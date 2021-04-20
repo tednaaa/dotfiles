@@ -44,6 +44,10 @@
     "prefix": "af",
     "body": "&::after {\n\tcontent: '';\n}"
   },
+  "margin center": {
+    "prefix": "mc",
+    "body": "margin: 0 auto;"
+  },
   "background": {
     "prefix": "bgu",
     "body": "background: url('$0') 0 0 / cover no-repeat;"
@@ -55,6 +59,10 @@
   "flexbox direction": {
     "prefix": "fbd",
     "body": "flex-direction: ${0:column};"
+  },
+  "flexbox center": {
+    "prefix": "fbc",
+    "body": "justify-content: center;\nalign-items: center;"
   }
 }
 ```
