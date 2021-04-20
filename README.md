@@ -25,7 +25,6 @@
   "workbench.statusBar.visible": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[go]": {
-    "editor.insertSpaces": true,
     "editor.defaultFormatter": "golang.go",
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
