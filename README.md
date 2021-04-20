@@ -1,5 +1,5 @@
 ## settings
-```
+```json
 {
   "workbench.startupEditor": "none",
   "window.zoomLevel": 2,
@@ -35,7 +35,7 @@
 ```
 
 ## snippets
-```
+```json
 {
   "before": {
     "prefix": "bf",
