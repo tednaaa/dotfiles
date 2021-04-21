@@ -63,6 +63,26 @@
   "flexbox center": {
     "prefix": "fbc",
     "body": "justify-content: center;\nalign-items: center;"
+  },
+  "media query": {
+    "prefix": "qq",
+    "body": "@media (max-width: $0) {\n\t\n}"
+  },
+  "media query 576px": {
+    "prefix": "qq1",
+    "body": "@media (max-width: 576px) {\n\t$0\n}"
+  },
+  "media query 768px": {
+    "prefix": "qq2",
+    "body": "@media (max-width: 768px) {\n\t$0\n}"
+  },
+  "media query 992px": {
+    "prefix": "qq3",
+    "body": "@media (max-width: 992px) {\n\t$0\n}"
+  },
+  "media query 1200px": {
+    "prefix": "qq4",
+    "body": "@media (max-width: 1200px) {\n\t$0\n}"
   }
 }
 ```
