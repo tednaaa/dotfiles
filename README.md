@@ -1,4 +1,5 @@
 ## extensions
+
 - [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
@@ -6,6 +7,7 @@
 - [Go](https://marketplace.visualstudio.com/items?itemName=golang.go)
 
 ## settings
+
 ```json
 {
   "workbench.startupEditor": "none",
@@ -27,7 +29,6 @@
   "editor.smoothScrolling": true,
   "prettier.singleQuote": true,
   "explorer.confirmDelete": false,
-  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.statusBar.visible": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -36,11 +37,15 @@
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     }
+  },
+  "[python]": {
+    "editor.tabSize": 4
   }
 }
 ```
 
 ## snippets
+
 ```json
 {
   "before": {
@@ -90,6 +95,10 @@
   "media query 1200px": {
     "prefix": "qq4",
     "body": "@media (max-width: 1200px) {\n\t$0\n}"
+  },
+  "try catch": {
+    "prefix": "tc",
+    "body": "try {\n\t$0\n} catch (error) {\n\tconsole.log(error)\n}"
   }
 }
 ```
