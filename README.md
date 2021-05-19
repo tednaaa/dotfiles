@@ -4,6 +4,7 @@
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
 - [WakaTime](https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime)
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 - [Go](https://marketplace.visualstudio.com/items?itemName=golang.go)
 
 ## settings
@@ -30,8 +31,15 @@
   "prettier.singleQuote": true,
   "explorer.confirmDelete": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "python.formatting.provider": "autopep8",
   "workbench.statusBar.visible": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
   "[go]": {
     "editor.defaultFormatter": "golang.go",
     "editor.codeActionsOnSave": {
@@ -39,6 +47,7 @@
     }
   },
   "[python]": {
+    "editor.defaultFormatter": null,
     "editor.tabSize": 4
   }
 }
