@@ -34,6 +34,7 @@
   "python.formatting.provider": "autopep8",
   "workbench.statusBar.visible": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "window.menuBarVisibility": "toggle",
   "workbench.editorAssociations": [
     {
       "viewType": "jupyter.notebook.ipynb",
