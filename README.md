@@ -16,6 +16,7 @@
   "workbench.tips.enabled": false,
   "workbench.activityBar.visible": false,
   "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.untitled.hint": "hidden",
   "workbench.statusBar.visible": false,
 
   "editor.fontSize": 13,
