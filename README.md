@@ -30,9 +30,6 @@
   "editor.minimap.enabled": false,
   "editor.glyphMargin": false,
   "editor.smoothScrolling": true,
-  "prettier.singleQuote": true,
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
   "editor.cursorSmoothCaretAnimation": true,
   "editor.wordSeparators": "`~!@#$%^&*()-_=+[{]}\\|;:'\",.<>/?",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -41,9 +38,14 @@
   "files.trimFinalNewlines": true,
   "files.insertFinalNewline": true,
 
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+
   "window.zoomLevel": 2,
   "window.menuBarVisibility": "toggle",
 
+  "prettier.singleQuote": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "python.formatting.provider": "autopep8",
 
