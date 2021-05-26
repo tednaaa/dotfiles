@@ -45,8 +45,8 @@
   "window.menuBarVisibility": "toggle",
 
   "typescript.updateImportsOnFileMove.enabled": "always",
-
   "python.formatting.provider": "autopep8",
+
   "workbench.editorAssociations": [
     {
       "viewType": "jupyter.notebook.ipynb",
