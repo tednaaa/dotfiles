@@ -9,6 +9,7 @@
 - [Go](https://marketplace.visualstudio.com/items?itemName=golang.go)
 
 ## settings
+
 ```json
 {
   "workbench.startupEditor": "none",
@@ -45,9 +46,12 @@
 
   "window.zoomLevel": 2,
   "window.menuBarVisibility": "toggle",
+  
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
 
   "prettier.singleQuote": true,
-  "typescript.updateImportsOnFileMove.enabled": "always",
+
   "python.formatting.provider": "autopep8",
 
   "workbench.editorAssociations": [
