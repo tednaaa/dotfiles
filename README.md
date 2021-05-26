@@ -9,7 +9,6 @@
 - [Go](https://marketplace.visualstudio.com/items?itemName=golang.go)
 
 ## settings
-
 ```json
 {
   "workbench.startupEditor": "none",
@@ -34,6 +33,7 @@
   "prettier.singleQuote": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "editor.cursorSmoothCaretAnimation": true,
   "editor.wordSeparators": "`~!@#$%^&*()-_=+[{]}\\|;:'\",.<>/?",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
 
