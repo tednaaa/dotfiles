@@ -12,29 +12,40 @@
 ```json
 {
   "workbench.startupEditor": "none",
-  "window.zoomLevel": 2,
+  "workbench.iconTheme": "vs-minimal",
+  "workbench.tips.enabled": false,
+  "workbench.activityBar.visible": false,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.statusBar.visible": false,
+
   "editor.fontSize": 13,
   "editor.tabSize": 2,
   "editor.fontFamily": "Fira Code",
   "editor.inlineHints.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
-  "files.autoSave": "afterDelay",
   "editor.mouseWheelZoom": true,
   "editor.detectIndentation": false,
   "editor.hover.delay": 500,
   "editor.formatOnSave": true,
-  "workbench.activityBar.visible": false,
   "editor.minimap.enabled": false,
-  "workbench.editor.tabSizing": "shrink",
   "editor.glyphMargin": false,
   "editor.smoothScrolling": true,
   "prettier.singleQuote": true,
   "explorer.confirmDelete": false,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "python.formatting.provider": "autopep8",
-  "workbench.statusBar.visible": false,
+  "explorer.confirmDragAndDrop": false,
+  "editor.wordSeparators": "`~!@#$%^&*()-_=+[{]}\\|;:'\",.<>/?",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+
+  "window.zoomLevel": 2,
   "window.menuBarVisibility": "toggle",
+
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  "python.formatting.provider": "autopep8",
   "workbench.editorAssociations": [
     {
       "viewType": "jupyter.notebook.ipynb",
@@ -106,6 +117,7 @@
     "prefix": "qq4",
     "body": "@media (max-width: 1200px) {\n\t$0\n}"
   },
+
   "try catch": {
     "prefix": "tc",
     "body": "try {\n\t$0\n} catch (error) {\n\tconsole.log(error)\n}"
