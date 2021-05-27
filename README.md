@@ -12,43 +12,39 @@
 
 ```json
 {
-  "workbench.startupEditor": "none",
-  "workbench.iconTheme": "vs-minimal",
-  "workbench.tips.enabled": false,
-  "workbench.activityBar.visible": false,
-  "workbench.editor.tabSizing": "shrink",
-  "workbench.editor.untitled.hint": "hidden",
-  "workbench.statusBar.visible": false,
-
-  "editor.fontSize": 13,
-  "editor.tabSize": 2,
-  "editor.fontFamily": "Fira Code",
-  "editor.inlineHints.fontFamily": "Fira Code",
-  "editor.fontLigatures": true,
-  "editor.mouseWheelZoom": true,
-  "editor.detectIndentation": false,
-  "editor.hover.delay": 500,
-  "editor.formatOnSave": true,
-  "editor.minimap.enabled": false,
-  "editor.glyphMargin": false,
-  "editor.smoothScrolling": true,
-  "editor.cursorSmoothCaretAnimation": true,
   "editor.wordSeparators": "`~!@#$%^&*()-_=+[{]}\\|;:'\",.<>/?",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.inlineHints.fontFamily": "Fira Code",
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.detectIndentation": false,
+  "editor.fontFamily": "Fira Code",
+  "editor.minimap.enabled": false,
+  "editor.smoothScrolling": true,
+  "editor.mouseWheelZoom": true,
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.glyphMargin": false,
+  "editor.hover.delay": 500,
+  "editor.fontSize": 15,
+  "editor.tabSize": 2,
+
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.iconTheme": "vs-minimal",
+  "workbench.startupEditor": "none",
 
   "files.trimTrailingWhitespace": true,
-  "files.trimFinalNewlines": true,
   "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
 
+  "explorer.confirmDragAndDrop": false,
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
 
-  "window.zoomLevel": 2,
   "window.menuBarVisibility": "toggle",
-  
-  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": 1,
+
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
 
   "prettier.singleQuote": true,
 
@@ -60,6 +56,7 @@
       "filenamePattern": "*.ipynb"
     }
   ],
+
   "[go]": {
     "editor.defaultFormatter": "golang.go",
     "editor.codeActionsOnSave": {
