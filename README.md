@@ -1,4 +1,4 @@
-## extensions
+## Extensions
 
 - [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
@@ -8,7 +8,7 @@
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 - [Go](https://marketplace.visualstudio.com/items?itemName=golang.go)
 
-## settings
+## Settings
 
 ```json
 {
@@ -70,7 +70,7 @@
 }
 ```
 
-## snippets
+## Snippets
 
 ```json
 {
@@ -126,6 +126,10 @@
   "try catch": {
     "prefix": "tc",
     "body": "try {\n\t$0\n} catch (error) {\n\tconsole.log(error)\n}"
+  },
+  "create and export function": {
+    "prefix": "cef",
+    "body": "export const ${TM_FILENAME_BASE} = () => {\n\t$0\n}"
   }
 }
 ```
