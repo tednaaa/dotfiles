@@ -48,6 +48,8 @@
 
   "prettier.singleQuote": true,
 
+  "terminal.integrated.fontSize": 15,
+
   "python.formatting.provider": "autopep8",
 
   "workbench.editorAssociations": [
