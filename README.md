@@ -28,10 +28,6 @@
   "editor.fontSize": 15,
   "editor.tabSize": 2,
 
-  "workbench.editor.tabSizing": "shrink",
-  "workbench.iconTheme": "vs-minimal",
-  "workbench.startupEditor": "none",
-
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -42,6 +38,9 @@
 
   "window.menuBarVisibility": "toggle",
   "window.zoomLevel": 1,
+
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.startupEditor": "none",
 
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
