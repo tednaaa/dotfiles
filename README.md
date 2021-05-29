@@ -138,7 +138,7 @@
 
 ## Shortcuts
 
-```
+```json
 [
   {
     "key": "ctrl+[Backquote]",
