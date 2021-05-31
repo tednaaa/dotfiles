@@ -25,7 +25,7 @@
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
   "editor.hover.delay": 500,
-  "editor.fontSize": 15,
+  "editor.fontSize": 16,
   "editor.tabSize": 2,
 
   "files.trimTrailingWhitespace": true,
@@ -47,7 +47,7 @@
 
   "prettier.singleQuote": true,
 
-  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.fontSize": 17,
 
   "python.formatting.provider": "autopep8",
 
