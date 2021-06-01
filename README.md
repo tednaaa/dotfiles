@@ -16,6 +16,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.inlineHints.fontFamily": "Fira Code",
   "editor.cursorSmoothCaretAnimation": true,
+  "editor.multiCursorModifier": "ctrlCmd",
   "editor.detectIndentation": false,
   "editor.fontFamily": "Fira Code",
   "editor.minimap.enabled": false,
