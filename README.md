@@ -14,7 +14,6 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.inlineHints.fontFamily": "Fira Code",
   "editor.cursorSmoothCaretAnimation": true,
-  "editor.multiCursorModifier": "ctrlCmd",
   "editor.detectIndentation": false,
   "editor.fontFamily": "Fira Code",
   "editor.minimap.enabled": false,
@@ -35,7 +34,8 @@
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
 
-  "window.menuBarVisibility": "toggle",
+  "window.customMenuBarAltFocus": false,
+  "window.titleBarStyle": "custom",
   "window.zoomLevel": 1,
 
   "workbench.editor.tabSizing": "shrink",
