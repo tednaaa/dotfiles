@@ -37,6 +37,7 @@
   "explorer.confirmDelete": false,
 
   "window.customMenuBarAltFocus": false,
+  "window.menuBarVisibility": "hidden",
   "window.titleBarStyle": "custom",
   "window.zoomLevel": 1,
 
