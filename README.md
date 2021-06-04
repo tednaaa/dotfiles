@@ -1,16 +1,4 @@
-## Shortcuts (for linux)
-
-```json
-[
-  {
-    "key": "shift+alt+up",
-    "command": "editor.action.copyLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+alt+down",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  }
-]
-```
+- [Extensions](components/Extensions.md)
+- [Settings](components/Settings.md)
+- [Snippets](components/Snippets.md)
+- [Shortcuts (for linux)](components/LinuxShortcuts.md)
