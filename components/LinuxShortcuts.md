@@ -1,4 +1,4 @@
-## Shortcuts (for linux)
+# Shortcuts (for linux)
 
 ```json
 [

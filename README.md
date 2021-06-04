@@ -1,4 +1,6 @@
+# VS Code settings
+
+- [Main Settings](components/Settings.md)
 - [Extensions](components/Extensions.md)
-- [Settings](components/Settings.md)
 - [Snippets](components/Snippets.md)
 - [Shortcuts (for linux)](components/LinuxShortcuts.md)

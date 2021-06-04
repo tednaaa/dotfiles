@@ -1,4 +1,4 @@
-## Settings
+# Main Settings
 
 ```json
 {
