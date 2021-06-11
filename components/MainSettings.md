@@ -17,6 +17,11 @@
   "editor.fontSize": 16,
   "editor.tabSize": 2,
 
+  "window.customMenuBarAltFocus": false,
+  "window.menuBarVisibility": "hidden",
+  "window.titleBarStyle": "custom",
+  "window.zoomLevel": 1,
+
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -24,11 +29,6 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
-
-  "window.customMenuBarAltFocus": false,
-  "window.menuBarVisibility": "hidden",
-  "window.titleBarStyle": "custom",
-  "window.zoomLevel": 1,
 
   "workbench.activityBar.visible": false,
   "workbench.editor.tabSizing": "shrink",
