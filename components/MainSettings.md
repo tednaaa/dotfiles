@@ -30,6 +30,7 @@
   "window.titleBarStyle": "custom",
   "window.zoomLevel": 1,
 
+  "workbench.activityBar.visible": false,
   "workbench.editor.tabSizing": "shrink",
   "workbench.startupEditor": "none",
 
