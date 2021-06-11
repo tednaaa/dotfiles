@@ -4,7 +4,6 @@
 {
   "editor.wordSeparators": "`~!@#$%^&*()-_=+[{]}\\|;:'\",.<>/?",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.inlineHints.fontFamily": "Fira Code",
   "editor.cursorSmoothCaretAnimation": true,
   "editor.detectIndentation": false,
   "editor.fontFamily": "Fira Code",
@@ -18,11 +17,6 @@
   "editor.fontSize": 16,
   "editor.tabSize": 2,
 
-  "window.customMenuBarAltFocus": false,
-  "window.menuBarVisibility": "hidden",
-  "window.titleBarStyle": "custom",
-  "window.zoomLevel": 1,
-
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -31,24 +25,27 @@
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
 
+  "window.customMenuBarAltFocus": false,
+  "window.menuBarVisibility": "hidden",
+  "window.titleBarStyle": "custom",
+  "window.zoomLevel": 1,
+
   "workbench.editor.tabSizing": "shrink",
   "workbench.startupEditor": "none",
 
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
 
-  "prettier.singleQuote": true,
-
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "terminal.integrated.fontSize": 17,
+
+  "prettier.singleQuote": true,
 
   "python.formatting.provider": "autopep8",
 
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
 
   "[go]": {
     "editor.defaultFormatter": "golang.go",
