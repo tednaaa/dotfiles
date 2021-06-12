@@ -17,11 +17,6 @@
   "editor.fontSize": 16,
   "editor.tabSize": 2,
 
-  "window.customMenuBarAltFocus": false,
-  "window.menuBarVisibility": "hidden",
-  "window.titleBarStyle": "custom",
-  "window.zoomLevel": 1,
-
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -33,6 +28,9 @@
   "workbench.activityBar.visible": false,
   "workbench.editor.tabSizing": "shrink",
   "workbench.startupEditor": "none",
+
+  "window.titleBarStyle": "custom",
+  "window.zoomLevel": 1,
 
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
