@@ -11,6 +11,10 @@
     "key": "shift+alt+down",
     "command": "editor.action.copyLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+[Slash]",
+    "command": "editor.action.commentLine"
   }
 ]
 ```
