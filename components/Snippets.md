@@ -51,10 +51,6 @@
     "body": "@media (max-width: 1200px) {\n\t$0\n}"
   },
 
-  "try catch": {
-    "prefix": "tc",
-    "body": "try {\n\t$0\n} catch (error) {\n\tconsole.log(error)\n}"
-  },
   "create and export function": {
     "prefix": "cef",
     "body": "export const ${TM_FILENAME_BASE} = () => {\n\t$0\n}"
