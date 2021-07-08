@@ -32,16 +32,15 @@
   "window.titleBarStyle": "custom",
   "window.zoomLevel": 1,
 
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "terminal.integrated.fontSize": 17,
 
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
   "prettier.singleQuote": true,
-
+  "tabnine.experimentalAutoImports": true,
   "python.formatting.provider": "autopep8",
-
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
   },
