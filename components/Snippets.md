@@ -54,6 +54,10 @@
   "create and export function": {
     "prefix": "cef",
     "body": "export const ${TM_FILENAME_BASE} = () => {\n\t$0\n}"
+  },
+  "create react functional component": {
+    "prefix": "rafc",
+    "body": "export const ${TM_FILENAME_BASE} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}"
   }
 }
 ```
