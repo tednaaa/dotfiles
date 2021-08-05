@@ -2,6 +2,11 @@
 
 ```json
 {
+  "get File Name": {
+    "prefix": "gfn",
+    "body": "${TM_FILENAME_BASE}"
+  },
+
   "before": {
     "prefix": "bf",
     "body": "&::before {\n\tcontent: '';\n}"
@@ -51,13 +56,17 @@
     "body": "@media (max-width: 1200px) {\n\t$0\n}"
   },
 
+  "console log": {
+    "prefix": "clg",
+    "body": "console.log($0);"
+  },
   "create and export function": {
     "prefix": "cef",
-    "body": "export const ${TM_FILENAME_BASE} = () => {\n\t$0\n}"
+    "body": "export const ${TM_FILENAME_BASE} = () => {\n\t$0\n};"
   },
   "create react functional component": {
     "prefix": "rafc",
-    "body": "export const ${TM_FILENAME_BASE} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}"
+    "body": "export const ${TM_FILENAME_BASE} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n};"
   }
 }
 ```
