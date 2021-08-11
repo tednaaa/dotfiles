@@ -5,6 +5,7 @@
   "editor.wordSeparators": "`~!@#$%^&*()-_=+[{]}\\|;:'\",.<>/?",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.cursorSmoothCaretAnimation": true,
+  "editor.inlineSuggest.enabled": true,
   "editor.detectIndentation": false,
   "editor.fontFamily": "Fira Code",
   "editor.minimap.enabled": false,
@@ -39,18 +40,9 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
 
   "prettier.singleQuote": true,
-  "tabnine.experimentalAutoImports": true,
   "python.formatting.provider": "autopep8",
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  },
+  "tabnine.experimentalAutoImports": true,
 
-  "[go]": {
-    "editor.defaultFormatter": "golang.go",
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    }
-  },
   "[python]": {
     "editor.defaultFormatter": null,
     "editor.tabSize": 4
