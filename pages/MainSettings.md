@@ -7,7 +7,7 @@
   "editor.cursorSmoothCaretAnimation": true,
   "editor.inlineSuggest.enabled": true,
   "editor.detectIndentation": false,
-  "editor.fontFamily": "Fira Code",
+  "editor.fontFamily": "JetBrains Mono",
   "editor.minimap.enabled": false,
   "editor.smoothScrolling": true,
   "editor.mouseWheelZoom": true,
