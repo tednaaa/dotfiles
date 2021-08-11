@@ -1,6 +1,6 @@
-# VS Code settings
+# Visual Studio Code settings
 
-- [Main Settings](components/MainSettings.md)
-- [Extensions](components/Extensions.md)
-- [Snippets](components/Snippets.md)
-- [Shortcuts (for linux)](components/LinuxShortcuts.md)
+- [Main Settings](pages/MainSettings.md)
+- [Snippets](pages/Snippets.md)
+- [Useful Extensions](pages/UsefulExtensions.md)
+- [Shortcuts (for linux)](pages/LinuxShortcuts.md)
