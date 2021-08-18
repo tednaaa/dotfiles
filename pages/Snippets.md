@@ -9,11 +9,15 @@
 
   "before": {
     "prefix": "bf",
-    "body": "&::before {\n\tcontent: '';\n}"
+    "body": "&::before {\n\tcontent: '';$0\n}"
   },
   "after": {
     "prefix": "af",
-    "body": "&::after {\n\tcontent: '';\n}"
+    "body": "&::after {\n\tcontent: '';$0\n}"
+  },
+  "hover": {
+    "prefix": "hv",
+    "body": "&:hover {\n\t$0\n}"
   },
   "margin center": {
     "prefix": "mc",
