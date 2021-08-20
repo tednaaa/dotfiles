@@ -15,6 +15,14 @@
     "prefix": "af",
     "body": "&::after {\n\tcontent: '';$0\n}"
   },
+  "not first child": {
+    "prefix": "nfc",
+    "body": "&:not(:first-child) {\n\t$0\n}"
+  },
+  "not last child": {
+    "prefix": "nlc",
+    "body": "&:not(:last-child) {\n\t$0\n}"
+  },
   "hover": {
     "prefix": "hv",
     "body": "&:hover {\n\t$0\n}"
