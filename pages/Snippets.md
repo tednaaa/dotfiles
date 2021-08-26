@@ -21,6 +21,16 @@
     "prefix": "af",
     "body": "&::after {\n\tcontent: '';$0\n}"
   },
+  "first child": {
+    "scope": "scss",
+    "prefix": "fc",
+    "body": "&:first-child {\n\t$0\n}"
+  },
+  "last child": {
+    "scope": "scss",
+    "prefix": "lc",
+    "body": "&:last-child {\n\t$0\n}"
+  },
   "not first child": {
     "scope": "scss",
     "prefix": "nfc",
