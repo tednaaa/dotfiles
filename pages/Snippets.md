@@ -101,7 +101,7 @@
   "console log": {
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "clg",
-    "body": "console.log($0);"
+    "body": "console.log($0)"
   },
   "create and export function": {
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
