@@ -108,10 +108,10 @@
     "prefix": "cef",
     "body": "export const ${TM_FILENAME_BASE} = () => {\n\t$0\n};"
   },
-  "create react functional component": {
+  "create reactjs functional component": {
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "rafc",
-    "body": "export const ${TM_FILENAME_BASE} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n};"
+    "body": "import React from 'react';\n\nexport const ${TM_FILENAME_BASE} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n};"
   }
 }
 ```
