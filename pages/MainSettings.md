@@ -18,6 +18,12 @@
   "editor.fontSize": 16,
   "editor.tabSize": 2,
 
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.activityBar.visible": false,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.startupEditor": "none",
+
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -25,10 +31,6 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
-
-  "workbench.activityBar.visible": false,
-  "workbench.editor.tabSizing": "shrink",
-  "workbench.startupEditor": "none",
 
   "window.titleBarStyle": "custom",
   "window.zoomLevel": 1,
@@ -39,9 +41,9 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
 
-  "prettier.singleQuote": true,
   "python.formatting.provider": "autopep8",
   "tabnine.experimentalAutoImports": true,
+  "prettier.singleQuote": true,
 
   "[python]": {
     "editor.defaultFormatter": null,
