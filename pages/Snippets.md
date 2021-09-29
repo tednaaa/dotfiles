@@ -2,11 +2,11 @@
 
 ```json
 {
-  "get File Name": {
+  "file Name": {
     "prefix": "gfn",
     "body": "${TM_FILENAME_BASE}"
   },
-  "generate UUID": {
+  "UUID": {
     "prefix": "gud",
     "body": "${0:${UUID}}"
   },
@@ -103,12 +103,12 @@
     "prefix": "clg",
     "body": "console.log($0)"
   },
-  "create and export function": {
+  "modular function": {
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
-    "prefix": "cef",
+    "prefix": "mf",
     "body": ["export const ${TM_FILENAME_BASE} = () => {", "  $0", "};"]
   },
-  "create reactjs functional component": {
+  "reactjs functional component": {
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "rafc",
     "body": [
