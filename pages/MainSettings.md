@@ -48,6 +48,8 @@
   "[python]": {
     "editor.defaultFormatter": null,
     "editor.tabSize": 4
-  }
+  },
+
+  "emmet.preferences": { "output.reverseAttributes": true }
 }
 ```
