@@ -117,7 +117,7 @@
       "",
       "export const ${TM_FILENAME_BASE} = (props) => {",
       "  return (",
-      "    <div {...props} className={clsx('${0:${TM_FILENAME_BASE}}', props.className)}>",
+      "    <div {...props} className={clsx('', props.className)}>",
       "      {props.children}",
       "    </div>",
       "  );",
