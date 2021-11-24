@@ -113,13 +113,11 @@
     "prefix": "rafc",
     "body": [
       "import React from 'react';",
-      "import './${TM_FILENAME_BASE}.scss';",
+      "import './${TM_FILENAME_BASE}.module.scss';",
       "",
-      "export const ${TM_FILENAME_BASE} = (props) => {",
+      "export const ${TM_FILENAME_BASE} = () => {",
       "  return (",
-      "    <div {...props} className={clsx('', props.className)}>",
-      "      {props.children}",
-      "    </div>",
+      "    <div></div>",
       "  );",
       "};"
     ]
