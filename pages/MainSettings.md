@@ -13,6 +13,7 @@
   "editor.mouseWheelZoom": true,
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
+  "editor.glyphMargin": false,
   "editor.hover.delay": 500,
   "editor.fontSize": 16,
   "editor.tabSize": 2,
