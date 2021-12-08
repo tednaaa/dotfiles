@@ -12,6 +12,7 @@
   "editor.smoothScrolling": true,
   "editor.mouseWheelZoom": true,
   "editor.fontLigatures": true,
+  "editor.glyphMargin": false,
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
   "editor.hover.delay": 500,
