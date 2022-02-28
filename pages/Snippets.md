@@ -121,6 +121,11 @@
       "  );",
       "};"
     ]
+  },
+  "MUI styled function": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "ms",
+    "body": "const Component = styled()(() => ({}));"
   }
 }
 ```
