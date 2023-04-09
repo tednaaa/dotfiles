@@ -15,7 +15,7 @@
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
   "editor.hover.delay": 500,
-  "editor.fontSize": 16,
+  "editor.fontSize": 15,
   "editor.tabSize": 2,
 
   "workbench.iconTheme": "material-icon-theme",
