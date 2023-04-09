@@ -4,7 +4,7 @@
 {
   "editor.wordSeparators": "`~!@#$%^&*()-_=+[{]}\\|;:'\",.<>/?",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.fontFamily": "JetBrains Mono",
   "editor.inlineSuggest.enabled": true,
   "editor.detectIndentation": false,
@@ -12,7 +12,6 @@
   "editor.smoothScrolling": true,
   "editor.mouseWheelZoom": true,
   "editor.fontLigatures": true,
-  "editor.glyphMargin": false,
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
   "editor.hover.delay": 500,
@@ -42,14 +41,8 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
 
-  "python.formatting.provider": "autopep8",
   "tabnine.experimentalAutoImports": true,
   "prettier.singleQuote": true,
-
-  "[python]": {
-    "editor.defaultFormatter": null,
-    "editor.tabSize": 4
-  },
 
   "emmet.preferences": { "output.reverseAttributes": true }
 }
