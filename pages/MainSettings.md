@@ -5,6 +5,7 @@
   "editor.wordSeparators": "`~!@#$%^&*()-_=+[{]}\\|;:'\",.<>/?",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.cursorSmoothCaretAnimation": "on",
+  "editor.acceptSuggestionOnCommitCharacter": true,
   "editor.fontFamily": "JetBrains Mono",
   "editor.inlineSuggest.enabled": true,
   "editor.detectIndentation": false,
@@ -15,7 +16,7 @@
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
   "editor.hover.delay": 500,
-  "editor.fontSize": 15,
+  "editor.fontSize": 14,
   "editor.tabSize": 2,
 
   "workbench.iconTheme": "material-icon-theme",
