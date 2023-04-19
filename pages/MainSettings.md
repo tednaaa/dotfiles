@@ -21,7 +21,6 @@
   "editor.tabSize": 2,
 
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.activityBar.visible": false,
   "workbench.editor.tabSizing": "shrink",
   "workbench.colorTheme": "GitHub Dark",
   "workbench.startupEditor": "none",
@@ -43,7 +42,6 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
 
-  "tabnine.experimentalAutoImports": true,
   "prettier.singleQuote": true,
 
   "emmet.preferences": {
