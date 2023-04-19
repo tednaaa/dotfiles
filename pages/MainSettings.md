@@ -4,8 +4,9 @@
 {
   "editor.wordSeparators": "`~!@#$%^&*()-_=+[{]}\\|;:'\",.<>/?",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.cursorSmoothCaretAnimation": "on",
   "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.unicodeHighlight.includeStrings": false,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.fontFamily": "JetBrains Mono",
   "editor.inlineSuggest.enabled": true,
   "editor.detectIndentation": false,
@@ -45,6 +46,8 @@
   "tabnine.experimentalAutoImports": true,
   "prettier.singleQuote": true,
 
-  "emmet.preferences": { "output.reverseAttributes": true }
+  "emmet.preferences": {
+    "output.reverseAttributes": true
+  }
 }
 ```
