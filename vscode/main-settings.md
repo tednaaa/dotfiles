@@ -33,8 +33,8 @@
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
 
-  "window.titleBarStyle": "custom",
   "window.zoomLevel": 1,
+  "window.titleBarStyle": "custom",
 
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "terminal.integrated.fontSize": 17,
@@ -42,10 +42,11 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
 
-  "prettier.singleQuote": true,
-
-  "emmet.preferences": {
-    "output.reverseAttributes": true
-  }
+  // plugins
+  "emmet.preferences": { "output.reverseAttributes": true },
+  "quokka.suppressExpirationNotifications": true,
+  "wallaby.suppressExpirationNotifications": true,
+  "vscode-pets.theme": "forest",
+  "prettier.singleQuote": true
 }
 ```
