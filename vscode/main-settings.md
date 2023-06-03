@@ -22,7 +22,7 @@
 
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editor.tabSizing": "shrink",
-  "workbench.colorTheme": "GitHub Dark",
+  "workbench.colorTheme": "Theme",
   "workbench.startupEditor": "none",
 
   "files.trimTrailingWhitespace": true,
@@ -45,7 +45,6 @@
   "emmet.preferences": { "output.reverseAttributes": true },
   "quokka.suppressExpirationNotifications": true,
   "wallaby.suppressExpirationNotifications": true,
-  "vscode-pets.theme": "forest",
   "prettier.singleQuote": true
 }
 ```
