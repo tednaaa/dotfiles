@@ -42,6 +42,7 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
 
+  "extensions.ignoreRecommendations": true,
   "emmet.preferences": { "output.reverseAttributes": true },
   "quokka.suppressExpirationNotifications": true,
   "wallaby.suppressExpirationNotifications": true,
