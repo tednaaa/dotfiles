@@ -14,6 +14,7 @@
   "editor.smoothScrolling": true,
   "editor.mouseWheelZoom": true,
   "editor.fontLigatures": true,
+  "editor.linkedEditing": true,
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
   "editor.hover.delay": 500,
@@ -41,7 +42,6 @@
 
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
-
   "extensions.ignoreRecommendations": true,
   "emmet.preferences": { "output.reverseAttributes": true },
   "quokka.suppressExpirationNotifications": true,
