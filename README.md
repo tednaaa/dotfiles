@@ -1,4 +1,4 @@
-# Setup instruction for my mac m1 pro
+# Setup for my mac m1 pro
 
 > Install Brew - https://brew.sh
 > Install Fish shell - https://fishshell.com
