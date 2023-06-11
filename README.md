@@ -1,4 +1,25 @@
-## Table of Contents
+# Setup instruction for my mac m1 pro
+
+> Install Brew - https://brew.sh
+> Install Fish shell - https://fishshell.com
+
+```
+which fish # check path
+
+# set fish as default
+echo $path | sudo tee -a /etc/shells
+chsh -s $path
+```
+
+> Install JetBrains Mono Nerd Font - https://nerdfonts.com
+> Install Starship prompt - https://starship.rs
+
+> Install asdf to manage multiple runtime versions - https://asdf-vm.com (fish + homebrew)
+
+> Install vscode cask and following extensions
+> EditorConfig, ESLint, Prettier, GitLens, Editor & Icon Themes, WakaTime, Quokka + WallabyJS
+
+## Table of Configs
 
 - vscode
   - [Settings](#vscode-settings)
