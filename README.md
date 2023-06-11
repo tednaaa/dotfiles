@@ -239,12 +239,11 @@ chsh -s $path
 
 ```
 [pull]
-	rebase = false
+	rebase = true
 [init]
 	defaultBranch = main
 [push]
 	default = current
 [core]
 	editor = code --wait
-
 ```
