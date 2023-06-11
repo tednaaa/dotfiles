@@ -1,11 +1,12 @@
-### Table of Contents
+## Table of Contents
 
-**[vscode settings](#vscode-settings)**<br>
-**[vscode shortcuts](#vscode-shortcuts)**<br>
-**[vscode snippets](#vscode-snippets)**<br>
-**[basic git config](#basic-git-config)**<br>
+- vscode
+  - [Settings](#vscode-settings)
+  - [Shortcuts](#vscode-shortcuts)
+  - [Snippets](#vscode-snippets)
+- [Basic Git Config](#basic-git-config)
 
-## vscode settings
+### vscode settings
 
 ```json
 {
@@ -57,7 +58,7 @@
 }
 ```
 
-## vscode shortcuts
+### vscode shortcuts
 
 # Shortcuts
 
@@ -79,7 +80,7 @@
 ]
 ```
 
-# vscode snippets
+### vscode snippets
 
 ```json
 {
@@ -210,7 +211,7 @@
 }
 ```
 
-## basic git config
+### basic git config
 
 ```
 [pull]
