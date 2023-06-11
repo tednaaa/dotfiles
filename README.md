@@ -12,7 +12,7 @@ echo $path | sudo tee -a /etc/shells
 chsh -s $path
 ```
 
-> Install JetBrains Mono Nerd Font - https://nerdfonts.com
+> Install JetBrains Mono font - https://www.jetbrains.com/lp/mono
 
 > Install Starship prompt - https://starship.rs
 
@@ -42,6 +42,7 @@ chsh -s $path
   "editor.fontFamily": "JetBrains Mono",
   "editor.inlineSuggest.enabled": true,
   "editor.detectIndentation": false,
+  "editor.cursorBlinking": "smooth",
   "editor.minimap.enabled": false,
   "editor.smoothScrolling": true,
   "editor.mouseWheelZoom": true,
@@ -55,7 +56,7 @@ chsh -s $path
 
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editor.tabSizing": "shrink",
-  "workbench.colorTheme": "Theme",
+  "workbench.colorTheme": "Tokyo Night",
   "workbench.startupEditor": "none",
 
   "files.trimTrailingWhitespace": true,
