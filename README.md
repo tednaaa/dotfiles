@@ -247,4 +247,5 @@ chsh -s $path
 	default = current
 [core]
 	editor = code --wait
+	ignorecase = false
 ```
