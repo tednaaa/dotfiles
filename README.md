@@ -49,14 +49,12 @@ chsh -s $path
   "editor.fontLigatures": true,
   "editor.linkedEditing": true,
   "editor.formatOnSave": true,
-  "editor.glyphMargin": false,
   "editor.hover.delay": 500,
   "editor.fontSize": 14,
   "editor.tabSize": 2,
 
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editor.tabSizing": "shrink",
-  "workbench.colorTheme": "Tokyo Night",
   "workbench.startupEditor": "none",
 
   "files.trimTrailingWhitespace": true,
@@ -79,7 +77,8 @@ chsh -s $path
   "emmet.preferences": { "output.reverseAttributes": true },
   "quokka.suppressExpirationNotifications": true,
   "wallaby.suppressExpirationNotifications": true,
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "workbench.colorTheme": "One Dark Pro Darker"
 }
 ```
 
