@@ -53,6 +53,7 @@ chsh -s $path
   "editor.fontSize": 14,
   "editor.tabSize": 2,
 
+  "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editor.tabSizing": "shrink",
   "workbench.startupEditor": "none",
@@ -77,8 +78,7 @@ chsh -s $path
   "emmet.preferences": { "output.reverseAttributes": true },
   "quokka.suppressExpirationNotifications": true,
   "wallaby.suppressExpirationNotifications": true,
-  "prettier.singleQuote": true,
-  "workbench.colorTheme": "One Dark Pro Darker"
+  "prettier.singleQuote": true
 }
 ```
 
