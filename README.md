@@ -238,13 +238,15 @@ chsh -s $path
 ### basic git config
 
 ```
-[pull]
-	rebase = true
-[init]
-	defaultBranch = main
-[push]
-	default = current
 [core]
 	editor = code --wait
 	ignorecase = false
+[init]
+	defaultBranch = main
+[fetch]
+	prune = true
+[pull]
+	rebase = true
+[push]
+	default = current
 ```
