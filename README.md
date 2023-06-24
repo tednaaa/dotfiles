@@ -70,7 +70,7 @@ chsh -s $path
   "window.titleBarStyle": "custom",
 
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "terminal.integrated.fontSize": 17,
+  "terminal.integrated.fontSize": 14,
 
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
