@@ -67,17 +67,17 @@ chsh -s $path
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
 
-  "window.zoomLevel": 1,
   "window.titleBarStyle": "custom",
+  "window.zoomLevel": 1,
 
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "terminal.integrated.fontSize": 14,
 
-  "javascript.updateImportsOnFileMove.enabled": "always",
   "emmet.preferences": { "output.reverseAttributes": true },
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "quokka.suppressExpirationNotifications": true,
   "wallaby.suppressExpirationNotifications": true,
+  "quokka.suppressExpirationNotifications": true,
   "extensions.ignoreRecommendations": true,
   "prettier.singleQuote": true,
   "scm.defaultViewMode": "tree"
