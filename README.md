@@ -1,4 +1,4 @@
-# Setup for my mac m1 pro
+# Setup for my MacBook m1 pro
 
 > Install Brew - https://brew.sh
 
@@ -50,6 +50,7 @@ chsh -s $path
   "editor.linkedEditing": true,
   "editor.formatOnSave": true,
   "editor.hover.delay": 500,
+  "editor.lineHeight": 24,
   "editor.fontSize": 14,
   "editor.tabSize": 2,
 
@@ -73,8 +74,8 @@ chsh -s $path
   "terminal.integrated.fontSize": 14,
 
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
   "emmet.preferences": { "output.reverseAttributes": true },
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "quokka.suppressExpirationNotifications": true,
   "wallaby.suppressExpirationNotifications": true,
   "extensions.ignoreRecommendations": true,
