@@ -211,7 +211,7 @@ chsh -s $path
     "prefix": "clg",
     "body": "console.log($0)"
   },
-  "modular function": {
+  "arrow function": {
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "mf",
     "body": ["export const ${TM_FILENAME_BASE} = () => {", "  $0", "};"]
@@ -220,13 +220,27 @@ chsh -s $path
     "scope": "javascriptreact,typescriptreact",
     "prefix": "rafc",
     "body": [
-      "import styles from './${TM_FILENAME_BASE}.module.scss';",
+      "import styles from './styles.module.scss';",
       "",
       "export const ${TM_FILENAME_BASE} = () => {",
       "  return (",
       "    <div></div>",
       "  );",
       "};"
+    ]
+  },
+  "RTL template": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "rtl",
+    "body": [
+      "import { render } from '@testing-library/react';",
+      "import { $0 } from './';",
+      "",
+      "describe('$0', () => {",
+      "  it('should render correctly', () => {",
+      "    render(<$0 />);",
+      "  });",
+      "});"
     ]
   },
   "MUI styled function": {
