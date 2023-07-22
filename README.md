@@ -50,7 +50,7 @@ chsh -s $path
   "editor.linkedEditing": true,
   "editor.formatOnSave": true,
   "editor.hover.delay": 500,
-  "editor.lineHeight": 24,
+  "editor.lineHeight": 22,
   "editor.fontSize": 14,
   "editor.tabSize": 2,
 
@@ -73,14 +73,19 @@ chsh -s $path
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "terminal.integrated.fontSize": 14,
 
-  "emmet.preferences": { "output.reverseAttributes": true },
-  "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  "emmet.preferences": { "output.reverseAttributes": true },
   "wallaby.suppressExpirationNotifications": true,
   "quokka.suppressExpirationNotifications": true,
   "extensions.ignoreRecommendations": true,
+  "scm.defaultViewMode": "tree",
   "prettier.singleQuote": true,
-  "scm.defaultViewMode": "tree"
+
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  }
 }
 ```
 
