@@ -252,6 +252,17 @@ chsh -s $path
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "ms",
     "body": "const Component = styled()(() => ({}));"
+  },
+  "Vue template": {
+    "scope": "vue",
+    "prefix": "stv",
+    "body": [
+      "<script setup lang='ts'></script>"
+      "",
+      "<template></template>"
+      "",
+      "<style module lang='scss'></style>"
+    ]
   }
 }
 ```
