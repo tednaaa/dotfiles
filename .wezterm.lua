@@ -9,7 +9,7 @@ wezterm.on("gui-startup", function(cmd)
 end)
 
 config = {
-  color_scheme = 'One Dark (Gogh)',
+  color_scheme = 'GitHub Dark',
   font = wezterm.font("JetBrains Mono", { weight = "DemiBold" }),
   font_size = 15,
   initial_rows = 30,

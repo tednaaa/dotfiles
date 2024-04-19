@@ -1,0 +1,11 @@
+[core]
+	editor = code --wait
+	ignorecase = false
+[init]
+	defaultBranch = main
+[fetch]
+	prune = true
+[pull]
+	rebase = true
+[push]
+	default = current

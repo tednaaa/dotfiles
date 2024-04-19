@@ -1,0 +1,49 @@
+{
+  "editor.wordSeparators": "`~!@#$%^&*()-_=+[{]}\\|;:'\",.<>/?",
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.unicodeHighlight.includeStrings": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.inlineSuggest.enabled": true,
+  "editor.detectIndentation": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.minimap.enabled": false,
+  "editor.smoothScrolling": true,
+  "editor.mouseWheelZoom": true,
+  "editor.fontLigatures": false,
+  "editor.linkedEditing": true,
+  "editor.formatOnSave": true,
+  "editor.hover.delay": 500,
+  "editor.lineHeight": 22,
+  "editor.fontSize": 11,
+  "editor.tabSize": 2,
+
+  "workbench.colorTheme": "An Old Hope",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.startupEditor": "none",
+  "workbench.editor.revealIfOpen": false,
+
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+
+  "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+
+  "window.titleBarStyle": "custom",
+  "window.zoomLevel": 1,
+
+  "terminal.integrated.fontSize": 12,
+
+  "extensions.ignoreRecommendations": true,
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.checkOnSave": true,
+  "emmet.preferences": { "output.reverseAttributes": true },
+  "scm.defaultViewMode": "tree",
+  "go.toolsManagement.autoUpdate": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "codeium.enableCodeLens": false,
+  "codeium.enableSearch": true
+}
