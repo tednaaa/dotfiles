@@ -10,7 +10,7 @@ end)
 
 config = {
   color_scheme = 'GitHub Dark',
-  font = wezterm.font("JetBrains Mono", { weight = "DemiBold" }),
+  font = wezterm.font("JetBrainsMono Nerd Font", { weight = "DemiBold" }),
   font_size = 15,
   initial_rows = 30,
   initial_cols = 120,

@@ -3,7 +3,7 @@
   "editor.acceptSuggestionOnCommitCharacter": true,
   "editor.unicodeHighlight.includeStrings": false,
   "editor.cursorSmoothCaretAnimation": "on",
-  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.inlineSuggest.enabled": true,
   "editor.detectIndentation": false,
   "editor.cursorBlinking": "smooth",

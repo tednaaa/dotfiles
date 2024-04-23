@@ -12,8 +12,6 @@ chsh -s $(which fish)
 
 > Wezterm terminal emulator - https://wezfurlong.org/wezterm
 
-> JetBrains Mono font - https://www.jetbrains.com/lp/mono
-
 > Starship prompt - https://starship.rs
 
 > asdf to manage multiple runtime versions - https://asdf-vm.com `(fish + git)`

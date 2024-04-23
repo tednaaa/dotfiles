@@ -1,0 +1,28 @@
+{
+  "base_keymap": "VSCode",
+  "vim_mode": false,
+  "features": { "copilot": false },
+  "telemetry": { "diagnostics": false, "metrics": false },
+
+  "theme": "One Dark",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_features": { "calt": false },
+
+  "cursor_blink": false,
+  "ui_font_size": 18,
+  "buffer_font_size": 15,
+  "tab_size": 4,
+  "hard_tabs": true,
+  "show_whitespaces": "all",
+
+  "lsp": {
+      "rust-analyzer": {
+          "initialization_options": {
+              "check": {
+                  "command": "clippy"
+              }
+          }
+      }
+  }
+}
