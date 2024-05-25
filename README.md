@@ -1,3 +1,11 @@
+> symlink vscode
+
+```
+ln -s ~/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+ln -s ~/dotfiles/vscode/snippets.json ~/Library/Application\ Support/Code/User/snippets/personal.code-snippets
+```
+
 ## Setup
 
 > Brew - https://brew.sh

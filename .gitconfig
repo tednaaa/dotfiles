@@ -9,3 +9,7 @@
 	rebase = true
 [push]
 	default = current
+
+[user]
+name = Andranik
+email = tednaaa@gmail.com
