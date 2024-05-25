@@ -1,28 +1,28 @@
 {
-    "vim_mode": false,
-    "base_keymap": "VSCode",
-    "features": { "copilot": false },
-    "telemetry": { "diagnostics": false, "metrics": false },
+  "vim_mode": false,
+  "base_keymap": "VSCode",
+  "features": { "copilot": false },
+  "telemetry": { "diagnostics": false, "metrics": false },
 
-    "theme": "Ayu Dark",
-    "buffer_font_family": "JetBrainsMono Nerd Font",
-    "ui_font_family": "JetBrainsMono Nerd Font",
-    "buffer_font_features": { "calt": false },
+  "theme": "Ayu Dark",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_features": { "calt": false },
 
-    "cursor_blink": false,
-    "ui_font_size": 16,
-    "buffer_font_size": 14,
-    "tab_size": 4,
-    "hard_tabs": true,
-    "show_whitespaces": "all",
+  "cursor_blink": false,
+  "ui_font_size": 16,
+  "buffer_font_size": 14,
+  "tab_size": 4,
+  "hard_tabs": true,
+  "show_whitespaces": "all",
 
-    "lsp": {
-        "rust-analyzer": {
-            "initialization_options": {
-                "check": {
-                    "command": "clippy"
-                }
-            }
-        }
-    }
+  "lsp": {
+      "rust-analyzer": {
+          "initialization_options": {
+              "check": {
+                  "command": "clippy"
+              }
+          }
+      }
+  }
 }
