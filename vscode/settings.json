@@ -19,7 +19,7 @@
   "editor.fontSize": 11,
   "editor.tabSize": 2,
 
-  "workbench.colorTheme": "Ayu Dark",
+  "workbench.colorTheme": "Darcula Theme from IntelliJ",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editor.tabSizing": "shrink",
   "workbench.startupEditor": "none",
@@ -43,8 +43,9 @@
   "rust-analyzer.checkOnSave": true,
   "emmet.preferences": { "output.reverseAttributes": true },
   "scm.defaultViewMode": "tree",
+  "diffEditor.renderSideBySide": false,
   "go.toolsManagement.autoUpdate": true,
   "liveServer.settings.donotShowInfoMsg": true,
   "codeium.enableCodeLens": false,
-  "codeium.enableSearch": true
+  "codeium.enableSearch": true,
 }
