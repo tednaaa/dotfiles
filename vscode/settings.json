@@ -47,5 +47,5 @@
   "go.toolsManagement.autoUpdate": true,
   "liveServer.settings.donotShowInfoMsg": true,
   "codeium.enableCodeLens": false,
-  "codeium.enableSearch": true,
+  "codeium.enableSearch": true
 }
