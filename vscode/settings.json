@@ -1,5 +1,6 @@
 {
   "editor.wordSeparators": "`~!@#$%^&*()-_=+[{]}\\|;:'\",.<>/?",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.acceptSuggestionOnCommitCharacter": true,
   "editor.unicodeHighlight.includeStrings": false,
   "editor.inlayHints.enabled": "offUnlessPressed",
@@ -19,7 +20,7 @@
   "editor.fontSize": 11,
   "editor.tabSize": 2,
 
-  "workbench.colorTheme": "Darcula Theme from IntelliJ",
+  "workbench.colorTheme": "Ayu Mirage",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editor.tabSizing": "shrink",
   "workbench.startupEditor": "none",
