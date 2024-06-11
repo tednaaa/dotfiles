@@ -10,12 +10,11 @@ return {
 		{ "L3MON4D3/LuaSnip" },
 		{ "rafamadriz/friendly-snippets" },
 		{ "onsails/lspkind-nvim" },
-		{ 'wakatime/vim-wakatime' },
 		{
 			"Exafunction/codeium.nvim",
 			cmd = "Codeium",
 			build = ":Codeium Auth",
-			opts = {},
+			opts = {}
 		},
 	},
 	config = function()
