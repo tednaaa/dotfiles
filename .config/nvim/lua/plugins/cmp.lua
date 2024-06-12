@@ -10,6 +10,7 @@ return {
 		{ "L3MON4D3/LuaSnip" },
 		{ "rafamadriz/friendly-snippets" },
 		{ "onsails/lspkind-nvim" },
+		{ "windwp/nvim-autopairs", event = "InsertEnter", config = true },
 		{
 			"Exafunction/codeium.nvim",
 			cmd = "Codeium",
@@ -31,8 +32,8 @@ return {
 				["<C-f>"] = cmp.mapping.scroll_docs(4),
 
 				["<C-Space>"] = cmp.mapping.complete({}),
-				['<Tab>'] = cmp.mapping.select_next_item(),
-				['<S-Tab>'] = cmp.mapping.select_prev_item(),
+				["<Tab>"] = cmp.mapping.select_next_item(),
+				["<S-Tab>"] = cmp.mapping.select_prev_item(),
 				["<CR>"] = cmp.mapping.confirm({ select = true }),
 				["<S-CR>"] = cmp.mapping.confirm({
 					behavior = cmp.ConfirmBehavior.Replace,
