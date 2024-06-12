@@ -1,34 +1,35 @@
-local keymap = vim.keymap
-vim.g.mapleader = " "
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+vim.keymap.set("i", "jj", "<Esc>")
 
-keymap.set("n", "<C-d>", "<C-d>zz")
-keymap.set("n", "<C-u>", "<C-u>zz")
-keymap.set("n", "n", "nzzzv")
-keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
-keymap.set("n", "x", '"_x')
-keymap.set("n", "<leader>h", ':nohlsearch<CR>', { desc = "Remove search highlight", silent = true })
+vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
+vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
+vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
+vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
+-- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
+-- or just use <C-\><C-n> to exit terminal mode
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
--- Increment/decrement
-keymap.set("n", "+", "<C-a>", { silent = true })
-keymap.set("n", "-", "<C-x>", { silent = true })
+-- Disable arrow keys in normal mode :)
+vim.keymap.set("n", "<left>", "")
+vim.keymap.set("n", "<right>", "")
+vim.keymap.set("n", "<up>", "")
+vim.keymap.set("n", "<down>", "")
 
---move select
-keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
-keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
+vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
+vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
+vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
+vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
---golang keys
-keymap.set("n", "<leader>Gf", ":GoFillStruct<cr>", { desc = "Go Fill Struct", silent = true })
-keymap.set("n", "<leader>Gt", ":GoAddTag", { desc = "Go Add Tags" })
-keymap.set("n", "<leader>Gc", ":GoClearTag<cr>", { desc = "Go Clear Tag", silent = true })
-keymap.set("n", "<leader>Gr", ":GoRename<cr>", { desc = "Go Rename" })
-keymap.set("n", "<leader>GK", ":GoDoc<cr>", { desc = "Go Doc", silent = true })
-keymap.set("n", "<leader>Gi", ":GoImpl<cr>", { desc = "Go Implementation", silent = true })
-keymap.set("n", "<leader>Gg", ":GoGenReturn<cr>", { desc = "Generate Return Values", silent = true })
-keymap.set("n", "<leader>Gd", ":GoCodeLenAct<cr>", { desc = "Generate Annotation Details", silent = true })
-keymap.set("n", "<leader>Ga", ":GoCodeAction<cr>", { desc = "Go Code Action", silent = true })
-
---vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-keymap.set("n", "<leader>v", ":vsplit<CR>", { silent = true, desc = "Vertical Split" })
-keymap.set("n", "<leader>s", ":split<CR>", { silent = true, desc = "Horizontal Split" })
+vim.api.nvim_create_autocmd("TextYankPost", {
+	desc = "Highlight when yanking (copying) text",
+	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+})

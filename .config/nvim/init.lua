@@ -1,19 +1,23 @@
-require("core.base")
-require("core.lazy")
-require("core.highlights")
+require("core.settings")
 require("core.keymaps")
 
-local has = vim.fn.has
-local is_mac = has("macunix")
-local is_win = has("win32")
-local is_wsl = has("wsl")
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable",
+		lazypath,
+	})
+end
+vim.opt.rtp:prepend(lazypath)
 
-if is_mac then
-	require("core.macos")
-end
-if is_win then
-	require("core.windows")
-end
-if is_wsl then
-	require("core.wsl")
-end
+require("lazy").setup("plugins", {
+	spec = {},
+	change_detection = {
+		enabled = false,
+		notify = false,
+	},
+})

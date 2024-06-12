@@ -1,32 +1,26 @@
 return {
 	{ "nvim-treesitter/playground", cmd = "TSPlaygroundToggle" },
-
 	{
 		"nvim-treesitter/nvim-treesitter",
 		opts = {
 			ensure_installed = {
-				"astro",
-				"cmake",
-				"cpp",
-				"css",
-				"fish",
-				"gitignore",
-				"go",
-				"graphql",
-				"http",
-				"java",
-				"php",
+				"help",
+				"lua",
 				"rust",
-				"scss",
 				"sql",
-				"svelte",
+				"javascript",
+				"typescript",
+				"scss",
 			},
 
-			-- matchup = {
-			-- 	enable = true,
-			-- },
+			sync_install = false,
+			auto_install = true,
 
-			-- https://github.com/nvim-treesitter/playground#query-linter
+			highlight = {
+				enable = true,
+				additional_vim_regex_highlighting = false,
+			},
+
 			query_linter = {
 				enable = true,
 				use_virtual_text = true,
@@ -52,16 +46,5 @@ return {
 				},
 			},
 		},
-		config = function(_, opts)
-			require("nvim-treesitter.configs").setup(opts)
-
-			-- MDX
-			vim.filetype.add({
-				extension = {
-					mdx = "mdx",
-				},
-			})
-			vim.treesitter.language.register("markdown", "mdx")
-		end,
-	},
+	}
 }
