@@ -49,19 +49,6 @@
   "liveServer.settings.donotShowInfoMsg": true,
   "codeium.enableCodeLens": false,
   "codeium.enableSearch": true,
-  "[lua]": { "editor.defaultFormatter": "sumneko.lua" },
   "typescript.suggest.paths": false,
-  "javascript.suggest.paths": false,
-
-  // Vim settings
-  "editor.cursorSurroundingLines": 10,
-  "vim.highlightedyank.enable": true,
-  "vim.smartRelativeLine": true,
-  "vim.surround": true,
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "j"],
-      "after": ["<esc>"]
-    }
-  ]
+  "javascript.suggest.paths": false
 }

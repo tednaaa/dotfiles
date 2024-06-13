@@ -4,7 +4,8 @@ position = { x = 450, y = 300 }
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
-size = 15
+size = 14
+offset.y = 4
 
 [cursor]
 vi_mode_style = "None"

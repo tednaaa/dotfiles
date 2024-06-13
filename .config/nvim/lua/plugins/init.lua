@@ -1,16 +1,16 @@
 return {
-	{
-		"folke/tokyonight.nvim",
-		priority = 1000,
-		init = function()
-			vim.cmd.colorscheme("tokyonight-night")
-			vim.cmd.hi("Comment gui=none")
-		end,
-	},
 	{ "tpope/vim-sleuth" },
 	{ "wakatime/vim-wakatime" },
-	{ "numToStr/Comment.nvim",               opts = {}, lazy = false },
+	{ "numToStr/Comment.nvim", opts = {}, lazy = false },
 	{ "lukas-reineke/indent-blankline.nvim", opts = {}, main = "ibl" },
+	{ "windwp/nvim-ts-autotag" },
+	{
+		"rebelot/kanagawa.nvim",
+		priority = 1000,
+		init = function()
+			vim.cmd.colorscheme("kanagawa")
+		end,
+	},
 	{
 		"folke/todo-comments.nvim",
 		event = "VimEnter",
