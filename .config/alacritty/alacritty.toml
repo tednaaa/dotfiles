@@ -1,0 +1,10 @@
+[window]
+dimensions = { columns = 120, lines = 35 }
+position = { x = 450, y = 300 }
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+size = 15
+
+[cursor]
+vi_mode_style = "None"

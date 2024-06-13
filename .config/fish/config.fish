@@ -4,5 +4,3 @@ end
 
 starship init fish | source
 source ~/.asdf/asdf.fish
-
-set -x PATH $PATH /Applications/WezTerm.app/Contents/MacOS

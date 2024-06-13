@@ -20,7 +20,7 @@ echo $(which fish) | sudo tee -a /etc/shells
 chsh -s $(which fish)
 ```
 
-> Wezterm terminal emulator - https://wezfurlong.org/wezterm
+> Alacritty terminal emulator - https://alacritty.org
 
 > Starship prompt - https://starship.rs
 
