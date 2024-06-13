@@ -1,8 +1,11 @@
-- `<leader>sh` - Search help
+- `<leader>sh` - Search global help
 - `<leader>sk` - Search keymaps
-- `?` - Show neotree keymaps
+- `?` - Show help for current buffer
 
-- `<C-hjkl>` - Use ctrl + hjkl keys to move focus to the window
+- `<leader>gg` - Open neogit
+- `<leader>b` - Open neotree
+
+- `<C-hjkl>` - Use ctrl + hjkl keys to move focus to the buffer
 
 - `<C-o>` - Exit insert mode for exactly one move
 
