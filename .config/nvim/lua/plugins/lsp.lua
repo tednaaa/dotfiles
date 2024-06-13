@@ -84,6 +84,7 @@ return {
 			vim.list_extend(ensure_installed, {
 				"stylua",
 				"astro-language-server",
+				"golangci_lint_ls",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
@@ -97,10 +98,5 @@ return {
 				},
 			})
 		end,
-	},
-	{
-		"pmizio/typescript-tools.nvim",
-		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-		opts = {},
 	},
 }
