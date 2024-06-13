@@ -1,6 +1,6 @@
 [window]
-dimensions = { columns = 120, lines = 35 }
-position = { x = 450, y = 300 }
+dimensions = { columns = 130, lines = 30 }
+position = { x = 500, y = 350 }
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
