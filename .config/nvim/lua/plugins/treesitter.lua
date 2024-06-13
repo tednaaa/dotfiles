@@ -7,6 +7,7 @@ return {
 				"help",
 				"lua",
 				"rust",
+				"astro",
 				"sql",
 				"javascript",
 				"typescript",
@@ -46,5 +47,5 @@ return {
 				},
 			},
 		},
-	}
+	},
 }
