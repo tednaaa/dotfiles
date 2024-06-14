@@ -25,7 +25,10 @@
 `gr` - Goto references
 `gI` - Goto implementation
 
-`<C-q>` - after `gd` send to list everything
+`[d` - Go to previous diagnostic message
+`]d` - Go to next diagnostic message
+`<leader>e` - Show diagnostic error messages
+`<leader>q` - Open diagnostic quickfix list
 
 `<leader>rn` - Rename the variable under your cursor
 `<leader>ca` - Execute a code action under your cursor
