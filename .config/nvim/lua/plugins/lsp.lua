@@ -57,7 +57,7 @@ return {
 					if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
 						map("<leader>th", function()
 							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
-						end, "[T]oggle Inlay [H]ints")
+						end, "Toggle Inlay Hints")
 					end
 				end,
 			})
@@ -74,6 +74,15 @@ return {
 						},
 					},
 				},
+				eslint = {
+					on_attach = function(_, bufnr)
+						vim.api.nvim_create_autocmd("BufWritePre", {
+							buffer = bufnr,
+							command = "EslintFixAll",
+						})
+					end,
+				},
+				volar = { filetypes = { "javascript", "typescript", "vue" } },
 			}
 
 			require("mason").setup()
@@ -87,7 +96,6 @@ return {
 				"html",
 				"cssls",
 				"tsserver",
-				"volar",
 				"emmet-language-server",
 				"tailwindcss-language-server",
 				"astro-language-server",
@@ -102,10 +110,6 @@ return {
 						require("lspconfig")[server_name].setup(server)
 					end,
 				},
-			})
-
-			require("lspconfig").volar.setup({
-				filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
 			})
 		end,
 	},
