@@ -10,7 +10,6 @@ return {
 		{ "L3MON4D3/LuaSnip" },
 		{ "rafamadriz/friendly-snippets" },
 		{ "onsails/lspkind-nvim" },
-		{ "windwp/nvim-autopairs", event = "InsertEnter", config = true },
 		{
 			"Exafunction/codeium.nvim",
 			cmd = "Codeium",

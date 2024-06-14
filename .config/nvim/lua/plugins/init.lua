@@ -3,7 +3,6 @@ return {
 	{ "wakatime/vim-wakatime" },
 	{ "numToStr/Comment.nvim", opts = {}, lazy = false },
 	{ "lukas-reineke/indent-blankline.nvim", opts = {}, main = "ibl" },
-	{ "windwp/nvim-ts-autotag" },
 	{
 		"rebelot/kanagawa.nvim",
 		priority = 1000,

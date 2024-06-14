@@ -3,8 +3,8 @@ return {
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			{ "williamboman/mason.nvim", config = true },
-			"williamboman/mason-lspconfig.nvim",
-			"WhoIsSethDaniel/mason-tool-installer.nvim",
+			{ "williamboman/mason-lspconfig.nvim" },
+			{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
 			{ "j-hui/fidget.nvim", opts = {} },
 			{ "folke/neodev.nvim", opts = {} },
 		},
@@ -65,8 +65,6 @@ return {
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 			local servers = {
-				rust_analyzer = {},
-				gopls = {},
 				lua_ls = {
 					settings = {
 						Lua = {
@@ -83,8 +81,16 @@ return {
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
 				"stylua",
-				"astro-language-server",
+				"rust_analyzer",
+				"gopls",
 				"golangci_lint_ls",
+				"html",
+				"cssls",
+				"tsserver",
+				"volar",
+				"emmet-language-server",
+				"tailwindcss-language-server",
+				"astro-language-server",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
@@ -96,6 +102,10 @@ return {
 						require("lspconfig")[server_name].setup(server)
 					end,
 				},
+			})
+
+			require("lspconfig").volar.setup({
+				filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
 			})
 		end,
 	},
