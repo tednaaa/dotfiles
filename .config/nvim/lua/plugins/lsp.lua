@@ -98,6 +98,7 @@ return {
 				"tsserver",
 				"emmet-language-server",
 				"tailwindcss-language-server",
+				"svelte-language-server",
 				"astro-language-server",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
