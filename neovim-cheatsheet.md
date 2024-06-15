@@ -5,15 +5,15 @@
 `<leader>sk` - Search keymaps
 `?` - Show help for current buffer
 
-`<leader>gg` - Open neogit
-`<leader>b` - Open neotree
+`<leader>gg` - Open fugitive
 
 `<C-o>` - Exit insert mode for exactly one move
 `<C-hjkl>` - Use ctrl + hjkl keys to move focus to the buffer
 
-`hciw` - Delete inside quote and toggle to insert mode
+`<C-a>` - Increment number
+`<C-x>` - Decrement number
 
-`yinq` - Yank inside next quote
+`ciw` - Delete inside quote and toggle to insert mode
 
 `va(` - Visually select around `(` symbol
 `dt(` - Delete everything till `(` symbol
@@ -27,8 +27,6 @@
 
 `[d` - Go to previous diagnostic message
 `]d` - Go to next diagnostic message
-`<leader>e` - Show diagnostic error messages
-`<leader>q` - Open diagnostic quickfix list
 
 `<leader>rn` - Rename the variable under your cursor
 `<leader>ca` - Execute a code action under your cursor

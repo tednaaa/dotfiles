@@ -1,22 +1,15 @@
 return {
-	{ "tpope/vim-sleuth" },
 	{ "wakatime/vim-wakatime" },
 	{ "numToStr/Comment.nvim", opts = {}, lazy = false },
 	{ "lukas-reineke/indent-blankline.nvim", opts = {}, main = "ibl" },
 	{
-		"rebelot/kanagawa.nvim",
-		priority = 1000,
-		init = function()
-			vim.cmd.colorscheme("kanagawa")
-		end,
-	},
-	{
-		"folke/todo-comments.nvim",
-		event = "VimEnter",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		opts = { signs = false },
-	},
-	{
+		{
+			"rebelot/kanagawa.nvim",
+			priority = 1000,
+			init = function()
+				vim.cmd.colorscheme("kanagawa")
+			end,
+		},
 		"echasnovski/mini.nvim",
 		config = function()
 			require("mini.ai").setup({ n_lines = 500 })
