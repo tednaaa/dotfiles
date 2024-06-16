@@ -9,7 +9,7 @@ return {
 			vim.g.loaded_netrwPlugin = 1
 
 			nvimtree.setup({
-				view = { side = "left", width = 50 },
+				view = { side = "left", width = 40 },
 				update_focused_file = { enable = true, update_cwd = false },
 
 				renderer = {

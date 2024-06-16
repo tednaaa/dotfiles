@@ -13,7 +13,7 @@ vim.opt.wrap = false
 
 vim.opt.showmode = false
 
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard:append { 'unnamed', 'unnamedplus' }
 
 vim.opt.breakindent = true
 

@@ -1,1 +1,0 @@
-/Users/tedna/.asdf/completions/asdf.fish

@@ -4,7 +4,7 @@ position = { x = 500, y = 350 }
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
-size = 14
+size = 12
 offset.y = 4
 
 [cursor]
