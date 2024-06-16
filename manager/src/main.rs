@@ -5,8 +5,6 @@ fn main() -> Result<(), std::io::Error> {
 	if let Some(home) = dirs::home_dir() {
 		let dotfiles_dir = home.join("dotfiles");
 
-		let foo = String::from("Hello World!");
-
 		let dotfiles_map = [
 			("nvim", ".config/nvim"),
 			("alacritty", ".config/alacritty"),

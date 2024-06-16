@@ -18,7 +18,7 @@ return {
 
 					root_folder_label = false,
 
-					icons = { webdev_colors = false, show = { folder_arrow = false, git = false } },
+					icons = { show = { folder_arrow = false, git = false } },
 					indent_markers = { enable = true },
 				},
 			})
