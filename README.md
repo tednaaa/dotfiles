@@ -6,12 +6,6 @@
 
 > Fish shell - https://fishshell.com
 
-```
-# Set as default shell
-echo $(which fish) | sudo tee -a /etc/shells
-chsh -s $(which fish)
-```
-
 > Alacritty terminal emulator - https://alacritty.org
 
 > Starship prompt - https://starship.rs
