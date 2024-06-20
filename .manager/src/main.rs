@@ -8,12 +8,19 @@ fn main() -> Result<(), std::io::Error> {
 		let dotfiles_map = [
 			("nvim", ".config/nvim"),
 			("alacritty", ".config/alacritty"),
+			(".tmux.conf", ".tmux.conf"),
 			("zed/settings.json", ".config/zed/settings.json"),
-			("vscode/settings.json", ".config/VSCodium/User/settings.json"),
-			("vscode/keybindings.json", ".config/VSCodium/User/keybindings.json"),
+			(
+				"vscode/settings.json",
+				"Library/Application Support/Code/User/settings.json",
+			),
+			(
+				"vscode/keybindings.json",
+				"Library/Application Support/Code/User/keybindings.json",
+			),
 			(
 				"vscode/snippets.json",
-				".config/VSCodium/User/snippets/main.code-snippets",
+				"Library/Application Support/Code/User/snippets/main.code-snippets",
 			),
 			("config.fish", ".config/fish/config.fish"),
 			(".gitconfig", ".gitconfig"),

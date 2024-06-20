@@ -1,4 +1,14 @@
-#### Inside command mode `/`
+## Setup
+
+> Brew
+
+> Alacritty + Fish + Tmux + Starship
+
+> asdf
+
+### Neovim Helper
+
+> Inside command mode `/`
 
 ```
 `<leader>sh` - Search global help
@@ -45,7 +55,7 @@
 `gb[count]{motion}` - (Op-pending) Toggles the region using blockwise comment
 ```
 
-#### Inside command mode `/`
+> Inside command mode `/`
 
 ```
 `%s/text/new_text - change text in buffer to new
