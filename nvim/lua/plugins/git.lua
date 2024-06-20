@@ -1,5 +1,16 @@
+vim.keymap.set("n", "<leader>gg", "<cmd>Neogit<CR>", { desc = "Open neogit" })
+
 return {
-	{ "tpope/vim-fugitive" },
+	{
+		"NeogitOrg/neogit",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"sindrets/diffview.nvim",
+			"nvim-telescope/telescope.nvim",
+			"ibhagwan/fzf-lua",
+		},
+		config = true
+	},
 	{
 		"lewis6991/gitsigns.nvim",
 		opts = {
@@ -11,5 +22,9 @@ return {
 				changedelete = { text = "~" },
 			},
 		},
+		config = function()
+			require('gitsigns').setup()
+			require("scrollbar.handlers.gitsigns").setup()
+		end
 	},
 }

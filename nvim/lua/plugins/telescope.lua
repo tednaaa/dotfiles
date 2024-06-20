@@ -15,6 +15,15 @@ return {
 					path_display = { "smart" },
 				},
 				pickers = {
+					buffers = {
+						show_all_buffers = true,
+						sort_mru = true,
+						mappings = {
+							i = {
+								["<c-d>"] = "delete_buffer",
+							},
+						},
+					},
 					find_files = {
 						hidden = true,
 					},
@@ -32,8 +41,8 @@ return {
 				},
 			})
 
-			pcall(require("telescope").load_extension, "fzf")
-			pcall(require("telescope").load_extension, "ui-select")
+			require("telescope").load_extension("fzf")
+			require("telescope").load_extension("ui-select")
 
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<leader>h", builtin.help_tags, { desc = "Search Help" })
@@ -43,10 +52,6 @@ return {
 			vim.keymap.set("n", "<leader>pr", builtin.oldfiles, { desc = "Find recent files" })
 			vim.keymap.set("n", "<leader>g/", builtin.live_grep, { desc = "Find string in project" })
 			vim.keymap.set("n", "<leader>pc", builtin.grep_string, { desc = "Find string under cursor in project" })
-
-			vim.keymap.set("n", "<leader>sn", function()
-				builtin.find_files({ cwd = vim.fn.stdpath("config") })
-			end, { desc = "Search Neovim files" })
 		end,
 	},
 }
