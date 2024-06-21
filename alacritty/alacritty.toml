@@ -1,8 +1,13 @@
 [window]
 dimensions = { columns = 140, lines = 35 }
 position = { x = 300, y = 220 }
+dynamic_padding = true
+startup_mode = "Maximized"
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
 size = 15
+
+[cursor]
+vi_mode_style = "None"
 
