@@ -56,5 +56,5 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "workbench.colorTheme": "Darcula Theme from IntelliJ"
+  "workbench.colorTheme": "Atom One Dark"
 }
