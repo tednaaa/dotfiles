@@ -2,10 +2,10 @@ return {
 	{ "wakatime/vim-wakatime" },
 	{ "numToStr/Comment.nvim", opts = {}, lazy = false },
 	{
-		"rebelot/kanagawa.nvim",
-		priority = 1000,
-		init = function()
-			vim.cmd.colorscheme("kanagawa")
+		"navarasu/onedark.nvim",
+		config = function()
+			require("onedark").setup({ style = "darker" })
+			require("onedark").load()
 		end,
 	},
 	{
