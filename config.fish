@@ -7,3 +7,5 @@ fzf --fish | source
 
 source ~/.asdf/asdf.fish
 source "$HOME/.cargo/env.fish"
+
+set -gx TERM screen-256color

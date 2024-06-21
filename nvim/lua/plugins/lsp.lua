@@ -28,6 +28,7 @@ return {
 				"tailwindcss",
 				"html",
 				"cssls",
+				"volar",
 			},
 			automatic_installation = true,
 		})
@@ -78,6 +79,25 @@ return {
 					capabilities = capabilities,
 				})
 			end,
+			["tsserver"] = function()
+				lspconfig["tsserver"].setup({
+					capabilities = capabilities,
+					init_options = {
+						plugins = {
+							{
+								name = "@vue/typescript-plugin",
+								location = "/opt/homebrew/lib/node_modules/@vue/typescript-plugin",
+								languages = { "javascript", "typescript", "vue" },
+							},
+						},
+					},
+					filetypes = {
+						"javascript",
+						"typescript",
+						"vue",
+					},
+				})
+			end,
 			["svelte"] = function()
 				lspconfig["svelte"].setup({
 					capabilities = capabilities,
@@ -89,6 +109,12 @@ return {
 							end,
 						})
 					end,
+				})
+			end,
+			["volar"] = function()
+				lspconfig["volar"].setup({
+					capabilities = capabilities,
+					filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
 				})
 			end,
 			["emmet_ls"] = function()

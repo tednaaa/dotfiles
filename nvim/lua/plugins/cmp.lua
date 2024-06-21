@@ -54,7 +54,7 @@ return {
 				formatting = {
 					format = lspkind.cmp_format({
 						mode = "symbol",
-						maxwidth = 20,
+						maxwidth = 15,
 						ellipsis_char = "...",
 						show_labelDetails = true,
 						symbol_map = { Codeium = "" },
