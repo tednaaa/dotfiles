@@ -1,115 +1,108 @@
 return {
-	"VonHeikemen/lsp-zero.nvim",
+	"neovim/nvim-lspconfig",
 	dependencies = {
-		-- LSP Support
-		{ "neovim/nvim-lspconfig" },
+		{ "hrsh7th/cmp-nvim-lsp" },
+		{ "antosha417/nvim-lsp-file-operations", config = true },
+		{ "folke/neodev.nvim", opts = {} },
 		{ "williamboman/mason.nvim" },
 		{ "williamboman/mason-lspconfig.nvim" },
-		{ "j-hui/fidget.nvim",                opts = {} },
-		{ "onsails/lspkind.nvim" },
-
-		-- Autocompletion
-		{ "hrsh7th/nvim-cmp" },
-		{ "hrsh7th/cmp-buffer" },
-		{ "hrsh7th/cmp-path" },
-		{ "hrsh7th/cmp-cmdline" },
-		{ "saadparwaiz1/cmp_luasnip" },
-		{ "hrsh7th/cmp-nvim-lsp" },
-		{ "hrsh7th/cmp-nvim-lua" },
-		{
-			"Exafunction/codeium.nvim",
-			config = function()
-				require("codeium").setup({})
-			end
-		},
-
-		-- Snippets
-		{ "rafamadriz/friendly-snippets" },
-		{ "L3MON4D3/LuaSnip",            version = "v2.*", build = "make install_jsregexp" },
+		{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
+		{ "j-hui/fidget.nvim", opts = {} },
 	},
-
 	config = function()
-		local lsp = require('lsp-zero')
-		lsp.extend_lspconfig()
+		local mason = require("mason")
+		local mason_lspconfig = require("mason-lspconfig")
+		local mason_tool_installer = require("mason-tool-installer")
+		local lspconfig = require("lspconfig")
+		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
-		lsp.on_attach(function(_, bufnr)
-			lsp.default_keymaps({ buffer = bufnr, remap = false })
-		end)
-
-		lsp.preset("recommended")
-
-		require("mason").setup()
-		require("mason-lspconfig").setup({
+		mason.setup()
+		mason_lspconfig.setup({
 			ensure_installed = {
 				"lua_ls",
 				"rust_analyzer",
+				"gopls",
+				"golangci_lint_ls",
 				"tsserver",
+				"emmet_ls",
+				"tailwindcss",
+				"html",
+				"cssls",
 			},
-			handlers = {
-				function(server_name)
-					require("lspconfig")[server_name].setup({})
-				end,
+			automatic_installation = true,
+		})
 
-				["lua_ls"] = function()
-					local lspconfig = require("lspconfig")
-					lspconfig.lua_ls.setup {
-						settings = {
-							Lua = {
-								diagnostics = {
-									globals = { "vim" }
-								}
-							}
-						}
-					}
-				end,
-
+		mason_tool_installer.setup({
+			ensure_installed = {
+				"stylua",
+				"prettier",
+				"eslint_d",
 			},
 		})
-		local cmp = require 'cmp'
 
-		cmp.setup({
-			snippet = {
-				expand = function(args)
-					require('luasnip').lsp_expand(args.body)
-					vim.snippet.expand(args.body)
-				end,
-			},
-			mapping = cmp.mapping.preset.insert({
-				["<C-b>"] = cmp.mapping.scroll_docs(-4),
-				["<C-f>"] = cmp.mapping.scroll_docs(4),
-				["<C-Space>"] = cmp.mapping.complete({}),
-				["<Tab>"] = cmp.mapping.select_next_item(),
-				["<S-Tab>"] = cmp.mapping.select_prev_item(),
-				["<CR>"] = cmp.mapping.confirm({ select = true }),
-				["<S-CR>"] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
-				["<C-CR>"] = function(fallback)
-					cmp.abort()
-					fallback()
-				end
-			}),
-			sources = cmp.config.sources({
-				{ name = 'nvim_lsp' },
-				{ name = 'vsnip' },
-				{ name = 'luasnip' },
-				{ name = 'buffer' },
-				{ name = "codeium" },
-			}),
-			formatting = {
-				format = require('lspkind').cmp_format({
-					mode = 'symbol',
-					maxwidth = 50,
-					ellipsis_char = '...',
-					show_labelDetails = true,
-					symbol_map = { Codeium = "" },
+		vim.api.nvim_create_autocmd("LspAttach", {
+			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+			callback = function(event)
+				local opts = { buffer = event.buf, silent = true }
 
-					before = function(_, vim_item)
-						return vim_item
-					end
+				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+				vim.keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
+				vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
+				vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts)
+				vim.keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
+
+				vim.keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
+				vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
+				vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
+				vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+
+				vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
+				vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+				vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+
+				vim.keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
+			end,
+		})
+
+		local capabilities = cmp_nvim_lsp.default_capabilities()
+
+		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+		for type, icon in pairs(signs) do
+			local hl = "DiagnosticSign" .. type
+			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+		end
+
+		mason_lspconfig.setup_handlers({
+			function(server_name)
+				lspconfig[server_name].setup({
+					capabilities = capabilities,
 				})
-			}
+			end,
+			["svelte"] = function()
+				lspconfig["svelte"].setup({
+					capabilities = capabilities,
+					on_attach = function(client, _)
+						vim.api.nvim_create_autocmd("BufWritePost", {
+							pattern = { "*.js", "*.ts" },
+							callback = function(ctx)
+								client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
+							end,
+						})
+					end,
+				})
+			end,
+			["emmet_ls"] = function()
+				lspconfig["emmet_ls"].setup({
+					capabilities = capabilities,
+					filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "svelte" },
+				})
+			end,
+			["lua_ls"] = function()
+				lspconfig["lua_ls"].setup({
+					capabilities = capabilities,
+					settings = { Lua = { diagnostics = { globals = { "vim" } }, completion = { callSnippet = "Replace" } } },
+				})
+			end,
 		})
-
-		local capabilities = require('cmp_nvim_lsp').default_capabilities()
-		require('lspconfig')['rust_analyzer'].setup({ capabilities = capabilities })
 	end,
 }

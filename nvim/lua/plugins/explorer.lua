@@ -9,11 +9,21 @@ return {
 			"MunifTanjim/nui.nvim",
 		},
 		keys = {
-			{ "<leader>e", "<cmd>Neotree toggle<cr>", desc = "NeoTree" },
+			{ "<leader>e", "<cmd>Neotree toggle<cr>" },
 		},
 		config = function()
 			require("neo-tree").setup({
 				close_if_last_window = true,
+				source_selector = {
+					winbar = false,
+					statusline = false,
+					show_scrolled_off_parent_node = false,
+					sources = {
+						{ source = "filesystem" },
+						{ source = "buffers" },
+						{ source = "git_status" },
+					},
+				},
 				filesystem = {
 					filtered_items = {
 						hide_dotfiles = false,
@@ -22,8 +32,8 @@ return {
 					},
 					follow_current_file = {
 						enabled = true,
-					}
-				}
+					},
+				},
 			})
 
 			vim.cmd([[Neotree]])
@@ -31,10 +41,10 @@ return {
 	},
 	{
 		"nvim-lualine/lualine.nvim",
-		dependencies = { 'nvim-tree/nvim-web-devicons' },
+		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
-			require('lualine').setup()
-		end
+			require("lualine").setup({})
+		end,
 	},
 	{
 		"mbbill/undotree",
@@ -101,7 +111,7 @@ return {
 		"petertriho/nvim-scrollbar",
 		config = function()
 			require("scrollbar").setup()
-		end
+		end,
 	},
 	{
 		"christoomey/vim-tmux-navigator",
@@ -113,11 +123,11 @@ return {
 			"TmuxNavigatePrevious",
 		},
 		keys = {
-			{ "<c-h>",  "<cmd><C-U>TmuxNavigateLeft<cr>" },
-			{ "<c-j>",  "<cmd><C-U>TmuxNavigateDown<cr>" },
-			{ "<c-k>",  "<cmd><C-U>TmuxNavigateUp<cr>" },
-			{ "<c-l>",  "<cmd><C-U>TmuxNavigateRight<cr>" },
+			{ "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+			{ "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+			{ "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+			{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
 			{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
-		}
+		},
 	},
 }
