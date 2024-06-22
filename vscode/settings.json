@@ -1,5 +1,6 @@
 {
   "editor.wordSeparators": "`~!@#$%^&*()-_=+[{]}\\|;:'\",.<>/?",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.acceptSuggestionOnCommitCharacter": true,
   "editor.unicodeHighlight.includeStrings": false,
   "editor.inlayHints.enabled": "offUnlessPressed",
@@ -15,13 +16,17 @@
   "editor.linkedEditing": true,
   "editor.formatOnSave": true,
   "editor.hover.delay": 500,
-  "editor.lineHeight": 22,
-  "editor.fontSize": 11,
+  "editor.lineHeight": 18,
+  "editor.fontSize": 12,
   "editor.tabSize": 2,
+
+  "workbench.colorTheme": "Atom One Dark",
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.activityBar.location": "hidden",
   "workbench.editor.tabSizing": "shrink",
   "workbench.startupEditor": "none",
   "workbench.editor.revealIfOpen": false,
+  "workbench.statusBar.visible": false,
 
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
@@ -29,7 +34,6 @@
 
   "explorer.confirmDragAndDrop": false,
   "explorer.compactFolders": false,
-  "explorer.confirmDelete": false,
 
   "window.titleBarStyle": "custom",
   "window.zoomLevel": 1,
@@ -37,24 +41,22 @@
   "terminal.integrated.fontSize": 12,
 
   "extensions.ignoreRecommendations": true,
-  "rust-analyzer.check.command": "clippy",
-  "rust-analyzer.checkOnSave": true,
-  "emmet.preferences": { "output.reverseAttributes": true },
-  "scm.defaultViewMode": "tree",
-  "diffEditor.renderSideBySide": false,
-  "go.toolsManagement.autoUpdate": true,
   "liveServer.settings.donotShowInfoMsg": true,
-  "codeium.enableCodeLens": false,
-  "codeium.enableSearch": true,
   "typescript.suggest.paths": false,
   "javascript.suggest.paths": false,
+  "emmet.preferences": { "output.reverseAttributes": true },
 
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "scm.defaultViewMode": "tree",
+  "diffEditor.renderSideBySide": false,
+
+  "go.toolsManagement.autoUpdate": true,
+
+  "codeium.enableCodeLens": false,
+  "codeium.enableSearch": true,
+
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.checkOnSave": true,
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
-  },
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  },
-  "workbench.colorTheme": "Atom One Dark"
+  }
 }
