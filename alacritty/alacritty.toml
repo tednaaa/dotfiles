@@ -1,3 +1,7 @@
+[shell]
+program = "/opt/homebrew/bin/tmux"
+args = ["new-session", "-A", "-s", "main"]
+
 [window]
 dimensions = { columns = 140, lines = 35 }
 position = { x = 300, y = 220 }
@@ -10,4 +14,3 @@ size = 15
 
 [cursor]
 vi_mode_style = "None"
-
