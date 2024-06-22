@@ -10,6 +10,7 @@ fn main() -> Result<(), std::io::Error> {
 			("alacritty", ".config/alacritty"),
 			(".tmux.conf", ".tmux.conf"),
 			("zed/settings.json", ".config/zed/settings.json"),
+			("zed/keymap.json", ".config/zed/keymap.json"),
 			(
 				"vscode/settings.json",
 				"Library/Application Support/Code/User/settings.json",

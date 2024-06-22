@@ -58,7 +58,7 @@
 > Inside command mode `/`
 
 ```
-`%s/text/new_text - change text in buffer to new
+`%s/old_text/new_text - change in current buffer all matching words to new
 ```
 
 > Autotag usage
@@ -70,4 +70,3 @@ Before        Input         After
 <div></div>    ciwspan<esc>   <span></span>
 --------------------------------------------
 ```
-
