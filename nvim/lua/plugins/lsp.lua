@@ -3,19 +3,19 @@ return {
 	dependencies = {
 		{ "hrsh7th/cmp-nvim-lsp" },
 		{ "antosha417/nvim-lsp-file-operations", config = true },
-		{ "folke/neodev.nvim", opts = {} },
+		{ "folke/neodev.nvim",                   opts = {} },
 		{ "williamboman/mason.nvim" },
 		{ "williamboman/mason-lspconfig.nvim" },
-		{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
-		{ "j-hui/fidget.nvim", opts = {} },
+		{ "j-hui/fidget.nvim",                   opts = {} },
 	},
 	config = function()
 		local mason = require("mason")
 		local mason_lspconfig = require("mason-lspconfig")
-		local mason_tool_installer = require("mason-tool-installer")
 		local lspconfig = require("lspconfig")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
+		-- Install manually using :MasonInstall {name}
+		-- stylua, prettierd, eslintd
 		mason.setup()
 		mason_lspconfig.setup({
 			ensure_installed = {
@@ -24,21 +24,13 @@ return {
 				"gopls",
 				"golangci_lint_ls",
 				"tsserver",
-				"emmet_ls",
-				"tailwindcss",
+				"volar",
 				"html",
 				"cssls",
-				"volar",
+				"emmet_ls",
+				"tailwindcss",
 			},
 			automatic_installation = true,
-		})
-
-		mason_tool_installer.setup({
-			ensure_installed = {
-				"stylua",
-				"prettier",
-				"eslint_d",
-			},
 		})
 
 		vim.api.nvim_create_autocmd("LspAttach", {
@@ -75,9 +67,7 @@ return {
 
 		mason_lspconfig.setup_handlers({
 			function(server_name)
-				lspconfig[server_name].setup({
-					capabilities = capabilities,
-				})
+				lspconfig[server_name].setup({ capabilities = capabilities })
 			end,
 			["tsserver"] = function()
 				lspconfig["tsserver"].setup({
@@ -86,16 +76,14 @@ return {
 						plugins = {
 							{
 								name = "@vue/typescript-plugin",
-								location = "/opt/homebrew/lib/node_modules/@vue/typescript-plugin",
+								location = "/Users/tedna/.asdf/installs/nodejs/20.15.0/lib/node_modules/@vue/typescript-plugin",
 								languages = { "javascript", "typescript", "vue" },
+								-- location = vim.fn.expand("$HOME")
+								-- 		.. "/.asdf/installs/nodejs/20.15.0/lib/node_modules/@vue/typescript-plugin",
 							},
 						},
 					},
-					filetypes = {
-						"javascript",
-						"typescript",
-						"vue",
-					},
+					filetypes = { "javascript", "typescript", "vue" },
 				})
 			end,
 			["svelte"] = function()

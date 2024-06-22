@@ -9,7 +9,7 @@ return {
 			"nvim-telescope/telescope.nvim",
 			"ibhagwan/fzf-lua",
 		},
-		config = true
+		config = true,
 	},
 	{
 		"lewis6991/gitsigns.nvim",
@@ -23,8 +23,8 @@ return {
 			},
 		},
 		config = function()
-			require('gitsigns').setup()
+			require("gitsigns").setup()
 			require("scrollbar.handlers.gitsigns").setup()
-		end
+		end,
 	},
 }

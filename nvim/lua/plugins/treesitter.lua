@@ -9,6 +9,7 @@ return {
 	config = function()
 		local treesitter = require("nvim-treesitter.configs")
 
+		---@diagnostic disable-next-line: missing-fields
 		treesitter.setup({
 			sync_install = false,
 			auto_install = true,
