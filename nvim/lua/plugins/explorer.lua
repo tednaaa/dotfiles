@@ -15,8 +15,8 @@ return {
 			require("neo-tree").setup({
 				close_if_last_window = true,
 				source_selector = {
-					winbar = false,
-					statusline = false,
+					winbar = true,
+					content_layout = "center",
 					show_scrolled_off_parent_node = false,
 					sources = {
 						{ source = "filesystem" },

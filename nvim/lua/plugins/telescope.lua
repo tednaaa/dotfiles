@@ -10,7 +10,8 @@ return {
 			{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
 		},
 		config = function()
-			require("telescope").setup({
+			local telescope = require("telescope")
+			telescope.setup({
 				pickers = {
 					find_files = {
 						hidden = true,
@@ -29,8 +30,8 @@ return {
 				},
 			})
 
-			require("telescope").load_extension("fzf")
-			require("telescope").load_extension("ui-select")
+			telescope.load_extension("fzf")
+			telescope.load_extension("ui-select")
 
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<leader>h", builtin.help_tags, { desc = "Search Help" })
