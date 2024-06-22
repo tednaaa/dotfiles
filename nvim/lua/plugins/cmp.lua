@@ -1,11 +1,5 @@
 return {
 	{
-		"Exafunction/codeium.nvim",
-		cmd = "Codeium",
-		build = ":Codeium Auth",
-		opts = {},
-	},
-	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
 			{ "hrsh7th/cmp-buffer" },
@@ -15,6 +9,7 @@ return {
 			{ "hrsh7th/cmp-nvim-lua" },
 			{ "onsails/lspkind.nvim" },
 
+			{ "Exafunction/codeium.nvim" },
 			{ "saadparwaiz1/cmp_luasnip" },
 			{ "rafamadriz/friendly-snippets" },
 			{ "L3MON4D3/LuaSnip", version = "v2.*", build = "make install_jsregexp" },
@@ -26,6 +21,7 @@ return {
 			local luasnip = require("luasnip")
 			local autopairs = require("nvim-autopairs")
 
+			require("codeium").setup({})
 			require("luasnip.loaders.from_vscode").lazy_load()
 
 			cmp.setup({
