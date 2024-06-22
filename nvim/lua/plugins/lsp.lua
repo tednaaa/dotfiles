@@ -3,10 +3,10 @@ return {
 	dependencies = {
 		{ "hrsh7th/cmp-nvim-lsp" },
 		{ "antosha417/nvim-lsp-file-operations", config = true },
-		{ "folke/neodev.nvim",                   opts = {} },
+		{ "folke/neodev.nvim", opts = {} },
 		{ "williamboman/mason.nvim" },
 		{ "williamboman/mason-lspconfig.nvim" },
-		{ "j-hui/fidget.nvim",                   opts = {} },
+		{ "j-hui/fidget.nvim", opts = {} },
 	},
 	config = function()
 		local mason = require("mason")
@@ -76,10 +76,9 @@ return {
 						plugins = {
 							{
 								name = "@vue/typescript-plugin",
-								location = "/Users/tedna/.asdf/installs/nodejs/20.15.0/lib/node_modules/@vue/typescript-plugin",
+								location = vim.fn.expand("$HOME")
+									.. "/.asdf/installs/nodejs/20.15.0/lib/node_modules/@vue/typescript-plugin",
 								languages = { "javascript", "typescript", "vue" },
-								-- location = vim.fn.expand("$HOME")
-								-- 		.. "/.asdf/installs/nodejs/20.15.0/lib/node_modules/@vue/typescript-plugin",
 							},
 						},
 					},
