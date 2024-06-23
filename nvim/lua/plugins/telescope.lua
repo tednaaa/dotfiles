@@ -15,6 +15,7 @@ return {
 				pickers = {
 					find_files = {
 						hidden = true,
+						previewer = false,
 					},
 					live_grep = {
 						file_ignore_patterns = { "node_modules", ".git" },
@@ -38,7 +39,6 @@ return {
 			vim.keymap.set("n", "<leader>hk", builtin.keymaps, { desc = "Search Keymaps" })
 
 			vim.keymap.set("n", "<leader>p", builtin.find_files, { desc = "Find files in project" })
-			vim.keymap.set("n", "<leader>pr", builtin.oldfiles, { desc = "Find recent files" })
 			vim.keymap.set("n", "<leader>g/", builtin.live_grep, { desc = "Find string in project" })
 			vim.keymap.set("n", "<leader>pc", builtin.grep_string, { desc = "Find string under cursor in project" })
 		end,
