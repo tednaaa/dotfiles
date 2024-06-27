@@ -1,6 +1,6 @@
-[shell]
-program = "/opt/homebrew/bin/tmux"
-args = ["new-session", "-A", "-s", "main"]
+# [shell]
+# program = "/opt/homebrew/bin/tmux"
+# args = ["new-session", "-A", "-s", "main"]
 
 [env]
 TERM = "xterm-256color"
