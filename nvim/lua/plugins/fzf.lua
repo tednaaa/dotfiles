@@ -15,6 +15,8 @@ return {
 			vim.keymap.set("n", "<leader>g/", fzf.live_grep, { desc = "live grep" })
 			vim.keymap.set("n", "<leader>/", fzf.lgrep_curbuf, { desc = "live grep current buffer" })
 
+			vim.keymap.set("n", "<leader>cw", fzf.grep_cWORD, { desc = "global search for word under cursor" })
+
 			vim.keymap.set("n", "<leader>df", function()
 				fzf.files({ cwd = "~/dotfiles" })
 			end, { desc = "open dotfiles" })

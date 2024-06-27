@@ -40,7 +40,7 @@ return {
 				local fzf = require("fzf-lua")
 
 				vim.keymap.set("n", "gD", fzf.lsp_declarations, opts)
-				vim.keymap.set("n", "gR", fzf.lsp_references, opts)
+				vim.keymap.set("n", "gr", fzf.lsp_references, opts)
 				vim.keymap.set("n", "gd", fzf.lsp_definitions, opts)
 				vim.keymap.set("n", "gi", fzf.lsp_implementations, opts)
 				vim.keymap.set("n", "gt", fzf.lsp_typedefs, opts)
