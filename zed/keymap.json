@@ -1,16 +1,35 @@
 [
-  {
-    "bindings": {
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
-    }
-  },
-  {
-    "context": "Editor && vim_mode == insert",
-    "bindings": {
-      "j j": ["workspace::SendKeystrokes", "escape"]
-    }
-  }
+	{
+		"bindings": {
+			"ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+			"ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+			"ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+			"ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+		}
+	},
+	{
+		// put key-bindings here if you want them to work in insert mode
+		"context": "Editor && vim_mode == insert && !menu",
+		"bindings": {
+			"j j": "vim::NormalBefore"
+		}
+	},
+	{
+		// put key-bindings here if you want them to work in normal & visual mode
+		"context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+		"bindings": {}
+	},
+	{
+		// put key-bindings here if you want them to work only in normal mode
+		"context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+		"bindings": {
+			// "down": ["workspace::SendKeystrokes", "4 j"]
+			// "up": ["workspace::SendKeystrokes", "4 k"]
+		}
+	},
+	{
+		// visual, visual line & visual block modes
+		"context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+		"bindings": {}
+	}
 ]
