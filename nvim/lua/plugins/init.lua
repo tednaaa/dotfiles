@@ -1,6 +1,5 @@
 return {
 	{ "wakatime/vim-wakatime" },
-	{ "numToStr/Comment.nvim", opts = {}, lazy = false },
 	{
 		"navarasu/onedark.nvim",
 		config = function()
@@ -23,10 +22,5 @@ return {
 				return "%2l:%-2v"
 			end
 		end,
-	},
-	{
-		"m4xshen/hardtime.nvim",
-		dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-		opts = {},
 	},
 }
