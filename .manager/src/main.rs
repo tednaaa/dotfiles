@@ -8,9 +8,13 @@ fn main() -> Result<(), std::io::Error> {
 		let dotfiles_map = [
 			("nvim", ".config/nvim"),
 			("alacritty", ".config/alacritty"),
-			(".tmux.conf", ".tmux.conf"),
 			("zed/settings.json", ".config/zed/settings.json"),
 			("zed/keymap.json", ".config/zed/keymap.json"),
+			("fish/config.fish", ".config/fish/config.fish"),
+			("tmux/.tmux.conf", ".tmux.conf"),
+			("git/.gitconfig", ".gitconfig"),
+			("npm/.npmrc", ".npmrc"),
+
 			(
 				"vscode/settings.json",
 				"Library/Application Support/Code/User/settings.json",
@@ -23,10 +27,6 @@ fn main() -> Result<(), std::io::Error> {
 				"vscode/snippets.json",
 				"Library/Application Support/Code/User/snippets/main.code-snippets",
 			),
-			("config.fish", ".config/fish/config.fish"),
-			(".gitconfig", ".gitconfig"),
-			(".tool-versions", ".tool-versions"),
-			(".npmrc", ".npmrc"),
 		];
 
 		let args: Vec<String> = env::args().collect();
@@ -47,43 +47,45 @@ fn main() -> Result<(), std::io::Error> {
 					unlink(&link_name)?;
 				}
 			}
-			_ => {}
+			_ => panic!("{command}: command not found"),
 		}
 	}
 
 	Ok(())
 }
 
-fn link(target: &Path, link_name: &Path) -> Result<(), std::io::Error> {
-	if link_name.exists() {
-		if let Ok(existing_target) = fs::read_link(link_name) {
-			if existing_target == target {
-				println!("Symlink already exists and is correct: {:?} -> {:?}", link_name, target);
+fn link(original_path: &Path, symlink_target_path: &Path) -> Result<(), std::io::Error> {
+	if symlink_target_path.exists() {
+		if let Ok(existing_target) = fs::read_link(symlink_target_path) {
+			if existing_target == original_path {
+				println!("✅ Already linked: {:?} -> {:?}", symlink_target_path, original_path);
 				return Ok(());
 			}
 		}
 	}
 
-	if let Some(parent_dir) = link_name.parent() {
+	if let Some(parent_dir) = symlink_target_path.parent() {
 		fs::create_dir_all(parent_dir)?;
 	}
 
-	if let Err(error) = symlink(target, link_name) {
+	if let Err(error) = symlink(original_path, symlink_target_path) {
 		if error.kind() != std::io::ErrorKind::AlreadyExists {
 			Err(error)?;
 		}
 
-		println!("File already exists: {:?}", link_name);
+		println!("❌ File already exists: {:?}", symlink_target_path);
 		return Ok(());
 	}
 
-	println!("Symlink created: {:?} -> {:?}", link_name, target);
+	println!("✅ Symlink created: {:?} -> {:?}", symlink_target_path, original_path);
 	Ok(())
 }
 
-fn unlink(link_name: &Path) -> Result<(), std::io::Error> {
-	if link_name.exists() {
-		fs::remove_file(link_name)?;
+fn unlink(symlink_target_path: &Path) -> Result<(), std::io::Error> {
+	if symlink_target_path.exists() {
+		fs::remove_file(symlink_target_path)?;
 	}
+
+	println!("✅ Deleted: {:?}", symlink_target_path);
 	Ok(())
 }
