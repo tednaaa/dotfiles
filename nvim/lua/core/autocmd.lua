@@ -3,6 +3,17 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 	command = "set nopaste",
 })
 
+vim.api.nvim_create_autocmd({ "CmdlineLeave", "VimEnter" }, {
+	callback = function()
+		vim.opt.pumheight = 15
+	end,
+})
+vim.api.nvim_create_autocmd("CmdlineEnter", {
+	callback = function()
+		vim.opt.pumheight = 7
+	end,
+})
+
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "json", "jsonc", "markdown" },
 	callback = function()
