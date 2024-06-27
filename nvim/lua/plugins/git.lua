@@ -6,7 +6,6 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"sindrets/diffview.nvim",
-			"nvim-telescope/telescope.nvim",
 			"ibhagwan/fzf-lua",
 		},
 		config = true,
@@ -22,9 +21,5 @@ return {
 				changedelete = { text = "~" },
 			},
 		},
-		config = function()
-			require("gitsigns").setup()
-			require("scrollbar.handlers.gitsigns").setup()
-		end,
 	},
 }
