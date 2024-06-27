@@ -10,10 +10,6 @@
 
 > Inside command mode `/`
 
-`<leader>sh - Search global help`
-`<leader>sk - Search keymaps`
-`? - Show help for current buffer`
-
 `<C-o> - Exit insert mode for exactly one move`
 `<C-o> - Use to go back after goto definition`
 `<C-hjkl> - Use ctrl + hjkl keys to move focus to the buffer`
