@@ -3,10 +3,10 @@ return {
 	dependencies = {
 		{ "hrsh7th/cmp-nvim-lsp" },
 		{ "antosha417/nvim-lsp-file-operations", config = true },
-		{ "folke/neodev.nvim", opts = {} },
+		{ "folke/neodev.nvim",                   opts = {} },
 		{ "williamboman/mason.nvim" },
 		{ "williamboman/mason-lspconfig.nvim" },
-		{ "j-hui/fidget.nvim", opts = {} },
+		{ "j-hui/fidget.nvim",                   opts = {} },
 	},
 	config = function()
 		local mason = require("mason")
@@ -19,17 +19,10 @@ return {
 		mason.setup()
 		mason_lspconfig.setup({
 			ensure_installed = {
-				"lua_ls",
-				"rust_analyzer",
-				"gopls",
-				"golangci_lint_ls",
-				"tsserver",
-				"html",
-				"cssls",
-				"emmet_ls",
-				"tailwindcss",
+				"lua_ls", "rust_analyzer",
+				"gopls", "golangci_lint_ls",
+				"tsserver", "html", "cssls", "emmet_ls", "tailwindcss",
 			},
-			automatic_installation = true,
 		})
 
 		vim.api.nvim_create_autocmd("LspAttach", {
@@ -47,8 +40,8 @@ return {
 
 				vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
 				vim.keymap.set("n", "<leader>pd", fzf.diagnostics_workspace, opts)
+				vim.keymap.set({ "n", "v" }, "<leader>ca", fzf.lsp_code_actions, opts)
 
-				vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 				vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 				vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 
@@ -72,6 +65,12 @@ return {
 				lspconfig["lua_ls"].setup({
 					capabilities = capabilities,
 					settings = { Lua = { diagnostics = { globals = { "vim" } }, completion = { callSnippet = "Replace" } } },
+				})
+			end,
+			["rust_analyzer"] = function()
+				lspconfig["rust_analyzer"].setup({
+					capabilities = capabilities,
+					settings = { check = { command = "clippy" } }
 				})
 			end,
 			["emmet_ls"] = function()
