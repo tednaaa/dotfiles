@@ -8,13 +8,13 @@ fn main() -> Result<(), std::io::Error> {
 		let dotfiles_map = [
 			("nvim", ".config/nvim"),
 			("alacritty", ".config/alacritty"),
+			("wezterm", ".config/wezterm"),
 			("zed/settings.json", ".config/zed/settings.json"),
 			("zed/keymap.json", ".config/zed/keymap.json"),
 			("fish/config.fish", ".config/fish/config.fish"),
 			("tmux/.tmux.conf", ".tmux.conf"),
 			("git/.gitconfig", ".gitconfig"),
 			("npm/.npmrc", ".npmrc"),
-
 			(
 				"vscode/settings.json",
 				"Library/Application Support/Code/User/settings.json",
