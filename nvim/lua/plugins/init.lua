@@ -8,6 +8,12 @@ return {
 		end,
 	},
 	{
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup()
+		end
+	},
+	{
 		"echasnovski/mini.nvim",
 		config = function()
 			require("mini.ai").setup({ n_lines = 500 })

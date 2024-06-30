@@ -22,6 +22,9 @@
 `cw - Delete word after and switch to insert mode`
 `ci" - Delete inside quote and toggle to insert mode`
 
+`saiw - surround with "" or () {}`
+`sd - delete surrounding "" or () or {}`
+
 `va( - Visually select around ( symbol`
 `dt( - Delete everything till ( symbol`
 
