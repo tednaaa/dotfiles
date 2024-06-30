@@ -31,7 +31,7 @@ return {
 
 					local gitsigns = require('gitsigns')
 
-					map('n', '<leader>gh', gitsigns.preview_hunk)
+					map('n', 'gh', gitsigns.preview_hunk)
 				end
 			})
 		end
