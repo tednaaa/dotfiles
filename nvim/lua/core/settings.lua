@@ -42,3 +42,4 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = false
 vim.opt.hlsearch = true
 vim.opt.swapfile = false
+vim.opt.termguicolors = true
