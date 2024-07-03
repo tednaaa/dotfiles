@@ -7,7 +7,7 @@ return {
 
 			local fzf = require("fzf-lua")
 
-			vim.keymap.set("n", "<leader>h", fzf.help_tags, { desc = "help tags" })
+			vim.keymap.set("n", "<leader>ht", fzf.help_tags, { desc = "help tags" })
 			vim.keymap.set("n", "<leader>hk", fzf.keymaps, { desc = "keymaps" })
 
 			vim.keymap.set("n", "<leader>p", fzf.files, { desc = "files" })

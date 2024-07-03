@@ -1,17 +1,10 @@
 return {
 	{ "wakatime/vim-wakatime" },
 	{
-		"navarasu/onedark.nvim",
-		config = function()
-			require("onedark").setup({ style = "darker" })
-			require("onedark").load()
-		end,
-	},
-	{
 		"norcalli/nvim-colorizer.lua",
 		config = function()
 			require("colorizer").setup()
-		end
+		end,
 	},
 	{
 		"echasnovski/mini.nvim",

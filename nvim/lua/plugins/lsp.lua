@@ -14,14 +14,14 @@ return {
 		local lspconfig = require("lspconfig")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
-		-- Install manually using :MasonInstall {name}
-		-- stylua, prettierd, eslintd
+		-- Also you can install manually using :MasonInstall {name}
+		-- For example eslint_d and prettier_d
 		mason.setup()
 		mason_lspconfig.setup({
 			ensure_installed = {
 				"lua_ls", "rust_analyzer",
 				"gopls", "golangci_lint_ls",
-				"tsserver", "html", "cssls", "emmet_ls", "tailwindcss",
+				"tsserver", "eslint", "html", "cssls", "emmet_ls", "tailwindcss",
 			},
 		})
 
@@ -44,6 +44,12 @@ return {
 
 				vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 				vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+
+				vim.keymap.set("n", "<leader>hh", function()
+					local reversed_value = not vim.lsp.inlay_hint.is_enabled({})
+
+					vim.lsp.inlay_hint.enable(reversed_value)
+				end, opts)
 
 				vim.keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
 			end,

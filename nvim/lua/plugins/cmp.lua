@@ -21,7 +21,7 @@ return {
 			local luasnip = require("luasnip")
 			local autopairs = require("nvim-autopairs")
 
-			require("codeium").setup({})
+			require("codeium").setup()
 			require("luasnip.loaders.from_vscode").lazy_load()
 
 			cmp.setup({
@@ -46,22 +46,28 @@ return {
 				formatting = {
 					format = lspkind.cmp_format({
 						mode = "symbol",
-						maxwidth = 50,
+						maxwidth = 20,
 						ellipsis_char = "...",
 						show_labelDetails = true,
 						symbol_map = { Codeium = "" },
 
-						before = function(_, vim_item)
+						before = function(entry, vim_item)
+							if entry.completion_item.detail ~= nil and entry.completion_item.detail ~= "" then
+								vim_item.menu = entry.completion_item.detail
+							end
+
+							print(vim.inspect(vim_item))
+
 							return vim_item
 						end,
 					}),
 				},
 				sources = {
+					{ name = "codeium" },
 					{ name = "nvim_lsp" },
 					{ name = "path" },
 					{ name = "luasnip" },
 					{ name = "buffer" },
-					{ name = "codeium" },
 				},
 			})
 
