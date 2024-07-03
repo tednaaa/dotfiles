@@ -22,7 +22,7 @@
 `cw - Delete word after and switch to insert mode`
 `ci" - Delete inside quote and toggle to insert mode`
 
-`saiw - surround with "" or () {}`
+`saiw - surround with "" or () or {}`
 `sd - delete surrounding "" or () or {}`
 
 `va( - Visually select around ( symbol`
@@ -33,4 +33,11 @@
 `gc[count]{motion} - (Op-pending) Toggles the region using linewise comment`
 `gb[count]{motion} - (Op-pending) Toggles the region using blockwise comment`
 
-`: %s/old_text/new_text - change in current buffer all matching words to new`
+`: %s/old/new/gc - change in current buffer all matching words to new`
+
+> In Visual select mode
+
+`s/old/new - change inside selection only first matching for each line`
+`s/old/new/g - match and replace all`
+`s/old/new/gc - and also ask for each replace`
+
