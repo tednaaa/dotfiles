@@ -21,6 +21,17 @@ config.window_padding = {
 config.color_scheme = "GitHub Dark"
 config.colors = { background = "#1E232A" }
 
+config.background = {
+	{
+		source = {
+			File = "Users/tedna/Pictures/wallpaper.jpg",
+		},
+		height = "100%",
+		width = "100%",
+		hsb = { brightness = 0.005 },
+	},
+}
+
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "DemiBold" })
 config.font_size = 15
 config.adjust_window_size_when_changing_font_size = false
@@ -29,7 +40,6 @@ config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 config.window_frame = {
 	font_size = 15.0,
 }
-
 
 local act = wezterm.action
 config.leader = {
