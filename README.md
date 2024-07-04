@@ -1,43 +1,49 @@
 ## Setup
 
-> Brew
-
-> Alacritty + Fish + Tmux + Starship
-
-> asdf
+- brew
+- fish
+- rust toolchain
+- starship
+- asdf
+- wezterm
+- alacritty + tmux
+- neovim > zed > vscode
 
 ## Neovim
 
-> Inside command mode `/`
+`<C-o>` - Exit insert mode for exactly one move
+`<C-o>` - Use to go back after goto definition
+`<C-hjkl>` - Use ctrl + hjkl keys to focus buffers
 
-`<C-o> - Exit insert mode for exactly one move`
-`<C-o> - Use to go back after goto definition`
-`<C-hjkl> - Use ctrl + hjkl keys to move focus to the buffer`
+`<C-wv` - Create vertical split
+`<C-ws` - Create horizontal split
 
-`% - Jump to prev/next () {}`
+`%` - Jump to prev/next [] or () or {}
 
-`<C-a> - Increment number`
-`<C-x> - Decrement number`
+`<C-a>` - Increment number
+`<C-x>` - Decrement number
 
-`cw - Delete word after and switch to insert mode`
-`ci" - Delete inside quote and toggle to insert mode`
+`diw` - Delete word from any position
+`ciw` - also switch to insert mode
 
-`saiw - surround with "" or () or {}`
-`sd - delete surrounding "" or () or {}`
+`ci..` - Delete inside "" or () or {} and switch to insert mode
+`saiw..` - surround with "" or () or {}
+`sd..` - delete surrounding "" or () or {}
 
-`va( - Visually select around ( symbol`
-`dt( - Delete everything till ( symbol`
+`vas` - Visual select blocks
+`va(` - Visually select around ( symbol
+`dt(` - Delete everything till ( symbol
 
-`gcc - Toggles the current line using linewise comment`
-`gbc - Toggles the current line using blockwise comment`
-`gc[count]{motion} - (Op-pending) Toggles the region using linewise comment`
-`gb[count]{motion} - (Op-pending) Toggles the region using blockwise comment`
+`gcc` - Toggles the current line using linewise comment
+`gbc` - Toggles the current line using blockwise comment
+`gc[count]{motion}` - (Op-pending) Toggles the region using linewise comment
+`gb[count]{motion}` - (Op-pending) Toggles the region using blockwise comment
 
-`: %s/old/new/gc - change in current buffer all matching words to new`
+`: %s/old/new/gc` - change in current buffer all matching words to new
 
-> In Visual select mode
+> In Visual select mode `'<,'>`
 
-`s/old/new - change inside selection only first matching for each line`
-`s/old/new/g - match and replace all`
-`s/old/new/gc - and also ask for each replace`
+`: s/old/new` - change inside selection only first matching for each line
+`: s/old/new/g` - match and replace all
+`: s/old/new/gc` - and also ask for each replace
 
