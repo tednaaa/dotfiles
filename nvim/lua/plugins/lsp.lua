@@ -3,10 +3,10 @@ return {
 	dependencies = {
 		{ "hrsh7th/cmp-nvim-lsp" },
 		{ "antosha417/nvim-lsp-file-operations", config = true },
-		{ "folke/neodev.nvim",                   opts = {} },
+		{ "folke/neodev.nvim", opts = {} },
 		{ "williamboman/mason.nvim" },
 		{ "williamboman/mason-lspconfig.nvim" },
-		{ "j-hui/fidget.nvim",                   opts = {} },
+		{ "j-hui/fidget.nvim", opts = {} },
 	},
 	config = function()
 		local mason = require("mason")
@@ -19,9 +19,16 @@ return {
 		mason.setup()
 		mason_lspconfig.setup({
 			ensure_installed = {
-				"lua_ls", "rust_analyzer",
-				"gopls", "golangci_lint_ls",
-				"tsserver", "eslint", "html", "cssls", "emmet_ls", "tailwindcss",
+				"lua_ls",
+				"rust_analyzer",
+				"gopls",
+				"golangci_lint_ls",
+				"tsserver",
+				"eslint",
+				"html",
+				"cssls",
+				"emmet_ls",
+				"tailwindcss",
 			},
 		})
 
@@ -76,13 +83,7 @@ return {
 			["rust_analyzer"] = function()
 				lspconfig["rust_analyzer"].setup({
 					capabilities = capabilities,
-					settings = { check = { command = "clippy" } }
-				})
-			end,
-			["emmet_ls"] = function()
-				lspconfig["emmet_ls"].setup({
-					capabilities = capabilities,
-					filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss" },
+					settings = { check = { command = "clippy" } },
 				})
 			end,
 		})

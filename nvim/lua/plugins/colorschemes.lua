@@ -7,6 +7,7 @@ return {
 			vim.cmd([[colorscheme tokyonight]])
 		end,
 	},
+	{ "xiyaowong/transparent.nvim" },
 	-- {
 	-- 	"navarasu/onedark.nvim",
 	-- 	config = function()
