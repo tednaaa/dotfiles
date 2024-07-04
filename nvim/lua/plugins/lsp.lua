@@ -21,6 +21,7 @@ return {
 			ensure_installed = {
 				"lua_ls",
 				"rust_analyzer",
+				"taplo",
 				"gopls",
 				"golangci_lint_ls",
 				"tsserver",
@@ -33,7 +34,7 @@ return {
 		})
 
 		vim.api.nvim_create_autocmd("LspAttach", {
-			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+			group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
 			callback = function(event)
 				local opts = { buffer = event.buf, silent = true }
 
@@ -70,21 +71,30 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
+		local servers = {
+			lua_ls = {
+				settings = {
+					Lua = {
+						diagnostics = { globals = { "vim" } },
+						completion = { callSnippet = "Replace" },
+					},
+				},
+			},
+			rust_analyzer = {
+				settings = {
+					check = { command = "clippy" },
+				},
+			},
+			docker_compose_language_service = {
+				filetypes = { "yml.docker-compose" },
+			},
+		}
+
 		mason_lspconfig.setup_handlers({
 			function(server_name)
-				lspconfig[server_name].setup({ capabilities = capabilities })
-			end,
-			["lua_ls"] = function()
-				lspconfig["lua_ls"].setup({
-					capabilities = capabilities,
-					settings = { Lua = { diagnostics = { globals = { "vim" } }, completion = { callSnippet = "Replace" } } },
-				})
-			end,
-			["rust_analyzer"] = function()
-				lspconfig["rust_analyzer"].setup({
-					capabilities = capabilities,
-					settings = { check = { command = "clippy" } },
-				})
+				local server = servers[server_name] or {}
+				server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
+				require("lspconfig")[server_name].setup(server)
 			end,
 		})
 	end,
