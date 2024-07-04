@@ -3,11 +3,20 @@ return {
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
-		config = function()
+		opts = function()
+			return {
+				style = "moon",
+				transparent = true,
+				styles = {
+					sidebars = "transparent",
+					floats = "transparent",
+				},
+			}
+		end,
+		init = function()
 			vim.cmd([[colorscheme tokyonight]])
 		end,
 	},
-	{ "xiyaowong/transparent.nvim" },
 	-- {
 	-- 	"navarasu/onedark.nvim",
 	-- 	config = function()
