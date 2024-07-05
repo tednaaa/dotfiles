@@ -35,30 +35,32 @@ return {
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
 			callback = function(event)
-				local opts = { buffer = event.buf, silent = true }
+				local keymap = function(mode, lhs, rhs)
+					vim.keymap.set(mode, lhs, rhs, { buffer = event.buf, noremap = true, silent = true })
+				end
 
 				local fzf = require("fzf-lua")
 
-				vim.keymap.set("n", "gD", fzf.lsp_declarations, opts)
-				vim.keymap.set("n", "gr", fzf.lsp_references, opts)
-				vim.keymap.set("n", "gd", fzf.lsp_definitions, opts)
-				vim.keymap.set("n", "gi", fzf.lsp_implementations, opts)
-				vim.keymap.set("n", "gt", fzf.lsp_typedefs, opts)
+				keymap("n", "gD", fzf.lsp_declarations)
+				keymap("n", "gr", fzf.lsp_references)
+				keymap("n", "gd", fzf.lsp_definitions)
+				keymap("n", "gi", fzf.lsp_implementations)
+				keymap("n", "gt", fzf.lsp_typedefs)
 
-				vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
-				vim.keymap.set("n", "<leader>pd", fzf.diagnostics_workspace, opts)
-				vim.keymap.set({ "n", "v" }, "<leader>ca", fzf.lsp_code_actions, opts)
+				keymap("n", "<leader>d", vim.diagnostic.open_float)
+				keymap("n", "<leader>pd", fzf.diagnostics_workspace)
+				keymap({ "n", "v" }, "<leader>ca", fzf.lsp_code_actions)
 
-				vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-				vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+				keymap("n", "<leader>rn", vim.lsp.buf.rename)
+				keymap("n", "K", vim.lsp.buf.hover)
 
-				vim.keymap.set("n", "<leader>hh", function()
+				keymap("n", "<leader>hh", function()
 					local reversed_value = not vim.lsp.inlay_hint.is_enabled({})
 
 					vim.lsp.inlay_hint.enable(reversed_value)
-				end, opts)
+				end)
 
-				vim.keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
+				keymap("n", "<leader>rs", ":LspRestart<CR>")
 			end,
 		})
 
