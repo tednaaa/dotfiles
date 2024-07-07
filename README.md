@@ -13,6 +13,7 @@
 
 `<C-o>` - Exit insert mode for exactly one move
 `<C-o>` - Use to go back after goto definition
+`<C-i>` - Use to go back to definition
 `<C-hjkl>` - Use ctrl + hjkl keys to focus buffers
 
 `<C-wv` - Create vertical split
