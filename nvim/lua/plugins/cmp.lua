@@ -1,5 +1,24 @@
 return {
 	{
+		"Exafunction/codeium.vim",
+		event = "BufEnter",
+		config = function()
+			local keymap = function(lhs, rhs)
+				vim.keymap.set("i", lhs, rhs, { expr = true, silent = true })
+			end
+
+			keymap("<C-g>", function()
+				return vim.fn["codeium#Accept"]()
+			end)
+			keymap("<C-;>", function()
+				return vim.fn["codeium#CycleCompletions"](1)
+			end)
+			keymap("<C-x>", function()
+				return vim.fn["codeium#Clear"]()
+			end)
+		end,
+	},
+	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
 			{ "hrsh7th/cmp-buffer" },
@@ -9,7 +28,6 @@ return {
 			{ "hrsh7th/cmp-nvim-lua" },
 			{ "onsails/lspkind.nvim" },
 
-			{ "Exafunction/codeium.nvim" },
 			{ "saadparwaiz1/cmp_luasnip" },
 			{ "rafamadriz/friendly-snippets" },
 			{ "L3MON4D3/LuaSnip", version = "v2.*", build = "make install_jsregexp" },
@@ -21,7 +39,6 @@ return {
 			local luasnip = require("luasnip")
 			local autopairs = require("nvim-autopairs")
 
-			require("codeium").setup()
 			require("luasnip.loaders.from_vscode").lazy_load()
 
 			cmp.setup({
@@ -49,21 +66,17 @@ return {
 						maxwidth = 20,
 						ellipsis_char = "...",
 						show_labelDetails = true,
-						symbol_map = { Codeium = "" },
 
 						before = function(entry, vim_item)
 							if entry.completion_item.detail ~= nil and entry.completion_item.detail ~= "" then
 								vim_item.menu = entry.completion_item.detail
 							end
 
-							print(vim.inspect(vim_item))
-
 							return vim_item
 						end,
 					}),
 				},
 				sources = {
-					{ name = "codeium" },
 					{ name = "nvim_lsp" },
 					{ name = "path" },
 					{ name = "luasnip" },
