@@ -1,5 +1,5 @@
 local keymap = function(mode, lhs, rhs, description)
-	vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true, desc = description })
+	vim.keymap.set(mode, lhs, rhs, { silent = true, desc = description })
 end
 
 keymap("t", "<Esc><Esc>", "<C-\\><C-n>", "Exit terminal mode")

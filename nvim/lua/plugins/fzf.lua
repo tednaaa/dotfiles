@@ -24,6 +24,7 @@ return {
 
 		keymap("n", "<leader>p", fzf.files, "files")
 		keymap("n", "<leader>po", fzf.oldfiles, "old files")
+		keymap("n", "<leader>pp", fzf.buffers, "buffers")
 		keymap("n", "<leader>g/", fzf.live_grep, "live grep")
 		keymap("n", "<leader>/", fzf.lgrep_curbuf, "live grep current buffer")
 
