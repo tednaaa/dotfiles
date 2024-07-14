@@ -17,11 +17,26 @@ return {
 			vim.cmd([[colorscheme tokyonight]])
 		end,
 	},
+
 	-- {
 	-- 	"navarasu/onedark.nvim",
 	-- 	config = function()
 	-- 		require("onedark").setup({ style = "darker" })
 	-- 		require("onedark").load()
+	-- 	end,
+	-- },
+
+	-- {
+	-- 	"EdenEast/nightfox.nvim",
+	-- 	config = function()
+	-- 		require("nightfox").setup({
+	-- 			options = {
+	-- 				transparent = true,
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- 	init = function()
+	-- 		vim.cmd("colorscheme nightfox")
 	-- 	end,
 	-- },
 }
