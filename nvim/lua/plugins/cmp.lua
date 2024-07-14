@@ -7,9 +7,6 @@ return {
 				vim.keymap.set("i", lhs, rhs, { expr = true, silent = true })
 			end
 
-			keymap("<C-g>", function()
-				return vim.fn["codeium#Accept"]()
-			end)
 			keymap("<C-;>", function()
 				return vim.fn["codeium#CycleCompletions"](1)
 			end)
@@ -61,6 +58,8 @@ return {
 				},
 				---@diagnostic disable-next-line: missing-fields
 				formatting = {
+					fields = { "kind", "abbr", "menu" },
+
 					format = lspkind.cmp_format({
 						mode = "symbol",
 						maxwidth = 20,
