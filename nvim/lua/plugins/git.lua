@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<leader>gg", "<cmd>Neogit<CR>", { desc = "Open neogit" })
+vim.keymap.set("n", "<leader>gg", "<cmd>Neogit<CR>", { desc = "Open Git" })
 
 return {
 	{
@@ -32,6 +32,7 @@ return {
 					local gitsigns = require("gitsigns")
 
 					keymap("n", "gh", gitsigns.preview_hunk)
+					keymap("n", "ghx", gitsigns.reset_hunk)
 				end,
 			})
 		end,
