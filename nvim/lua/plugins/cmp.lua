@@ -81,20 +81,6 @@ return {
 						end
 						return item
 					end,
-					-- format = lspkind.cmp_format({
-					-- 	mode = "symbol",
-					-- 	maxwidth = 20,
-					-- 	ellipsis_char = "...",
-					-- 	show_labelDetails = true,
-					--
-					-- 	before = function(entry, vim_item)
-					-- 		if entry.completion_item.detail ~= nil and entry.completion_item.detail ~= "" then
-					-- 			vim_item.menu = entry.completion_item.detail
-					-- 		end
-					--
-					-- 		return vim_item
-					-- 	end,
-					-- }),
 				},
 				sources = {
 					{ name = "nvim_lsp" },
