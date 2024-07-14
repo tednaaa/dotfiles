@@ -1,9 +1,9 @@
 return {
 	{ "wakatime/vim-wakatime" },
 	{
-		"norcalli/nvim-colorizer.lua",
+		"brenoprata10/nvim-highlight-colors",
 		config = function()
-			require("colorizer").setup()
+			require("nvim-highlight-colors").setup()
 		end,
 	},
 	{
