@@ -32,7 +32,6 @@ return {
 		},
 		config = function()
 			local cmp = require("cmp")
-			local lspkind = require("lspkind")
 			local luasnip = require("luasnip")
 			local autopairs = require("nvim-autopairs")
 
