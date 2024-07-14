@@ -47,4 +47,4 @@
 `: s/old/new` - change inside selection only first matching for each line
 `: s/old/new/g` - match and replace all
 `: s/old/new/gc` - and also ask for each replace
-
+`:s/\<old\>/new/gi` - replace exactly old word (older will ignored)
