@@ -7,6 +7,7 @@ return {
 		{ "williamboman/mason.nvim" },
 		{ "williamboman/mason-lspconfig.nvim" },
 		{ "j-hui/fidget.nvim", opts = {} },
+		{ "ray-x/lsp_signature.nvim", event = "VeryLazy" },
 	},
 	config = function()
 		local mason = require("mason")
@@ -35,6 +36,11 @@ return {
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
 			callback = function(event)
+				require("lsp_signature").on_attach({
+					bind = true,
+					handler_opts = { border = "rounded" },
+				}, event.buf)
+
 				local keymap = function(mode, lhs, rhs)
 					vim.keymap.set(mode, lhs, rhs, { buffer = event.buf, noremap = true, silent = true })
 				end
