@@ -51,7 +51,27 @@ return {
 		end,
 	},
 	{
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+		},
+		config = function()
+			require("noice").setup({
+				lsp = {
+					override = {
+						["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+						["vim.lsp.util.stylize_markdown"] = true,
+						["cmp.entry.get_documentation"] = true,
+					},
+				},
+				presets = { command_palette = true, lsp_doc_border = true },
+			})
+		end,
+	},
+	{
 		"nvim-lualine/lualine.nvim",
+		event = "VeryLazy",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("lualine").setup({ options = { globalstatus = true } })
@@ -59,6 +79,7 @@ return {
 	},
 	{
 		"lewis6991/satellite.nvim",
+		event = "VeryLazy",
 		dependencies = { "lewis6991/gitsigns.nvim" },
 		config = function()
 			require("satellite").setup()
