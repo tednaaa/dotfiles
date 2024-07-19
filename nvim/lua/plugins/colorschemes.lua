@@ -1,20 +1,28 @@
 return {
+	-- {
+	-- 	"folke/tokyonight.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	opts = function()
+	-- 		return {
+	-- 			style = "moon",
+	-- 			transparent = true,
+	-- 			styles = { sidebars = "transparent", floats = "transparent" },
+	-- 		}
+	-- 	end,
+	-- 	init = function()
+	-- 		vim.cmd("colorscheme tokyonight")
+	-- 	end,
+	-- },
+
 	{
-		"folke/tokyonight.nvim",
+		"projekt0n/github-nvim-theme",
 		lazy = false,
 		priority = 1000,
-		opts = function()
-			return {
-				style = "moon",
-				transparent = true,
-				styles = {
-					sidebars = "transparent",
-					floats = "transparent",
-				},
-			}
-		end,
-		init = function()
-			vim.cmd([[colorscheme tokyonight]])
+		config = function()
+			require("github-theme").setup({ optinos = { transparent = true } })
+
+			vim.cmd("colorscheme github_dark_dimmed")
 		end,
 	},
 
@@ -23,20 +31,6 @@ return {
 	-- 	config = function()
 	-- 		require("onedark").setup({ style = "darker" })
 	-- 		require("onedark").load()
-	-- 	end,
-	-- },
-
-	-- {
-	-- 	"EdenEast/nightfox.nvim",
-	-- 	config = function()
-	-- 		require("nightfox").setup({
-	-- 			options = {
-	-- 				transparent = true,
-	-- 			},
-	-- 		})
-	-- 	end,
-	-- 	init = function()
-	-- 		vim.cmd("colorscheme nightfox")
 	-- 	end,
 	-- },
 }
