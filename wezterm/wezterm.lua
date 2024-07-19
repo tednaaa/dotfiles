@@ -5,6 +5,11 @@ wezterm.on("gui-startup", function()
 	window:gui_window():maximize()
 end)
 
+-- TODO: still not working
+-- wezterm.on("exit", function()
+-- 	os.execute("killall prettierd eslint_d")
+-- end)
+
 local config = {}
 if wezterm.config_builder then
 	config = wezterm.config_builder()
@@ -19,21 +24,21 @@ config.window_padding = {
 }
 
 config.color_scheme = "GitHub Dark"
-config.colors = { background = "#1E232A" }
 
-config.background = {
-	{
-		source = {
-			File = "Users/tedna/Pictures/wallpaper.jpg",
-		},
-		height = "100%",
-		width = "100%",
-		hsb = { brightness = 0.005 },
-	},
-}
+-- config.background = {
+-- 	{
+-- 		source = {
+-- 			File = "Users/tedna/Pictures/wallpaper.jpg",
+-- 		},
+-- 		height = "100%",
+-- 		width = "100%",
+-- 		hsb = { brightness = 0.005 },
+-- 	},
+-- }
 
-config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "DemiBold" })
-config.font_size = 15
+config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular" })
+config.font_size = 14
+config.line_height = 1.3
 config.adjust_window_size_when_changing_font_size = false
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
@@ -45,34 +50,12 @@ local act = wezterm.action
 config.leader = {
 	key = "a",
 	mods = "CTRL",
-	timeout_milliseconds = math.maxinteger,
 }
 config.keys = {
-	{
-		key = "h",
-		mods = "LEADER",
-		action = act.ActivatePaneDirection("Left"),
-	},
-	{
-		key = "j",
-		mods = "LEADER",
-		action = act.ActivatePaneDirection("Down"),
-	},
-	{
-		key = "k",
-		mods = "LEADER",
-		action = act.ActivatePaneDirection("Up"),
-	},
-	{
-		key = "l",
-		mods = "LEADER",
-		action = act.ActivatePaneDirection("Right"),
-	},
-	{
-		key = "-",
-		mods = "LEADER",
-		action = act.ActivatePaneDirection("Right"),
-	},
+	{ key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
+	{ key = "j", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
+	{ key = "k", mods = "LEADER", action = act.ActivatePaneDirection("Up") },
+	{ key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
 }
 
 return config
