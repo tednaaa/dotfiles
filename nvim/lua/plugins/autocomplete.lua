@@ -16,6 +16,17 @@ return {
 		end,
 	},
 	{
+		"folke/lazydev.nvim",
+		ft = "lua",
+		opts = { library = { { path = "luvit-meta/library", words = { "vim%.uv" } } } },
+	},
+	{
+		"onsails/lspkind.nvim",
+		config = function()
+			require("lspkind").init({ preset = "codicons" })
+		end,
+	},
+	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
 			{ "hrsh7th/cmp-buffer" },
@@ -23,13 +34,19 @@ return {
 			{ "hrsh7th/cmp-cmdline" },
 			{ "hrsh7th/cmp-nvim-lsp" },
 			{ "hrsh7th/cmp-nvim-lua" },
-			{ "onsails/lspkind.nvim" },
 
 			{ "saadparwaiz1/cmp_luasnip" },
 			{ "rafamadriz/friendly-snippets" },
 			{ "L3MON4D3/LuaSnip", version = "v2.*", build = "make install_jsregexp" },
 			{ "windwp/nvim-autopairs" },
 		},
+		opts = function(_, opts)
+			opts.sources = opts.sources or {}
+			table.insert(opts.sources, {
+				name = "lazydev",
+				group_index = 0,
+			})
+		end,
 		config = function()
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
