@@ -1,18 +1,14 @@
 return {
 	{
-		"Exafunction/codeium.vim",
-		event = "BufEnter",
+		"monkoose/neocodeium",
+		event = "VeryLazy",
 		config = function()
-			local keymap = function(lhs, rhs)
-				vim.keymap.set("i", lhs, rhs, { expr = true, silent = true })
-			end
+			local neocodeium = require("neocodeium")
+			neocodeium.setup()
 
-			keymap("<C-;>", function()
-				return vim.fn["codeium#CycleCompletions"](1)
-			end)
-			keymap("<C-x>", function()
-				return vim.fn["codeium#Clear"]()
-			end)
+			vim.keymap.set("i", "<A-a>", neocodeium.accept)
+			vim.keymap.set("i", "<A-n>", neocodeium.cycle_or_complete)
+			vim.keymap.set("i", "<A-c>", neocodeium.clear)
 		end,
 	},
 	{
