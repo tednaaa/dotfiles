@@ -17,8 +17,7 @@ return {
 
 			require("neo-tree").setup({
 				source_selector = {
-					winbar = true,
-					content_layout = "center",
+					winbar = false,
 					show_scrolled_off_parent_node = false,
 				},
 				filesystem = {
@@ -53,9 +52,7 @@ return {
 	{
 		"folke/noice.nvim",
 		event = "VeryLazy",
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-		},
+		dependencies = { "MunifTanjim/nui.nvim" },
 		config = function()
 			require("noice").setup({
 				lsp = {
@@ -67,6 +64,15 @@ return {
 				},
 				presets = { command_palette = true, lsp_doc_border = true },
 			})
+		end,
+	},
+	{
+		"MagicDuck/grug-far.nvim",
+		config = function()
+			local grug_far = require("grug-far")
+			grug_far.setup({ placeholders = { enabled = false } })
+
+			vim.keymap.set("n", "<leader>g;", grug_far.grug_far, { desc = "Global find and replace" })
 		end,
 	},
 	{
