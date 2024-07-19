@@ -23,7 +23,6 @@
 
   "workbench.colorTheme": "Atom One Dark",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.activityBar.location": "hidden",
   "workbench.editor.tabSizing": "shrink",
   "workbench.startupEditor": "none",
   "workbench.editor.revealIfOpen": false,
