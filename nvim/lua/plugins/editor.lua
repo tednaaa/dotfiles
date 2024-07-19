@@ -88,7 +88,10 @@ return {
 		"petertriho/nvim-scrollbar",
 		event = "VeryLazy",
 		config = function()
-			require("scrollbar").setup({ handlers = { cursor = false } })
+			require("scrollbar").setup({
+				handlers = { cursor = false },
+				excluded_filetypes = { "neo-tree" },
+			})
 			require("scrollbar.handlers.gitsigns").setup()
 		end,
 	},
