@@ -12,9 +12,6 @@ padding = { x = 2, y = 2 }
 decorations = "None"
 startup_mode = "Maximized"
 
-[colors]
-primary.background = "#262626"
-
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
 size = 15
