@@ -20,6 +20,7 @@ return {
 					winbar = false,
 					show_scrolled_off_parent_node = false,
 				},
+
 				filesystem = {
 					filtered_items = {
 						hide_dotfiles = false,
@@ -84,11 +85,11 @@ return {
 		end,
 	},
 	{
-		"lewis6991/satellite.nvim",
+		"petertriho/nvim-scrollbar",
 		event = "VeryLazy",
-		dependencies = { "lewis6991/gitsigns.nvim" },
 		config = function()
-			require("satellite").setup()
+			require("scrollbar").setup({ handlers = { cursor = false } })
+			require("scrollbar.handlers.gitsigns").setup()
 		end,
 	},
 	{
