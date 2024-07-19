@@ -8,3 +8,4 @@ fzf --fish | source
 source ~/.asdf/asdf.fish
 source "$HOME/.cargo/env.fish"
 
+set -x XDG_CONFIG_HOME $HOME/.config

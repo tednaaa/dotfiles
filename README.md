@@ -1,3 +1,11 @@
+## How to manage?
+
+```bash
+cd .manager
+cargo run link
+cargo run unlink
+```
+
 ## Setup
 
 - brew

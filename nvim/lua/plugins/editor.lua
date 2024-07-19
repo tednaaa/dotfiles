@@ -47,7 +47,7 @@ return {
 				},
 			})
 
-			vim.cmd([[Neotree]])
+			vim.cmd("Neotree show")
 		end,
 	},
 	{
