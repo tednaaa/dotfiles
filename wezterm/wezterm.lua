@@ -5,36 +5,25 @@ wezterm.on("gui-startup", function()
 	window:gui_window():maximize()
 end)
 
--- TODO: still not working
--- wezterm.on("exit", function()
--- 	os.execute("killall prettierd eslint_d")
--- end)
-
 local config = {}
 if wezterm.config_builder then
 	config = wezterm.config_builder()
 	config:set_strict_mode(true)
 end
 
-config.window_padding = {
-	left = "0",
-	right = "0",
-	top = "0",
-	bottom = "0",
-}
+config.window_padding = { left = "0", right = "0", top = "0", bottom = "0" }
 
 config.color_scheme = "GitHub Dark"
+config.colors = { background = "#141414" }
 
--- config.background = {
--- 	{
--- 		source = {
--- 			File = "Users/tedna/Pictures/wallpaper.jpg",
--- 		},
--- 		height = "100%",
--- 		width = "100%",
--- 		hsb = { brightness = 0.005 },
--- 	},
--- }
+config.background = {
+	{
+		source = { File = "/Users/tedna/Pictures/wallpaper.png" },
+		height = "100%",
+		width = "100%",
+		hsb = { brightness = 0.05 },
+	},
+}
 
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular" })
 config.font_size = 14
