@@ -79,13 +79,21 @@ return {
 					},
 				},
 			},
-			rust_analyzer = {
-				settings = {
-					check = { command = "clippy" },
+			rust_analyzer = { settings = { check = { command = "clippy" } } },
+			docker_compose_language_service = { filetypes = { "yml.docker-compose" } },
+
+			-- Vue take over mode
+			tsserver = {
+				init_options = {
+					plugins = {
+						{
+							name = "@vue/typescript-plugin",
+							location = "/Users/tedna/.asdf/installs/nodejs/20.15.0/lib/node_modules/@vue/typescript-plugin",
+							languages = { "javascript", "typescript", "vue" },
+						},
+					},
 				},
-			},
-			docker_compose_language_service = {
-				filetypes = { "yml.docker-compose" },
+				filetypes = { "javascript", "typescript", "vue" },
 			},
 		}
 
