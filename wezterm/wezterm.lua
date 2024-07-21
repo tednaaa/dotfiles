@@ -11,7 +11,7 @@ if wezterm.config_builder then
 	config:set_strict_mode(true)
 end
 
-config.window_padding = { left = "0", right = "0", top = "0", bottom = "0" }
+config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
 
 config.color_scheme = "GitHub Dark"
 config.colors = { background = "#141414" }
@@ -26,8 +26,8 @@ config.background = {
 }
 
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular" })
-config.font_size = 14
-config.line_height = 1.3
+config.font_size = 13
+config.line_height = 1.4
 config.adjust_window_size_when_changing_font_size = false
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
