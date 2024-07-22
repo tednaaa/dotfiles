@@ -14,6 +14,9 @@ keymap({ "n", "i" }, "<down>", "")
 
 keymap("n", "<leader>w", "<cmd>update<cr>", "save buffer")
 
+keymap("i", "<C-h>", "<C-o>h", "Move cursor 1 time to left")
+keymap("i", "<C-l>", "<C-o>l", "Move cursor 1 time to right")
+
 keymap("n", "J", "mzJ`z", "Join line with next")
 
 keymap("v", "J", ":m '>+1<CR>gv=gv", "Move selected line down")
