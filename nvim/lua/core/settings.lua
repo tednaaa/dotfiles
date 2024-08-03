@@ -37,6 +37,7 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.fillchars:append({ vert = "▎", horiz = "▁" })
 
 vim.diagnostic.config({ virtual_text = false })
 
