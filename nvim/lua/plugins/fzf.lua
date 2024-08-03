@@ -28,7 +28,6 @@ return {
 
 		keymap("n", "<leader>p", fzf.files)
 		keymap("n", "<leader>po", fzf.oldfiles)
-		keymap("n", "<leader>pp", fzf.buffers)
 		keymap("n", "<leader>g/", fzf.grep_project)
 		keymap("n", "<leader>/", fzf.grep_curbuf)
 
