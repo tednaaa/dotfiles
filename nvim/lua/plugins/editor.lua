@@ -1,57 +1,18 @@
 return {
 	{
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v3.x",
-		event = "VimEnter",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons",
-			"MunifTanjim/nui.nvim",
+		"folke/flash.nvim",
+		event = "VeryLazy",
+		opts = {},
+		-- stylua: ignore
+		keys = {
+			{ "s", mode = { "n", "x", "o" }, function() require("flash").jump() end},
+			{ "<c-s>", mode = { "c" }, function() require("flash").toggle() end},
 		},
-		keys = { { "<leader>e", "<cmd>Neotree toggle<cr>" } },
-		config = function()
-			vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
-			vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
-			vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
-			vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵", texthl = "DiagnosticSignHint" })
-
-			require("neo-tree").setup({
-				source_selector = {
-					winbar = false,
-					show_scrolled_off_parent_node = false,
-				},
-
-				filesystem = {
-					filtered_items = {
-						hide_dotfiles = false,
-						hide_gitignored = false,
-						hide_hidden = false,
-						never_show = { ".DS_Store" },
-					},
-					follow_current_file = { enabled = true },
-				},
-				default_component_configs = {
-					git_status = {
-						symbols = {
-							added = "",
-							modified = "",
-							deleted = "✖",
-							renamed = "󰁕",
-							untracked = "",
-							ignored = "",
-							unstaged = "󰄱",
-							staged = "",
-							conflict = "",
-						},
-					},
-				},
-			})
-
-			vim.cmd("Neotree show")
-		end,
 	},
 	{
 		"folke/noice.nvim",
+		-- TODO: redraw issue, folke on vacation till the end of August
+		tag = "v4.4.7",
 		event = "VeryLazy",
 		dependencies = { "MunifTanjim/nui.nvim" },
 		config = function()
@@ -62,6 +23,7 @@ return {
 						["vim.lsp.util.stylize_markdown"] = true,
 						["cmp.entry.get_documentation"] = true,
 					},
+					signature = { opts = { size = { width = 80, height = 10 } } },
 				},
 				presets = { command_palette = true, lsp_doc_border = true },
 			})
@@ -74,6 +36,36 @@ return {
 			grug_far.setup({ placeholders = { enabled = false } })
 
 			vim.keymap.set("n", "<leader>g;", grug_far.grug_far, { desc = "Global find and replace" })
+		end,
+	},
+	{
+		"akinsho/bufferline.nvim",
+		version = "*",
+		dependencies = "nvim-tree/nvim-web-devicons",
+		config = function()
+			require("bufferline").setup({
+				options = {
+					diagnostics = "nvim_lsp",
+					show_close_icon = false,
+					show_buffer_close_icons = false,
+					indicator = { style = "none" },
+					separator_style = { "", "" },
+					offsets = {
+						{
+							filetype = "neo-tree",
+							text = "I use neovim btw ;)",
+							highlight = "Directory",
+							text_align = "left",
+						},
+					},
+				},
+			})
+
+			vim.keymap.set("n", "<leader>q", require("bufferline").close_others)
+			-- stylua: ignore
+			vim.keymap.set("n", "L", function() require("bufferline").cycle(1) end)
+			-- stylua: ignore
+			vim.keymap.set("n", "H", function() require("bufferline").cycle(-1) end)
 		end,
 	},
 	{
@@ -94,20 +86,5 @@ return {
 			})
 			require("scrollbar.handlers.gitsigns").setup()
 		end,
-	},
-	{
-		"christoomey/vim-tmux-navigator",
-		cmd = {
-			"TmuxNavigateLeft",
-			"TmuxNavigateDown",
-			"TmuxNavigateUp",
-			"TmuxNavigateRight",
-		},
-		keys = {
-			{ "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-			{ "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-			{ "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-			{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
-		},
 	},
 }
