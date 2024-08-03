@@ -15,22 +15,39 @@ return {
 	-- 	end,
 	-- },
 
-	{
-		"projekt0n/github-nvim-theme",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("github-theme").setup({ options = { transparent = true } })
+	-- {
+	-- 	"projekt0n/github-nvim-theme",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("github-theme").setup({ options = { transparent = true } })
+	--
+	-- 		vim.cmd("colorscheme github_dark_dimmed")
+	-- 	end,
+	-- },
 
-			vim.cmd("colorscheme github_dark_dimmed")
+	-- {
+	-- 	"catppuccin/nvim",
+	-- 	name = "catppuccin",
+	-- 	priority = 1000,
+	-- 	init = function()
+	-- 		vim.cmd("colorscheme catppuccin-mocha")
+	-- 	end,
+	-- },
+
+	{
+		"navarasu/onedark.nvim",
+		config = function()
+			require("onedark").setup({ style = "darker" })
+			require("onedark").load()
 		end,
 	},
 
 	-- {
-	-- 	"navarasu/onedark.nvim",
+	-- 	"Mofiqul/vscode.nvim",
 	-- 	config = function()
-	-- 		require("onedark").setup({ style = "darker" })
-	-- 		require("onedark").load()
+	-- 		require("vscode").setup()
+	-- 		vim.cmd("colorscheme vscode")
 	-- 	end,
 	-- },
 }
