@@ -14,11 +14,24 @@ return {
 		"lewis6991/gitsigns.nvim",
 		config = function()
 			require("gitsigns").setup({
-				on_attach = function(bufnr)
-					local function keymap(mode, l, r, opts)
-						opts = opts or {}
-						opts.buffer = bufnr
-						vim.keymap.set(mode, l, r, opts)
+				signs = {
+					add = { text = "▎" },
+					change = { text = "▎" },
+					delete = { text = "" },
+					topdelete = { text = "" },
+					changedelete = { text = "▎" },
+					untracked = { text = "▎" },
+				},
+				signs_staged = {
+					add = { text = "▎" },
+					change = { text = "▎" },
+					delete = { text = "" },
+					topdelete = { text = "" },
+					changedelete = { text = "▎" },
+				},
+				on_attach = function(buffer)
+					local function keymap(mode, l, r)
+						vim.keymap.set(mode, l, r, { buffer = buffer })
 					end
 
 					local gitsigns = require("gitsigns")
