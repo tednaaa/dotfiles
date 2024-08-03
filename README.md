@@ -17,6 +17,13 @@ cargo run unlink
 - alacritty + tmux
 - neovim > zed > vscode
 
+## Zed
+
+Code actions: `g .`
+Close all items: `ctrl w q`
+
+Project diagnostics: `cmd shift m`
+
 ## Neovim
 
 `<C-o>` - Exit insert mode for exactly one move
