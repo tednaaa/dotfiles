@@ -21,7 +21,7 @@ return {
 				"taplo",
 				"gopls",
 				"golangci_lint_ls",
-				"tsserver",
+				"vtsls",
 				"eslint",
 				"html",
 				"cssls",
@@ -45,11 +45,10 @@ return {
 				keymap("n", "gi", fzf.lsp_implementations)
 				keymap("n", "gt", fzf.lsp_typedefs)
 
-				keymap("n", "<leader>d", vim.diagnostic.open_float)
-				keymap("n", "<leader>pd", fzf.diagnostics_workspace)
 				keymap({ "n", "v" }, "<leader>ca", fzf.lsp_code_actions)
 
-				keymap("n", "<leader>rn", vim.lsp.buf.rename)
+				keymap("n", "<leader>d", vim.diagnostic.open_float)
+				keymap("n", "<leader>r", vim.lsp.buf.rename)
 				keymap("n", "K", vim.lsp.buf.hover)
 
 				keymap("n", "<leader>hh", function()
@@ -83,18 +82,18 @@ return {
 			docker_compose_language_service = { filetypes = { "yml.docker-compose" } },
 
 			-- Vue take over mode
-			tsserver = {
-				init_options = {
-					plugins = {
-						{
-							name = "@vue/typescript-plugin",
-							location = "/Users/tedna/.asdf/installs/nodejs/20.15.0/lib/node_modules/@vue/typescript-plugin",
-							languages = { "javascript", "typescript", "vue" },
-						},
-					},
-				},
-				filetypes = { "javascript", "typescript", "vue" },
-			},
+			-- tsserver = {
+			-- 	init_options = {
+			-- 		plugins = {
+			-- 			{
+			-- 				name = "@vue/typescript-plugin",
+			-- 				location = "/Users/tedna/.asdf/installs/nodejs/20.15.0/lib/node_modules/@vue/typescript-plugin",
+			-- 				languages = { "javascript", "typescript", "javascriptreact", "typescriptreact", "vue" },
+			-- 			},
+			-- 		},
+			-- 	},
+			-- 	filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact", "vue" },
+			-- },
 		}
 
 		mason_lspconfig.setup_handlers({
