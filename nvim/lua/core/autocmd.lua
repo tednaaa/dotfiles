@@ -9,17 +9,31 @@ vim.api.nvim_create_autocmd("CmdlineEnter", {
 	end,
 })
 
--- vim.api.nvim_create_autocmd("FileType", {
--- 	pattern = { "json", "jsonc", "markdown" },
--- 	callback = function()
--- 		vim.opt.conceallevel = 0
--- 	end,
--- })
---
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking copying text",
 	group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
 	callback = function()
 		vim.highlight.on_yank()
+	end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+	group = vim.api.nvim_create_augroup("close_with_q", { clear = true }),
+	pattern = {
+		"grug-far",
+		"help",
+		"lspinfo",
+		"qf",
+		"startuptime",
+		"checkhealth",
+		"gitsigns.blame",
+	},
+	callback = function(event)
+		vim.bo[event.buf].buflisted = false
+		vim.keymap.set("n", "q", "<cmd>close<cr>", {
+			buffer = event.buf,
+			silent = true,
+			desc = "Quit buffer",
+		})
 	end,
 })
