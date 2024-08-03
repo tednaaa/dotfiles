@@ -12,6 +12,7 @@ fn main() -> Result<(), std::io::Error> {
 			("wezterm", ".config/wezterm"),
 			("zed/settings.json", ".config/zed/settings.json"),
 			("zed/keymap.json", ".config/zed/keymap.json"),
+			("zed/snippets.json", ".config/zed/snippets.json"),
 			("fish/config.fish", ".config/fish/config.fish"),
 			("lazygit/config.yml", ".config/lazygit/config.yml"),
 			// ~
