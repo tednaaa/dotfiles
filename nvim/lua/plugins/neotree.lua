@@ -28,6 +28,7 @@ return {
 					never_show = { ".DS_Store" },
 				},
 				follow_current_file = { enabled = true },
+				use_libuv_file_watcher = true,
 			},
 			default_component_configs = {
 				git_status = {
