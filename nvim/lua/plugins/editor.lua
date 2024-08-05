@@ -1,15 +1,5 @@
 return {
 	{
-		"folke/flash.nvim",
-		event = "VeryLazy",
-		opts = {},
-		-- stylua: ignore
-		keys = {
-			{ "s", mode = { "n", "x", "o" }, function() require("flash").jump() end},
-			{ "<c-s>", mode = { "c" }, function() require("flash").toggle() end},
-		},
-	},
-	{
 		"folke/noice.nvim",
 		-- TODO: redraw issue, folke on vacation till the end of August
 		tag = "v4.4.7",
