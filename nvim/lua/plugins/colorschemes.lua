@@ -15,6 +15,23 @@ return {
 	-- 	end,
 	-- },
 
+	{
+		"olimorris/onedarkpro.nvim",
+		priority = 1000,
+		config = function()
+			vim.cmd("colorscheme onedark")
+		end,
+	},
+
+	-- {
+	-- 	"loctvl842/monokai-pro.nvim",
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("monokai-pro").setup()
+	-- 		vim.cmd("colorscheme monokai-pro")
+	-- 	end,
+	-- },
+
 	-- {
 	-- 	"projekt0n/github-nvim-theme",
 	-- 	lazy = false,
@@ -34,14 +51,6 @@ return {
 	-- 		vim.cmd("colorscheme catppuccin-mocha")
 	-- 	end,
 	-- },
-
-	{
-		"navarasu/onedark.nvim",
-		config = function()
-			require("onedark").setup({ style = "darker" })
-			require("onedark").load()
-		end,
-	},
 
 	-- {
 	-- 	"Mofiqul/vscode.nvim",
