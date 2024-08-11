@@ -9,6 +9,6 @@ return {
 			javascriptreact = { "prettierd", "eslint_d" },
 			json = { "prettierd" },
 		},
-		format_on_save = { timeout_ms = 3000, lsp_format = "fallback" },
+		format_on_save = { timeout_ms = 1000, lsp_format = "fallback" },
 	},
 }
