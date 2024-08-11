@@ -35,9 +35,12 @@ return {
 					end
 
 					local gitsigns = require("gitsigns")
+					local fzf = require("fzf-lua")
 
 					keymap("n", "gh", gitsigns.preview_hunk)
 					keymap("n", "ghx", gitsigns.reset_hunk)
+
+					keymap("n", "ghh", fzf.git_bcommits)
 				end,
 			})
 		end,
