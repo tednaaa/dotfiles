@@ -23,7 +23,7 @@ return {
 		"MagicDuck/grug-far.nvim",
 		config = function()
 			local grug_far = require("grug-far")
-			grug_far.setup({ placeholders = { enabled = false } })
+			grug_far.setup()
 
 			vim.keymap.set("n", "<leader>g;", grug_far.grug_far, { desc = "Global find and replace" })
 		end,
