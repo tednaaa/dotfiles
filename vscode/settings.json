@@ -20,9 +20,6 @@
   "editor.lineHeight": 18,
   "editor.fontSize": 11,
   "editor.tabSize": 2,
-
-  "workbench.colorTheme": "Atom One Dark",
-  "workbench.iconTheme": "material-icon-theme",
   "workbench.editor.tabSizing": "shrink",
   "workbench.startupEditor": "none",
   "workbench.editor.revealIfOpen": false,
