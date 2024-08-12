@@ -9,6 +9,9 @@ source ~/.asdf/plugins/golang/set-env.fish
 
 set -x ASDF_GOLANG_MOD_VERSION_ENABLED true
 
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
 starship init fish | source
 fzf --fish | source
 
