@@ -35,6 +35,7 @@ Project diagnostics: `cmd shift m`
 `<C-ws` - Create horizontal split
 
 `%` - Jump to prev/next [] or () or {}
+`*` - Jump through cword items
 
 `<C-a>` - Increment number
 `<C-x>` - Decrement number
