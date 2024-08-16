@@ -1,0 +1,66 @@
+return {}
+-- return {
+-- 	{
+-- 		"mfussenegger/nvim-dap",
+-- 		dependencies = {
+-- 			"rcarriga/nvim-dap-ui",
+-- 			"nvim-neotest/nvim-nio",
+-- 			"mxsdev/nvim-dap-vscode-js",
+-- 		},
+-- 		config = function()
+-- 			local dap = require("dap")
+-- 			local ui = require("dapui")
+-- 			local mason_registry = require("mason-registry")
+--
+-- 			require("dapui").setup()
+--
+-- 			---@diagnostic disable-next-line: missing-fields
+-- 			require("dap-vscode-js").setup({
+-- 				debugger_path = mason_registry.get_package("js-debug-adapter"):get_install_path(),
+-- 				adapters = { "pwa-node", "pwa-chrome" },
+-- 			})
+--
+-- 			if dap.configurations.typescript == nil and dap.configurations.javascript == nil then
+-- 				for _, language in ipairs({ "typescript", "javascript" }) do
+-- 					dap.configurations[language] = {
+-- 						{
+-- 							type = "pwa-node",
+-- 							request = "launch",
+-- 							name = "Launch file",
+-- 							program = "${file}",
+-- 							cwd = "${workspaceFolder}",
+-- 						},
+-- 					}
+-- 				end
+-- 			end
+--
+-- 			vim.keymap.set("n", "<space>b", dap.toggle_breakpoint)
+-- 			vim.keymap.set("n", "<space>gb", dap.run_to_cursor)
+--
+-- 			vim.keymap.set("n", "<space>?", function()
+-- 				---@diagnostic disable-next-line: missing-fields
+-- 				require("dapui").eval(nil, { enter = true })
+-- 			end)
+--
+-- 			vim.keymap.set("n", "<F1>", dap.continue)
+-- 			vim.keymap.set("n", "<F2>", dap.step_into)
+-- 			vim.keymap.set("n", "<F3>", dap.step_over)
+-- 			vim.keymap.set("n", "<F4>", dap.step_out)
+-- 			vim.keymap.set("n", "<F5>", dap.step_back)
+-- 			vim.keymap.set("n", "<F13>", dap.restart)
+--
+-- 			dap.listeners.before.attach.dapui_config = function()
+-- 				ui.open()
+-- 			end
+-- 			dap.listeners.before.launch.dapui_config = function()
+-- 				ui.open()
+-- 			end
+-- 			dap.listeners.before.event_terminated.dapui_config = function()
+-- 				ui.close()
+-- 			end
+-- 			dap.listeners.before.event_exited.dapui_config = function()
+-- 				ui.close()
+-- 			end
+-- 		end,
+-- 	},
+-- }
