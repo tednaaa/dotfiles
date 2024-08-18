@@ -22,6 +22,7 @@ return {
 				"gopls",
 				"golangci_lint_ls",
 				"vtsls",
+				"volar",
 				"eslint",
 				"html",
 				"cssls",
@@ -81,8 +82,9 @@ return {
 			rust_analyzer = { settings = { check = { command = "clippy" } } },
 			docker_compose_language_service = { filetypes = { "yml.docker-compose" } },
 
+			-- Vue take over mode
 			vtsls = {
-				filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+				filetypes = { "typescript", "javascript", "vue" },
 				settings = {
 					vtsls = { tsserver = { globalPlugins = {} } },
 				},
