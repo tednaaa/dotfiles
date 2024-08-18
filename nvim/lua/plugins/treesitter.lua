@@ -14,10 +14,17 @@ return {
 			sync_install = false,
 			auto_install = true,
 			indent = { enable = true },
-			autotag = { enable = true },
 			highlight = {
 				enable = true,
 				additional_vim_regex_highlighting = false,
+			},
+		})
+
+		require("nvim-ts-autotag").setup({
+			opts = {
+				enable_close = true,
+				enable_rename = true,
+				enable_close_on_slash = false,
 			},
 		})
 
