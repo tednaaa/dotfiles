@@ -15,7 +15,7 @@ return {
 					},
 					signature = { opts = { size = { width = 80, height = 10 } } },
 				},
-				presets = { command_palette = true, lsp_doc_border = true },
+				presets = { command_palette = true, lsp_doc_border = false },
 			})
 		end,
 	},
