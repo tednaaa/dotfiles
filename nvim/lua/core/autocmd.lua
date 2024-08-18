@@ -24,6 +24,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		"help",
 		"lspinfo",
 		"qf",
+		"json",
 		"startuptime",
 		"checkhealth",
 		"gitsigns.blame",
