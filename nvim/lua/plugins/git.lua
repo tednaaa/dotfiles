@@ -10,16 +10,7 @@ return {
 		},
 		config = function()
 			local diffview = require("diffview")
-			local actions = require("diffview.actions")
-
-			diffview.setup({
-				keymaps = {
-					file_panel = {
-						{ "n", "j", actions.select_next_entry, { desc = "Open the diff for the next file" } },
-						{ "n", "k", actions.select_prev_entry, { desc = "Open the diff for the previous file" } },
-					},
-				},
-			})
+			diffview.setup()
 
 			require("neogit").setup({ integrations = { diffview = true, fzf_lua = true } })
 
