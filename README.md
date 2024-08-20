@@ -41,6 +41,8 @@ Project diagnostics: `cmd shift m`
 `<C-x>` - Decrement number
 
 `diw` - Delete word from any position
+`viwp` - Replace word after previous move
+
 `ciw` - also switch to insert mode
 
 `ci..` - Delete inside "" or () or {} and switch to insert mode
