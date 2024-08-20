@@ -26,9 +26,14 @@ config.background = {
 	},
 }
 
-config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular" })
-config.font_size = 13.7
+-- config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular" })
+-- config.font_size = 13.7
+-- config.line_height = 1.3
+
+config.font = wezterm.font("FiraCode Nerd Font Mono", { weight = "Medium" })
+config.font_size = 14.7
 config.line_height = 1.3
+
 config.adjust_window_size_when_changing_font_size = false
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
