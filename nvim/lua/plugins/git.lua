@@ -46,6 +46,8 @@ return {
 					local fzf = require("fzf-lua")
 
 					keymap("n", "gh", gitsigns.preview_hunk)
+					keymap("n", "ghs", gitsigns.stage_hunk)
+					keymap("n", "ghu", gitsigns.undo_stage_hunk)
 					keymap("n", "ghx", gitsigns.reset_hunk)
 
 					keymap("n", "ghh", fzf.git_bcommits)
