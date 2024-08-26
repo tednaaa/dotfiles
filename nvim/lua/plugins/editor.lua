@@ -20,6 +20,10 @@ return {
 		end,
 	},
 	{
+		"otavioschwanck/arrow.nvim",
+		opts = { show_icons = true, leader_key = ";" },
+	},
+	{
 		"MagicDuck/grug-far.nvim",
 		config = function()
 			local grug_far = require("grug-far")
