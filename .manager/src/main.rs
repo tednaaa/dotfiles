@@ -10,6 +10,7 @@ fn main() -> Result<(), std::io::Error> {
 			("nvim", ".config/nvim"),
 			("alacritty", ".config/alacritty"),
 			("wezterm", ".config/wezterm"),
+			("yazi", ".config/yazi"),
 			("zed/settings.json", ".config/zed/settings.json"),
 			("zed/keymap.json", ".config/zed/keymap.json"),
 			("zed/snippets.json", ".config/zed/snippets.json"),
