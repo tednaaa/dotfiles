@@ -5,30 +5,45 @@ return {
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 		{ "williamboman/mason.nvim" },
 		{ "williamboman/mason-lspconfig.nvim" },
+		{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
 	},
 	config = function()
-		local mason = require("mason")
-		local mason_lspconfig = require("mason-lspconfig")
-		local cmp_nvim_lsp = require("cmp_nvim_lsp")
-
-		-- Also you can install manually using :MasonInstall {name}
-		-- For example eslint_d and prettier_d
-		mason.setup()
-		mason_lspconfig.setup({
+		require("mason").setup()
+		require("mason-tool-installer").setup({
 			ensure_installed = {
-				"lua_ls",
+				"editorconfig-checker",
+
+				"dockerfile-language-server",
+				"docker-compose-language-service",
+				"hadolint",
+
+				"lua-language-server",
+				"stylua",
+
 				"rust_analyzer",
 				"taplo",
+
 				"gopls",
-				"golangci_lint_ls",
+				"gofumpt",
+				"golines",
+				"gomodifytags",
+				"gotests",
+				"golangci-lint",
+
 				"vtsls",
-				"volar",
-				"eslint",
+				{ "volar", auto_update = false },
 				"html",
 				"cssls",
 				"emmet_ls",
 				"tailwindcss",
+
+				"eslint-lsp",
+				"prettierd",
 			},
+
+			auto_update = true,
+			run_on_start = true,
+			start_delay = 3000,
 		})
 
 		vim.api.nvim_create_autocmd("LspAttach", {
@@ -62,7 +77,7 @@ return {
 			end,
 		})
 
-		local capabilities = cmp_nvim_lsp.default_capabilities()
+		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
 		for type, icon in pairs(signs) do
@@ -83,31 +98,31 @@ return {
 			docker_compose_language_service = { filetypes = { "yml.docker-compose" } },
 
 			-- Vue take over mode
-			vtsls = {
-				filetypes = { "typescript", "javascript", "vue" },
-				settings = {
-					vtsls = { tsserver = { globalPlugins = {} } },
-				},
-				before_init = function(params, config)
-					local result = vim
-						.system({ "npm", "query", "#vue" }, { cwd = params.workspaceFolders[1].name, text = true })
-						:wait()
-					if result.stdout ~= "[]" then
-						local vuePluginConfig = {
-							name = "@vue/typescript-plugin",
-							location = require("mason-registry").get_package("vue-language-server"):get_install_path()
-								.. "/node_modules/@vue/language-server",
-							languages = { "vue" },
-							configNamespace = "typescript",
-							enableForWorkspaceTypeScriptVersions = true,
-						}
-						table.insert(config.settings.vtsls.tsserver.globalPlugins, vuePluginConfig)
-					end
-				end,
-			},
+			-- vtsls = {
+			-- 	filetypes = { "typescript", "javascript", "vue" },
+			-- 	settings = {
+			-- 		vtsls = { tsserver = { globalPlugins = {} } },
+			-- 	},
+			-- 	before_init = function(params, config)
+			-- 		local result = vim
+			-- 			.system({ "npm", "query", "#vue" }, { cwd = params.workspaceFolders[1].name, text = true })
+			-- 			:wait()
+			-- 		if result.stdout ~= "[]" then
+			-- 			local vuePluginConfig = {
+			-- 				name = "@vue/typescript-plugin",
+			-- 				location = require("mason-registry").get_package("vue-language-server"):get_install_path()
+			-- 					.. "/node_modules/@vue/language-server",
+			-- 				languages = { "vue" },
+			-- 				configNamespace = "typescript",
+			-- 				enableForWorkspaceTypeScriptVersions = true,
+			-- 			}
+			-- 			table.insert(config.settings.vtsls.tsserver.globalPlugins, vuePluginConfig)
+			-- 		end
+			-- 	end,
+			-- },
 		}
 
-		mason_lspconfig.setup_handlers({
+		require("mason-lspconfig").setup_handlers({
 			function(server_name)
 				local server = servers[server_name] or {}
 				server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
