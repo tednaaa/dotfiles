@@ -60,9 +60,9 @@ return {
 					["<CR>"] = cmp.mapping.confirm({ select = true }),
 					["<S-CR>"] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
 				}),
-				completion = {
-					completeopt = "menu,menuone,preview,noselect",
-				},
+				completion = { completeopt = "menu,menuone,preview,noselect" },
+				---@diagnostic disable-next-line: missing-fields
+				performance = { debounce = 0, throttle = 0 },
 				snippet = {
 					expand = function(args)
 						luasnip.lsp_expand(args.body)
