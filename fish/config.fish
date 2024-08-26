@@ -18,6 +18,7 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 
 starship init fish | source
+zoxide init fish | source
 fzf --fish | source
 
 function yy
