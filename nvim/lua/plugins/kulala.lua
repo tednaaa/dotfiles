@@ -6,8 +6,9 @@ return {
 		local kulala = require("kulala")
 		kulala.setup()
 
-		vim.keymap.set("n", "<A-k>", kulala.jump_prev, { noremap = true, silent = true })
-		vim.keymap.set("n", "<A-j>", kulala.jump_next, { noremap = true, silent = true })
-		vim.keymap.set("n", "<A-l>", kulala.run, { noremap = true, silent = true })
+		local opts = { noremap = true, silent = true }
+		vim.keymap.set("n", "<A-N>", kulala.jump_prev, opts)
+		vim.keymap.set("n", "<A-n>", kulala.jump_next, opts)
+		vim.keymap.set("n", "<A-m>", kulala.run, opts)
 	end,
 }
