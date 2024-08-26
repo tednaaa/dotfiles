@@ -36,6 +36,7 @@ Project diagnostics: `cmd shift m`
 
 `%` - Jump to prev/next [] or () or {}
 `*` - Jump through cword items
+`r` - Change symbol
 
 `<C-a>` - Increment number
 `<C-x>` - Decrement number
