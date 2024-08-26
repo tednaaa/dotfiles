@@ -36,6 +36,7 @@ return {
 				"cssls",
 				"emmet_ls",
 				"tailwindcss",
+				"prisma-language-server",
 
 				"eslint-lsp",
 				"prettierd",
@@ -43,7 +44,6 @@ return {
 
 			auto_update = true,
 			run_on_start = true,
-			start_delay = 3000,
 		})
 
 		vim.api.nvim_create_autocmd("LspAttach", {
