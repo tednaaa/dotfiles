@@ -10,6 +10,7 @@ return {
 				javascriptreact = { "prettierd", "eslint_d" },
 				vue = { "prettierd", "eslint_d" },
 				json = { "prettierd" },
+				go = { "gofumpt", "golines", "gomodifytags", "gotests" },
 			},
 			format_after_save = { async = true, lsp_format = "fallback" },
 		})
