@@ -44,14 +44,6 @@ return {
 					show_buffer_close_icons = false,
 					indicator = { style = "none" },
 					separator_style = { "", "" },
-					offsets = {
-						{
-							filetype = "neo-tree",
-							text = "I use neovim btw ;)",
-							highlight = "Directory",
-							text_align = "left",
-						},
-					},
 				},
 			})
 
