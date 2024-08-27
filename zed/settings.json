@@ -9,9 +9,9 @@
 	"ui_font_family": "JetBrainsMono Nerd Font",
 	"buffer_font_features": { "calt": false },
 	"cursor_blink": false,
-	"ui_font_size": 14,
-	"buffer_line_height": { "custom": 2 },
-	"buffer_font_size": 13,
+	"ui_font_size": 16,
+	"buffer_line_height": { "custom": 1.8 },
+	"buffer_font_size": 16,
 
 	"indent_guides": { "enabled": true },
 	"tabs": { "file_icons": true },
