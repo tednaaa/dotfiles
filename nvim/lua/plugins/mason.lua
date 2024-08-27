@@ -39,6 +39,7 @@ return {
 				"prisma-language-server",
 
 				"eslint-lsp",
+				"eslint_d",
 				"prettierd",
 			},
 
