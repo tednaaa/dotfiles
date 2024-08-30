@@ -42,8 +42,6 @@ return {
 					diagnostics = "nvim_lsp",
 					show_close_icon = false,
 					show_buffer_close_icons = false,
-					indicator = { style = "none" },
-					separator_style = { "", "" },
 				},
 			})
 
