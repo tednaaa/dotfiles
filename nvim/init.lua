@@ -1,17 +1,7 @@
 require("core.settings")
 require("core.keymaps")
 require("core.autocmd")
-
-local clear_processes = require("modules.clear-processes")
-local generate_editorconfig = require("modules.generate-editorconfig")
-
-vim.api.nvim_create_user_command("ClearProcesses", function()
-	clear_processes.clear_processes()
-end, {})
-
-vim.api.nvim_create_user_command("GenerateEditorconfig", function()
-	generate_editorconfig.generate_editorconfig()
-end, {})
+require("core.user_commands")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
