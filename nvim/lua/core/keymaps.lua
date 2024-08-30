@@ -35,7 +35,7 @@ keymap("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
 keymap("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move Down" })
 keymap("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
 
-keymap("n", "<leader>w", "<cmd>update<cr>", { desc = "save buffer" })
+keymap("n", "<leader>w", "<cmd>write<cr>", { desc = "save buffer" })
 
 keymap("n", "J", "mzJ`z", { desc = "Join line with next" })
 
