@@ -21,7 +21,7 @@ return {
 	},
 	{
 		"otavioschwanck/arrow.nvim",
-		opts = { show_icons = true, leader_key = "t" },
+		opts = { show_icons = true, leader_key = ";" },
 	},
 	{
 		"MagicDuck/grug-far.nvim",
