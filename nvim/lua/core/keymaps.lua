@@ -5,15 +5,15 @@ local keymap = function(mode, lhs, rhs, opts)
 	vim.keymap.set(mode, lhs, rhs, opts)
 end
 
-keymap("t", "<esc><esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
-keymap("n", "<esc>", "<cmd>nohlsearch<cr>")
-keymap("i", "jj", "<esc>")
+keymap("n", "<leader>w", "<cmd>write<cr>", { desc = "save buffer" })
+keymap("n", "<esc>", "<cmd>nohlsearch<cr>", { desc = "Remove Highlights" })
+keymap("i", "jj", "<esc>", { desc = "Escape insert mode" })
 
 -- better up/down
-keymap({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
-keymap({ "n", "x" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
-keymap({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
-keymap({ "n", "x" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
+keymap({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true })
+keymap({ "n", "x" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true })
+keymap({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true })
+keymap({ "n", "x" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true })
 
 -- Move to window using the <ctrl> hjkl keys
 keymap("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
@@ -34,8 +34,6 @@ keymap("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
 keymap("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
 keymap("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move Down" })
 keymap("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
-
-keymap("n", "<leader>w", "<cmd>write<cr>", { desc = "save buffer" })
 
 keymap("n", "J", "mzJ`z", { desc = "Join line with next" })
 
