@@ -40,7 +40,7 @@ return {
 			local grug_far = require("grug-far")
 			grug_far.setup()
 
-			vim.keymap.set("n", "<leader>g;", grug_far.grug_far, { desc = "Global find and replace" })
+			vim.keymap.set("n", "<leader>g;", grug_far.open, { desc = "Global find and replace" })
 		end,
 	},
 	{
