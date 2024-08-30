@@ -26,6 +26,15 @@ return {
 		opts = { show_icons = true, leader_key = ";" },
 	},
 	{
+		"folke/trouble.nvim",
+		opts = {},
+		cmd = "Trouble",
+		keys = {
+			{ "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", desc = "Global Diagnostics" },
+			{ "<leader>bx", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", desc = "Buffer Diagnostics" },
+		},
+	},
+	{
 		"MagicDuck/grug-far.nvim",
 		config = function()
 			local grug_far = require("grug-far")
