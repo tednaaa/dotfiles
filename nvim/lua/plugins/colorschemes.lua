@@ -15,13 +15,13 @@ return {
 	-- 	end,
 	-- },
 
-	{
-		"olimorris/onedarkpro.nvim",
-		priority = 1000,
-		config = function()
-			vim.cmd("colorscheme onedark")
-		end,
-	},
+	-- {
+	-- 	"olimorris/onedarkpro.nvim",
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		vim.cmd("colorscheme onedark")
+	-- 	end,
+	-- },
 
 	-- {
 	-- 	"loctvl842/monokai-pro.nvim",
@@ -43,14 +43,14 @@ return {
 	-- 	end,
 	-- },
 
-	-- {
-	-- 	"catppuccin/nvim",
-	-- 	name = "catppuccin",
-	-- 	priority = 1000,
-	-- 	init = function()
-	-- 		vim.cmd("colorscheme catppuccin-mocha")
-	-- 	end,
-	-- },
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+		init = function()
+			vim.cmd("colorscheme catppuccin-mocha")
+		end,
+	},
 
 	-- {
 	-- 	"Mofiqul/vscode.nvim",
