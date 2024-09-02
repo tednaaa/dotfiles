@@ -95,7 +95,7 @@ return {
 					},
 				},
 			},
-			rust_analyzer = { settings = { check = { command = "clippy" } } },
+			rust_analyzer = { settings = { ["rust-analyzer"] = { checkOnSave = { command = "clippy" } } } },
 			docker_compose_language_service = { filetypes = { "yml.docker-compose" } },
 
 			-- Vue take over mode
