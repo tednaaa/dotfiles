@@ -1,14 +1,14 @@
 return {
 	{
-		"monkoose/neocodeium",
-		event = "VeryLazy",
+		"supermaven-inc/supermaven-nvim",
 		config = function()
-			local neocodeium = require("neocodeium")
-			neocodeium.setup()
-
-			vim.keymap.set("i", "<A-a>", neocodeium.accept)
-			vim.keymap.set("i", "<A-n>", neocodeium.cycle_or_complete)
-			vim.keymap.set("i", "<A-c>", neocodeium.clear)
+			require("supermaven-nvim").setup({
+				keymaps = {
+					accept_suggestion = "<A-a>",
+					clear_suggestion = "<A-c>",
+					accept_word = "<A-j>",
+				},
+			})
 		end,
 	},
 	{
