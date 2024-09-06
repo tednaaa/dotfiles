@@ -1,7 +1,6 @@
 return {
 	{ "wakatime/vim-wakatime" },
 	{ "RRethy/vim-illuminate" },
-	{ "folke/ts-comments.nvim", opts = {}, event = "VeryLazy", enabled = true },
 
 	{
 		"brenoprata10/nvim-highlight-colors",
