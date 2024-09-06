@@ -1,40 +1,40 @@
 [
-	{
-		"bindings": {
-			"ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-			"ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-			"ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-			"ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
-		}
-	},
-	{
-		// normal mode
-		"context": "Editor && vim_mode == normal && !VimWaiting && !menu",
-		"bindings": {
-			"shift-l": "pane::ActivateNextItem",
-			"shift-h": "pane::ActivatePrevItem",
+  {
+    "bindings": {
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  },
+  {
+    // normal mode
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "shift-l": "pane::ActivateNextItem",
+      "shift-h": "pane::ActivatePrevItem",
 
-			"space v": "pane::SplitRight",
-			"space s": "pane::SplitDown",
+      "space v": "pane::SplitRight",
+      "space s": "pane::SplitDown",
 
-			"space r": "editor::Rename"
-		}
-	},
-	{
-		// insert mode
-		"context": "Editor && vim_mode == insert && !menu",
-		"bindings": {
-			"j j": "vim::NormalBefore"
-		}
-	},
-	{
-		// normal & visual mode
-		"context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
-		"bindings": {}
-	},
-	{
-		// visual, visual line & visual block modes
-		"context": "Editor && vim_mode == visual && !VimWaiting && !menu",
-		"bindings": {}
-	}
+      "space r": "editor::Rename"
+    }
+  },
+  {
+    // insert mode
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      "j j": "vim::NormalBefore"
+    }
+  },
+  {
+    // normal & visual mode
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {}
+  },
+  {
+    // visual, visual line & visual block modes
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {}
+  }
 ]

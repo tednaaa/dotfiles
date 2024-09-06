@@ -1,34 +1,34 @@
 {
-	"vim_mode": true,
-	"relative_line_numbers": true,
-	"vertical_scroll_margin": 10,
+  "vim_mode": true,
+  "relative_line_numbers": true,
+  "vertical_scroll_margin": 10,
 
-	// Editor
-	"theme": "One Dark Pro",
-	"buffer_font_family": "JetBrainsMono Nerd Font",
-	"ui_font_family": "JetBrainsMono Nerd Font",
-	"buffer_font_features": { "calt": false },
-	"cursor_blink": false,
-	"ui_font_size": 16,
-	"buffer_line_height": { "custom": 1.8 },
-	"buffer_font_size": 16,
+  // Editor
+  "theme": "One Dark Pro",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_features": { "calt": false },
+  "cursor_blink": false,
+  "ui_font_size": 16,
+  "buffer_line_height": { "custom": 1.8 },
+  "buffer_font_size": 16,
 
-	"indent_guides": { "enabled": true },
-	"tabs": { "file_icons": true },
-	"tab_size": 2,
-	"hard_tabs": true,
-	"show_whitespaces": "selection",
+  "indent_guides": { "enabled": true },
+  "tabs": { "file_icons": true },
+  "tab_size": 2,
+  "hard_tabs": true,
+  "show_whitespaces": "selection",
 
-	// LSP configuration
-	"lsp": {
-		"rust-analyzer": {
-			"initialization_options": { "check": { "command": "clippy" } }
-		}
-	},
+  // LSP configuration
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": { "check": { "command": "clippy" } }
+    }
+  },
 
-	// disabled
-	"git": { "inline_blame": { "enabled": false } },
-	"features": { "inline_completion_provider": "none", "copilot": false }
+  // disabled
+  "git": { "inline_blame": { "enabled": false } },
+  "features": { "inline_completion_provider": "supermaven" }
 
-	// "telemetry": { "diagnostics": false, "metrics": false },
+  // "telemetry": { "diagnostics": false, "metrics": false },
 }
