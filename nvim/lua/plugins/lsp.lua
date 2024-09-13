@@ -64,6 +64,9 @@ return {
 
 				keymap({ "n", "v" }, "<leader>ca", fzf.lsp_code_actions)
 
+				keymap("n", "]g", vim.diagnostic.goto_next)
+				keymap("n", "[g", vim.diagnostic.goto_prev)
+
 				keymap("n", "<leader>d", vim.diagnostic.open_float)
 				keymap("n", "<leader>r", vim.lsp.buf.rename)
 				keymap("n", "K", vim.lsp.buf.hover)
