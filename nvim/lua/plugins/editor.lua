@@ -22,10 +22,6 @@ return {
 		end,
 	},
 	{
-		"otavioschwanck/arrow.nvim",
-		opts = { show_icons = true, leader_key = ";" },
-	},
-	{
 		"folke/trouble.nvim",
 		opts = {},
 		cmd = "Trouble",
