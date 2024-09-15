@@ -27,8 +27,8 @@ config.background = {
 }
 
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular" })
-config.font_size = 15
-config.line_height = 1.3
+config.font_size = 17
+config.line_height = 1.37
 
 config.adjust_window_size_when_changing_font_size = false
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
