@@ -15,13 +15,13 @@ return {
 	-- 	end,
 	-- },
 
-	-- {
-	-- 	"olimorris/onedarkpro.nvim",
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		vim.cmd("colorscheme onedark")
-	-- 	end,
-	-- },
+	{
+		"olimorris/onedarkpro.nvim",
+		priority = 1000,
+		config = function()
+			vim.cmd("colorscheme onedark")
+		end,
+	},
 
 	-- {
 	-- 	"loctvl842/monokai-pro.nvim",
@@ -32,16 +32,16 @@ return {
 	-- 	end,
 	-- },
 
-	{
-		"projekt0n/github-nvim-theme",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("github-theme").setup({ options = { transparent = true } })
-
-			vim.cmd("colorscheme github_dark_dimmed")
-		end,
-	},
+	-- {
+	-- 	"projekt0n/github-nvim-theme",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("github-theme").setup({ options = { transparent = true } })
+	--
+	-- 		vim.cmd("colorscheme github_dark_dimmed")
+	-- 	end,
+	-- },
 
 	-- {
 	-- 	"catppuccin/nvim",
