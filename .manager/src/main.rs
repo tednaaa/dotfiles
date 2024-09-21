@@ -8,31 +8,15 @@ fn main() -> Result<(), std::io::Error> {
 		let dotfiles_map = [
 			// ~/.config
 			("nvim", ".config/nvim"),
-			("alacritty", ".config/alacritty"),
 			("wezterm", ".config/wezterm"),
 			("yazi", ".config/yazi"),
 			("zed/settings.json", ".config/zed/settings.json"),
 			("zed/keymap.json", ".config/zed/keymap.json"),
 			("zed/snippets.json", ".config/zed/snippets.json"),
 			("fish/config.fish", ".config/fish/config.fish"),
-			("lazygit/config.yml", ".config/lazygit/config.yml"),
 			// ~
-			("tmux/.tmux.conf", ".tmux.conf"),
 			("git/.gitconfig", ".gitconfig"),
 			("npm/.npmrc", ".npmrc"),
-			// vscode...
-			(
-				"vscode/settings.json",
-				"Library/Application Support/Code/User/settings.json",
-			),
-			(
-				"vscode/keybindings.json",
-				"Library/Application Support/Code/User/keybindings.json",
-			),
-			(
-				"vscode/snippets.json",
-				"Library/Application Support/Code/User/snippets/main.code-snippets",
-			),
 		];
 
 		let args: Vec<String> = env::args().collect();
