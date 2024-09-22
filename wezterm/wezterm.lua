@@ -19,14 +19,14 @@ config.color_scheme = "GitHub Dark"
 config.colors = { background = "#141414" }
 
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Medium" })
-config.font_size = 11.7
+config.font_size = 9.2
 config.line_height = 1.2
 
 config.adjust_window_size_when_changing_font_size = false
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
 config.window_frame = {
-	font_size = 11.0,
+	font_size = 10,
 }
 
 local act = wezterm.action
