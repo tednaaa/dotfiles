@@ -31,7 +31,7 @@ return {
 				"golangci-lint",
 
 				"vtsls",
-				{ "volar", auto_update = false },
+				"volar",
 				"html",
 				"cssls",
 				"emmet_ls",
