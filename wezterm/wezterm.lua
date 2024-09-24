@@ -19,8 +19,8 @@ config.color_scheme = "GitHub Dark"
 config.colors = { background = "#141414" }
 
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Medium" })
-config.font_size = 9.2
-config.line_height = 1.2
+config.font_size = 12
+config.line_height = 1.24
 
 config.adjust_window_size_when_changing_font_size = false
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
