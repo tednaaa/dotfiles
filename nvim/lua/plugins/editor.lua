@@ -15,7 +15,7 @@ return {
 					},
 					signature = { opts = { size = { width = 80, height = 10 } } },
 				},
-				presets = { command_palette = true, lsp_doc_border = false },
+				presets = { command_palette = true, lsp_doc_border = true },
 				-- disable print and write notifications
 				routes = { { filter = { event = "msg_show", kind = "", find = "written" }, opts = { skip = true } } },
 			})
