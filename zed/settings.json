@@ -4,14 +4,14 @@
 	"vertical_scroll_margin": 10,
 
 	// Editor
-	"theme": "Gruvbox Dark Hard",
+	"theme": "Ayu Dark",
 	"buffer_font_family": "JetBrainsMono Nerd Font",
 	"ui_font_family": "JetBrainsMono Nerd Font",
 	"buffer_font_features": { "calt": false },
 	"cursor_blink": false,
-	"ui_font_size": 13,
+	"ui_font_size": 16,
 	"buffer_line_height": { "custom": 1.8 },
-	"buffer_font_size": 12,
+	"buffer_font_size": 15,
 
 	"indent_guides": { "enabled": true },
 	"tabs": { "file_icons": true },
@@ -26,9 +26,12 @@
 		}
 	},
 
+	// AI
+	"features": { "inline_completion_provider": "supermaven" },
+	"show_inline_completions": false,
+
 	// disabled
-	"git": { "inline_blame": { "enabled": false } },
-	"features": { "inline_completion_provider": "supermaven" }
+	"git": { "inline_blame": { "enabled": false } }
 
 	// "telemetry": { "diagnostics": false, "metrics": false },
 }
