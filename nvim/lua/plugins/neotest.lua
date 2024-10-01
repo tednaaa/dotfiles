@@ -25,10 +25,10 @@ return {
 		})
 
 		-- stylua: ignore start
-		vim.keymap.set("n", "<leader>nt", neotest.run.run)
+		vim.keymap.set("n", "<leader>nt", function() neotest.run.run() end)
 		vim.keymap.set("n", "<leader>nf", function() neotest.run.run(vim.fn.expand("%")) end)
 		vim.keymap.set("n", "<leader>no", function () neotest.output.open({ enter = true }) end)
-		vim.keymap.set("n", "<leader>ns", neotest.summary.toggle)
+		vim.keymap.set("n", "<leader>ns", function () neotest.summary.toggle() end)
 		-- stylua: ignore end
 	end,
 }
