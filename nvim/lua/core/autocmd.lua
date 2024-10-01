@@ -20,14 +20,21 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.api.nvim_create_autocmd("FileType", {
 	group = vim.api.nvim_create_augroup("close_with_q", { clear = true }),
 	pattern = {
-		"grug-far",
 		"help",
-		"lspinfo",
-		"qf",
-		"json",
 		"startuptime",
 		"checkhealth",
+		"lspinfo",
+		"qf",
+
 		"gitsigns.blame",
+		"grug-far",
+
+		"json",
+		"text",
+
+		"neotest-output",
+		"neotest-summary",
+		"neotest-attach",
 	},
 	callback = function(event)
 		vim.bo[event.buf].buflisted = false
