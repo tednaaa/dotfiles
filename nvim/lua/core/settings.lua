@@ -34,6 +34,7 @@ vim.opt.showmode = false
 vim.opt.undofile = true
 vim.opt.timeoutlen = 200
 vim.opt.signcolumn = "yes"
+vim.opt.statuscolumn = [[%!v:lua.require'modules.ui'.statuscolumn()]]
 
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
