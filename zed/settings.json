@@ -18,6 +18,7 @@
 	"tab_size": 2,
 	"hard_tabs": true,
 	"show_whitespaces": "selection",
+	"soft_wrap": "none",
 
 	// LSP configuration
 	"lsp": {
