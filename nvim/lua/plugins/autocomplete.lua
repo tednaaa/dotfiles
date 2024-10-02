@@ -11,6 +11,7 @@ return {
 			})
 		end,
 	},
+
 	{
 		"folke/lazydev.nvim",
 		ft = "lua",
@@ -22,6 +23,7 @@ return {
 			require("lspkind").init({ preset = "codicons" })
 		end,
 	},
+
 	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
@@ -34,19 +36,14 @@ return {
 			{ "saadparwaiz1/cmp_luasnip" },
 			{ "rafamadriz/friendly-snippets" },
 			{ "L3MON4D3/LuaSnip", version = "v2.*", build = "make install_jsregexp" },
-			{ "windwp/nvim-autopairs" },
 		},
 		opts = function(_, opts)
 			opts.sources = opts.sources or {}
-			table.insert(opts.sources, {
-				name = "lazydev",
-				group_index = 0,
-			})
+			table.insert(opts.sources, { name = "lazydev", group_index = 0 })
 		end,
 		config = function()
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
-			local autopairs = require("nvim-autopairs")
 
 			require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -99,17 +96,6 @@ return {
 					{ name = "buffer" },
 				},
 			})
-
-			autopairs.setup({
-				check_ts = true,
-				ts_config = {
-					lua = { "string" },
-					javascript = { "template_string" },
-					java = false,
-				},
-			})
-
-			cmp.event:on("confirm_done", require("nvim-autopairs.completion.cmp").on_confirm_done())
 		end,
 	},
 }

@@ -14,4 +14,18 @@ return {
 			MiniIcons.mock_nvim_web_devicons()
 		end,
 	},
+	{
+		"echasnovski/mini.comment",
+		version = false,
+		config = function()
+			require("mini.comment").setup()
+		end,
+	},
+	{
+		"echasnovski/mini.pairs",
+		version = false,
+		config = function()
+			require("mini.pairs").setup()
+		end,
+	},
 }
