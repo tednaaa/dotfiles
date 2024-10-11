@@ -31,7 +31,9 @@
 	{
 		// insert mode
 		"context": "Editor && vim_mode == insert && !menu",
-		"bindings": {}
+		"bindings": {
+			"j j": "vim::NormalBefore"
+		}
 	},
 	{
 		// normal & visual mode
