@@ -46,7 +46,17 @@ vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.fillchars:append({ vert = "▎", horiz = "▁" })
 
-vim.diagnostic.config({ virtual_text = false })
+vim.diagnostic.config({
+	virtual_text = false,
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = "",
+			[vim.diagnostic.severity.WARN] = "",
+			[vim.diagnostic.severity.INFO] = "",
+			[vim.diagnostic.severity.HINT] = "󰌵",
+		},
+	},
+})
 
 vim.opt.backspace = { "start", "eol", "indent" }
 vim.opt.path:append({ "**" })
