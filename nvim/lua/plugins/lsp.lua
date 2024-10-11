@@ -20,7 +20,6 @@ return {
 				"lua-language-server",
 				"stylua",
 
-				"rust_analyzer",
 				"taplo",
 
 				"gopls",
@@ -81,8 +80,6 @@ return {
 			end,
 		})
 
-		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
 		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
 		for type, icon in pairs(signs) do
 			local hl = "DiagnosticSign" .. type
@@ -98,8 +95,9 @@ return {
 					},
 				},
 			},
-			rust_analyzer = { settings = { ["rust-analyzer"] = { checkOnSave = { command = "clippy" } } } },
+			-- rust_analyzer = { settings = { ["rust-analyzer"] = { checkOnSave = { command = "clippy" } } } },
 			docker_compose_language_service = { filetypes = { "yml.docker-compose" } },
+			"kulala_ls",
 
 			-- Vue take over mode
 			-- vtsls = {
@@ -125,6 +123,7 @@ return {
 			-- 	end,
 			-- },
 		}
+		local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 		require("mason-lspconfig").setup_handlers({
 			function(server_name)
