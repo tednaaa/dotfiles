@@ -2,6 +2,8 @@ return {
 	"ibhagwan/fzf-lua",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
+		local actions = require("fzf-lua.actions")
+
 		require("fzf-lua").setup({
 			winopts = {
 				fullscreen = true,
@@ -11,6 +13,12 @@ return {
 
 					-- layout = "horizontal",
 					-- horizontal = "right:60%",
+				},
+			},
+
+			grep = {
+				actions = {
+					["ctrl-r"] = { actions.toggle_ignore },
 				},
 			},
 
