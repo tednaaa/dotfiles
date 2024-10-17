@@ -4,9 +4,7 @@
 			"ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
 			"ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
 			"ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-			"ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
-
-			"z": "project_panel::CollapseAllEntries"
+			"ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
 		}
 	},
 	{
