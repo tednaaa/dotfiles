@@ -38,6 +38,14 @@ return {
 		end,
 	},
 	{
+		"otavioschwanck/arrow.nvim",
+		opts = {
+			show_icons = true,
+			leader_key = ";",
+			buffer_leader_key = "m",
+		},
+	},
+	{
 		"akinsho/bufferline.nvim",
 		version = "*",
 		dependencies = "nvim-tree/nvim-web-devicons",
