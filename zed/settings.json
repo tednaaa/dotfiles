@@ -5,7 +5,7 @@
 	"vertical_scroll_margin": 10,
 
 	// Editor
-	"theme": "Ayu Dark",
+	"theme": "Catppuccin Mocha",
 	"buffer_font_family": "JetBrainsMono Nerd Font",
 	"ui_font_family": "JetBrainsMono Nerd Font",
 	"buffer_font_features": { "calt": false },
@@ -19,7 +19,7 @@
 	"tab_size": 2,
 	"hard_tabs": true,
 	"show_whitespaces": "selection",
-	"soft_wrap": "none",
+	"soft_wrap": "editor_width",
 
 	// LSP configuration
 	"lsp": {
@@ -30,7 +30,7 @@
 
 	// AI
 	"features": { "inline_completion_provider": "supermaven" },
-	"show_inline_completions": false,
+	"show_inline_completions": true,
 
 	// disabled
 	"git": { "inline_blame": { "enabled": false } }
