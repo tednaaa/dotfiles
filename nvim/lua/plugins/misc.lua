@@ -1,6 +1,7 @@
 return {
 	{ "wakatime/vim-wakatime" },
 	{ "RRethy/vim-illuminate" },
+	{ "wildfunctions/myeyeshurt", opts = {} },
 
 	{
 		"brenoprata10/nvim-highlight-colors",
