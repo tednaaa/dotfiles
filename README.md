@@ -202,7 +202,7 @@ sudo systemctl enable sddm
 reboot
 ```
 
-> [!NOTE]
+> [!TIP]
 > And that's it, enjoy your new system!
 
 > Some more additional packages
