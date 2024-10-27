@@ -1,4 +1,4 @@
-## How to manage dotfiles?
+### How to manage dotfiles?
 
 ```bash
 cd .manager
