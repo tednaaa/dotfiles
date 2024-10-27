@@ -205,8 +205,6 @@ reboot
 > [!NOTE]
 > And that's it, enjoy your new system!
 
-> Additional information
-
 > Some more additional packages
 
 - `asdf` - Manage all your runtime versions with one tool!
