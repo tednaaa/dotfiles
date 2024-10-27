@@ -6,15 +6,18 @@ cargo run link
 cargo run unlink
 ```
 
-## Arch Installation with KDE (intel + nvidia)
+### Arch Installation with KDE (intel + nvidia)
 
-> Check internet connection `if you are using wifi, check [this](#connect-to-wifi)`
+> Check internet connection
 
 ```
 ping google.com
 ```
 
-## Disk partitioning
+> [!NOTE]
+> if you are using wifi, check [this](#connect-to-wifi)
+
+> Disk partitioning
 
 ```
 # check existing partitions
@@ -90,12 +93,13 @@ nvim /etc/locale.gen
 locale-gen
 ```
 
-```(in my case hostname is Archi)
-touch /etc/hostname
-nvim /etc/hostname
+> Add hostname
+
+```
+echo Archi > /etc/hostname
 ```
 
-> Add this to `/etc/hosts`
+> Configure `/etc/hosts`
 
 ```
 127.0.0.1 localhost
