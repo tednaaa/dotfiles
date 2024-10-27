@@ -10,6 +10,7 @@ return {
 				javascriptreact = { "prettierd", "eslint_d" },
 				vue = { "prettierd", "eslint_d" },
 				json = { "prettierd" },
+				markdown = { "prettierd" },
 				go = { "gofumpt", "golines" },
 			},
 			format_on_save = { lsp_format = "fallback", timeout_ms = 500 },
