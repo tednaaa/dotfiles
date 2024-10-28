@@ -188,7 +188,7 @@ sudo pacman -S plasma-desktop plasma-pa plasma-nm plasma-firewall kscreen bluede
 > My additional packages
 
 ```
-sudo pacman -S wezterm fzf ripgrep bat
+sudo pacman -S wezterm fzf ripgrep bat git-delta
 paru -S google-chrome
 ```
 
