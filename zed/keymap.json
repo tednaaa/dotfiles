@@ -1,25 +1,28 @@
 [
-  {
-    "context": "VimControl && !menu",
-    "bindings": {
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+	{
+		"bindings": {
+			"ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+			"ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+			"ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+			"ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+		}
+	},
+	{
+		"context": "VimControl && !menu",
+		"bindings": {
+			"shift-l": "pane::ActivateNextItem",
+			"shift-h": "pane::ActivatePrevItem",
 
-      "shift-l": "pane::ActivateNextItem",
-      "shift-h": "pane::ActivatePrevItem",
+			"space v": "pane::SplitRight",
+			"space s": "pane::SplitDown",
 
-      "space v": "pane::SplitRight",
-      "space s": "pane::SplitDown",
-
-      "space r": "editor::Rename"
-    }
-  },
-  {
-    "context": "ProjectPanel && not_editing",
-    "bindings": {
-      "z": "project_panel::CollapseAllEntries"
-    }
-  }
+			"space r": "editor::Rename"
+		}
+	},
+	{
+		"context": "ProjectPanel && not_editing",
+		"bindings": {
+			"z": "project_panel::CollapseAllEntries"
+		}
+	}
 ]
