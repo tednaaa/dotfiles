@@ -4,7 +4,6 @@
 	"relative_line_numbers": true,
 	"vertical_scroll_margin": 10,
 
-	// Editor
 	"theme": "Catppuccin Mocha",
 	"buffer_font_family": "JetBrainsMono Nerd Font",
 	"ui_font_family": "JetBrainsMono Nerd Font",
@@ -21,19 +20,46 @@
 	"show_whitespaces": "selection",
 	"soft_wrap": "editor_width",
 
-	// LSP configuration
 	"lsp": {
 		"rust-analyzer": {
 			"initialization_options": { "check": { "command": "clippy" } }
 		}
 	},
 
-	// AI
 	"features": { "inline_completion_provider": "supermaven" },
 	"show_inline_completions": true,
 
-	// disabled
-	"git": { "inline_blame": { "enabled": false } }
+	"git": { "inline_blame": { "enabled": false } },
 
-	// "telemetry": { "diagnostics": false, "metrics": false },
+	"auto_install_extensions": {
+		"astro": true,
+		"basher": true,
+		"cargo-tom": true,
+		"catppuccin": true,
+		"docker-compose": true,
+		"dockerfile": true,
+		"emmet": true,
+		"env": true,
+		"fish": true,
+		"git-firefly": true,
+		"github-theme": true,
+		"golangci-lint": true,
+		"graphql": true,
+		"html": true,
+		"http": true,
+		"log": true,
+		"make": true,
+		"nginx": true,
+		"one-dark-pro": true,
+		"prisma": true,
+		"scss": true,
+		"snippets": true,
+		"sql": true,
+		"svelte": true,
+		"terraform": true,
+		"toml": true,
+		"vue": true,
+		"wakatime": true,
+		"xml": true
+	}
 }
