@@ -32,12 +32,14 @@ return {
 
 				"vtsls",
 				"volar",
+				"astro",
 				"html",
 				"cssls",
 				"emmet_ls",
 				"tailwindcss",
 				"prisma-language-server",
 
+				"js-debug-adapter",
 				"eslint-lsp",
 				"eslint_d",
 				"prettierd",
