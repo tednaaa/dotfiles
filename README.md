@@ -151,17 +151,17 @@ ExecStart=/usr/bin/grub-btrfsd --syslog --timeshift-auto
 sudo systemctl enable grub-btrfsd
 ```
 
-> Paru setup `required to install timeshift-autosnap package`
+> yay setup `required to install timeshift-autosnap package`
 
 ```
-sudo pacman -S rust
+sudo pacman -S go
 
-# from paru docs
-git clone https://aur.archlinux.org/paru.git
-cd paru
+# from yay docs
+git clone https://aur.archlinux.org/yay.git
+cd yay/
 makepkg -si
 
-paru -S timeshift-autosnap
+yay -S timeshift-autosnap
 
 reboot
 ```
@@ -189,7 +189,7 @@ sudo pacman -S plasma-desktop plasma-pa plasma-nm plasma-firewall kscreen bluede
 
 ```
 sudo pacman -S wezterm fzf ripgrep bat git-delta
-paru -S google-chrome
+yay -S google-chrome
 ```
 
 > Now install display manager and reboot
