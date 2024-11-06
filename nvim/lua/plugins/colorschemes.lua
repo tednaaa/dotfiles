@@ -1,12 +1,12 @@
 return {
-	{
-		"Shatur/neovim-ayu",
-		priority = 1000,
-		config = function()
-			require("ayu").setup({ mirage = false, terminal = true })
-			require("ayu").colorscheme()
-		end,
-	},
+	-- {
+	-- 	"Shatur/neovim-ayu",
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("ayu").setup({ mirage = false, terminal = true })
+	-- 		require("ayu").colorscheme()
+	-- 	end,
+	-- },
 
 	-- {
 	-- 	"olimorris/onedarkpro.nvim",
@@ -15,6 +15,15 @@ return {
 	-- 		vim.cmd("colorscheme onedark")
 	-- 	end,
 	-- },
+
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+		init = function()
+			vim.cmd("colorscheme catppuccin-mocha")
+		end,
+	},
 
 	-- {
 	-- 	"folke/tokyonight.nvim",
@@ -49,15 +58,6 @@ return {
 	-- 		require("github-theme").setup({ options = { transparent = true } })
 	--
 	-- 		vim.cmd("colorscheme github_dark_dimmed")
-	-- 	end,
-	-- },
-
-	-- {
-	-- 	"catppuccin/nvim",
-	-- 	name = "catppuccin",
-	-- 	priority = 1000,
-	-- 	init = function()
-	-- 		vim.cmd("colorscheme catppuccin-mocha")
 	-- 	end,
 	-- },
 
