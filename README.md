@@ -195,7 +195,7 @@ yay -S google-chrome
 > Now install display manager and reboot
 
 ```
-sudo pacman -S sddm sddm-kcm
+sudo pacman -S sddm
 
 sudo systemctl enable sddm
 
