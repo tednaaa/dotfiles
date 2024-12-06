@@ -4,7 +4,7 @@
 	"relative_line_numbers": true,
 	"vertical_scroll_margin": 10,
 
-	"theme": "Catppuccin Mocha",
+	"theme": "Github Dark",
 	"buffer_font_family": "JetBrainsMono Nerd Font",
 	"ui_font_family": "JetBrainsMono Nerd Font",
 	"buffer_font_features": { "calt": false },
@@ -18,7 +18,6 @@
 	"tab_size": 2,
 	"hard_tabs": true,
 	"show_whitespaces": "selection",
-	"soft_wrap": "editor_width",
 
 	"lsp": {
 		"rust-analyzer": {
@@ -26,23 +25,36 @@
 		}
 	},
 
+	"languages": {
+		"TypeScript": {
+			"code_actions_on_format": { "source.fixAll.eslint": true }
+		},
+		"TSX": {
+			"code_actions_on_format": { "source.fixAll.eslint": true }
+		}
+	},
+
 	"features": { "inline_completion_provider": "supermaven" },
-	"show_inline_completions": true,
+	"show_inline_completions": false,
 
 	"git": { "inline_blame": { "enabled": false } },
 
 	"auto_install_extensions": {
+		"intellij-newui-theme": true,
+		"catppuccin": true,
+		"new-darcula": true,
+		"one-dark-pro": true,
+		"github-theme": true,
+
 		"astro": true,
 		"basher": true,
 		"cargo-tom": true,
-		"catppuccin": true,
 		"docker-compose": true,
 		"dockerfile": true,
 		"emmet": true,
 		"env": true,
 		"fish": true,
 		"git-firefly": true,
-		"github-theme": true,
 		"golangci-lint": true,
 		"graphql": true,
 		"html": true,
@@ -50,7 +62,6 @@
 		"log": true,
 		"make": true,
 		"nginx": true,
-		"one-dark-pro": true,
 		"prisma": true,
 		"scss": true,
 		"snippets": true,
