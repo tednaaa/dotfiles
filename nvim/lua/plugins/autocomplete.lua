@@ -1,16 +1,16 @@
 return {
-	{
-		"supermaven-inc/supermaven-nvim",
-		config = function()
-			require("supermaven-nvim").setup({
-				keymaps = {
-					accept_suggestion = "<A-a>",
-					clear_suggestion = "<A-c>",
-					accept_word = "<A-j>",
-				},
-			})
-		end,
-	},
+	-- {
+	-- 	"supermaven-inc/supermaven-nvim",
+	-- 	config = function()
+	-- 		require("supermaven-nvim").setup({
+	-- 			keymaps = {
+	-- 				accept_suggestion = "<A-a>",
+	-- 				clear_suggestion = "<A-c>",
+	-- 				accept_word = "<A-j>",
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
 
 	{
 		"folke/lazydev.nvim",
@@ -35,7 +35,7 @@ return {
 
 			{ "saadparwaiz1/cmp_luasnip" },
 			{ "rafamadriz/friendly-snippets" },
-			{ "L3MON4D3/LuaSnip", version = "v2.*", build = "make install_jsregexp" },
+			{ "L3MON4D3/LuaSnip",            version = "v2.*", build = "make install_jsregexp" },
 		},
 		opts = function(_, opts)
 			opts.sources = opts.sources or {}
