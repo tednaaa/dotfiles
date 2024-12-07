@@ -1,76 +1,76 @@
 {
-	"vim_mode": true,
-	"vim": { "use_system_clipboard": "always" },
-	"relative_line_numbers": true,
-	"vertical_scroll_margin": 10,
+  "vim_mode": true,
+  "vim": { "use_system_clipboard": "always" },
+  "relative_line_numbers": true,
+  "vertical_scroll_margin": 10,
 
-	"theme": "Github Dark",
-	"buffer_font_family": "JetBrainsMono Nerd Font",
-	"ui_font_family": "JetBrainsMono Nerd Font",
-	"buffer_font_features": { "calt": false },
-	"cursor_blink": false,
-	"ui_font_size": 16,
-	"buffer_line_height": { "custom": 1.8 },
-	"buffer_font_size": 15,
+  "theme": "Rosé Pine",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_features": { "calt": false },
+  "cursor_blink": false,
+  "ui_font_size": 16,
+  "buffer_line_height": { "custom": 1.8 },
+  "buffer_font_size": 15,
 
-	"indent_guides": { "enabled": true },
-	"tabs": { "file_icons": true },
-	"tab_size": 2,
-	"hard_tabs": true,
-	"show_whitespaces": "selection",
+  "indent_guides": { "enabled": true },
+  "tabs": { "file_icons": true },
+  "tab_size": 2,
+  "hard_tabs": true,
+  "show_whitespaces": "selection",
 
-	"lsp": {
-		"rust-analyzer": {
-			"initialization_options": { "check": { "command": "clippy" } }
-		}
-	},
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": { "check": { "command": "clippy" } }
+    }
+  },
 
-	"languages": {
-		"TypeScript": {
-			"code_actions_on_format": { "source.fixAll.eslint": true }
-		},
-		"TSX": {
-			"code_actions_on_format": { "source.fixAll.eslint": true }
-		}
-	},
+  "languages": {
+    "TypeScript": {
+      "code_actions_on_format": { "source.fixAll.eslint": true }
+    },
+    "TSX": {
+      "code_actions_on_format": { "source.fixAll.eslint": true }
+    }
+  },
 
-	"features": { "inline_completion_provider": "supermaven" },
-	"show_inline_completions": false,
+  "features": { "inline_completion_provider": "supermaven" },
+  "show_inline_completions": false,
 
-	"git": { "inline_blame": { "enabled": false } },
+  "git": { "inline_blame": { "enabled": false } },
 
-	"auto_install_extensions": {
-		"intellij-newui-theme": true,
-		"catppuccin": true,
-		"new-darcula": true,
-		"one-dark-pro": true,
-		"github-theme": true,
+  "auto_install_extensions": {
+    "intellij-newui-theme": true,
+    "catppuccin": true,
+    "new-darcula": true,
+    "one-dark-pro": true,
+    "github-theme": true,
 
-		"astro": true,
-		"basher": true,
-		"cargo-tom": true,
-		"docker-compose": true,
-		"dockerfile": true,
-		"emmet": true,
-		"env": true,
-		"fish": true,
-		"git-firefly": true,
-		"golangci-lint": true,
-		"graphql": true,
-		"html": true,
-		"http": true,
-		"log": true,
-		"make": true,
-		"nginx": true,
-		"prisma": true,
-		"scss": true,
-		"snippets": true,
-		"sql": true,
-		"svelte": true,
-		"terraform": true,
-		"toml": true,
-		"vue": true,
-		"wakatime": true,
-		"xml": true
-	}
+    "astro": true,
+    "basher": true,
+    "cargo-tom": true,
+    "docker-compose": true,
+    "dockerfile": true,
+    "emmet": true,
+    "env": true,
+    "fish": true,
+    "git-firefly": true,
+    "golangci-lint": true,
+    "graphql": true,
+    "html": true,
+    "http": true,
+    "log": true,
+    "make": true,
+    "nginx": true,
+    "prisma": true,
+    "scss": true,
+    "snippets": true,
+    "sql": true,
+    "svelte": true,
+    "terraform": true,
+    "toml": true,
+    "vue": true,
+    "wakatime": true,
+    "xml": true
+  }
 }
