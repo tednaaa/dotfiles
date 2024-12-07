@@ -57,6 +57,8 @@ mount -o compress=zstd,subvol=@home /dev/nvme0n1p3 /mnt/home
 
 mkdir -p /mnt/efi
 mount /dev/nvme0n1p1 /mnt/efi
+
+swapon /dev/nvme0n1p2
 ```
 
 > Package Installation
@@ -182,14 +184,13 @@ sudo nvim /etc/pacman.conf
 > Desktop Environment `Minimal KDE`
 
 ```
-sudo pacman -S plasma-desktop plasma-pa plasma-nm plasma-firewall kscreen bluedevil powerdevil power-profiles-daemon dolphin ark
+sudo pacman -S plasma-desktop plasma-pa plasma-nm plasma-firewall kscreen bluedevil powerdevil power-profiles-daemon dolphin ark spectacle
 ```
 
 > My additional packages
 
 ```
-sudo pacman -S wezterm fzf ripgrep bat git-delta
-yay -S google-chrome
+yay -S wezterm fzf ripgrep bat git-delta google-chrome
 ```
 
 > Now install display manager and reboot
