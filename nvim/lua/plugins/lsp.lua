@@ -2,8 +2,7 @@ return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
 		{ "hrsh7th/cmp-nvim-lsp" },
-		{ "artemave/workspace-diagnostics.nvim" },
-		{ "antosha417/nvim-lsp-file-operations", config = true },
+		{ "antosha417/nvim-lsp-file-operations",      config = true },
 		{ "williamboman/mason.nvim" },
 		{ "williamboman/mason-lspconfig.nvim" },
 		{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
@@ -100,12 +99,6 @@ return {
 			},
 			rust_analyzer = { settings = { ["rust-analyzer"] = { checkOnSave = { command = "clippy" } } } },
 			docker_compose_language_service = { filetypes = { "yml.docker-compose" } },
-			"kulala_ls",
-			vtsls = {
-				on_attach = function(client, bufnr)
-					require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
-				end,
-			},
 
 			-- Vue take over mode
 			-- vtsls = {
