@@ -219,3 +219,12 @@ iwctl
 
 station wlan0 connect {wifi_name}
 ```
+
+## Disable kwallet popup
+
+> `.config/kwalletrc`
+
+```
+[Wallet]
+Enabled=false
+```
