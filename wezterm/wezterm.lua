@@ -11,6 +11,7 @@ if wezterm.config_builder then
 	config:set_strict_mode(true)
 end
 
+config.front_end = "WebGpu"
 config.enable_wayland = false
 
 -- auto fullscreen not working with this option
