@@ -1,4 +1,6 @@
 return {
+	{ "stevearc/dressing.nvim", opts = {} },
+	{ "Chaitanyabsprip/fastaction.nvim", opts = {} },
 	{
 		"folke/noice.nvim",
 		event = "VeryLazy",

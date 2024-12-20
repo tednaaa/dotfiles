@@ -16,12 +16,11 @@ return {
 				},
 			},
 
-			-- actions = { files = { ["ctrl-q"] = actions.file_sel_to_qf } },
-			keymap = { fzf = { ["ctrl-a"] = "select-all+accept" } },
+			keymap = { fzf = { ["ctrl-q"] = "select-all+accept" } },
 
 			grep = {
 				actions = {
-					["ctrl-r"] = { actions.toggle_ignore },
+					["ctrl-i"] = { actions.toggle_ignore },
 
 					["ctrl-g"] = false,
 					["ctrl-f"] = { actions.grep_lgrep },

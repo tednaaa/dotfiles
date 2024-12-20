@@ -62,7 +62,8 @@ return {
 				keymap("n", "gi", fzf.lsp_implementations)
 				keymap("n", "gt", fzf.lsp_typedefs)
 
-				keymap({ "n", "v" }, "g.", fzf.lsp_code_actions)
+				-- keymap({ "n", "v" }, "g.", fzf.lsp_code_actions)
+				keymap({ "n", "v" }, "g.", require("fastaction").code_action)
 
 				keymap("n", "]g", vim.diagnostic.goto_next)
 				keymap("n", "[g", vim.diagnostic.goto_prev)
