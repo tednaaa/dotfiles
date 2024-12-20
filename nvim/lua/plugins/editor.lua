@@ -50,7 +50,9 @@ return {
 		version = "*",
 		dependencies = "nvim-tree/nvim-web-devicons",
 		config = function()
-			require("bufferline").setup({
+			local bufferline = require("bufferline")
+
+			bufferline.setup({
 				options = {
 					diagnostics = "nvim_lsp",
 					show_close_icon = false,
@@ -58,11 +60,11 @@ return {
 				},
 			})
 
-			vim.keymap.set("n", "<leader>q", require("bufferline").close_others)
-			-- stylua: ignore
-			vim.keymap.set("n", "L", function() require("bufferline").cycle(1) end)
-			-- stylua: ignore
-			vim.keymap.set("n", "H", function() require("bufferline").cycle(-1) end)
+			-- stylua: ignore start
+			vim.keymap.set("n", "<leader>q", bufferline.close_others)
+			vim.keymap.set("n", "L", function() bufferline.cycle(1) end)
+			vim.keymap.set("n", "H", function() bufferline.cycle(-1) end)
+			-- stylua: ignore end
 		end,
 	},
 	{
