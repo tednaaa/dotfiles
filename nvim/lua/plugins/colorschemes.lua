@@ -1,12 +1,12 @@
 return {
-	-- {
-	-- 	"Shatur/neovim-ayu",
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		require("ayu").setup({ mirage = false, terminal = true })
-	-- 		require("ayu").colorscheme()
-	-- 	end,
-	-- },
+	{
+		"Shatur/neovim-ayu",
+		priority = 1000,
+		config = function()
+			require("ayu").setup({ mirage = false, terminal = true })
+			require("ayu").colorscheme()
+		end,
+	},
 
 	-- {
 	-- 	"olimorris/onedarkpro.nvim",
@@ -21,27 +21,18 @@ return {
 	-- 	init = function() vim.cmd("colorscheme catppuccin-mocha") end,
 	-- },
 
-	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = function()
-			return {
-				style = "moon",
-				transparent = true,
-				styles = { sidebars = "transparent", floats = "transparent" },
-			}
-		end,
-		init = function() vim.cmd("colorscheme tokyonight") end,
-	},
-
 	-- {
-	-- 	"loctvl842/monokai-pro.nvim",
+	-- 	"folke/tokyonight.nvim",
+	-- 	lazy = false,
 	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		require("monokai-pro").setup()
-	-- 		vim.cmd("colorscheme monokai-pro")
+	-- 	opts = function()
+	-- 		return {
+	-- 			style = "moon",
+	-- 			transparent = true,
+	-- 			styles = { sidebars = "transparent", floats = "transparent" },
+	-- 		}
 	-- 	end,
+	-- 	init = function() vim.cmd("colorscheme tokyonight") end,
 	-- },
 
 	-- {
