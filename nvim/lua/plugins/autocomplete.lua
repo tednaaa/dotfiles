@@ -46,12 +46,12 @@ return {
 
 			sources = {
 				default = { "snippets", "lsp", "path", "buffer" },
-				-- optionally disable cmdline completions
-				-- cmdline = {},
+				-- disable cmdline completions
+				cmdline = {},
 			},
 
 			-- experimental signature help support
-			-- signature = { enabled = true }
+			-- signature = { enabled = true },
 		},
 		-- allows extending the providers array elsewhere in your config
 		-- without having to redefine it
