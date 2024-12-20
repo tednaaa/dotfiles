@@ -1,8 +1,7 @@
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
-		{ "hrsh7th/cmp-nvim-lsp" },
-		{ "antosha417/nvim-lsp-file-operations",      config = true },
+		{ "antosha417/nvim-lsp-file-operations", config = true },
 		{ "williamboman/mason.nvim" },
 		{ "williamboman/mason-lspconfig.nvim" },
 		{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
@@ -63,7 +62,7 @@ return {
 				keymap("n", "gi", fzf.lsp_implementations)
 				keymap("n", "gt", fzf.lsp_typedefs)
 
-				keymap({ "n", "v" }, "<leader>ca", fzf.lsp_code_actions)
+				keymap({ "n", "v" }, "g.", fzf.lsp_code_actions)
 
 				keymap("n", "]g", vim.diagnostic.goto_next)
 				keymap("n", "[g", vim.diagnostic.goto_prev)
@@ -124,7 +123,7 @@ return {
 			-- 	end,
 			-- },
 		}
-		local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+		local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 		require("mason-lspconfig").setup_handlers({
 			function(server_name)

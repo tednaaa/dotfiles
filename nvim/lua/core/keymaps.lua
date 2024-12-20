@@ -28,12 +28,12 @@ keymap("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window
 keymap("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
 
 -- Move Lines
-keymap("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move Down" })
-keymap("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move Up" })
-keymap("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
-keymap("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
-keymap("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move Down" })
-keymap("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
+keymap("n", "<A-J>", "<cmd>m .+1<cr>==", { desc = "Move Down" })
+keymap("n", "<A-K>", "<cmd>m .-2<cr>==", { desc = "Move Up" })
+keymap("i", "<A-J>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
+keymap("i", "<A-K>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
+keymap("v", "<A-J>", ":m '>+1<cr>gv=gv", { desc = "Move Down" })
+keymap("v", "<A-K>", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
 
 keymap("n", "J", "mzJ`z", { desc = "Join line with next" })
 
@@ -45,6 +45,9 @@ keymap("n", "<C-d>", "<C-d>zz", { desc = "Autocenter on scroll down" })
 keymap("n", "<C-u>", "<C-u>zz", { desc = "Autocenter on scroll up" })
 keymap("n", "<n>", "nzzzv", { desc = "Autocenter on search forward" })
 keymap("n", "<N>", "Nzzzv", { desc = "Autocenter on search backward" })
+
+-- Quick list
+keymap("n", "<leader>qq", "<cmd>copen<cr>", { desc = "Quick list" })
 
 -- Disable arrow keys :)
 keymap({ "n", "i" }, "<left>", "")

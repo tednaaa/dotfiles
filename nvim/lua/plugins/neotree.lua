@@ -10,7 +10,7 @@ return {
 	keys = { { "<leader>e", "<cmd>Neotree toggle<cr>" } },
 	config = function()
 		require("neo-tree").setup({
-			window = { width = 60 },
+			window = { width = 50 },
 
 			source_selector = {
 				winbar = false,

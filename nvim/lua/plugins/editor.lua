@@ -1,28 +1,24 @@
 return {
 	{
-		"stevearc/dressing.nvim",
-		opts = {},
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		dependencies = { "MunifTanjim/nui.nvim" },
+		config = function()
+			require("noice").setup({
+				lsp = {
+					override = {
+						["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+						["vim.lsp.util.stylize_markdown"] = true,
+						["cmp.entry.get_documentation"] = true,
+					},
+					signature = { opts = { size = { width = 80, height = 10 } } },
+				},
+				presets = { command_palette = true, lsp_doc_border = true },
+				-- disable print and write notifications
+				routes = { { filter = { event = "msg_show", kind = "", find = "written" }, opts = { skip = true } } },
+			})
+		end,
 	},
-	-- {
-	-- 	"folke/noice.nvim",
-	-- 	event = "VeryLazy",
-	-- 	dependencies = { "MunifTanjim/nui.nvim" },
-	-- 	config = function()
-	-- 		require("noice").setup({
-	-- 			lsp = {
-	-- 				override = {
-	-- 					["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-	-- 					["vim.lsp.util.stylize_markdown"] = true,
-	-- 					["cmp.entry.get_documentation"] = true,
-	-- 				},
-	-- 				signature = { opts = { size = { width = 80, height = 10 } } },
-	-- 			},
-	-- 			presets = { command_palette = true, lsp_doc_border = true },
-	-- 			-- disable print and write notifications
-	-- 			routes = { { filter = { event = "msg_show", kind = "", find = "written" }, opts = { skip = true } } },
-	-- 		})
-	-- 	end,
-	-- },
 	{
 		"folke/trouble.nvim",
 		opts = {},
@@ -45,7 +41,7 @@ return {
 		"otavioschwanck/arrow.nvim",
 		opts = {
 			show_icons = true,
-			leader_key = ";",
+			leader_key = "<leader>m",
 			buffer_leader_key = "m",
 		},
 	},
@@ -103,17 +99,6 @@ return {
 				tabline = {},
 				extensions = {},
 			})
-		end,
-	},
-	{
-		"petertriho/nvim-scrollbar",
-		event = "VeryLazy",
-		config = function()
-			require("scrollbar").setup({
-				handlers = { cursor = false },
-				excluded_filetypes = { "neo-tree" },
-			})
-			require("scrollbar.handlers.gitsigns").setup()
 		end,
 	},
 }

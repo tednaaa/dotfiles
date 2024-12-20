@@ -16,9 +16,15 @@ return {
 				},
 			},
 
+			-- actions = { files = { ["ctrl-q"] = actions.file_sel_to_qf } },
+			keymap = { fzf = { ["ctrl-a"] = "select-all+accept" } },
+
 			grep = {
 				actions = {
 					["ctrl-r"] = { actions.toggle_ignore },
+
+					["ctrl-g"] = false,
+					["ctrl-f"] = { actions.grep_lgrep },
 				},
 			},
 
@@ -36,7 +42,7 @@ return {
 
 		keymap("n", "<leader>p", fzf.files)
 		keymap("n", "<leader>po", fzf.oldfiles)
-		keymap("n", "<leader>g/", fzf.grep_project)
+		keymap("n", "g/", fzf.grep_project)
 		keymap("n", "<leader>/", fzf.grep_curbuf)
 
 		keymap("n", "<leader>cw", fzf.grep_cword)

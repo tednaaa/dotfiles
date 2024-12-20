@@ -11,35 +11,29 @@ return {
 	-- {
 	-- 	"olimorris/onedarkpro.nvim",
 	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		vim.cmd("colorscheme onedark")
-	-- 	end,
+	-- 	config = function() vim.cmd("colorscheme onedark") end,
+	-- },
+
+	-- {
+	-- 	"catppuccin/nvim",
+	-- 	name = "catppuccin",
+	-- 	priority = 1000,
+	-- 	init = function() vim.cmd("colorscheme catppuccin-mocha") end,
 	-- },
 
 	{
-		"catppuccin/nvim",
-		name = "catppuccin",
+		"folke/tokyonight.nvim",
+		lazy = false,
 		priority = 1000,
-		init = function()
-			vim.cmd("colorscheme catppuccin-mocha")
+		opts = function()
+			return {
+				style = "moon",
+				transparent = true,
+				styles = { sidebars = "transparent", floats = "transparent" },
+			}
 		end,
+		init = function() vim.cmd("colorscheme tokyonight") end,
 	},
-
-	-- {
-	-- 	"folke/tokyonight.nvim",
-	-- 	lazy = false,
-	-- 	priority = 1000,
-	-- 	opts = function()
-	-- 		return {
-	-- 			style = "moon",
-	-- 			transparent = true,
-	-- 			styles = { sidebars = "transparent", floats = "transparent" },
-	-- 		}
-	-- 	end,
-	-- 	init = function()
-	-- 		vim.cmd("colorscheme tokyonight")
-	-- 	end,
-	-- },
 
 	-- {
 	-- 	"loctvl842/monokai-pro.nvim",
@@ -56,7 +50,6 @@ return {
 	-- 	priority = 1000,
 	-- 	config = function()
 	-- 		require("github-theme").setup({ options = { transparent = true } })
-	--
 	-- 		vim.cmd("colorscheme github_dark_dimmed")
 	-- 	end,
 	-- },
