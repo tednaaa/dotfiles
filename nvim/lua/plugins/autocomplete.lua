@@ -27,6 +27,12 @@ return {
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
+			enabled = function()
+				return not vim.tbl_contains({ "DressingInput" }, vim.bo.filetype)
+					and vim.bo.buftype ~= "prompt"
+					and vim.b.completion ~= false
+			end,
+
 			keymap = {
 				["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
 				["<C-e>"] = { "hide" },
@@ -43,15 +49,35 @@ return {
 			},
 
 			appearance = { nerd_font_variant = "mono" },
+			completion = {
+				trigger = { show_on_insert_on_trigger_character = false },
+				menu = {
+					draw = {
+						components = {
+							kind_icon = {
+								ellipsis = false,
+								text = function(ctx)
+									local kind_icon, _, _ = require("mini.icons").get("lsp", ctx.kind)
+									return kind_icon
+								end,
+								highlight = function(ctx)
+									local _, hl, _ = require("mini.icons").get("lsp", ctx.kind)
+									return hl
+								end,
+							},
+						},
+					},
+				},
+			},
 
 			sources = {
-				default = { "snippets", "lsp", "path", "buffer" },
+				default = { "lsp", "path", "snippets", "buffer" },
 				-- disable cmdline completions
 				cmdline = {},
 			},
 
 			-- experimental signature help support
-			-- signature = { enabled = true },
+			signature = { enabled = true },
 		},
 		-- allows extending the providers array elsewhere in your config
 		-- without having to redefine it
