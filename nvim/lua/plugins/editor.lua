@@ -21,6 +21,19 @@ return {
 			})
 		end,
 	},
+
+	{
+		"stevearc/quicker.nvim",
+		event = "FileType qf",
+		config = function()
+			require("quicker").setup()
+
+			-- stylua: ignore start
+			vim.keymap.set("n", "<leader>q", function() require("quicker").toggle() end, { desc = "Toggle quickfix", })
+			vim.keymap.set("n", "<leader>l", function() require("quicker").toggle({ loclist = true }) end, { desc = "Toggle loclist", })
+			-- stylua: ignore end
+		end,
+	},
 	{
 		"folke/trouble.nvim",
 		opts = {},

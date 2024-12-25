@@ -46,9 +46,6 @@ keymap("n", "<C-u>", "<C-u>zz", { desc = "Autocenter on scroll up" })
 keymap("n", "<n>", "nzzzv", { desc = "Autocenter on search forward" })
 keymap("n", "<N>", "Nzzzv", { desc = "Autocenter on search backward" })
 
--- Quick list
-keymap("n", "<leader>qq", "<cmd>copen<cr>", { desc = "Quick list" })
-
 -- Disable arrow keys :)
 keymap({ "n", "i" }, "<left>", "")
 keymap({ "n", "i" }, "<right>", "")
