@@ -1,6 +1,7 @@
 return {
 	{ "stevearc/dressing.nvim", opts = {} },
 	{ "Chaitanyabsprip/fastaction.nvim", opts = {} },
+
 	{
 		"folke/noice.nvim",
 		event = "VeryLazy",
@@ -56,8 +57,8 @@ return {
 		"otavioschwanck/arrow.nvim",
 		opts = {
 			show_icons = true,
-			leader_key = "<leader>m",
-			buffer_leader_key = "m",
+			leader_key = "m",
+			buffer_leader_key = "M",
 		},
 	},
 	{
@@ -76,7 +77,7 @@ return {
 			})
 
 			-- stylua: ignore start
-			vim.keymap.set("n", "<leader>q", bufferline.close_others)
+			vim.keymap.set("n", "<leader>Q", bufferline.close_others)
 			vim.keymap.set("n", "L", function() bufferline.cycle(1) end)
 			vim.keymap.set("n", "H", function() bufferline.cycle(-1) end)
 			-- stylua: ignore end
