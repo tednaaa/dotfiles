@@ -43,7 +43,8 @@ vim.opt.signcolumn = "yes"
 vim.opt.statuscolumn = [[%!v:lua.require'modules.ui'.statuscolumn()]]
 
 vim.opt.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.listchars = { tab = "▸\\ ", trail = "·", extends = ">", precedes = "<", nbsp = "·" }
+
 vim.opt.fillchars:append({ vert = "▎", horiz = "▁" })
 
 vim.diagnostic.config({
