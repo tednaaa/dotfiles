@@ -1,12 +1,5 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = ";"
-
--- Set filetype to `bigfile` for files larger than 1.5 MB
--- Only vim syntax will be enabled (with the correct filetype)
--- LSP, treesitter and other ft plugins will be disabled.
--- mini.animate will also be disabled.
-vim.g.bigfile_size = 1024 * 1024 * 1.5 -- 1.5 MB
-
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
@@ -14,6 +7,9 @@ vim.opt.fileencoding = "utf-8"
 vim.opt.number = true
 vim.opt.relativenumber = true
 -- vim.opt.cmdheight = 0
+
+vim.opt.pumblend = 15
+vim.opt.pumheight = 15
 
 vim.opt.cursorline = false
 vim.opt.hlsearch = true
@@ -40,7 +36,7 @@ vim.opt.showmode = false
 vim.opt.undofile = true
 vim.opt.timeoutlen = 200
 vim.opt.signcolumn = "yes"
-vim.opt.statuscolumn = [[%!v:lua.require'modules.ui'.statuscolumn()]]
+vim.opt.statuscolumn = [[%!v:lua.require'snacks.statuscolumn'.get()]]
 
 vim.opt.list = true
 vim.opt.listchars = { tab = "▸\\ ", trail = "·", extends = ">", precedes = "<", nbsp = "·" }

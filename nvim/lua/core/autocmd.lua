@@ -1,14 +1,3 @@
-vim.api.nvim_create_autocmd({ "CmdlineLeave", "VimEnter" }, {
-	callback = function()
-		vim.opt.pumheight = 15
-	end,
-})
-vim.api.nvim_create_autocmd("CmdlineEnter", {
-	callback = function()
-		vim.opt.pumheight = 7
-	end,
-})
-
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking copying text",
 	group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
@@ -44,19 +33,4 @@ vim.api.nvim_create_autocmd("FileType", {
 			desc = "Quit buffer",
 		})
 	end,
-})
-
-vim.filetype.add({
-	pattern = {
-		[".*"] = {
-			function(path, buf)
-				return vim.bo[buf]
-						and vim.bo[buf].filetype ~= "bigfile"
-						and path
-						and vim.fn.getfsize(path) > vim.g.bigfile_size
-						and "bigfile"
-					or nil
-			end,
-		},
-	},
 })

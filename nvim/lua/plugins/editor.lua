@@ -1,5 +1,4 @@
 return {
-	{ "stevearc/dressing.nvim", opts = {} },
 	{ "Chaitanyabsprip/fastaction.nvim", opts = {} },
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
 
