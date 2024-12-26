@@ -1,6 +1,7 @@
 return {
 	{ "stevearc/dressing.nvim", opts = {} },
 	{ "Chaitanyabsprip/fastaction.nvim", opts = {} },
+	{ "nvim-tree/nvim-web-devicons", lazy = true },
 
 	{
 		"folke/noice.nvim",
@@ -64,7 +65,6 @@ return {
 	{
 		"akinsho/bufferline.nvim",
 		version = "*",
-		dependencies = "nvim-tree/nvim-web-devicons",
 		config = function()
 			local bufferline = require("bufferline")
 
@@ -86,7 +86,6 @@ return {
 	{
 		"nvim-lualine/lualine.nvim",
 		event = "VeryLazy",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("lualine").setup({
 				options = {
