@@ -8,6 +8,7 @@ fn main() -> Result<(), std::io::Error> {
 		let dotfiles_map = [
 			// ~/.config
 			("nvim", ".config/nvim"),
+			("ghostty", ".config/ghostty"),
 			("wezterm", ".config/wezterm"),
 			("zellij", ".config/zellij"),
 			("zed/settings.json", ".config/zed/settings.json"),

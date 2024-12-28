@@ -1,0 +1,30 @@
+# Font
+font-family = JetBrainsMono Nerd Font
+font-size = 12.5
+adjust-underline-position = 4
+
+# Theme
+theme = GitHub Dark
+cursor-invert-fg-bg = true
+window-theme = ghostty
+
+# Window
+gtk-single-instance = true
+gtk-tabs-location = top
+gtk-wide-tabs = false
+window-padding-y = 2,0
+window-padding-balance = true
+window-decoration = false
+window-width = 999
+window-height = 999
+
+# Keybindings
+# keybind = super+shift+h=goto_split:left
+# keybind = super+shift+j=goto_split:bottom
+# keybind = super+shift+k=goto_split:top
+# keybind = super+shift+l=goto_split:right
+
+# Other
+mouse-hide-while-typing = true
+copy-on-select = clipboard
+shell-integration-features = cursor,sudo,no-title
