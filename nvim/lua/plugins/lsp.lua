@@ -133,5 +133,9 @@ return {
 				require("lspconfig")[server_name].setup(server)
 			end,
 		})
+
+		-- TODO: I don't understand why, but this is needed to make the lsp work
+		-- Seems mason-lspconfig is not supporting gdscript lsp
+		require("lspconfig").gdscript.setup(capabilities)
 	end,
 }
