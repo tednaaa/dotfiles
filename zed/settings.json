@@ -1,5 +1,6 @@
 {
   "vim_mode": true,
+  "terminal": { "toolbar": { "breadcrumbs": false } },
   "vim": { "use_system_clipboard": "always" },
   "relative_line_numbers": true,
   "vertical_scroll_margin": 10,

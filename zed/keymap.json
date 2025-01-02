@@ -8,6 +8,19 @@
     }
   },
   {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "g h d": "editor::ToggleHunkDiff",
+      "g h r": "editor::RevertSelectedHunks",
+
+      "g D": "editor::GoToDefinitionSplit",
+      "g r": "editor::FindAllReferences",
+
+      "ctrl-q": "pane::CloseActiveItem",
+      "ctrl-shift-q": "pane::CloseInactiveItems"
+    }
+  },
+  {
     "context": "VimControl && !menu",
     "bindings": {
       "shift-l": "pane::ActivateNextItem",
