@@ -23,7 +23,6 @@ return {
 		lazy = false,
 		dependencies = "rafamadriz/friendly-snippets",
 		version = "v0.*",
-
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
@@ -32,7 +31,6 @@ return {
 					and vim.bo.buftype ~= "prompt"
 					and vim.b.completion ~= false
 			end,
-
 			keymap = {
 				["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
 				["<C-e>"] = { "hide" },
@@ -47,12 +45,14 @@ return {
 				["<Tab>"] = { "snippet_forward", "fallback" },
 				["<S-Tab>"] = { "snippet_backward", "fallback" },
 			},
-
 			appearance = { nerd_font_variant = "mono" },
 			completion = {
 				trigger = { show_on_trigger_character = false },
+				documentation = { auto_show = true, auto_show_delay_ms = 200 },
 				menu = {
+					max_height = 15,
 					draw = {
+						treesitter = { "lsp" },
 						components = {
 							kind_icon = {
 								ellipsis = false,
@@ -69,18 +69,13 @@ return {
 					},
 				},
 			},
-
 			sources = {
 				default = { "lsp", "path", "snippets", "buffer" },
 				-- disable cmdline completions
 				cmdline = {},
 			},
-
-			-- experimental signature help support
 			signature = { enabled = true },
 		},
-		-- allows extending the providers array elsewhere in your config
-		-- without having to redefine it
 		opts_extend = { "sources.default" },
 	},
 }
