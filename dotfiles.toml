@@ -4,6 +4,8 @@
 "nvim" = ".config/nvim"
 "wezterm" = ".config/wezterm"
 "zellij" = ".config/zellij"
+"lazygit" = ".config/lazygit"
+
 "fish/config.fish" = ".config/fish/config.fish"
 "git/.gitconfig" = ".gitconfig"
 "npm/.npmrc" = ".npmrc"
