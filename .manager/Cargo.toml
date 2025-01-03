@@ -1,7 +1,0 @@
-[package]
-name = "manager"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
-dirs = "5.0.1"

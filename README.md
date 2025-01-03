@@ -1,9 +1,11 @@
 ### How to manage dotfiles?
 
+> Also check symlinks in `dotfiles.toml`
+
 ```bash
-cd .manager
-cargo run link
-cargo run unlink
+cargo install symm
+symm link
+symm unlink
 ```
 
 ### Arch Installation with KDE (intel + nvidia)

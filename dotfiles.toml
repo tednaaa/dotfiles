@@ -1,0 +1,9 @@
+[symlinks]
+"zed" = ".config/zed"
+"ghostty" = ".config/ghostty"
+"nvim" = ".config/nvim"
+"wezterm" = ".config/wezterm"
+"zellij" = ".config/zellij"
+"fish/config.fish" = ".config/fish/config.fish"
+"git/.gitconfig" = ".gitconfig"
+"npm/.npmrc" = ".npmrc"
