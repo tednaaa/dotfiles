@@ -7,15 +7,10 @@ return {
 			"ibhagwan/fzf-lua",
 		},
 		config = function()
-			local diffview = require("diffview")
-			diffview.setup()
-
+			require("diffview").setup()
 			require("neogit").setup({ integrations = { diffview = true, fzf_lua = true } })
 
 			vim.keymap.set("n", "<leader>gg", "<cmd>Neogit<CR>", { desc = "Open Git" })
-
-			vim.keymap.set("n", "gvo", diffview.open)
-			vim.keymap.set("n", "gvc", diffview.close)
 		end,
 	},
 	{ "akinsho/git-conflict.nvim", version = "*", config = true },
