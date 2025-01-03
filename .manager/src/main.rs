@@ -13,6 +13,7 @@ fn main() -> Result<(), std::io::Error> {
 			("zellij", ".config/zellij"),
 			("zed/settings.json", ".config/zed/settings.json"),
 			("zed/keymap.json", ".config/zed/keymap.json"),
+			("zed/tasks.json", ".config/zed/tasks.json"),
 			("zed/snippets.json", ".config/zed/snippets.json"),
 			("vscode/settings.json", ".config/VSCodium/User/settings.json"),
 			("fish/config.fish", ".config/fish/config.fish"),

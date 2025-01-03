@@ -1,5 +1,5 @@
 [core]
-	editor = nvim
+	editor = zed
 	ignorecase = false
 	pager = delta
 

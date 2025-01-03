@@ -21,6 +21,15 @@
     }
   },
   {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "lazygit", "target": "center" }
+      ]
+    }
+  },
+  {
     "context": "VimControl && !menu",
     "bindings": {
       "shift-l": "pane::ActivateNextItem",
