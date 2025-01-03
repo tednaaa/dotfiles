@@ -3,5 +3,10 @@
     "label": "lazygit",
     "command": "lazygit",
     "hide": "on_success"
+  },
+  {
+    "label": "Generate .editorconfig",
+    "command": "cp ~/.config/zed/.editorconfig.template .editorconfig",
+    "show_output": false
   }
 ]
