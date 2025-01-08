@@ -27,7 +27,7 @@
     "bindings": {
       "space g g": [
         "task::Spawn",
-        { "task_name": "lazygit", "target": "center" }
+        { "task_name": "lazygit", "reveal_target": "center" }
       ]
     }
   },
