@@ -192,7 +192,7 @@ sudo pacman -S plasma-desktop plasma-pa plasma-nm plasma-firewall kscreen bluede
 > My additional packages
 
 ```
-yay -S wezterm fzf ripgrep bat git-delta google-chrome
+yay -S ghostty fzf ripgrep bat lazygit git-delta google-chrome
 ```
 
 > Now install display manager and reboot
