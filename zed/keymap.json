@@ -6,7 +6,16 @@
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "lazygit", "reveal_target": "center" }
+      ],
+      "space g ;": [
+        "task::Spawn",
+        { "task_name": "fzf text", "reveal_target": "center" }
+      ]
     }
   },
   {
@@ -20,15 +29,6 @@
 
       "ctrl-q": "pane::CloseActiveItem",
       "ctrl-shift-q": "pane::CloseInactiveItems"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
-    "bindings": {
-      "space g g": [
-        "task::Spawn",
-        { "task_name": "lazygit", "reveal_target": "center" }
-      ]
     }
   },
   {
