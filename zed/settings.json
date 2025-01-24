@@ -1,11 +1,11 @@
 {
   "vim_mode": true,
   "terminal": { "toolbar": { "breadcrumbs": false } },
-  "vim": { "use_system_clipboard": "always" },
+  "vim": { "use_system_clipboard": "always", "use_smartcase_find": true },
   "relative_line_numbers": true,
   "vertical_scroll_margin": 10,
 
-  "theme": "JetBrains New Dark",
+  "theme": "One Dark Pro",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "ui_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_features": { "calt": false },
