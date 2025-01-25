@@ -4,4 +4,3 @@
 
 1) `m` - then select some symbol for example `a`
 2) Press `' a` and goto
-

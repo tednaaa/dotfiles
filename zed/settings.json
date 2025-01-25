@@ -37,7 +37,7 @@
   },
 
   "features": { "inline_completion_provider": "supermaven" },
-  "show_inline_completions": false,
+  "show_inline_completions": true,
 
   "git": { "inline_blame": { "enabled": false } },
 
