@@ -5,6 +5,11 @@
     "hide": "on_success"
   },
   {
+    "label": "lazydocker",
+    "command": "lazydocker",
+    "hide": "on_success"
+  },
+  {
     "label": "fzf text",
     "command": "zed \"$(tv text)\"",
     "hide": "always",
