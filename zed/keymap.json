@@ -32,6 +32,12 @@
     }
   },
   {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
+    "bindings": {
+      "p": ["vim::Paste", { "preserveClipboard": true }]
+    }
+  },
+  {
     "context": "VimControl && !menu",
     "bindings": {
       "shift-l": "pane::ActivateNextItem",
