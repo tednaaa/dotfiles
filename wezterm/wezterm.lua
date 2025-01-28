@@ -25,15 +25,10 @@ config.line_height = 1.2
 config.adjust_window_size_when_changing_font_size = false
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
-config.window_frame = {
-	font_size = 12,
-}
+config.window_frame = { font_size = 12 }
 
 local act = wezterm.action
-config.leader = {
-	key = "a",
-	mods = "CTRL",
-}
+config.leader = { key = "a", mods = "CTRL" }
 config.keys = {
 	{ key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
 	{ key = "j", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
