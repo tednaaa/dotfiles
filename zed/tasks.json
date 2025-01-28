@@ -1,7 +1,7 @@
 [
   {
-    "label": "lazygit",
-    "command": "lazygit",
+    "label": "git",
+    "command": "gitu",
     "hide": "on_success"
   },
   {

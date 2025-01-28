@@ -10,15 +10,15 @@
 
       "space g g": [
         "task::Spawn",
-        { "task_name": "lazygit", "reveal_target": "center" }
-      ],
-      "space g d": [
-        "task::Spawn",
-        { "task_name": "lazydocker", "reveal_target": "center" }
+        { "task_name": "git", "reveal_target": "center" }
       ],
       "space g ;": [
         "task::Spawn",
         { "task_name": "fzf text", "reveal_target": "center" }
+      ],
+      "space g d": [
+        "task::Spawn",
+        { "task_name": "lazydocker", "reveal_target": "center" }
       ]
     }
   },

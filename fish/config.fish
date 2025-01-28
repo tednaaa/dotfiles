@@ -7,6 +7,7 @@ source ~/.asdf/asdf.fish
 
 starship init fish | source
 
+set -gx EDITOR "zed --wait"
 
 # pnpm
 set -gx PNPM_HOME "/home/tedna/.local/share/pnpm"
