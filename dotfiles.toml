@@ -1,6 +1,5 @@
 [symlinks]
 "zed" = ".config/zed"
-"ghostty" = ".config/ghostty"
 "nvim" = ".config/nvim"
 "wezterm" = ".config/wezterm"
 "zellij" = ".config/zellij"
