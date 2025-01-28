@@ -45,7 +45,8 @@
     },
     "TSX": {
       "code_actions_on_format": { "source.fixAll.eslint": true }
-    }
+    },
+    "Python": { "hard_tabs": false, "tab_size": 4 }
   },
 
   "features": { "inline_completion_provider": "supermaven" },
