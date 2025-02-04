@@ -5,6 +5,8 @@
 "zellij" = ".config/zellij"
 "lazygit" = ".config/lazygit"
 
+"vscode/settings.json" = ".config/VSCodium/User/settings.json"
+
 "fish/config.fish" = ".config/fish/config.fish"
 "git/.gitconfig" = ".gitconfig"
 "npm/.npmrc" = ".npmrc"
