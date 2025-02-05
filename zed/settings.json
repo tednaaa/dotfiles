@@ -1,11 +1,14 @@
 {
   "vim_mode": true,
-  "terminal": { "toolbar": { "breadcrumbs": false } },
+  "terminal": {
+    "toolbar": { "breadcrumbs": false },
+    "line_height": { "custom": 1.5 }
+  },
   "vim": { "use_system_clipboard": "always", "use_smartcase_find": true },
   "relative_line_numbers": true,
   "vertical_scroll_margin": 10,
 
-  "theme": "One Dark Pro",
+  "theme": "Atelier Cave Dark",
 
   "buffer_font_family": "Maple Mono NF",
   "buffer_font_weight": 500,
