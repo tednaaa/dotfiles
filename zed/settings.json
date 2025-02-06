@@ -9,6 +9,7 @@
   "vertical_scroll_margin": 10,
 
   "theme": "Atelier Cave Dark",
+  "icon_theme": "Material Icon Theme",
 
   "buffer_font_family": "Maple Mono NF",
   "buffer_font_weight": 500,
@@ -49,7 +50,17 @@
     "TSX": {
       "code_actions_on_format": { "source.fixAll.eslint": true }
     },
-    "Python": { "hard_tabs": false, "tab_size": 4 }
+    "Python": {
+      "hard_tabs": false,
+      "tab_size": 4,
+      "formatter": {
+        "external": {
+          "command": "black",
+          "arguments": ["-"]
+        }
+      },
+      "format_on_save": "on"
+    }
   },
 
   "features": { "inline_completion_provider": "supermaven" },
