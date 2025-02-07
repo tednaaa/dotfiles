@@ -4,7 +4,7 @@
   "relative_line_numbers": true,
   "vertical_scroll_margin": 10,
 
-  "theme": "Atelier Cave Dark",
+  "theme": "Tokyo Night",
   "icon_theme": "Material Icon Theme",
 
   "buffer_font_family": "Maple Mono NF",
@@ -41,10 +41,7 @@
       "hard_tabs": false,
       "tab_size": 4,
       "formatter": {
-        "external": {
-          "command": "black",
-          "arguments": ["-"]
-        }
+        "external": { "command": "black", "arguments": ["-"] }
       },
       "format_on_save": "on"
     }
@@ -71,6 +68,7 @@
 
   "auto_install_extensions": {
     "intellij-newui-theme": true,
+    "tokyo-night": true,
     "catppuccin": true,
     "new-darcula": true,
     "one-dark-pro": true,
