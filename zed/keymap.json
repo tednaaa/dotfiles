@@ -25,7 +25,7 @@
   {
     "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
     "bindings": {
-      "g h d": "editor::ToggleHunkDiff",
+      "g h d": "editor::ToggleSelectedDiffHunks",
       "g h r": "editor::RevertSelectedHunks",
 
       "g D": "editor::GoToDefinitionSplit",
