@@ -6,6 +6,7 @@
 "lazygit" = ".config/lazygit"
 
 "vscode/settings.json" = ".config/VSCodium/User/settings.json"
+"cursor/settings.json" = ".config/Cursor/User/settings.json"
 
 "fish/config.fish" = ".config/fish/config.fish"
 "git/.gitconfig" = ".gitconfig"
