@@ -9,7 +9,7 @@
 
   "buffer_font_family": "Maple Mono NF",
   "buffer_font_weight": 500,
-  "buffer_font_size": 15,
+  "buffer_font_size": 15.0,
   "buffer_line_height": { "custom": 1.8 },
   "buffer_font_features": { "calt": false },
 
@@ -49,7 +49,8 @@
 
   "lsp": {
     "rust-analyzer": {
-      "initialization_options": { "check": { "command": "clippy" } }
+      "initialization_options": { "check": { "command": "clippy" } },
+      "binary": { "ignore_system_version": true }
     },
     "pyright": {
       "settings": {
