@@ -4,7 +4,7 @@
   "relative_line_numbers": true,
   "vertical_scroll_margin": 10,
 
-  "theme": "Fleet Dark",
+  "theme": "Catppuccin Mocha",
   "icon_theme": "Material Icon Theme",
 
   "buffer_font_family": "Maple Mono NF",
@@ -64,6 +64,13 @@
 
   "git": { "inline_blame": { "enabled": false } },
 
+  "assistant": {
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
   "features": { "inline_completion_provider": "supermaven" },
   "show_inline_completions": true,
 
