@@ -71,8 +71,8 @@
     },
     "version": "2"
   },
-  "features": { "inline_completion_provider": "supermaven" },
-  "show_inline_completions": true,
+  "features": { "edit_prediction_provider": "supermaven" },
+  "show_edit_predictions": true,
 
   "auto_install_extensions": {
     "intellij-newui-theme": true,
