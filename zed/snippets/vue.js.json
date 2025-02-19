@@ -1,0 +1,12 @@
+{
+  "Vue template": {
+    "prefix": "stv",
+    "body": [
+      "<script setup lang='ts'></script>",
+      "",
+      "<template></template>",
+      "",
+      "<style module></style>"
+    ]
+  }
+}
