@@ -2,6 +2,7 @@
 "zed" = ".config/zed"
 "nvim" = ".config/nvim"
 "wezterm" = ".config/wezterm"
+"ghostty" = ".config/ghostty"
 "zellij" = ".config/zellij"
 "lazygit" = ".config/lazygit"
 
