@@ -24,10 +24,7 @@ require("lazy").setup({
     -- personal overrides
     { import = "plugins" },
   },
-  defaults = {
-    lazy = false,
-    version = false,
-  },
+  defaults = { lazy = false, version = false },
   install = { colorscheme = { "tokyonight" } },
   checker = { enabled = true, notify = false },
   performance = {
