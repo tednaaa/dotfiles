@@ -30,6 +30,7 @@
   "hard_tabs": true,
   "show_whitespaces": "selection",
 
+  "format_on_save": "on",
   "languages": {
     "TypeScript": {
       "code_actions_on_format": { "source.fixAll.eslint": true }
@@ -37,13 +38,15 @@
     "TSX": {
       "code_actions_on_format": { "source.fixAll.eslint": true }
     },
+    "Vue.js": {
+      "code_actions_on_format": { "source.fixAll.eslint": true }
+    },
     "Python": {
       "hard_tabs": false,
       "tab_size": 4,
       "formatter": {
         "external": { "command": "black", "arguments": ["-"] }
-      },
-      "format_on_save": "on"
+      }
     }
   },
 
@@ -66,12 +69,12 @@
 
   "assistant": {
     "default_model": {
-      "provider": "anthropic",
-      "model": "claude-3-5-sonnet-latest"
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
     },
     "version": "2"
   },
-  "features": { "edit_prediction_provider": "supermaven" },
+  "features": { "edit_prediction_provider": "copilot" },
   "show_edit_predictions": true,
 
   "auto_install_extensions": {
