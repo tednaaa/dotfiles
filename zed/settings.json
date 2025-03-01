@@ -4,8 +4,8 @@
   "relative_line_numbers": true,
   "vertical_scroll_margin": 10,
 
-  "theme": "Catppuccin Mocha - No Italics",
-  "icon_theme": "Material Icon Theme",
+  "theme": "One Dark Pro",
+  "icon_theme": "Catppuccin Mocha",
 
   "buffer_font_family": "Maple Mono NF",
   "buffer_font_weight": 500,
@@ -80,10 +80,11 @@
   "auto_install_extensions": {
     "intellij-newui-theme": true,
     "tokyo-night": true,
-    "catppuccin": true,
-    "new-darcula": true,
     "one-dark-pro": true,
     "github-theme": true,
+
+    "catppuccin": true,
+    "catppuccin-icons": true,
 
     "astro": true,
     "basher": true,
