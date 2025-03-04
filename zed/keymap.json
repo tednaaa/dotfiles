@@ -38,11 +38,7 @@
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
-      "x": ["workspace::SendKeystrokes", "\" _ x"],
-      "d": ["workspace::SendKeystrokes", "\" _ d"],
-      "D": ["workspace::SendKeystrokes", "\" _ D"],
-      "c": ["workspace::SendKeystrokes", "\" _ c"],
-      "C": ["workspace::SendKeystrokes", "\" _ C"]
+      "x": ["workspace::SendKeystrokes", "\" _ x"]
     }
   },
   {
