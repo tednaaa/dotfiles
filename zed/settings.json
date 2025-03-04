@@ -69,12 +69,12 @@
 
   "assistant": {
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
+      "provider": "anthropic",
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
   },
-  "features": { "edit_prediction_provider": "copilot" },
+  "features": { "edit_prediction_provider": "supermaven" },
   "show_edit_predictions": true,
 
   "auto_install_extensions": {
