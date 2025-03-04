@@ -2,11 +2,13 @@
   {
     "context": "ProjectPanel || CollabPanel || OutlinePanel || ChatPanel || VimControl || EmptyPane || SharedScreen || MarkdownPreview || KeyContextView",
     "bindings": {
-      "ctrl-w": null,
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-w": "pane::CloseActiveItem",
+      "ctrl-shift-w": "pane::CloseInactiveItems",
+
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
 
       "space g g": [
         "task::Spawn",
@@ -26,19 +28,21 @@
     "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
     "bindings": {
       "g h d": "editor::ToggleSelectedDiffHunks",
-      "g h r": "editor::RevertSelectedHunks",
+      "g h r": "git::Restore",
+      "g h s": "git::ToggleStaged",
 
       "g D": "editor::GoToDefinitionSplit",
-      "g r": "editor::FindAllReferences",
-
-      "ctrl-w": "pane::CloseActiveItem",
-      "ctrl-shift-w": "pane::CloseInactiveItems"
+      "g r": "editor::FindAllReferences"
     }
   },
   {
-    "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
-      "p": ["vim::Paste", { "preserveClipboard": true }]
+      "x": ["workspace::SendKeystrokes", "\" _ x"],
+      "d": ["workspace::SendKeystrokes", "\" _ d"],
+      "D": ["workspace::SendKeystrokes", "\" _ D"],
+      "c": ["workspace::SendKeystrokes", "\" _ c"],
+      "C": ["workspace::SendKeystrokes", "\" _ C"]
     }
   },
   {
