@@ -45,7 +45,7 @@
     "context": "VimControl && !menu",
     "bindings": {
       "shift-l": "pane::ActivateNextItem",
-      "shift-h": "pane::ActivatePrevItem",
+      "shift-h": "pane::ActivatePreviousItem",
 
       "space v": "pane::SplitRight",
       "space s": "pane::SplitDown",
