@@ -4,7 +4,7 @@
   "relative_line_numbers": true,
   "vertical_scroll_margin": 10,
 
-  "theme": "One Dark Pro",
+  "theme": "Gruvbox Light Soft",
   "icon_theme": "Catppuccin Mocha",
 
   "buffer_font_family": "Maple Mono NF",

@@ -10,6 +10,8 @@
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
 
+      "space g r": "editor::RestartLanguageServer",
+
       "space g g": [
         "task::Spawn",
         { "task_name": "git", "reveal_target": "center" }
@@ -33,6 +35,13 @@
 
       "g D": "editor::GoToDefinitionSplit",
       "g r": "editor::FindAllReferences"
+    }
+  },
+  {
+    "context": "Editor && edit_prediction",
+    "bindings": {
+      "tab": "editor::Tab",
+      "alt-a": "editor::AcceptEditPrediction"
     }
   },
   {
