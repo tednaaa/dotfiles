@@ -2,12 +2,8 @@
 "zed" = ".config/zed"
 "nvim" = ".config/nvim"
 "wezterm" = ".config/wezterm"
-"ghostty" = ".config/ghostty"
-"zellij" = ".config/zellij"
 "lazygit" = ".config/lazygit"
-
-"vscode/settings.json" = ".config/VSCodium/User/settings.json"
-"cursor/settings.json" = ".config/Cursor/User/settings.json"
+"mise" = ".config/mise"
 
 "fish/config.fish" = ".config/fish/config.fish"
 "git/.gitconfig" = ".gitconfig"
