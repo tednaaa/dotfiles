@@ -192,7 +192,7 @@ sudo pacman -S plasma-desktop plasma-pa plasma-nm plasma-firewall kscreen bluede
 > My additional packages
 
 ```
-yay -S google-chrome firefox wezterm fzf ripgrep fd bat git-delta lazygit lazydocker appimagelauncher
+yay -S google-chrome firefox wezterm fzf ripgrep fd bat git-delta lazygit lazydocker appimagelauncher btop openbsd-netcat
 ```
 
 > Now install display manager and reboot
