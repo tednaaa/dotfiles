@@ -47,7 +47,10 @@
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
-      "x": ["workspace::SendKeystrokes", "\" _ x"]
+      "x": ["workspace::SendKeystrokes", "\" _ x"],
+
+      "alt-k": "editor::MoveLineUp",
+      "alt-j": "editor::MoveLineDown"
     }
   },
   {
