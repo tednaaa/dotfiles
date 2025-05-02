@@ -1,4 +1,7 @@
 {
+  "telemetry": {
+    "diagnostics": true
+  },
   "vim_mode": true,
   "vim": { "use_system_clipboard": "always", "use_smartcase_find": true },
   "relative_line_numbers": true,
@@ -7,14 +10,14 @@
   "theme": "JetBrains New Dark",
   "icon_theme": "Catppuccin Mocha",
 
-  "buffer_font_family": "Maple Mono NF",
-  "buffer_font_weight": 500,
+  "buffer_font_family": "Hurmit Nerd Font Mono",
+  "buffer_font_weight": 400,
   "buffer_font_size": 15.0,
   "buffer_line_height": { "custom": 1.8 },
   "buffer_font_features": { "calt": false },
 
-  "ui_font_family": "Maple Mono NF",
-  "ui_font_weight": 500,
+  "ui_font_family": "Hurmit Nerd Font Mono",
+  "ui_font_weight": 400,
   "ui_font_size": 16,
 
   "terminal": {
