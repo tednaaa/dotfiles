@@ -1,0 +1,150 @@
+{
+	"layer": "top",
+	"margin-left": 3,
+	"margin-right": 3,
+	"margin-top": 2,
+	"margin-bottom": 0,
+	"modules-left": ["hyprland/workspaces", "cpu", "memory", "network#speed"],
+	"modules-center": ["clock"],
+	"modules-right": [
+		"temperature#gpu",
+		"pulseaudio",
+		"backlight",
+		"network",
+		"bluetooth",
+		"battery",
+	],
+	"hyprland/window": {
+		"format": "󰣇 {}",
+	},
+	"temperature#gpu": {
+		"thermal-zone": 5,
+		"critical-threshold": 80,
+		"format-critical": "{temperatureC}°C ",
+		"format": "{temperatureC}°C ",
+		"tooltip": false,
+	},
+	"backlight": {
+		"device": "intel_backlight",
+		"scroll-step": 5,
+		"format": "{icon}",
+		"format-icons": ["󰃞 ", "󰃟 ", "󰃝 ", "󰃠 "],
+		"tooltip": true,
+		"tooltip-format": "{percent}%",
+	},
+	"network#speed": {
+		"interval": 1,
+		"format": "{ifname}%%",
+		"format-wifi": " {bandwidthDownBytes}  {bandwidthUpBytes}",
+		"format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes} ",
+		"format-disconnected": "󰌙",
+		"tooltip-format": "{ipaddr}",
+		"format-linked": "󰈁 {ifname} (No IP)",
+		"tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+		"tooltip-format-ethernet": "{ifname} 󰌘",
+		"tooltip-format-disconnected": "󰌙 Disconnected",
+		"max-length": 22,
+		"min-length": 20,
+		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+	},
+	"cpu": {
+		"interval": 1,
+		"format": "{usage}% <span font='Font Awesome 6 Free-Solid'>\uf2db</span>",
+		"on-click": "ghostty btop",
+	},
+	"memory": {
+		"interval": 1,
+		"format": "{percentage}% <span font='Font Awesome 5 Free'>\uf538</span>",
+		"on-click": "ghostty btop",
+		"tooltip-format": "{used}/{total} GiB",
+	},
+	"hyprland/workspaces": {
+		"all-outputs": true,
+		"warp-on-scroll": true,
+		"enable-bar-scroll": true,
+		"disable-scroll-wraparound": false,
+		"format": " {icon} ",
+		"format-icons": {
+			"active": "●",
+			"default": "○",
+		},
+		"persistent-workspaces": {
+			"*": 3,
+		},
+		"on-click": "activate",
+		"on-scroll-up": "hyprctl dispatch workspace e-1",
+		"on-scroll-down": "hyprctl dispatch workspace e+1",
+	},
+	"clock": {
+		"format": "{:%I:%M %p ☲ %a %d/%m}",
+		"tooltip": true,
+		"tooltip-format": "<tt>{calendar}</tt>",
+	},
+	"network": {
+		"format-wifi": "{icon}",
+		"format-ethernet": "󰈀",
+		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤢", "󰤨"],
+		"format-disconnected": "󰪎",
+		"interval": 5,
+		"tooltip-format-wifi": " {bandwidthDownBytes} |  {bandwidthUpBytes} | {essid}",
+		"tooltip-format-disconnected": "Disconnected",
+	},
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15,
+		},
+		"format": " {capacity}% {icon} ",
+		"format-full": "{icon}",
+		"format-plugged": " {capacity}% <span font='Font Awesome 5 Free'>\uf0e7</span> ",
+		"format-alt": "{icon}",
+		"tooltip-format": "{capacity}%, about {time} left",
+		"format-icons": [" ", " ", " ", " "],
+	},
+	"pulseaudio": {
+		"format": "<span font='Font Awesome 5 Free'>{icon}</span>",
+		"format-muted": "<span font='Font Awesome 5 Free'>\uf6a9</span>",
+		"format-icons": {
+			"headphone": "\uf025",
+			// "default": ["\uf028"]
+			// "default": [
+			//   "▁", // 0–16%
+			//   "▂▁", // 17–33%
+			//   "▃▂▁", // 34–50%
+			//   "▄▃▂▁", // 51–66%
+			//   "▅▄▃▂▁", // 67–83%
+			//   "▆▅▄▃▂▁" // 84–100%
+			// ]
+			"default": [
+				"▓░░░░░░░░░",
+				"▓▓░░░░░░░░",
+				"▓▓▓░░░░░░░",
+				"▓▓▓▓░░░░░░",
+				"▓▓▓▓▓░░░░░",
+				"▓▓▓▓▓▓░░░░",
+				"▓▓▓▓▓▓▓░░░",
+				"▓▓▓▓▓▓▓▓░░",
+				"▓▓▓▓▓▓▓▓▓░",
+				"▓▓▓▓▓▓▓▓▓▓",
+			],
+		},
+		"tooltip-format": "{volume}% {desc}",
+		"on-click": "pamixer -t",
+	},
+	"bluetooth": {
+		"format": "{icon}",
+		"format-icons": ["", "󰤾", "󰥀", "󰥄", "󰥈"],
+
+		"tooltip-format-off": "Bluetooth is off",
+		"tooltip-format-on": "Bluetooth is on",
+
+		"format-connected": "{icon} {num_connections}",
+		"format-connected-battery": "{icon} {device_battery_percentage}%",
+
+		"tooltip-format-connected": "{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\t{device_battery_percentage}%",
+
+		"on-click": "blueman-manager",
+	},
+}
