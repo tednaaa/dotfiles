@@ -2,9 +2,12 @@
 "hypr" = ".config/hypr"
 "waybar" = ".config/waybar"
 
+"ghostty" = ".config/ghostty"
+"wezterm" = ".config/wezterm"
+
 "zed" = ".config/zed"
 "nvim" = ".config/nvim"
-"wezterm" = ".config/wezterm"
+
 "lazygit" = ".config/lazygit"
 "mise" = ".config/mise"
 
