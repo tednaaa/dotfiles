@@ -4,16 +4,9 @@
 	"margin-right": 3,
 	"margin-top": 2,
 	"margin-bottom": 0,
-	"modules-left": ["hyprland/workspaces", "cpu", "memory", "network#speed"],
-	"modules-center": ["clock"],
-	"modules-right": [
-		"temperature#gpu",
-		"pulseaudio",
-		"backlight",
-		"network",
-		"bluetooth",
-		"battery",
-	],
+	"modules-left": ["network#speed", "cpu", "memory", "temperature#gpu"],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right": ["clock", "pulseaudio", "bluetooth", "battery"],
 	"hyprland/window": {
 		"format": "󰣇 {}",
 	},
@@ -23,14 +16,6 @@
 		"format-critical": "{temperatureC}°C ",
 		"format": "{temperatureC}°C ",
 		"tooltip": false,
-	},
-	"backlight": {
-		"device": "intel_backlight",
-		"scroll-step": 5,
-		"format": "{icon}",
-		"format-icons": ["󰃞 ", "󰃟 ", "󰃝 ", "󰃠 "],
-		"tooltip": true,
-		"tooltip-format": "{percent}%",
 	},
 	"network#speed": {
 		"interval": 1,
@@ -80,15 +65,6 @@
 		"tooltip": true,
 		"tooltip-format": "<tt>{calendar}</tt>",
 	},
-	"network": {
-		"format-wifi": "{icon}",
-		"format-ethernet": "󰈀",
-		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤢", "󰤨"],
-		"format-disconnected": "󰪎",
-		"interval": 5,
-		"tooltip-format-wifi": " {bandwidthDownBytes} |  {bandwidthUpBytes} | {essid}",
-		"tooltip-format-disconnected": "Disconnected",
-	},
 	"battery": {
 		"states": {
 			"good": 95,
@@ -107,15 +83,6 @@
 		"format-muted": "<span font='Font Awesome 5 Free'>\uf6a9</span>",
 		"format-icons": {
 			"headphone": "\uf025",
-			// "default": ["\uf028"]
-			// "default": [
-			//   "▁", // 0–16%
-			//   "▂▁", // 17–33%
-			//   "▃▂▁", // 34–50%
-			//   "▄▃▂▁", // 51–66%
-			//   "▅▄▃▂▁", // 67–83%
-			//   "▆▅▄▃▂▁" // 84–100%
-			// ]
 			"default": [
 				"▓░░░░░░░░░",
 				"▓▓░░░░░░░░",
