@@ -18,7 +18,7 @@ config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
 config.color_scheme = "GitHub Dark"
 config.colors = { background = "#141414" }
 
-config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular" })
+config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Medium" })
 config.font_size = 12.3
 config.line_height = 1.2
 

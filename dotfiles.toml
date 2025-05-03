@@ -1,9 +1,4 @@
 [symlinks]
-"hypr" = ".config/hypr"
-"waybar" = ".config/waybar"
-"rofi" = ".config/rofi"
-
-"ghostty" = ".config/ghostty"
 "wezterm" = ".config/wezterm"
 
 "zed" = ".config/zed"
