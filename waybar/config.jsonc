@@ -4,19 +4,16 @@
 	"margin-right": 3,
 	"margin-top": 2,
 	"margin-bottom": 0,
-	"modules-left": ["network#speed", "cpu", "memory", "temperature#gpu"],
+	"modules-left": [
+		"network#speed",
+		"power-profiles-daemon",
+		"cpu",
+		"memory",
+		"temperature#gpu",
+	],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["clock", "pulseaudio", "bluetooth", "battery"],
-	"hyprland/window": {
-		"format": "󰣇 {}",
-	},
-	"temperature#gpu": {
-		"thermal-zone": 5,
-		"critical-threshold": 80,
-		"format-critical": "{temperatureC}°C ",
-		"format": "{temperatureC}°C ",
-		"tooltip": false,
-	},
+
 	"network#speed": {
 		"interval": 1,
 		"format": "{ifname}%%",
@@ -32,6 +29,17 @@
 		"min-length": 20,
 		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
 	},
+	"power-profiles-daemon": {
+		"format": "{icon}   {profile}",
+		"tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+		"tooltip": true,
+		"format-icons": {
+			"default": "",
+			"performance": "",
+			"balanced": "",
+			"power-saver": "",
+		},
+	},
 	"cpu": {
 		"interval": 1,
 		"format": "{usage}% <span font='Font Awesome 6 Free-Solid'>\uf2db</span>",
@@ -43,6 +51,14 @@
 		"on-click": "ghostty btop",
 		"tooltip-format": "{used}/{total} GiB",
 	},
+	"temperature#gpu": {
+		"thermal-zone": 5,
+		"critical-threshold": 80,
+		"format-critical": "{temperatureC}°C ",
+		"format": "{temperatureC}°C ",
+		"tooltip": false,
+	},
+
 	"hyprland/workspaces": {
 		"all-outputs": true,
 		"warp-on-scroll": true,
@@ -60,23 +76,11 @@
 		"on-scroll-up": "hyprctl dispatch workspace e-1",
 		"on-scroll-down": "hyprctl dispatch workspace e+1",
 	},
+
 	"clock": {
 		"format": "{:%I:%M %p ☲ %a %d/%m}",
 		"tooltip": true,
 		"tooltip-format": "<tt>{calendar}</tt>",
-	},
-	"battery": {
-		"states": {
-			"good": 95,
-			"warning": 30,
-			"critical": 15,
-		},
-		"format": " {capacity}% {icon} ",
-		"format-full": "{icon}",
-		"format-plugged": " {capacity}% <span font='Font Awesome 5 Free'>\uf0e7</span> ",
-		"format-alt": "{icon}",
-		"tooltip-format": "{capacity}%, about {time} left",
-		"format-icons": [" ", " ", " ", " "],
 	},
 	"pulseaudio": {
 		"format": "<span font='Font Awesome 5 Free'>{icon}</span>",
@@ -113,5 +117,18 @@
 		"tooltip-format-enumerate-connected": "{device_alias}\t{device_battery_percentage}%",
 
 		"on-click": "blueman-manager",
+	},
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15,
+		},
+		"format": " {capacity}% {icon} ",
+		"format-full": "{icon}",
+		"format-plugged": " {capacity}% <span font='Font Awesome 5 Free'>\uf0e7</span> ",
+		"format-alt": "{icon}",
+		"tooltip-format": "{capacity}%, about {time} left",
+		"format-icons": [" ", " ", " ", " "],
 	},
 }
