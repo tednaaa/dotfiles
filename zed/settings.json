@@ -1,7 +1,4 @@
 {
-  "telemetry": {
-    "diagnostics": true
-  },
   "vim_mode": true,
   "vim": { "use_system_clipboard": "always", "use_smartcase_find": true },
   "relative_line_numbers": true,
@@ -22,7 +19,9 @@
 
   "terminal": {
     "toolbar": { "breadcrumbs": false },
-    "line_height": { "custom": 1.5 }
+    "line_height": { "custom": 1.5 },
+
+    "detect_venv": { "on": { "activate_script": "fish" } }
   },
 
   "cursor_blink": false,
