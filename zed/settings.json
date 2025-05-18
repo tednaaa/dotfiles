@@ -4,7 +4,7 @@
   "relative_line_numbers": true,
   "vertical_scroll_margin": 10,
 
-  "theme": "JetBrains New Dark",
+  "theme": "Tokyo Night",
   "icon_theme": "Catppuccin Mocha",
 
   "buffer_font_family": "JetBrainsMono Nerd Font",
@@ -70,9 +70,10 @@
   "git": { "inline_blame": { "enabled": false } },
 
   "assistant": {
+    "default_profile": "ask",
     "default_model": {
-      "provider": "google",
-      "model": "gemini-2.5-pro-exp-03-25"
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
   },
