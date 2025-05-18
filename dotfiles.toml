@@ -1,4 +1,5 @@
 [symlinks]
+"ghostty" = ".config/ghostty"
 "wezterm" = ".config/wezterm"
 
 "zed" = ".config/zed"
