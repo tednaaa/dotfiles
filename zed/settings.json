@@ -4,7 +4,7 @@
   "relative_line_numbers": true,
   "vertical_scroll_margin": 10,
 
-  "theme": "Tokyo Night",
+  "theme": "Zedokai",
   "icon_theme": "Catppuccin Mocha",
 
   "buffer_font_family": "JetBrainsMono Nerd Font",
@@ -69,8 +69,8 @@
 
   "git": { "inline_blame": { "enabled": false } },
 
-  "assistant": {
-    "default_profile": "ask",
+  "agent": {
+    "model_parameters": [],
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-3-7-sonnet-latest"
