@@ -15,13 +15,6 @@
     "hide": "on_success"
   },
   {
-    "label": "fzf text",
-    "command": "zed \"$(tv text)\"",
-    "hide": "always",
-    "allow_concurrent_runs": true,
-    "use_new_terminal": true
-  },
-  {
     "label": "Generate .editorconfig",
     "command": "cp ~/.config/zed/.editorconfig.template .editorconfig",
     "show_output": false
