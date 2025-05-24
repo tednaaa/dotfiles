@@ -12,13 +12,13 @@
 
       "space g r": "editor::RestartLanguageServer",
 
+      "space g h": [
+        "task::Spawn",
+        { "task_name": "resto", "reveal_target": "center" }
+      ],
       "space g g": [
         "task::Spawn",
         { "task_name": "git", "reveal_target": "center" }
-      ],
-      "space g ;": [
-        "task::Spawn",
-        { "task_name": "fzf text", "reveal_target": "center" }
       ],
       "space g d": [
         "task::Spawn",

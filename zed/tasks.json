@@ -1,5 +1,10 @@
 [
   {
+    "label": "resto",
+    "command": "cd ~/projects/resto && cargo run",
+    "hide": "on_success"
+  },
+  {
     "label": "git",
     "command": "lazygit",
     "hide": "on_success"
