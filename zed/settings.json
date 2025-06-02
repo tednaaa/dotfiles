@@ -4,7 +4,7 @@
   "relative_line_numbers": true,
   "vertical_scroll_margin": 10,
 
-  "theme": "Zedokai",
+  "theme": "Ayu Mirage",
   "icon_theme": "Catppuccin Mocha",
 
   "buffer_font_family": "JetBrainsMono Nerd Font",
@@ -78,7 +78,7 @@
     },
     "version": "2"
   },
-  "features": { "edit_prediction_provider": "supermaven" },
+  "features": { "edit_prediction_provider": "zed" },
   "show_edit_predictions": true,
 
   "auto_install_extensions": {
