@@ -186,7 +186,7 @@ sudo nvim /etc/pacman.conf
 > Desktop Environment `Minimal KDE`
 
 ```
-sudo pacman -S plasma-desktop plasma-pa plasma-nm plasma-firewall kscreen bluedevil powerdevil power-profiles-daemon dolphin ark spectacle
+sudo pacman -S plasma-desktop plasma-pa plasma-nm plasma-firewall kscreen bluedevil powerdevil power-profiles-daemon dolphin ark spectacle korganizer
 ```
 
 > My additional packages
