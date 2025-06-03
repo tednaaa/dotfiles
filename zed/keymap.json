@@ -38,8 +38,9 @@
     }
   },
   {
-    "context": "Editor && edit_prediction",
+    "context": "Editor && (edit_prediction || edit_prediction_conflict)",
     "bindings": {
+      "alt-l": null,
       "tab": "editor::Tab",
       "alt-a": "editor::AcceptEditPrediction"
     }
