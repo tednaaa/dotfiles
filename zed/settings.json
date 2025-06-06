@@ -4,7 +4,7 @@
   "relative_line_numbers": true,
   "vertical_scroll_margin": 10,
 
-  "theme": "Ayu Mirage",
+  "theme": "JetBrains New Dark",
   "icon_theme": "Catppuccin Mocha",
 
   "buffer_font_family": "JetBrainsMono Nerd Font",
@@ -74,7 +74,7 @@
     "model_parameters": [],
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-latest"
+      "model": "claude-sonnet-4"
     },
     "version": "2"
   },
