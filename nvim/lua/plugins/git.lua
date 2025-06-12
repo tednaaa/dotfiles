@@ -1,17 +1,12 @@
 return {
 	{
-		"NeogitOrg/neogit",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"sindrets/diffview.nvim",
-			"ibhagwan/fzf-lua",
-		},
-		config = function()
-			require("diffview").setup()
-			require("neogit").setup({ integrations = { diffview = true, fzf_lua = true } })
-
-			vim.keymap.set("n", "<leader>gg", "<cmd>Neogit<CR>", { desc = "Open Git" })
-		end,
+		"kdheepak/lazygit.nvim",
+		lazy = true,
+		cmd = { "LazyGit", "LazyGitConfig", "LazyGitCurrentFile", "LazyGitFilter", "LazyGitFilterCurrentFile" },
+		dependencies = { "nvim-lua/plenary.nvim", },
+		keys = {
+			{ "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
+		}
 	},
 	{ "akinsho/git-conflict.nvim", version = "*", config = true },
 	{
@@ -44,7 +39,6 @@ return {
 
 					keymap("n", "gh", gitsigns.preview_hunk)
 					keymap("n", "ghs", gitsigns.stage_hunk)
-					keymap("n", "ghu", gitsigns.undo_stage_hunk)
 					keymap("n", "ghx", gitsigns.reset_hunk)
 
 					keymap("n", "ghh", fzf.git_bcommits)
