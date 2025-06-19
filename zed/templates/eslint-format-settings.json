@@ -1,0 +1,35 @@
+{
+  "formatter": {
+    "code_actions": {
+      "source.fixAll.eslint": true,
+      "source.organizeImports": false
+    }
+  },
+
+  "format_on_save": "on",
+  "languages": {
+    "Vue.js": { "prettier": { "allowed": false } },
+    "TypeScript": { "prettier": { "allowed": false } }
+  },
+
+  "lsp": {
+    "eslint": {
+      "settings": {
+        "problems": { "shortenToSingleLine": true },
+        "rulesCustomizations": [
+          { "rule": "style/*", "severity": "off", "fixable": true },
+          { "rule": "format/*", "severity": "off", "fixable": true },
+          { "rule": "*-indent", "severity": "off", "fixable": true },
+          { "rule": "*-spacing", "severity": "off", "fixable": true },
+          { "rule": "*-spaces", "severity": "off", "fixable": true },
+          { "rule": "*-order", "severity": "off", "fixable": true },
+          { "rule": "*-dangle", "severity": "off", "fixable": true },
+          { "rule": "*-newline", "severity": "off", "fixable": true },
+          { "rule": "*quotes", "severity": "off", "fixable": true },
+          { "rule": "*semi", "severity": "off", "fixable": true }
+        ]
+      },
+      "validate": ["vue", "html", "markdown", "json", "jsonc", "css"]
+    }
+  }
+}
