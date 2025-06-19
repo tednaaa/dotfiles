@@ -34,7 +34,9 @@
       "g h s": "git::ToggleStaged",
 
       "g D": "editor::GoToDefinitionSplit",
-      "g r": "editor::FindAllReferences"
+      "g r": "editor::FindAllReferences",
+
+      "g b": "editor::ToggleBreakpoint"
     }
   },
   {
