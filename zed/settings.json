@@ -4,8 +4,8 @@
   "relative_line_numbers": true,
   "vertical_scroll_margin": 10,
 
-  "icon_theme": "Material Icon Theme",
-  "theme": "Github Dark Dimmed",
+  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "theme": "JetBrains New Dark",
 
   // "experimental.theme_overrides": {
   //   "background.appearance": "transparent",
