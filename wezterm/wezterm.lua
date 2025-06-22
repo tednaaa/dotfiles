@@ -11,8 +11,7 @@ if wezterm.config_builder then
 	config:set_strict_mode(true)
 end
 
--- auto fullscreen not working with this option
--- config.window_decorations = "RESIZE"
+config.window_decorations = "RESIZE"
 config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
 
 config.color_scheme = "GitHub Dark"
@@ -25,7 +24,7 @@ config.line_height = 1.2
 config.adjust_window_size_when_changing_font_size = false
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
-config.window_frame = { font_size = 12 }
+config.window_frame = { font_size = 15 }
 
 local act = wezterm.action
 config.leader = { key = "a", mods = "CTRL" }
