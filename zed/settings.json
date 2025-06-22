@@ -100,6 +100,7 @@
   "git": { "inline_blame": { "enabled": false } },
 
   "agent": {
+    "single_file_review": false,
     "default_profile": "write",
     "model_parameters": [],
     "default_model": {
