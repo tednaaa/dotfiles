@@ -9,6 +9,7 @@
 [delta]
 	navigate = true
 	line-numbers = true
+	tabs = 2
 
 [merge]
 	conflictStyle = zdiff3
