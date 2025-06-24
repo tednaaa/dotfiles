@@ -40,6 +40,13 @@
     }
   },
   {
+    "context": "Pane",
+    "bindings": {
+      "g b p": "pane::TogglePinTab",
+      "g b q": ["pane::CloseAllItems", { "close_pinned": false }]
+    }
+  },
+  {
     "context": "Editor && (edit_prediction || edit_prediction_conflict)",
     "bindings": {
       "alt-l": null,
