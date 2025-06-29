@@ -36,12 +36,8 @@
       "g D": "editor::GoToDefinitionSplit",
       "g r": "editor::FindAllReferences",
 
-      "g b": "editor::ToggleBreakpoint"
-    }
-  },
-  {
-    "context": "Pane",
-    "bindings": {
+      "g b": "editor::ToggleBreakpoint",
+
       "g b p": "pane::TogglePinTab",
       "g b q": ["pane::CloseAllItems", { "close_pinned": false }]
     }
