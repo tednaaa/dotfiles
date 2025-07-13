@@ -7,6 +7,7 @@ vim.opt.fileencoding = "utf-8"
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+vim.o.confirm = true
 vim.opt.cursorline = false
 vim.opt.hlsearch = true
 vim.opt.ignorecase = true
@@ -35,7 +36,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.statuscolumn = [[%!v:lua.require'snacks.statuscolumn'.get()]]
 
 vim.opt.list = true
-vim.opt.listchars = { tab = "▸\\ ", trail = "·", extends = ">", precedes = "<", nbsp = "·" }
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 vim.opt.fillchars:append({ vert = "▎", horiz = "▁" })
 
@@ -51,8 +52,12 @@ vim.diagnostic.config({
 	},
 })
 
+vim.schedule(function()
+	vim.o.clipboard = 'unnamedplus'
+end)
+
+
 vim.opt.backspace = { "start", "eol", "indent" }
 vim.opt.path:append({ "**" })
 vim.opt.wildignore:append({ "*/node_modules/*" })
-vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
 vim.opt.formatoptions:append({ "r" })
