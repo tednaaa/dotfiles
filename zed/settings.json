@@ -4,8 +4,8 @@
   "relative_line_numbers": true,
   "vertical_scroll_margin": 10,
 
-  "icon_theme": "JetBrains New UI Icons (Dark)",
-  "theme": "JetBrains New Dark",
+  "icon_theme": "Colored Zed Icons Theme Dark",
+  "theme": "Gruvbox Dark Hard",
 
   // "experimental.theme_overrides": {
   //   "background.appearance": "transparent",
@@ -111,7 +111,6 @@
     "catppuccin": true,
     "catppuccin-icons": true,
 
-    "astro": true,
     "basher": true,
     "cargo-tom": true,
     "docker-compose": true,
@@ -120,22 +119,14 @@
     "env": true,
     "fish": true,
     "git-firefly": true,
-    "golangci-lint": true,
-    "graphql": true,
     "html": true,
-    "http": true,
-    "log": true,
     "make": true,
     "nginx": true,
-    "prisma": true,
     "scss": true,
     "snippets": true,
     "sql": true,
-    "svelte": true,
-    "terraform": true,
     "toml": true,
     "vue": true,
-    "wakatime": true,
-    "xml": true
+    "wakatime": true
   }
 }
