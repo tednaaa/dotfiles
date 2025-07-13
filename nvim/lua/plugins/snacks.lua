@@ -1,11 +1,18 @@
 return {
 	"folke/snacks.nvim",
+	priority = 1000,
+	lazy = false,
+	---@type snacks.Config
 	opts = {
-		dashboard = { enabled = false },
-
-		picker = { hidden = true, ignored = true },
+		bigfile = { enabled = true },
+		input = { enabled = true },
+		quickfile = { enabled = true },
+		statuscolumn = { enabled = true },
+		words = { enabled = true },
 	},
-	config = function(opts)
-		Snacks.explorer.reveal(opts)
-	end,
+	-- stylua: ignore
+	keys = {
+		{ "<A-p>", function() Snacks.words.jump(-vim.v.count1) end, desc = "Prev Reference", mode = { "n", "t" } },
+		{ "<A-n>", function() Snacks.words.jump(vim.v.count1) end, desc = "Next Reference", mode = { "n", "t" } },
+	},
 }
