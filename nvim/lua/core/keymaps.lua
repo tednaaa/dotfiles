@@ -5,7 +5,7 @@ local keymap = function(mode, lhs, rhs, opts)
 	vim.keymap.set(mode, lhs, rhs, opts)
 end
 
-keymap("n", "<leader>w", "<cmd>write<cr>", { desc = "save buffer" })
+keymap("n", "<C-s>", "<cmd>write<cr>", { desc = "save buffer" })
 keymap("n", "<esc>", "<cmd>nohlsearch<cr>", { desc = "Remove Highlights" })
 keymap("i", "jj", "<esc>", { desc = "Escape insert mode" })
 
