@@ -1,85 +1,53 @@
-# Markdown Extension Examples
+## Check network connection
 
-This page demonstrates some of the built-in markdown extensions provided by VitePress.
-
-## Syntax Highlighting
-
-VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
-
-**Input**
-
-````md
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
-````
-
-**Output**
-
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
+```fish
+ping google.com
 ```
 
-## Custom Containers
+> If you have wired connection, you should be ok
 
-**Input**
+::: details If you have Wi-Fi - use `iwctl` to connect
 
-```md
-::: info
-This is an info box.
-:::
+```fish
+rfkill unblock all
 
-::: tip
-This is a tip.
-:::
-
-::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
+iwctl
+station wlan0 connect "{wifi_name}"
 ```
 
-**Output**
+:::
+
+## Installation
+
+```fish
+archinstall
+```
+
+| Config                        |                Details                |
+| ----------------------------- | :-----------------------------------: |
+| disk                          | best effort, btrfs, snapper snapshots |
+| swap                          |                enabled                |
+| unified kernel images         |                enabled                |
+| hostname, root password, user |         set whatever you want         |
+| profile                       |                minimal                |
+| audio                         |               pipewire                |
+| kernels                       |            linux (default)            |
+| network                       |          use NetworkManager           |
+| timezone                      |         set whatever you want         |
+
+```
+reboot
+```
 
 ::: info
-This is an info box.
+now you have a minimal setup, you can login with your username and password
 :::
 
-::: tip
-This is a tip.
-:::
+> Wi-Fi?
 
-::: warning
-This is a warning.
-:::
+::: warning use `nmcli` to connect
 
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
-
-## More
-
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
+```fish
+nmcli device wifi list
+nmcli device wifi connect "{wifi_name}" password "{password}"
+```
