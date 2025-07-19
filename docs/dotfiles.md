@@ -2,48 +2,33 @@
 outline: deep
 ---
 
-# Runtime API Examples
+#### How to manage dotfiles?
 
-This page demonstrates usage of some of the runtime APIs provided by VitePress.
-
-The main `useData()` API can be used to access site, theme, and page data for the current page. It works in both `.md` and `.vue` files:
-
-```md
-<script setup>
-import { useData } from 'vitepress'
-
-const { theme, page, frontmatter } = useData()
-</script>
-
-## Results
-
-### Theme Data
-<pre>{{ theme }}</pre>
-
-### Page Data
-<pre>{{ page }}</pre>
-
-### Page Frontmatter
-<pre>{{ frontmatter }}</pre>
+```fish
+cargo install symm
 ```
 
-<script setup>
-import { useData } from 'vitepress'
+#### There are 2 commands
 
-const { site, theme, page, frontmatter } = useData()
-</script>
+```fish
+symm link
+```
 
-## Results
+```fish
+symm unlink
+```
 
-### Theme Data
-<pre>{{ theme }}</pre>
+```toml [~/dotfiles/dotfiles.toml]
+[symlinks]
+"wezterm" = ".config/wezterm"
 
-### Page Data
-<pre>{{ page }}</pre>
+"zed" = ".config/zed"
+"nvim" = ".config/nvim"
 
-### Page Frontmatter
-<pre>{{ frontmatter }}</pre>
+"lazygit" = ".config/lazygit"
+"mise" = ".config/mise"
 
-## More
-
-Check out the documentation for the [full list of runtime APIs](https://vitepress.dev/reference/runtime-api#usedata).
+"fish/config.fish" = ".config/fish/config.fish"
+"git/.gitconfig" = ".gitconfig"
+"npm/.npmrc" = ".npmrc"
+```

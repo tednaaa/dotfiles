@@ -1,13 +1,3 @@
-### How to manage dotfiles?
-
-> Also check symlinks in `dotfiles.toml`
-
-```bash
-cargo install symm
-symm link
-symm unlink
-```
-
 ### Arch Installation with KDE (intel + nvidia)
 
 > Check internet connection
