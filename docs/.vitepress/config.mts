@@ -8,6 +8,7 @@ import {
 export default defineConfig({
 	title: "dotfiles",
 	description: "dotfiles",
+	base: "/dotfiles/",
 
 	markdown: {
 		config(md) {
