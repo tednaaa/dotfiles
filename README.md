@@ -183,6 +183,8 @@ sudo pacman -S intel-ucode nvidia nvidia-utils lib32-nvidia-utils
 sudo nvim /etc/pacman.conf
 ```
 
+sudo pacman -S ttf-jetbrains-mono-nerd
+
 > Desktop Environment `Minimal KDE`
 
 ```

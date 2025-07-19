@@ -41,4 +41,3 @@
 `: s/old/new/g` - match and replace all
 `: s/old/new/gc` - and also ask for each replace
 `:s/\<old\>/new/gi` - replace exactly old word (older will ignored)
-
