@@ -1,43 +1,45 @@
-## Neovim
+# Neovim Cheat Sheet
 
-`<C-o>` - Exit insert mode for exactly one move
-`<C-o>` - Use to go back after goto definition
-`<C-i>` - Use to go back to definition
-`<C-hjkl>` - Use ctrl + hjkl keys to focus buffers
+## Normal Mode
 
-`<C-wv` - Create vertical split
-`<C-ws` - Create horizontal split
+| Keymap              | Details                                                 |
+| ------------------- | ------------------------------------------------------- |
+| `<C-o>`             | Use to go back after goto definition                    |
+| `<C-i>`             | Use to go back to definition                            |
+| `<C-hjkl>`          | Use ctrl + hjkl keys to focus buffers                   |
+| `<C-wv>`            | Create vertical split                                   |
+| `<C-ws>`            | Create horizontal split                                 |
+| `%`                 | Jump to prev/next [] or () or {}                        |
+| `*`                 | Jump through cword items                                |
+| `r`                 | Change symbol                                           |
+| `<C-a>`             | Increment number                                        |
+| `<C-x>`             | Decrement number                                        |
+| `diw`               | Delete word from any position                           |
+| `viwp`              | Replace word after previous move                        |
+| `ciw`               | Delete word and switch to insert mode                   |
+| `ci..`              | Delete inside "" or () or {} and switch to insert mode  |
+| `saiw..`            | Surround with "" or () or {}                            |
+| `sd..`              | Delete surrounding "" or () or {}                       |
+| `vas`               | Visual select blocks                                    |
+| `va(`               | Visually select around ( symbol                         |
+| `dt(`               | Delete everything till ( symbol                         |
+| `gcc`               | Toggles the current line using linewise comment         |
+| `gbc`               | Toggles the current line using blockwise comment        |
+| `gc[count]{motion}` | (Op-pending) Toggles the region using linewise comment  |
+| `gb[count]{motion}` | (Op-pending) Toggles the region using blockwise comment |
 
-`%` - Jump to prev/next [] or () or {}
-`*` - Jump through cword items
-`r` - Change symbol
+## Insert Mode
 
-`<C-a>` - Increment number
-`<C-x>` - Decrement number
+| Keymap  | Details                               |
+| ------- | ------------------------------------- |
+| `<C-o>` | Exit insert mode for exactly one move |
 
-`diw` - Delete word from any position
-`viwp` - Replace word after previous move
+## Command Mode
 
-`ciw` - also switch to insert mode
-
-`ci..` - Delete inside "" or () or {} and switch to insert mode
-`saiw..` - surround with "" or () or {}
-`sd..` - delete surrounding "" or () or {}
-
-`vas` - Visual select blocks
-`va(` - Visually select around ( symbol
-`dt(` - Delete everything till ( symbol
-
-`gcc` - Toggles the current line using linewise comment
-`gbc` - Toggles the current line using blockwise comment
-`gc[count]{motion}` - (Op-pending) Toggles the region using linewise comment
-`gb[count]{motion}` - (Op-pending) Toggles the region using blockwise comment
-
-`: %s/old/new/gc` - change in current buffer all matching words to new
-
-> In Visual select mode `'<,'>`
-
-`: s/old/new` - change inside selection only first matching for each line
-`: s/old/new/g` - match and replace all
-`: s/old/new/gc` - and also ask for each replace
-`:s/\<old\>/new/gi` - replace exactly old word (older will ignored)
+| Command             | Details                                                                                   |
+| ------------------- | ----------------------------------------------------------------------------------------- |
+| `: %s/old/new/gc`   | Change in current buffer all matching words to new                                        |
+| `: s/old/new`       | Change inside selection only first matching for each line (In Visual select mode `'<,'>`) |
+| `: s/old/new/g`     | Match and replace all (In Visual select mode `'<,'>`)                                     |
+| `: s/old/new/gc`    | Match, replace all, and ask for each replace (In Visual select mode `'<,'>`)              |
+| `:s/\<old\>/new/gi` | Replace exactly old word (older will be ignored)                                          |
