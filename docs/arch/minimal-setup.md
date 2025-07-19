@@ -39,7 +39,7 @@ archinstall
 reboot
 ```
 
-::: info
+::: info Congrats 🥳
 now you have a minimal setup, you can login with your username and password
 :::
 
