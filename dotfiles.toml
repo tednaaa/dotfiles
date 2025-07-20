@@ -1,4 +1,8 @@
 [symlinks]
+"hypr" = ".config/hypr"
+"waybar" = ".config/waybar"
+"rofi" = ".config/rofi"
+
 "wezterm" = ".config/wezterm"
 
 "zed" = ".config/zed"
