@@ -2,6 +2,8 @@ if status is-interactive
 	# Commands to run in interactive sessions can go here
 end
 
+alias ls="eza --all --icons -l --no-user -o"
+
 set -gx EDITOR "zed --wait"
 
 source ~/.cargo/env.fish
