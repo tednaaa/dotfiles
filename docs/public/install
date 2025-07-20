@@ -40,14 +40,6 @@ print_step "Installing fish shell"
 sudo pacman -S --noconfirm fish
 print_success "Fish shell installed"
 
-print_step "Remove bash files"
-rm -rf ~/.bash*
-print_success "Bash files removed"
-
-print_step "Setting fish as default shell"
-chsh -s /usr/bin/fish
-print_success "Default shell changed to fish (will take effect after logout)"
-
 print_step "Installing base packages"
 sudo pacman -S --noconfirm base-devel git curl
 
