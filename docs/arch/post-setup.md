@@ -50,3 +50,9 @@ makepkg -si
 ```fish
 sudo pacman -S wezterm fzf ripgrep fd bat git-delta lazygit lazydocker appimagelauncher btop openbsd-netcat rsync
 ```
+
+## Installing nerd fonts
+
+```fish
+sudo pacman -S ttf-jetbrains-mono-nerd
+```
