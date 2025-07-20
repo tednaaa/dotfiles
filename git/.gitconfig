@@ -34,3 +34,6 @@
 [user]
 name = Andranik
 email = tednaaa@gmail.com
+
+[includeIf "gitdir:~/projects/work/"]
+  path = ~/projects/work/.gitconfig
