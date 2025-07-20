@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo pacman -S hyprland hyprpaper hyprlock xdg-desktop-portal-hyprland \
+	waybar rofi-wayland
