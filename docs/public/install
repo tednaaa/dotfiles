@@ -27,8 +27,12 @@ print_error() {
 	exit 1
 }
 
+print_skip() {
+	echo -e "${YELLOW}→ $1${NC}"
+}
+
 if [[ $EUID -eq 0 ]]; then
-  print_error "This script should not be run as root"
+	print_error "This script should not be run as root"
 fi
 
 print_step "Starting Arch Linux post-install setup"
@@ -36,58 +40,97 @@ print_step "Starting Arch Linux post-install setup"
 print_step "Updating system packages"
 sudo pacman -Syu --noconfirm
 
-print_step "Installing fish shell"
-sudo pacman -S --noconfirm fish
-print_success "Fish shell installed"
-
 print_step "Installing base packages"
 sudo pacman -S --noconfirm base-devel git curl
 
 print_step "Installing Rust toolchain via rustup"
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-source ~/.cargo/env
-print_success "Rust toolchain installed"
+if command -v rustup &> /dev/null; then
+	print_skip "rustup is already installed, skipping installation"
+else
+	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+	source ~/.cargo/env
+	print_success "Rust toolchain installed"
+fi
 
 print_step "Installing yay AUR helper"
-cd /tmp
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si --noconfirm
-cd ~
-rm -rf /tmp/yay
-print_success "yay AUR helper installed"
+if command -v yay &> /dev/null; then
+	print_skip "yay is already installed, skipping installation"
+else
+	cd /tmp
+	git clone https://aur.archlinux.org/yay.git
+	cd yay
+	makepkg -si --noconfirm
+	cd ~
+	rm -rf /tmp/yay
+	print_success "yay AUR helper installed"
+fi
 
 print_step "Installing symm CLI tool"
-cargo install symm
-print_success "symm installed"
+if command -v symm &> /dev/null; then
+	print_skip "symm is already installed, skipping installation"
+else
+	[[ -f ~/.cargo/env ]] && source ~/.cargo/env
+	cargo install symm
+	print_success "symm installed"
+fi
 
-git clone $dotfiles_repository "$HOME/dotfiles"
-cd "$HOME/dotfiles"
-print_success "Dotfiles cloned"
+print_step "Cloning dotfiles repository"
+if [[ -d "$HOME/dotfiles" ]]; then
+	print_skip "Dotfiles directory already exists, skipping clone and symlink setup"
+else
+	git clone $dotfiles_repository "$HOME/dotfiles"
+	cd "$HOME/dotfiles"
+	print_success "Dotfiles cloned"
 
-print_step "Setting up dotfiles with symm"
-symm unlink
-symm link
-print_success "Dotfiles linked"
+	print_step "Setting up dotfiles with symm"
+	symm unlink
+	symm link
+	print_success "Dotfiles linked"
+fi
 
 print_step "Installing toolset"
 packages=(
-    "wezterm"
-    "alacritty"
-    "neovim"
-    "starship"
-    "btop"
+	"wezterm"
+	"alacritty"
+	"neovim"
+	"starship"
+	"btop"
 
-    "ripgrep"
-    "eza"
-    "fd"
-    "bat"
-    "fzf"
+	"ripgrep"
+	"eza"
+	"fd"
+	"bat"
+	"fzf"
 )
 
 for package in "${packages[@]}"; do
-    echo "Installing $package..."
-    sudo pacman -S --noconfirm "$package" || yay -S --noconfirm "$package"
+	if pacman -Q "$package" &> /dev/null; then
+		print_skip "$package is already installed"
+	else
+		echo "Installing $package..."
+		sudo pacman -S --noconfirm "$package" || yay -S --noconfirm "$package"
+	fi
 done
+print_success "Basic toolset installation complete"
 
-print_success "Basic toolset installed"
+print_step "Installing hyprland"
+hyprland_packages=(
+	"hyprland"
+	"hyprpaper"
+	"hyprlock"
+	"xdg-desktop-portal-hyprland"
+	"waybar"
+	"rofi-wayland"
+)
+
+for package in "${hyprland_packages[@]}"; do
+	if pacman -Q "$package" &> /dev/null; then
+		print_skip "$package is already installed"
+	else
+		echo "Installing $package..."
+		sudo pacman -S --noconfirm "$package"
+	fi
+done
+print_success "Hyprland installation complete"
+
+print_success "Arch Linux post-install setup completed!"
