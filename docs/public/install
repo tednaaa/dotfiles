@@ -66,6 +66,7 @@ cd "$HOME/dotfiles"
 print_success "Dotfiles cloned"
 
 print_step "Setting up dotfiles with symm"
+symm unlink
 symm link
 print_success "Dotfiles linked"
 
