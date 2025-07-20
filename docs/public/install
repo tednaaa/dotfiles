@@ -1,0 +1,100 @@
+#!/bin/bash
+
+set -e
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m'
+
+dotfiles_repository="https://github.com/tednaaa/dotfiles"
+
+print_step() {
+	echo -e "\n${BLUE}==> $1${NC}"
+}
+
+print_success() {
+	echo -e "${GREEN}✓ $1${NC}"
+}
+
+print_warning() {
+	echo -e "${YELLOW}⚠ $1${NC}"
+}
+
+print_error() {
+	echo -e "${RED}✗ $1${NC}"
+	exit 1
+}
+
+if [[ $EUID -eq 0 ]]; then
+  print_error "This script should not be run as root"
+fi
+
+print_step "Starting Arch Linux post-install setup"
+
+print_step "Updating system packages"
+sudo pacman -Syu --noconfirm
+
+print_step "Installing fish shell"
+sudo pacman -S --noconfirm fish
+print_success "Fish shell installed"
+
+print_step "Remove bash files"
+rm -rf ~/.bash*
+print_success "Bash files removed"
+
+print_step "Setting fish as default shell"
+chsh -s /usr/bin/fish
+print_success "Default shell changed to fish (will take effect after logout)"
+
+print_step "Installing base packages"
+sudo pacman -S --noconfirm base-devel git curl
+
+print_step "Installing Rust toolchain via rustup"
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+source ~/.cargo/env
+print_success "Rust toolchain installed"
+
+print_step "Installing yay AUR helper"
+cd /tmp
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si --noconfirm
+cd ~
+rm -rf /tmp/yay
+print_success "yay AUR helper installed"
+
+print_step "Installing symm CLI tool"
+cargo install symm
+print_success "symm installed"
+
+git clone $dotfiles_repository "$HOME/dotfiles"
+cd "$HOME/dotfiles"
+print_success "Dotfiles cloned"
+
+print_step "Setting up dotfiles with symm"
+symm link
+print_success "Dotfiles linked"
+
+print_step "Installing toolset"
+packages=(
+    "wezterm"
+    "alacritty"
+    "neovim"
+    "starship"
+    "btop"
+
+    "ripgrep"
+    "eza"
+    "fd"
+    "bat"
+    "fzf"
+)
+
+for package in "${packages[@]}"; do
+    echo "Installing $package..."
+    sudo pacman -S --noconfirm "$package" || yay -S --noconfirm "$package"
+done
+
+print_success "Basic toolset installed"
