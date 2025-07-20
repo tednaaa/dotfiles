@@ -1,0 +1,118 @@
+---
+- name: Rust and Symm Installation
+  hosts: localhost
+  connection: local
+  become: no
+  vars:
+    user_home: "{{ ansible_env.HOME }}"
+    cargo_bin: "{{ user_home }}/.cargo/bin"
+
+  tasks:
+    - name: Check if rustup is already installed
+      stat:
+        path: "{{ user_home }}/.cargo/bin/rustup"
+      register: rustup_exists
+
+    - name: Download rustup installer
+      get_url:
+        url: https://sh.rustup.rs
+        dest: /tmp/rustup-init.sh
+        mode: '0755'
+      when: not rustup_exists.stat.exists
+
+    - name: Install Rust via rustup
+      shell: |
+        /tmp/rustup-init.sh -y --default-toolchain stable --profile default
+      environment:
+        HOME: "{{ user_home }}"
+      when: not rustup_exists.stat.exists
+
+    - name: Update rustup and cargo
+      shell: |
+        source {{ user_home }}/.cargo/env
+        rustup update
+      args:
+        executable: /bin/bash
+      environment:
+        HOME: "{{ user_home }}"
+      when: rustup_exists.stat.exists
+
+    - name: Check if symm is installed
+      stat:
+        path: "{{ cargo_bin }}/symm"
+      register: symm_exists
+
+    - name: Install symm via cargo
+      shell: |
+        source {{ user_home }}/.cargo/env
+        cargo install symm
+      args:
+        executable: /bin/bash
+      environment:
+        HOME: "{{ user_home }}"
+      when: not symm_exists.stat.exists
+
+    - name: Update symm if already installed
+      shell: |
+        source {{ user_home }}/.cargo/env
+        cargo install symm --force
+      args:
+        executable: /bin/bash
+      environment:
+        HOME: "{{ user_home }}"
+      when: symm_exists.stat.exists
+
+    - name: Add cargo bin to bash PATH
+      lineinfile:
+        path: "{{ user_home }}/.bashrc"
+        line: 'export PATH="$HOME/.cargo/bin:$PATH"'
+        create: yes
+        state: present
+
+    - name: Add cargo bin to fish PATH
+      blockinfile:
+        path: "{{ user_home }}/.config/fish/config.fish"
+        create: yes
+        marker: "# {mark} ANSIBLE MANAGED BLOCK - Cargo PATH"
+        block: |
+          if test -d ~/.cargo/bin
+              set -gx PATH ~/.cargo/bin $PATH
+          end
+        state: present
+
+    - name: Verify Rust installation
+      shell: |
+        source {{ user_home }}/.cargo/env
+        rustc --version
+        cargo --version
+      args:
+        executable: /bin/bash
+      environment:
+        HOME: "{{ user_home }}"
+      register: rust_version
+
+    - name: Verify symm installation
+      shell: |
+        source {{ user_home }}/.cargo/env
+        symm --version
+      args:
+        executable: /bin/bash
+      environment:
+        HOME: "{{ user_home }}"
+      register: symm_version
+
+    - name: Display installation results
+      debug:
+        msg: |
+          Rust and symm installation complete!
+
+          Rust version: {{ rust_version.stdout_lines[0] }}
+          Cargo version: {{ rust_version.stdout_lines[1] }}
+          Symm version: {{ symm_version.stdout }}
+
+          Cargo binaries are installed in: {{ cargo_bin }}
+
+          To use in current session:
+          source ~/.cargo/env
+
+          Or restart your terminal for PATH changes to take effect.

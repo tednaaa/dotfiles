@@ -1,0 +1,152 @@
+---
+- name: Dotfiles Setup and Configuration
+  hosts: localhost
+  connection: local
+  become: no
+  vars:
+    user_name: "{{ ansible_user_id }}"
+    user_home: "{{ ansible_env.HOME }}"
+    dotfiles_dir: "{{ user_home }}/dotfiles"
+    cargo_bin: "{{ user_home }}/.cargo/bin"
+
+  tasks:
+    - name: Ensure dotfiles directory exists
+      stat:
+        path: "{{ dotfiles_dir }}"
+      register: dotfiles_exists
+
+    - name: Fail if dotfiles directory doesn't exist
+      fail:
+        msg: "Dotfiles directory {{ dotfiles_dir }} doesn't exist. Please clone your dotfiles repository first."
+      when: not dotfiles_exists.stat.exists
+
+    - name: Check if dotfiles.toml exists
+      stat:
+        path: "{{ dotfiles_dir }}/dotfiles.toml"
+      register: dotfiles_config_exists
+
+    - name: Fail if dotfiles.toml doesn't exist
+      fail:
+        msg: "dotfiles.toml not found in {{ dotfiles_dir }}. This file is required for symm to work."
+      when: not dotfiles_config_exists.stat.exists
+
+    - name: Ensure cargo bin directory is in PATH
+      lineinfile:
+        path: "{{ user_home }}/.bashrc"
+        line: 'export PATH="$HOME/.cargo/bin:$PATH"'
+        create: yes
+        state: present
+
+    - name: Ensure cargo bin directory is in fish PATH
+      blockinfile:
+        path: "{{ user_home }}/.config/fish/config.fish"
+        create: yes
+        marker: "# {mark} ANSIBLE MANAGED BLOCK - Cargo PATH"
+        block: |
+          if test -d ~/.cargo/bin
+              set -gx PATH ~/.cargo/bin $PATH
+          end
+
+    - name: Create necessary config directories
+      file:
+        path: "{{ user_home }}/.config/{{ item }}"
+        state: directory
+        mode: '0755'
+      loop:
+        - fish
+        - wezterm
+        - zed
+        - nvim
+        - lazygit
+        - mise
+
+    - name: Check if symm is available
+      stat:
+        path: "{{ cargo_bin }}/symm"
+      register: symm_available
+
+    - name: Install symm if not available
+      shell: |
+        source {{ user_home }}/.cargo/env
+        cargo install symm
+      args:
+        executable: /bin/bash
+      environment:
+        HOME: "{{ user_home }}"
+      when: not symm_available.stat.exists
+
+    - name: Unlink existing dotfiles (cleanup)
+      shell: |
+        source {{ user_home }}/.cargo/env
+        cd {{ dotfiles_dir }}
+        {{ cargo_bin }}/symm unlink
+      args:
+        executable: /bin/bash
+      environment:
+        HOME: "{{ user_home }}"
+      ignore_errors: yes
+
+    - name: Link dotfiles using symm
+      shell: |
+        source {{ user_home }}/.cargo/env
+        cd {{ dotfiles_dir }}
+        {{ cargo_bin }}/symm link
+      args:
+        executable: /bin/bash
+      environment:
+        HOME: "{{ user_home }}"
+      register: symm_result
+
+    - name: Display symm output
+      debug:
+        var: symm_result.stdout_lines
+
+    - name: Verify symlinks were created
+      stat:
+        path: "{{ user_home }}/{{ item.value }}"
+      register: symlink_check
+      loop: "{{ dotfiles_symlinks | dict2items }}"
+      vars:
+        dotfiles_symlinks:
+          wezterm: ".config/wezterm"
+          zed: ".config/zed"
+          nvim: ".config/nvim"
+          lazygit: ".config/lazygit"
+          mise: ".config/mise"
+          fish_config: ".config/fish/config.fish"
+          gitconfig: ".gitconfig"
+          npmrc: ".npmrc"
+
+    - name: Report symlink status
+      debug:
+        msg: "{{ item.item.key }}: {{ 'LINKED' if item.stat.islnk else 'NOT LINKED' }}"
+      loop: "{{ symlink_check.results }}"
+      when: item.stat is defined
+
+    - name: Set fish as default shell if not already set
+      user:
+        name: "{{ user_name }}"
+        shell: /usr/bin/fish
+      become: yes
+      ignore_errors: yes
+
+    - name: Display completion message
+      debug:
+        msg: |
+          Dotfiles setup complete!
+
+          Symlinked configurations:
+          - Wezterm terminal
+          - Zed editor
+          - Neovim
+          - Lazygit
+          - Mise (development environment manager)
+          - Fish shell configuration
+          - Git configuration
+          - NPM configuration
+
+          Next steps:
+          1. Restart your terminal or run 'exec fish' to use the new shell
+          2. Your dotfiles are now active and will sync with the repository
+          3. Use 'symm unlink' to remove symlinks if needed
+          4. Use 'symm link' to recreate symlinks after updates
