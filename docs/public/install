@@ -99,6 +99,11 @@ packages=(
 	"fd"
 	"bat"
 	"fzf"
+
+	"openbsd-netcat"
+	"rsync"
+
+	"ttf-jetbrains-mono-nerd"
 )
 
 for package in "${packages[@]}"; do
