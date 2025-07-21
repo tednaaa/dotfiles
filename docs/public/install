@@ -104,6 +104,8 @@ packages=(
 	"rsync"
 	"cmake"
 
+	"dolphin"
+	"ark"
 	"ttf-jetbrains-mono-nerd"
 )
 
@@ -125,8 +127,6 @@ hyprland_packages=(
 	"xdg-desktop-portal-hyprland"
 	"waybar"
 	"rofi-wayland"
-	"dolphin"
-	"ark"
 )
 
 for package in "${hyprland_packages[@]}"; do
