@@ -35,8 +35,6 @@ if [[ $EUID -eq 0 ]]; then
 	print_error "This script should not be run as root"
 fi
 
-print_step "Starting Arch Linux post-install setup"
-
 print_step "Updating system packages"
 sudo pacman -Syu --noconfirm
 
@@ -132,5 +130,3 @@ for package in "${hyprland_packages[@]}"; do
 	fi
 done
 print_success "Hyprland installation complete"
-
-print_success "Arch Linux post-install setup completed!"
