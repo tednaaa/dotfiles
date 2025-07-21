@@ -66,9 +66,7 @@
       "shift-h": "pane::ActivatePreviousItem",
 
       "space v": "pane::SplitRight",
-      "space s": "pane::SplitDown",
-
-      "space r": "editor::Rename"
+      "space s": "pane::SplitDown"
     }
   },
   {
