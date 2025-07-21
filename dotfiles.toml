@@ -3,6 +3,7 @@
 "waybar" = ".config/waybar"
 "rofi" = ".config/rofi"
 
+"alacritty" = ".config/alacritty"
 "wezterm" = ".config/wezterm"
 
 "zed" = ".config/zed"
