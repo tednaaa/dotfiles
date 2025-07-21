@@ -88,8 +88,8 @@ fi
 
 print_step "Installing toolset"
 packages=(
-	"wezterm"
 	"alacritty"
+	"wezterm"
 	"neovim"
 	"starship"
 	"btop"
