@@ -42,6 +42,10 @@ export default defineConfig({
 				],
 			},
 			{
+				text: "Zed",
+				items: [{ text: "Cheat sheet", link: "/zed/cheat-sheet" }],
+			},
+			{
 				text: "Neovim",
 				items: [{ text: "Cheat sheet", link: "/neovim/cheat-sheet" }],
 			},
