@@ -106,6 +106,8 @@ packages=(
 	"cmake"
 
 	"ttf-jetbrains-mono-nerd"
+	"ttf-font-awesome"
+
 	"dolphin"
 	"blueman"
 	"ark"
