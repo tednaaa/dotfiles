@@ -16,9 +16,7 @@
  * ----------------------------------------------------- */
 
 * {
-	font-family:
-		"Fira Sans Semibold", "Font Awesome 6 Free", "Font Awesome 6 Brands",
-		FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+	font-family: "JetBrainsMono Nerd Font";
 	border: none;
 	border-radius: 0px;
 }

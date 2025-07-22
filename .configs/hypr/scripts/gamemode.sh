@@ -1,15 +1,11 @@
 #!/bin/bash
-#   ____                                          _
-#  / ___| __ _ _ __ ___   ___ _ __ ___   ___   __| | ___
-# | |  _ / _` | '_ ` _ \ / _ \ '_ ` _ \ / _ \ / _` |/ _ \
-# | |_| | (_| | | | | | |  __/ | | | | | (_) | (_| |  __/
-#  \____|\__,_|_| |_| |_|\___|_| |_| |_|\___/ \__,_|\___|
-#
-#
 
-if [ -f $HOME/.config/ml4w/settings/gamemode-enabled ]; then
+path="$HOME/.config/hypr/tmp/gamemode-enabled"
+
+
+if [ -f $path ]; then
     hyprctl reload
-    rm $HOME/.config/ml4w/settings/gamemode-enabled
+    rm $path
     notify-send "Gamemode deactivated" "Animations and blur enabled"
 else
     hyprctl --batch "\
@@ -20,6 +16,6 @@ else
         keyword general:gaps_out 0;\
         keyword general:border_size 1;\
         keyword decoration:rounding 0"
-    touch $HOME/.config/ml4w/settings/gamemode-enabled
+    touch $path
     notify-send "Gamemode activated" "Animations and blur disabled"
 fi

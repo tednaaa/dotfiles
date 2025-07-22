@@ -1,0 +1,187 @@
+{
+	"hyprland/workspaces": {
+		"on-scroll-up": "hyprctl dispatch workspace r-1",
+		"on-scroll-down": "hyprctl dispatch workspace r+1",
+		"on-click": "activate",
+		"active-only": false,
+		"all-outputs": true,
+		"format": "{}",
+		"format-icons": {
+			"urgent": "",
+			"active": "",
+			"default": "",
+		},
+		"persistent-workspaces": { "*": 5 },
+	},
+
+	"custom/empty": {
+		"format": "",
+	},
+
+	"custom/tools": {
+		"format": "",
+		"tooltip-format": "Tools",
+	},
+
+	"custom/updates": {
+		"format": "  {}",
+		"escape": true,
+		"return-type": "json",
+		"exec": "~/.config/hypr/scripts/updates.sh",
+		"interval": 1800,
+		"signal": 1,
+		"hide-empty-text": true,
+	},
+
+	"tray": {
+		"icon-size": 21,
+		"spacing": 10,
+	},
+
+	"clock": {
+		"format": "{:%H:%M %a}",
+		"timezone": "",
+		"tooltip": false,
+	},
+
+	"custom/system": {
+		"format": "",
+		"tooltip": false,
+	},
+
+	"cpu": {
+		"format": "/ C {usage}% ",
+		"on-click": "~/.config/ml4w/settings/system-monitor.sh",
+	},
+
+	"memory": {
+		"format": "/ M {}% ",
+		"on-click": "~/.config/ml4w/settings/system-monitor.sh",
+	},
+
+	"disk": {
+		"interval": 30,
+		"format": "D {percentage_used}% ",
+		"path": "/",
+		"on-click": "~/.config/ml4w/settings/system-monitor.sh",
+	},
+
+	"hyprland/language": {
+		"format": "/ K {short}",
+	},
+
+	"group/hardware": {
+		"orientation": "inherit",
+		"drawer": {
+			"transition-duration": 300,
+			"children-class": "not-memory",
+			"transition-left-to-right": false,
+		},
+		"modules": ["custom/system", "disk", "cpu", "memory", "hyprland/language"],
+	},
+
+	"group/tools": {
+		"orientation": "inherit",
+		"drawer": {
+			"transition-duration": 300,
+			"children-class": "not-memory",
+			"transition-left-to-right": false,
+		},
+		"modules": [
+			"custom/tools",
+			"custom/cliphist",
+			"custom/hypridle",
+			"custom/hyprshade",
+		],
+	},
+
+	"network": {
+		"format": "{ifname}",
+		"format-wifi": "  {essid} ({signalStrength}%)",
+		"format-ethernet": "  {ifname}",
+		"format-disconnected": "Disconnected ⚠",
+		"tooltip-format": " {ifname} via {gwaddri}",
+		"tooltip-format-wifi": "  {ifname} @ {essid}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+		"tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+		"tooltip-format-disconnected": "Disconnected",
+		"max-length": 50,
+		"on-click": "~/.config/hypr/scripts/network-manager.sh",
+		"on-click-right": "~/.config/hypr/scripts/nm-applet.sh toggle",
+	},
+
+	"battery": {
+		"states": {
+			// "good": 95,
+			"warning": 30,
+			"critical": 15,
+		},
+		"format": "{icon} {capacity}%",
+		"format-charging": " {capacity}%",
+		"format-plugged": " {capacity}%",
+		"format-alt": "{icon}  {time}",
+		"format-icons": [" ", " ", " ", " ", " "],
+	},
+
+	"power-profiles-daemon": {
+		"format": "{icon}",
+		"tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+		"tooltip": true,
+		"format-icons": {
+			"default": "",
+			"performance": "",
+			"balanced": "",
+			"power-saver": "",
+		},
+	},
+
+	"pulseaudio": {
+		// "scroll-step": 1, // %, can be a float
+		"format": "{icon}  {volume}%",
+		"format-bluetooth": "{volume}% {icon} {format_source}",
+		"format-bluetooth-muted": " {icon} {format_source}",
+		"format-muted": " {format_source}",
+		"format-source": "{volume}% ",
+		"format-source-muted": "",
+		"format-icons": {
+			"headphone": " ",
+			"hands-free": " ",
+			"headset": " ",
+			"phone": " ",
+			"portable": " ",
+			"car": " ",
+			"default": ["", "", ""],
+		},
+		"on-click": "pavucontrol",
+	},
+
+	"bluetooth": {
+		"format": " {status}",
+		"format-disabled": "",
+		"format-off": "",
+		"interval": 30,
+		"on-click": "blueman-manager",
+		"format-no-controller": "",
+	},
+
+	"backlight": {
+		"format": "{icon} {percent}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		],
+		"scroll-step": 1,
+	},
+}

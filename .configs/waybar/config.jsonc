@@ -6,30 +6,17 @@
 	"margin-right": 0,
 	"spacing": 0,
 
-	"include": ["~/.config/waybar/modules.json"],
+	"include": ["~/.config/waybar/modules.jsonc"],
 
-	"modules-left": [
-		"custom/appmenu",
-		"custom/settings",
-		"hyprland/window",
-		"custom/starter",
-	],
-
+	"modules-left": ["network", "backlight", "tray"],
 	"modules-center": ["hyprland/workspaces"],
-
 	"modules-right": [
-		"custom/updates",
 		"pulseaudio",
 		"bluetooth",
 		"battery",
-		"network",
+		"power-profiles-daemon",
 		"group/hardware",
-		"custom/cliphist",
-		"custom/hypridle",
 		"custom/hyprshade",
-		"tray",
-		"custom/exit",
-		"custom/ml4w-welcome",
 		"clock",
 	],
 }
