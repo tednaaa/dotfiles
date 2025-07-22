@@ -104,9 +104,10 @@ packages=(
 	"rsync"
 	"cmake"
 
+	"ttf-jetbrains-mono-nerd"
 	"dolphin"
 	"ark"
-	"ttf-jetbrains-mono-nerd"
+	"obs-studio"
 )
 
 for package in "${packages[@]}"; do
