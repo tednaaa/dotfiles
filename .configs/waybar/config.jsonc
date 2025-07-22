@@ -15,8 +15,6 @@
 		"bluetooth",
 		"battery",
 		"power-profiles-daemon",
-		"group/hardware",
-		"custom/hyprshade",
 		"clock",
 	],
 }
