@@ -110,6 +110,7 @@ packages=(
 
 	"dolphin"
 	"blueman"
+	"pavucontrol"
 	"ark"
 	"obs-studio"
 )
