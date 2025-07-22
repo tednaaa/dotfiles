@@ -107,6 +107,7 @@ packages=(
 
 	"ttf-jetbrains-mono-nerd"
 	"dolphin"
+	"blueman"
 	"ark"
 	"obs-studio"
 )
