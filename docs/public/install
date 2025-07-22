@@ -127,6 +127,8 @@ hyprland_packages=(
 	"xdg-desktop-portal-hyprland"
 	"waybar"
 	"rofi-wayland"
+
+	"nwg-look" # for dark theme
 )
 
 for package in "${hyprland_packages[@]}"; do
