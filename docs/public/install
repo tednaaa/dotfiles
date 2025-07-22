@@ -99,6 +99,7 @@ packages=(
 	"fd"
 	"bat"
 	"fzf"
+	"jq"
 
 	"openbsd-netcat"
 	"rsync"
