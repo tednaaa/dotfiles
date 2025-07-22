@@ -124,10 +124,11 @@ hyprland_packages=(
 	"hyprland"
 	"hyprpaper"
 	"hyprlock"
+	"hyprlang"
 	"xdg-desktop-portal-hyprland"
-	"waybar"
-	"rofi-wayland"
 
+	"waybar"
+	"rofi-wayland" # app launcher
 	"nwg-look" # for dark theme
 )
 
