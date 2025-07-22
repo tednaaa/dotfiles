@@ -8,7 +8,7 @@
 
 	"include": ["~/.config/waybar/modules.jsonc"],
 
-	"modules-left": ["network", "backlight", "tray"],
+	"modules-left": ["network", "hyprland/language", "backlight", "tray"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": [
 		"pulseaudio",

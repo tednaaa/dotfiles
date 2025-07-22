@@ -14,25 +14,6 @@
 		"persistent-workspaces": { "*": 5 },
 	},
 
-	"custom/empty": {
-		"format": "",
-	},
-
-	"custom/tools": {
-		"format": "",
-		"tooltip-format": "Tools",
-	},
-
-	"custom/updates": {
-		"format": "  {}",
-		"escape": true,
-		"return-type": "json",
-		"exec": "~/.config/hypr/scripts/updates.sh",
-		"interval": 1800,
-		"signal": 1,
-		"hide-empty-text": true,
-	},
-
 	"tray": {
 		"icon-size": 21,
 		"spacing": 10,
@@ -44,55 +25,8 @@
 		"tooltip": false,
 	},
 
-	"custom/system": {
-		"format": "",
-		"tooltip": false,
-	},
-
-	"cpu": {
-		"format": "/ C {usage}% ",
-		"on-click": "~/.config/ml4w/settings/system-monitor.sh",
-	},
-
-	"memory": {
-		"format": "/ M {}% ",
-		"on-click": "~/.config/ml4w/settings/system-monitor.sh",
-	},
-
-	"disk": {
-		"interval": 30,
-		"format": "D {percentage_used}% ",
-		"path": "/",
-		"on-click": "~/.config/ml4w/settings/system-monitor.sh",
-	},
-
 	"hyprland/language": {
-		"format": "/ K {short}",
-	},
-
-	"group/hardware": {
-		"orientation": "inherit",
-		"drawer": {
-			"transition-duration": 300,
-			"children-class": "not-memory",
-			"transition-left-to-right": false,
-		},
-		"modules": ["custom/system", "disk", "cpu", "memory", "hyprland/language"],
-	},
-
-	"group/tools": {
-		"orientation": "inherit",
-		"drawer": {
-			"transition-duration": 300,
-			"children-class": "not-memory",
-			"transition-left-to-right": false,
-		},
-		"modules": [
-			"custom/tools",
-			"custom/cliphist",
-			"custom/hypridle",
-			"custom/hyprshade",
-		],
+		"format": "{short}",
 	},
 
 	"network": {
