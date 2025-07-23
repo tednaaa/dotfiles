@@ -109,12 +109,6 @@ packages=(
 
 	"ttf-jetbrains-mono-nerd"
 	"ttf-font-awesome"
-
-	"dolphin"
-	"blueman"
-	"pavucontrol"
-	"ark"
-	"obs-studio"
 )
 
 for package in "${packages[@]}"; do
@@ -139,6 +133,13 @@ hyprland_packages=(
 	"mako" # notifications
 	"rofi-wayland" # app launcher
 	"nwg-look" # for dark theme
+	"cliphist"
+
+	"dolphin"
+	"blueman"
+	"pavucontrol"
+	"ark"
+	"obs-studio"
 )
 
 for package in "${hyprland_packages[@]}"; do
