@@ -9,6 +9,7 @@ set -gx EDITOR "zed --wait"
 source ~/.cargo/env.fish
 ~/.local/bin/mise activate fish | source
 starship init fish | source
+zoxide init fish | source
 
 set -gx PNPM_HOME "/home/tedna/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
