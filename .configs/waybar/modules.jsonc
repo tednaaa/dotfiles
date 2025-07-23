@@ -53,7 +53,7 @@
 
 	"network": {
 		"format": "{ifname}",
-		"format-wifi": "  {essid} ({signalStrength}%)",
+		"format-wifi": " ",
 		"format-ethernet": "  {ifname}",
 		"format-disconnected": "Disconnected ⚠",
 		"tooltip-format": " {ifname} via {gwaddri}",
@@ -61,8 +61,6 @@
 		"tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
 		"tooltip-format-disconnected": "Disconnected",
 		"max-length": 50,
-		"on-click": "~/.config/hypr/scripts/network-manager.sh",
-		"on-click-right": "~/.config/hypr/scripts/nm-applet.sh toggle",
 	},
 
 	"battery": {
