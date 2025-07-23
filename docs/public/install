@@ -130,6 +130,7 @@ hyprland_packages=(
 	"hyprland"
 	"hyprpaper"
 	"hyprlock"
+	"hyprshot"
 	"xdg-desktop-portal-hyprland"
 
 	"waybar"
