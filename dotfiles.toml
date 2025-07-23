@@ -2,6 +2,7 @@
 "hypr" = ".config/hypr"
 "waybar" = ".config/waybar"
 "rofi" = ".config/rofi"
+"yazi" = ".config/yazi"
 
 "alacritty" = ".config/alacritty"
 "wezterm" = ".config/wezterm"
