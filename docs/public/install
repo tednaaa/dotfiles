@@ -129,11 +129,12 @@ hyprland_packages=(
 	"hyprshot"
 	"xdg-desktop-portal-hyprland"
 
+	"clipse"
 	"waybar"
 	"mako" # notifications
 	"rofi-wayland" # app launcher
 	"nwg-look" # for dark theme
-	"clipse"
+	"ueberzugpp" # image rendering support in alacritty
 
 	"dolphin"
 	"blueman"
