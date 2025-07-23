@@ -133,7 +133,7 @@ hyprland_packages=(
 	"mako" # notifications
 	"rofi-wayland" # app launcher
 	"nwg-look" # for dark theme
-	"cliphist"
+	"clipse"
 
 	"dolphin"
 	"blueman"
