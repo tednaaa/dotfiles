@@ -130,15 +130,15 @@ hyprland_packages=(
 	"xdg-desktop-portal-hyprland"
 
 	"brightnessctl"
-	"clipse"
 	"waybar"
 	"mako" # notifications
 	"rofi-wayland" # app launcher
 	"nwg-look" # for dark theme
 	"ueberzugpp" # image rendering support in alacritty
+	"clipse"
+	"bluetui"
 
 	"dolphin"
-	"blueman"
 	"pavucontrol"
 	"ark"
 	"obs-studio"
