@@ -142,7 +142,7 @@ hyprland_packages=(
 
 	"dolphin"
 	"pavucontrol"
-	"ark"
+	"7zip"
 	"obs-studio"
 )
 
