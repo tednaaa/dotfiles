@@ -135,6 +135,7 @@ hyprland_packages=(
 	"rofi-wayland" # app launcher
 	"nwg-look" # for dark theme
 	"ueberzugpp" # image rendering support in alacritty
+	"mpv" # video player
 	"clipse"
 	"bluetui"
 	# "impala" # waiting for https://github.com/pythops/impala/issues/24
