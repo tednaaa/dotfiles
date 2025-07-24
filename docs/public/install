@@ -137,6 +137,7 @@ hyprland_packages=(
 	"ueberzugpp" # image rendering support in alacritty
 	"clipse"
 	"bluetui"
+	# "impala" # waiting for https://github.com/pythops/impala/issues/24
 
 	"dolphin"
 	"pavucontrol"
