@@ -110,9 +110,6 @@
 
 	"bluetooth": {
 		"format": " {status}",
-		"format-disabled": "",
-		"format-off": "",
-		"interval": 30,
 		"on-click": "alacritty --class bluetui -e bluetui",
 		"format-no-controller": "",
 	},
