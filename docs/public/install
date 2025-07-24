@@ -129,6 +129,7 @@ hyprland_packages=(
 	"hyprshot"
 	"xdg-desktop-portal-hyprland"
 
+	"brightnessctl"
 	"clipse"
 	"waybar"
 	"mako" # notifications
