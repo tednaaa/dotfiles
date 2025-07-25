@@ -30,7 +30,10 @@ export default defineConfig({
 		sidebar: [
 			{
 				text: "Dotfiles",
-				link: "/dotfiles",
+				items: [
+					{ text: "How to manage?", link: "/dotfiles/manage" },
+					{ text: "Setup script", link: "/dotfiles/setup-script" },
+				],
 			},
 			{
 				text: "Arch",

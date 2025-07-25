@@ -6,17 +6,20 @@ outline: deep
 
 ```fish
 cargo install symm
+# or
+yay -S symm
+# or
+paru -S symm
 ```
 
 #### There are 2 commands
 
 ```fish
 symm link
-```
-
-```fish
 symm unlink
 ```
+
+- also refer to my [dotfiles](https://github.com/tednaaa/dotfiles)
 
 ```toml [~/dotfiles/dotfiles.toml]
 [symlinks]

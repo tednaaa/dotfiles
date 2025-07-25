@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: lets go
-      link: /dotfiles
+      link: /dotfiles/setup-script
 
 features:
   - title: Feature A
