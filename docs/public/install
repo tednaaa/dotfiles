@@ -1,92 +1,46 @@
-#!/bin/bash
+#!/bin/fish
 
 set -e
 
-RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-NC='\033[0m'
+RED='\033[0;31m'
 
 dotfiles_repository="https://github.com/tednaaa/dotfiles"
-
-print_step() {
-	echo -e "\n${BLUE}==> $1${NC}"
-}
 
 print_success() {
 	echo -e "${GREEN}✓ $1${NC}"
 }
-
 print_warning() {
 	echo -e "${YELLOW}⚠ $1${NC}"
 }
-
 print_error() {
 	echo -e "${RED}✗ $1${NC}"
 	exit 1
 }
 
-print_skip() {
-	echo -e "${YELLOW}→ $1${NC}"
-}
-
-if [[ $EUID -eq 0 ]]; then
+if test (id -u) -eq 0
 	print_error "This script should not be run as root"
-fi
 
-print_step "Updating system packages"
+
 sudo pacman -Syu --noconfirm
 
-print_step "Installing base packages"
-sudo pacman -S --noconfirm base-devel git curl
+if not type -q paru
+	sudo pacman -S --needed --noconfirm base-devel git
+	git clone https://aur.archlinux.org/paru.git
+	cd paru
+	makepkg -si
 
-print_step "Installing Rust toolchain via rustup"
-if command -v rustup &> /dev/null; then
-	print_skip "rustup is already installed, skipping installation"
-else
-	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-	source ~/.cargo/env
-	print_success "Rust toolchain installed"
-fi
+if not test -d ~/dotfiles
+	git clone $dotfiles_repository ~/dotfiles
 
-print_step "Installing yay AUR helper"
-if command -v yay &> /dev/null; then
-	print_skip "yay is already installed, skipping installation"
-else
-	cd /tmp
-	git clone https://aur.archlinux.org/yay.git
-	cd yay
-	makepkg -si --noconfirm
-	cd ~
-	rm -rf /tmp/yay
-	print_success "yay AUR helper installed"
-fi
+paru -S --noconfirm --needed symm
+symm unlink
+symm link
 
-print_step "Installing symm CLI tool"
-if command -v symm &> /dev/null; then
-	print_skip "symm is already installed, skipping installation"
-else
-	[[ -f ~/.cargo/env ]] && source ~/.cargo/env
-	cargo install symm
-	print_success "symm installed"
-fi
 
-print_step "Cloning dotfiles repository"
-if [[ -d "$HOME/dotfiles" ]]; then
-	print_skip "Dotfiles directory already exists, skipping clone and symlink setup"
-else
-	git clone $dotfiles_repository "$HOME/dotfiles"
-	cd "$HOME/dotfiles"
-	print_success "Dotfiles cloned"
+set packages
 
-	print_step "Setting up dotfiles with symm"
-	symm unlink
-	symm link
-	print_success "Dotfiles linked"
-fi
-
-print_step "Installing toolset"
 packages=(
 	"alacritty"
 	"wezterm"

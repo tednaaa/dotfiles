@@ -1,3 +1,3 @@
 ```fish
-curl -fsSL tednaaa.github.io/dotfiles/install | sh
+curl -fsSL tednaaa.github.io/dotfiles/install | fish
 ```
