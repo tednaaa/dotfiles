@@ -1,8 +1,8 @@
 #!/usr/bin/env fish
-set -e
 
 if test (id -u) -eq 0
 	echo "This script should not be run as root"
+	exit 1
 end
 
 set dotfiles_repository "https://github.com/tednaaa/dotfiles"
@@ -11,10 +11,10 @@ set dotfiles_repository "https://github.com/tednaaa/dotfiles"
 sudo pacman -Syu --noconfirm
 
 if not type -q paru
-	sudo pacman -S --needed --noconfirm base-devel git
+	sudo pacman -S --needed --noconfirm base-devel git cargo
 	git clone https://aur.archlinux.org/paru.git
 	cd paru
-	makepkg -si
+	makepkg -si --noconfirm
 end
 
 if not test -d ~/dotfiles
