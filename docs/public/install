@@ -10,11 +10,20 @@ set dotfiles_repository "https://github.com/tednaaa/dotfiles"
 
 sudo pacman -Syu --noconfirm
 
-if not type -q paru
-	sudo pacman -S --needed --noconfirm base-devel git cargo
+
+if not command -s rustup
+	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+end
+if not command -s mise
+	curl https://mise.run | sh
+end
+
+
+if not command -s paru
+	sudo pacman -S --noconfirm --needed base-devel git
 	git clone https://aur.archlinux.org/paru.git
 	cd paru
-	makepkg -si --noconfirm
+	makepkg -si --noconfirm --needed
 end
 
 if not test -d ~/dotfiles
@@ -41,7 +50,3 @@ set apps ueberzugpp mpv clipse bluetui dolphin pavucontrol 7zip obs-studio
 set packages $packages $apps
 
 paru -S --noconfirm --needed $packages
-
-
-curl https://mise.run | sh
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
