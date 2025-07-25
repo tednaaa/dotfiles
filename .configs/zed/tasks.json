@@ -1,7 +1,7 @@
 [
   {
     "label": "resto",
-    "command": "cd ~/projects/resto && cargo run --bin tui",
+    "command": "cd ~/projects/resto && cargo run",
     "hide": "on_success"
   },
   {
