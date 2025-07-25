@@ -41,3 +41,6 @@ set apps ueberzugpp mpv clipse bluetui dolphin pavucontrol 7zip obs-studio
 set packages $packages $apps
 
 paru -S --noconfirm --needed $packages
+
+
+curl https://mise.run | sh
