@@ -13,6 +13,7 @@ sudo pacman -Syu --noconfirm
 
 if not command -s rustup
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+	source ~/.cargo/env.fish
 end
 if not command -s mise
 	curl https://mise.run | sh
