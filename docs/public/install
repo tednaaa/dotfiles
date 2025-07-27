@@ -54,3 +54,6 @@ set nvidia_drivers nvidia nvidia-utils
 set packages $packages $nvidia_drivers
 
 paru -S --noconfirm --needed $packages
+
+
+systemctl enable bluetooth
