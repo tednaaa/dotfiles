@@ -55,5 +55,5 @@ set packages $packages $nvidia_drivers
 
 paru -S --noconfirm --needed $packages
 
-
+rfkill unblock bluetooth
 systemctl enable bluetooth
