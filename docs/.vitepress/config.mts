@@ -45,6 +45,15 @@ export default defineConfig({
 				],
 			},
 			{
+				text: "Firefox",
+				items: [
+					{
+						text: "Bookmarks loading?",
+						link: "/firefox/bookmarks",
+					},
+				],
+			},
+			{
 				text: "Zed",
 				items: [{ text: "Cheat sheet", link: "/zed/cheat-sheet" }],
 			},
