@@ -13,10 +13,10 @@ sudo pacman -Syu --noconfirm
 
 if not command -s rustup
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-	source ~/.cargo/env.fish
 end
 if not command -s mise
 	curl https://mise.run | sh
+	mise use node@22
 end
 
 
@@ -38,7 +38,7 @@ symm link
 
 set packages
 
-set cli_tools alacritty wezterm neovim starship btop ripgrep zoxide eza fd bat yazi fzf jq git-delta lazygit lazydocker openbsd-netcat rsync cmake
+set cli_tools alacritty wezterm neovim starship btop ripgrep zoxide eza fd bat yazi fzf jq git-delta lazygit lazydocker openbsd-netcat openssh rsync cmake
 set packages $packages $cli_tools
 
 set fonts ttf-jetbrains-mono-nerd ttf-font-awesome
@@ -47,7 +47,7 @@ set packages $packages $fonts
 set desktop uwsm libnewt hyprland hyprpaper hyprlock hyprshot xdg-desktop-portal-hyprland brightnessctl waybar mako rofi-wayland nwg-look
 set packages $packages $desktop
 
-set apps ueberzugpp mpv clipse bluetui dolphin pavucontrol 7zip obs-studio
+set apps ueberzugpp mpv clipse bluetui dolphin pavucontrol 7zip obs-studio telegram-desktop firefox google-chrome
 set packages $packages $apps
 
 set nvidia_drivers nvidia nvidia-utils
