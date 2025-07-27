@@ -50,4 +50,7 @@ set packages $packages $desktop
 set apps ueberzugpp mpv clipse bluetui dolphin pavucontrol 7zip obs-studio
 set packages $packages $apps
 
+set nvidia_drivers nvidia nvidia-utils
+set packages $packages $nvidia_drivers
+
 paru -S --noconfirm --needed $packages
