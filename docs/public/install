@@ -38,7 +38,7 @@ symm link
 
 set packages
 
-set cli_tools alacritty wezterm neovim starship btop ripgrep zoxide eza fd bat yazi fzf jq git-delta lazygit lazydocker openbsd-netcat openssh rsync cmake
+set cli_tools alacritty wezterm neovim starship btop ripgrep zoxide eza fd bat yazi fzf jq git-delta lazygit docker docker-compose lazydocker openbsd-netcat openssh rsync cmake
 set packages $packages $cli_tools
 
 set fonts ttf-jetbrains-mono-nerd ttf-font-awesome
@@ -54,6 +54,9 @@ set nvidia_drivers nvidia nvidia-utils
 set packages $packages $nvidia_drivers
 
 paru -S --noconfirm --needed $packages
+
+systemctl enable docker.socket
+sudo usermod -aG docker $USER
 
 rfkill unblock bluetooth
 systemctl enable bluetooth
