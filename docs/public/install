@@ -38,7 +38,7 @@ symm link
 
 set packages
 
-set cli_tools alacritty wezterm neovim starship btop ripgrep zoxide eza fd bat yazi fzf jq openbsd-netcat rsync cmake
+set cli_tools alacritty wezterm neovim starship btop ripgrep zoxide eza fd bat yazi fzf jq git-delta lazygit lazydocker openbsd-netcat rsync cmake
 set packages $packages $cli_tools
 
 set fonts ttf-jetbrains-mono-nerd ttf-font-awesome
