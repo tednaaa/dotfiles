@@ -9,7 +9,7 @@
 "wezterm" = ".config/wezterm"
 
 "zed" = ".config/zed"
-"nvim" = ".config/nvim"
+# "nvim" = ".config/nvim"
 
 "lazygit" = ".config/lazygit"
 "mise" = ".config/mise"
