@@ -5,6 +5,7 @@
 "yazi" = ".config/yazi"
 
 "alacritty" = ".config/alacritty"
+"zellij" = ".config/zellij"
 "wezterm" = ".config/wezterm"
 
 "zed" = ".config/zed"
