@@ -269,6 +269,12 @@ plugins {
 load_plugins {
 }
 
+ui {
+    pane_frames {
+        hide_session_name true
+    }
+}
+
 simplified_ui false
 pane_frames false
 
