@@ -42,7 +42,7 @@ set packages $packages $cli_tools
 set fonts ttf-jetbrains-mono-nerd ttf-font-awesome
 set packages $packages $fonts
 
-set desktop uwsm libnewt hyprland hyprpaper hyprlock hyprshot xdg-desktop-portal-hyprland brightnessctl waybar mako rofi-wayland nwg-look
+set desktop uwsm libnewt hyprland hyprpaper hyprlock hyprshot xdg-desktop-portal-hyprland xdg-desktop-portal-gtk brightnessctl waybar mako rofi-wayland nwg-look
 set packages $packages $desktop
 
 set apps ueberzugpp mpv clipse bluetui dolphin pavucontrol 7zip obs-studio telegram-desktop firefox google-chrome
