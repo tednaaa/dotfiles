@@ -277,6 +277,7 @@ ui {
 
 simplified_ui false
 pane_frames false
+show_startup_tips false
 
 theme "tokyo-night-dark"
 
@@ -418,10 +419,7 @@ default_mode "normal"
 //
 // stacked_resize false
 
-// Whether to show tips on startup
-// Default: true
-//
-// show_startup_tips false
+
 
 // Whether to show release notes on first version run
 // Default: true
