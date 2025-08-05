@@ -48,38 +48,37 @@
 	},
 
 	"network": {
-		"format": "{ifname}",
-		"format-wifi": "",
-		"format-ethernet": "  {ifname}",
-		"format-disconnected": "Disconnected ⚠",
-		"tooltip-format": " {ifname} via {gwaddri}",
-		"tooltip-format-wifi": "  {ifname} @ {essid}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
-		"tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
-		"tooltip-format-disconnected": "Disconnected",
-		"max-length": 50,
+		"format-icons": {
+			"disconnected": "󰅛",
+			"default": "",
+			"wifi": "",
+		},
+		"format": "{icon}",
+		"tooltip-format": "{ifname} {ipaddr}/{cidr}",
+		"tooltip-format-wifi": "{ifname} {ipaddr}/{cidr} {essid} ({signalStrength}%)",
+		"tooltip-format-disconnected": "YOU IN THE WOODS?",
 	},
 
 	"battery": {
+		"format": "{icon}",
+		"format-charging": "󱐋",
+		"format-plugged": "",
+		"format-icons": ["", "", "", "", ""],
+		"tooltip-format": "{capacity}% {power}W {timeTo}",
 		"states": {
-			// "good": 95,
 			"warning": 30,
 			"critical": 15,
 		},
-		"format": "{icon} {capacity}%",
-		"format-charging": " {capacity}%",
-		"format-plugged": " {capacity}%",
-		"format-alt": "{icon}  {time}",
-		"format-icons": [" ", " ", " ", " ", " "],
 	},
 
 	"power-profiles-daemon": {
 		"format": "{icon}",
-		"tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+		"tooltip-format": "Power profile: {profile}",
 		"tooltip": true,
 		"format-icons": {
-			"default": "",
+			"default": "",
 			"performance": "",
-			"balanced": "",
+			"balanced": "",
 			"power-saver": "",
 		},
 	},
@@ -113,9 +112,14 @@
 	},
 
 	"bluetooth": {
-		"format": " {status}",
+		"format-icons": {
+			"off": "󰂲",
+			"default": "󰂯",
+		},
+		"tooltip-format": "Bluetooth {status}",
+		"format": "{icon}",
+		"format-on": "{icon}",
 		"on-click": "alacritty --class bluetui -e bluetui",
-		"format-no-controller": "",
 	},
 
 	"backlight": {
@@ -137,6 +141,6 @@
 			"",
 			"",
 		],
-		"scroll-step": 1,
+		"scroll-step": 10,
 	},
 }

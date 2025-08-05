@@ -51,3 +51,25 @@ tooltip {
 	color: orange;
 	background-color: #1e1e2e;
 }
+
+#battery.critical,
+#temperature.critical {
+	color: #e92d4d;
+}
+
+#battery.warning,
+#temperature.warning {
+	color: #fc4c02;
+}
+
+#custom-notification {
+	margin-right: 10px;
+}
+
+#pulseaudio {
+	color: #89b4fa;
+}
+
+#pulseaudio.microphone {
+	color: #cba6f7;
+}

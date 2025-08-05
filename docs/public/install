@@ -48,7 +48,7 @@ set hyprland_desktop \
 	uwsm libnewt \
 	hyprland hyprpaper hyprlock hyprshot \
 	xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
-	brightnessctl waybar mako walker-bin nwg-look
+	brightnessctl waybar mako walker-bin nwg-look power-profiles-daemon
 set packages $packages $hyprland_desktop
 
 set apps \
@@ -58,7 +58,7 @@ set apps \
 	firefox google-chrome
 set packages $packages $apps
 
-set fonts ttf-jetbrains-mono-nerd woff2-font-awesome noto-fonts-emoji
+set fonts ttf-jetbrains-mono-nerd noto-fonts-cjk noto-fonts-extra
 set packages $packages $fonts
 
 set nvidia_drivers nvidia nvidia-utils
