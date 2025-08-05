@@ -1,0 +1,3 @@
+[keys]
+next = ["ctrl j", "down"]
+prev = ["ctrl k", "up"]

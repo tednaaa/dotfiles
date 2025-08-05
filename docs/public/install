@@ -48,7 +48,7 @@ set hyprland_desktop \
 	uwsm libnewt \
 	hyprland hyprpaper hyprlock hyprshot \
 	xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
-	brightnessctl waybar mako rofi nwg-look
+	brightnessctl waybar mako walker-bin nwg-look
 set packages $packages $hyprland_desktop
 
 set apps \
