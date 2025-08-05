@@ -1,7 +1,7 @@
 * {
 	border: none;
 	border-radius: 0;
-	font-family: "JetBrainsMono Nerd Font";
+	font-family: "JetBrainsMono Nerd Font Propo";
 	font-weight: normal;
 	font-size: 16px;
 	min-height: 16px;
@@ -23,6 +23,7 @@ tooltip {
 #network,
 #power-profiles-daemon,
 #pulseaudio,
+#pulseaudio.microphone,
 #language,
 #clock,
 #tray,

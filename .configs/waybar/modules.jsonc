@@ -49,7 +49,7 @@
 
 	"network": {
 		"format": "{ifname}",
-		"format-wifi": " ",
+		"format-wifi": "",
 		"format-ethernet": "  {ifname}",
 		"format-disconnected": "Disconnected ⚠",
 		"tooltip-format": " {ifname} via {gwaddri}",
@@ -85,23 +85,31 @@
 	},
 
 	"pulseaudio": {
-		// "scroll-step": 1, // %, can be a float
-		"format": "{icon}  {volume}%",
-		"format-bluetooth": "{volume}% {icon} {format_source}",
-		"format-bluetooth-muted": " {icon} {format_source}",
-		"format-muted": " {format_source}",
-		"format-source": "{volume}% ",
-		"format-source-muted": "",
+		"format": "{icon} {volume}%",
+		"format-muted": "",
 		"format-icons": {
-			"headphone": " ",
-			"hands-free": " ",
-			"headset": " ",
-			"phone": " ",
-			"portable": " ",
-			"car": " ",
-			"default": ["", "", ""],
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""],
 		},
-		"on-click": "pavucontrol",
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click-right": "pavucontrol",
+		"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+	},
+
+	"pulseaudio#microphone": {
+		"format": "{format_source}",
+		"format-source": " {volume}%",
+		"format-source-muted": "",
+		"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+		"on-click-right": "pavucontrol",
+		"on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%",
+		"on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
 	},
 
 	"bluetooth": {

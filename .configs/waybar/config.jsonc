@@ -15,5 +15,10 @@
 		"tray",
 	],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["pulseaudio", "bluetooth", "clock"],
+	"modules-right": [
+		"pulseaudio",
+		"pulseaudio#microphone",
+		"bluetooth",
+		"clock",
+	],
 }
