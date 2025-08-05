@@ -11,7 +11,6 @@
 			"active": "",
 			"default": "",
 		},
-		"persistent-workspaces": { "*": 5 },
 	},
 
 	"tray": {
@@ -20,9 +19,7 @@
 	},
 
 	"clock": {
-		"exec": "date +\"%F %H:%M\"",
-		"format": "{:%H:%M}",
-		"format-alt": "{:%R %a, %b %d, %Y}",
+		"format": "{:%Y/%m/%d %H:%M}",
 		"tooltip-format": "<tt><small>{calendar}</small></tt>",
 		"calendar": {
 			"mode": "year",
@@ -33,15 +30,13 @@
 			"format": {
 				"months": "<span color='#ffead3'><b>{}</b></span>",
 				"days": "<span color='#ecc6d9'><b>{}</b></span>",
-				"weeks": "<span color='#009999'><b>W{}</b></span>",
+				"weeks": "<span color='#99ffdd'><b>W{}</b></span>",
 				"weekdays": "<span color='#ffcc66'><b>{}</b></span>",
 				"today": "<span color='#ff6699'><b><u>{}</u></b></span>",
 			},
 		},
 		"actions": {
-			"on-click-right": "mode",
-			"on-click-forward": "tz_up",
-			"on-click-backward": "tz_down",
+			"on-click": "mode",
 			"on-scroll-up": "shift_up",
 			"on-scroll-down": "shift_down",
 		},

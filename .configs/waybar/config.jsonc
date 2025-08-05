@@ -1,20 +1,22 @@
 {
 	"layer": "top",
-	"margin-bottom": 0,
-
-	"margin-left": 0,
-	"margin-right": 0,
-	"spacing": 0,
+	"position": "top",
+	"mod": "dock",
+	"exclusive": true,
+	"passthrough": false,
+	"gtk-layer-shell": true,
+	"height": 40,
 
 	"include": ["~/.config/waybar/modules.jsonc"],
 
-	"modules-left": ["network", "hyprland/language", "backlight", "tray"],
-	"modules-center": ["hyprland/workspaces"],
-	"modules-right": [
-		"pulseaudio",
-		"bluetooth",
+	"modules-left": [
 		"battery",
+		"backlight",
+		"network",
 		"power-profiles-daemon",
-		"clock",
+		"hyprland/language",
+		"tray",
 	],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right": ["pulseaudio", "bluetooth", "clock"],
 }
