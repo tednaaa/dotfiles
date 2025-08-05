@@ -11,6 +11,7 @@
 			"active": "",
 			"default": "",
 		},
+		"persistent-workspaces": { "*": 3 },
 	},
 
 	"tray": {

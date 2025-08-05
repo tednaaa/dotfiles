@@ -30,12 +30,10 @@ tooltip {
 #workspaces {
 	background: #1a1b26;
 	padding: 0px 12px;
-	margin: 2px 0px;
-	margin-top: 10px;
-	border: #0e0e0e 2px solid;
+	border: #1e1e2e 2px solid;
 	border-radius: 8px;
-	margin-left: 10px;
-	margin-right: 0px;
+	margin: 5px;
+	margin-bottom: 0;
 	min-width: 20px;
 }
 
@@ -44,11 +42,11 @@ tooltip {
 }
 #workspaces button {
 	padding: 0 10px;
-	border-radius: 4px;
+	border-radius: 5px;
 }
 
 #workspaces button.active,
 #workspaces button:hover {
 	color: orange;
-	background-color: #0e0e0e;
+	background-color: #1e1e2e;
 }
