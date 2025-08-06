@@ -7,8 +7,8 @@
 	"include": ["~/.config/waybar/modules.jsonc"],
 
 	"modules-left": [
-		"battery",
 		"backlight",
+		"battery",
 		"network",
 		"power-profiles-daemon",
 		"hyprland/language",
