@@ -8,7 +8,6 @@ if status is-interactive
 end
 
 alias ls="eza --all --icons -l --no-user -o"
-alias cd="z"
 
 set -gx EDITOR "zed --wait"
 
