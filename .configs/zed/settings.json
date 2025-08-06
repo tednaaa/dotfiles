@@ -35,13 +35,13 @@
   //   "editor.active_line.background": "#00000055"
   // },
 
-  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_family": "JetBrainsMonoNL Nerd Font Propo",
   "buffer_font_weight": 500,
-  "buffer_font_size": 15.0,
+  "buffer_font_size": 14,
   "buffer_line_height": { "custom": 1.8 },
   "buffer_font_features": { "calt": false },
 
-  "ui_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_family": "JetBrainsMonoNL Nerd Font Propo",
   "ui_font_weight": 500,
   "ui_font_size": 16,
 

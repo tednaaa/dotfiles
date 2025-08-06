@@ -8,5 +8,5 @@ TERM = "xterm-256color"
 padding = { x = 10, y = 10 }
 
 [font]
-normal = { family = "JetBrainsMono Nerd Font", style = "Medium" }
+normal = { family = "JetBrainsMonoNL Nerd Font Propo", style = "Medium" }
 size = 12

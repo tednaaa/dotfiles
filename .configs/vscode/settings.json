@@ -5,7 +5,7 @@
   "editor.acceptSuggestionOnCommitCharacter": true,
   "editor.unicodeHighlight.includeStrings": false,
   "editor.inlayHints.enabled": "offUnlessPressed",
-  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontFamily": "JetBrainsMonoNL Nerd Font Propo",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.inlineSuggest.enabled": true,
   "editor.detectIndentation": false,
