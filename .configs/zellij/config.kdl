@@ -279,7 +279,7 @@ simplified_ui false
 pane_frames false
 show_startup_tips false
 
-theme "tokyo-night-dark"
+theme "kanagawa_wave"
 
 default_mode "normal"
 
