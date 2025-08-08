@@ -61,6 +61,10 @@ export default defineConfig({
 				text: "Neovim",
 				items: [{ text: "Cheat sheet", link: "/neovim/cheat-sheet" }],
 			},
+			{
+				text: "K8S",
+				items: [{ text: "Basic setup with kubeadm", link: "/k8s/basic-setup" }],
+			},
 		],
 	},
 });
