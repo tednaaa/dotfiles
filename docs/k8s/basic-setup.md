@@ -65,14 +65,16 @@ vim /etc/containerd/config.toml
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --skip-phases=addon/kube-proxy
 ```
 
-### Install cilium cli
+### Install helm
 
-- [follow these steps](https://docs.cilium.io/en/stable/gettingstarted/k8s-install-default/#install-the-cilium-cli)
-- after that, install cilium and wait for status validation
+- [follow these steps](https://helm.sh/docs/intro/install)
+
+### Install cilium with helm
+
+- [follow these steps](https://docs.cilium.io/en/stable/installation/k8s-install-helm/#installation-using-helm)
+- after that, install cilium cli and wait for status validation
 
 ```fish
-cilium install
-
 cilium status --wait
 ```
 
