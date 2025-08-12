@@ -40,7 +40,6 @@ set cli_tools \
 	alacritty wezterm neovim starship \
 	btop ripgrep zoxide eza fd bat yazi fzf \
 	jq git-delta resvg lazygit \
-	docker docker-compose lazydocker \
 	openbsd-netcat openssh rsync cmake
 set packages $packages $cli_tools
 
@@ -63,6 +62,11 @@ set packages $packages $fonts
 
 set nvidia_drivers nvidia nvidia-utils
 set packages $packages $nvidia_drivers
+
+set devops_stuff \
+	docker docker-compose lazydocker \
+	doctl kubectl helm k9s
+set packages $packages $devops_stuff
 
 paru -S --noconfirm --needed $packages
 
