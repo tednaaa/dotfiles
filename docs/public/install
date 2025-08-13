@@ -39,7 +39,7 @@ set packages
 set cli_tools \
 	alacritty wezterm neovim starship \
 	btop ripgrep zoxide eza fd bat yazi fzf \
-	jq git-delta resvg lazygit \
+	jq git-delta resvg lazygit tabiew \
 	openbsd-netcat openssh rsync cmake
 set packages $packages $cli_tools
 
