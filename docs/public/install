@@ -65,7 +65,8 @@ set packages $packages $nvidia_drivers
 
 set devops_stuff \
 	docker docker-compose lazydocker \
-	doctl kubectl helm k9s
+	kubectl helm k9s \
+	doctl ansible
 set packages $packages $devops_stuff
 
 paru -S --noconfirm --needed $packages
