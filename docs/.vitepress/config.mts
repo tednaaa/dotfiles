@@ -64,8 +64,8 @@ export default defineConfig({
 			{
 				text: "K8S",
 				items: [
-					{ text: "Basic setup with kubeadm", link: "/k8s/basic-setup" },
-					{ text: "Ingress Nginx", link: "/k8s/ingress-nginx" },
+					{ text: "Self managed with kubeadm", link: "/k8s/basic-setup" },
+					{ text: "Canary releases", link: "/k8s/canary-releases" },
 				],
 			},
 		],

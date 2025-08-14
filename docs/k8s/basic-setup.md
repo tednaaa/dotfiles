@@ -1,3 +1,8 @@
+- You can setup self managed k8s cluster by following steps below
+- or just use `digital ocean` or `aws EKS`, they will setup cluster for you
+- good luck!
+
+
 ### System Prerequisites
 
 - Disable swap
