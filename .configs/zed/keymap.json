@@ -18,7 +18,7 @@
       ],
       "space g g": [
         "task::Spawn",
-        { "task_name": "git", "reveal_target": "center" }
+        { "task_name": "lazygit", "reveal_target": "center" }
       ],
       "space g d": [
         "task::Spawn",

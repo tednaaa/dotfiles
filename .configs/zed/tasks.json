@@ -5,7 +5,7 @@
     "hide": "on_success"
   },
   {
-    "label": "git",
+    "label": "lazygit",
     "command": "lazygit",
     "hide": "on_success"
   },
