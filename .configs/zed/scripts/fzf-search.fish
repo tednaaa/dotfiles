@@ -1,6 +1,7 @@
 #!/usr/bin/fish
 
 set -l ignores \
+	'.git/' \
 	'node_modules/' \
 	'pnpm-lock.yaml' \
 	'package-lock.json' \
@@ -11,10 +12,16 @@ set -l ignore_flags
 for p in $ignores
 	set -a ignore_flags --glob "!$p"
 end
-
 set -l ignore_str (string join ' ' $ignore_flags)
 
-set -l rg_cmd "rg -i --no-heading --line-number --color=always $ignore_str --"
+set -l reload_cmd '
+	set -l q {q}
+	if test -n "$q"
+		rg -i --hidden --no-heading --line-number --color=always '"$ignore_str"' "$q"
+	else
+		printf ""
+	end
+'
 
 set -l preview_cmd '
 	set -l file {1}
@@ -31,9 +38,9 @@ set -l preview_cmd '
 '
 
 set -l match (
-	fzf --ansi --disabled --prompt 'rg> ' \
+	printf "" | fzf --ansi --disabled --prompt 'rg> ' \
 		--delimiter : --nth=3.. \
-		--bind "change:reload:$rg_cmd {q} || true" \
+		--bind "change:reload:$reload_cmd" \
 		--preview "$preview_cmd" \
 		--preview-window=down:wrap:70%
 )
