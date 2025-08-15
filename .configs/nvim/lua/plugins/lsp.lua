@@ -1,7 +1,7 @@
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
-		{ "antosha417/nvim-lsp-file-operations", config = true },
+		{ "antosha417/nvim-lsp-file-operations",      config = true },
 		{ "williamboman/mason.nvim" },
 		{ "williamboman/mason-lspconfig.nvim" },
 		{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
@@ -98,28 +98,28 @@ return {
 			docker_compose_language_service = { filetypes = { "yml.docker-compose" } },
 
 			-- Vue take over mode
-			-- vtsls = {
-			-- 	filetypes = { "typescript", "javascript", "vue" },
-			-- 	settings = {
-			-- 		vtsls = { tsserver = { globalPlugins = {} } },
-			-- 	},
-			-- 	before_init = function(params, config)
-			-- 		local result = vim
-			-- 			.system({ "npm", "query", "#vue" }, { cwd = params.workspaceFolders[1].name, text = true })
-			-- 			:wait()
-			-- 		if result.stdout ~= "[]" then
-			-- 			local vuePluginConfig = {
-			-- 				name = "@vue/typescript-plugin",
-			-- 				location = require("mason-registry").get_package("vue-language-server"):get_install_path()
-			-- 					.. "/node_modules/@vue/language-server",
-			-- 				languages = { "vue" },
-			-- 				configNamespace = "typescript",
-			-- 				enableForWorkspaceTypeScriptVersions = true,
-			-- 			}
-			-- 			table.insert(config.settings.vtsls.tsserver.globalPlugins, vuePluginConfig)
-			-- 		end
-			-- 	end,
-			-- },
+			vtsls = {
+				filetypes = { "typescript", "javascript", "vue" },
+				settings = {
+					vtsls = { tsserver = { globalPlugins = {} } },
+				},
+				before_init = function(params, config)
+					local result = vim
+							.system({ "npm", "query", "#vue" }, { cwd = params.workspaceFolders[1].name, text = true })
+							:wait()
+					if result.stdout ~= "[]" then
+						local vuePluginConfig = {
+							name = "@vue/typescript-plugin",
+							location = require("mason-registry").get_package("vue-language-server"):get_install_path()
+									.. "/node_modules/@vue/language-server",
+							languages = { "vue" },
+							configNamespace = "typescript",
+							enableForWorkspaceTypeScriptVersions = true,
+						}
+						table.insert(config.settings.vtsls.tsserver.globalPlugins, vuePluginConfig)
+					end
+				end,
+			},
 		}
 		local capabilities = require("blink.cmp").get_lsp_capabilities()
 
