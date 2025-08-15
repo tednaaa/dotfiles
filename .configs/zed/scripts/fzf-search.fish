@@ -27,6 +27,12 @@ set -l preview_cmd '
 	set -l file {1}
 	set -l line {2}
 	set -l q {q}
+
+	if test -z "$file" -o "$file" = ""
+		echo "Start typing to search..."
+		exit 0
+	end
+
 	set -l start (math "max(1, $line-10)")
 	set -l end (math $line+10)
 	if test -n "$q"
