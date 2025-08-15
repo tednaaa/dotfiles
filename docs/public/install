@@ -60,14 +60,14 @@ set packages $packages $apps
 set fonts ttf-jetbrains-mono-nerd noto-fonts-cjk noto-fonts-extra
 set packages $packages $fonts
 
-set nvidia_drivers nvidia nvidia-utils
-set packages $packages $nvidia_drivers
-
 set devops_stuff \
 	docker docker-compose lazydocker \
 	kubectl helm k9s \
 	doctl ansible
 set packages $packages $devops_stuff
+
+set nvidia_drivers nvidia nvidia-utils
+set packages $packages $nvidia_drivers
 
 paru -S --noconfirm --needed $packages
 
