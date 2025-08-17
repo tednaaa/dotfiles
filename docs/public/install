@@ -47,7 +47,7 @@ set hyprland_desktop \
 	uwsm libnewt \
 	hyprland hyprpaper hyprlock hyprshot \
 	xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
-	brightnessctl waybar mako walker-bin nwg-look power-profiles-daemon
+	brightnessctl waybar swaync walker-bin nwg-look power-profiles-daemon
 set packages $packages $hyprland_desktop
 
 set apps \

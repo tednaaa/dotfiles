@@ -19,6 +19,7 @@
 		"pulseaudio",
 		"pulseaudio#microphone",
 		"bluetooth",
+		"custom/notification",
 		"clock",
 	],
 }

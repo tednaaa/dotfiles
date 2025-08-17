@@ -17,6 +17,7 @@ tooltip {
 	color: #cdd6f4;
 }
 
+#custom-notification,
 #battery,
 #backlight,
 #bluetooth,
@@ -60,10 +61,6 @@ tooltip {
 #battery.warning,
 #temperature.warning {
 	color: #fc4c02;
-}
-
-#custom-notification {
-	margin-right: 10px;
 }
 
 #pulseaudio {
