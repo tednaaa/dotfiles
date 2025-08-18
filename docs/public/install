@@ -40,7 +40,7 @@ set cli_tools \
 	alacritty wezterm neovim starship \
 	btop ripgrep zoxide eza fd bat yazi fzf \
 	jq git-delta resvg lazygit tabiew \
-	openbsd-netcat openssh rsync cmake
+	openbsd-netcat openssh rsync bind cmake
 set packages $packages $cli_tools
 
 set hyprland_desktop \
