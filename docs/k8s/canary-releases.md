@@ -15,6 +15,12 @@ kubectl patch serviceaccount default \
   -p '{"imagePullSecrets": [{"name": "dockerhub"}]}'
 ```
 
+#### need to paste `EXTERNAL-IP` of `nginx-ingress-controller` to DNS with type A
+
+```fish
+kubectl get svc -n ingress-nginx
+```
+
 ### Canary releases
 
 - [setup flagger](https://docs.flagger.app/install/flagger-install-on-kubernetes)
