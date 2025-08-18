@@ -65,6 +65,7 @@ export default defineConfig({
 				text: "K8S",
 				items: [
 					{ text: "Self managed with kubeadm", link: "/k8s/basic-setup" },
+					{ text: "Digital Ocean", link: "/k8s/digital-ocean" },
 					{ text: "Canary releases", link: "/k8s/canary-releases" },
 				],
 			},
