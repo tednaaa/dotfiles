@@ -15,11 +15,21 @@ kubectl patch serviceaccount default \
   -p '{"imagePullSecrets": [{"name": "dockerhub"}]}'
 ```
 
+#### Create secret for apps from .env file
+
+```fish
+kubectl create secret generic frontend-secret --from-env-file=.env
+```
+
 #### need to paste `EXTERNAL-IP` of `nginx-ingress-controller` to DNS with type A
 
 ```fish
 kubectl get svc -n ingress-nginx
 ```
+
+### Configure TLS cert-manager
+
+[install cert-manager with helm](https://cert-manager.io/docs/installation/helm/)
 
 ### Canary releases
 
