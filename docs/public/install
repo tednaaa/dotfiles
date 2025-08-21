@@ -63,7 +63,7 @@ set packages $packages $fonts
 set devops_stuff \
 	docker docker-compose lazydocker \
 	kubectl helm k9s \
-	doctl ansible
+	doctl ansible terraform
 set packages $packages $devops_stuff
 
 set nvidia_drivers nvidia nvidia-utils
