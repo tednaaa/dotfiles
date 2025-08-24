@@ -19,6 +19,6 @@ end
 # pnpm end
 
 source ~/.cargo/env.fish
-~/.local/bin/mise activate fish | source
+mise activate fish | source
 starship init fish | source
 zoxide init fish | source
