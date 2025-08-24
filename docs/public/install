@@ -1,4 +1,4 @@
-#!/usr/bin/env fish
+#!/usr/bin/fish
 
 if test (id -u) -eq 0
 	echo "This script should not be run as root"
@@ -31,44 +31,8 @@ end
 paru -S --noconfirm --needed symm
 symm unlink
 symm link
+symm packages install
 
-
-set packages
-
-set cli_tools \
-	alacritty zellij neovim starship \
-	btop ripgrep zoxide eza fd bat yazi fzf \
-	jq git-delta resvg lazygit tabiew \
-	openbsd-netcat openssh rsync bind cmake
-set packages $packages $cli_tools
-
-set hyprland_desktop \
-	uwsm libnewt \
-	hyprland hyprpaper hyprlock hyprshot \
-	xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
-	brightnessctl waybar swaync rofi nwg-look power-profiles-daemon
-set packages $packages $hyprland_desktop
-
-set apps \
-	ueberzugpp mpv clipse bluetui \
-	dolphin pavucontrol 7zip \
-	obs-studio telegram-desktop \
-	firefox google-chrome
-set packages $packages $apps
-
-set fonts ttf-jetbrains-mono-nerd noto-fonts-cjk noto-fonts-extra
-set packages $packages $fonts
-
-set devops_stuff \
-	docker docker-compose lazydocker \
-	kubectl helm k9s \
-	doctl ansible terraform
-set packages $packages $devops_stuff
-
-set nvidia_drivers nvidia nvidia-utils
-set packages $packages $nvidia_drivers
-
-paru -S --noconfirm --needed $packages
 
 systemctl enable docker.socket
 sudo usermod -aG docker $USER
