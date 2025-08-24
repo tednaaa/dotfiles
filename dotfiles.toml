@@ -17,3 +17,36 @@
 "fish/config.fish" = ".config/fish/config.fish"
 "git/.gitconfig" = ".gitconfig"
 "npm/.npmrc" = ".npmrc"
+
+[packages]
+ignored = [
+	"base", "base-devel", "linux", "linux-firmware", "efibootmgr", "intel-ucode",
+	"btrfs-progs", "snapper", "zram-generator",
+	"bluez", "bluez-utils", "networkmanager", "libpulse", "sof-firmware",
+	"pipewire", "pipewire-alsa", "pipewire-jack", "pipewire-pulse", "gst-plugin-pipewire", "wireplumber",
+	"paru", "paru-debug", "symm"
+]
+
+apps = ["firefox", "google-chrome", "obs-studio", "telegram-desktop"]
+fonts = ["ttf-jetbrains-mono-nerd", "noto-fonts-cjk", "noto-fonts-extra"]
+nvidia = ["nvidia", "nvidia-utils"]
+
+terminal = [
+  "alacritty", "zellij", "neovim", "fish", "starship",
+	"tabiew", "btop",
+	"yazi", "ueberzugpp", "resvg",
+  "fzf", "jq", "ripgrep", "zoxide", "eza", "fd", "bat",
+  "git", "git-delta", "lazygit",
+  "openbsd-netcat", "openssh", "rsync", "bind", "cmake",
+	"docker", "docker-compose", "lazydocker",
+	"kubectl", "helm", "k9s",
+	"doctl", "ansible", "terraform"
+]
+
+desktop_hyprland = [
+	"uwsm", "libnewt",
+	"hyprland", "hyprpaper", "hyprlock", "hyprshot",
+	"xdg-desktop-portal-hyprland", "xdg-desktop-portal-gtk",
+	"brightnessctl", "waybar", "swaync", "rofi", "nwg-look", "power-profiles-daemon",
+	"dolphin", "pavucontrol", "7zip", "mpv", "clipse", "bluetui",
+]
