@@ -35,5 +35,5 @@
 name = Andranik
 email = tednaaa@gmail.com
 
-[includeIf "gitdir:~/projects/work/"]
-  path = ~/projects/work/.gitconfig
+[includeIf "gitdir:~/work/"]
+  path = ~/work/.gitconfig
