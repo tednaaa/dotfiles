@@ -38,7 +38,7 @@ terminal = [
 	"yazi", "ueberzugpp", "resvg",
   "fzf", "jq", "ripgrep", "zoxide", "eza", "fd", "bat",
   "git", "git-delta", "lazygit",
-  "openbsd-netcat", "openssh", "rsync", "bind", "cmake",
+  "openbsd-netcat", "openssh", "rsync", "bind", "cmake", "postgresql",
 	"docker", "docker-buildx", "docker-compose", "lazydocker",
 	"kubectl", "helm", "k9s",
 	"doctl", "ansible", "terraform"
