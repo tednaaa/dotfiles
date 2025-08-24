@@ -27,9 +27,10 @@ ignored = [
 	"paru", "paru-debug", "symm"
 ]
 
-apps = ["firefox", "google-chrome", "obs-studio", "telegram-desktop", "dbeaver"]
 fonts = ["noto-fonts", "noto-fonts-cjk", "noto-fonts-emoji", "ttf-jetbrains-mono-nerd"]
 nvidia = ["nvidia", "nvidia-utils"]
+
+apps = ["firefox", "google-chrome", "obs-studio", "telegram-desktop", "dbeaver"]
 
 terminal = [
   "alacritty", "zellij", "neovim", "fish", "starship",
