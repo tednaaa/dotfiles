@@ -24,13 +24,14 @@ ignored = [
 	"btrfs-progs", "snapper", "zram-generator",
 	"bluez", "bluez-utils", "networkmanager", "libpulse", "sof-firmware",
 	"pipewire", "pipewire-alsa", "pipewire-jack", "pipewire-pulse", "gst-plugin-pipewire", "wireplumber",
-	"paru", "paru-debug", "symm"
+	"paru", "paru-debug", "symm",
+	"steam", "dbeaver",
 ]
 
 fonts = ["noto-fonts", "noto-fonts-cjk", "noto-fonts-emoji", "ttf-jetbrains-mono-nerd"]
 nvidia = ["nvidia", "nvidia-utils"]
 
-apps = ["firefox", "google-chrome", "obs-studio", "telegram-desktop", "dbeaver"]
+apps = ["firefox", "google-chrome", "obs-studio", "telegram-desktop"]
 
 terminal = [
   "alacritty", "zellij", "neovim", "fish", "starship",
