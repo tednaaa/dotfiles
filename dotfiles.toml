@@ -28,7 +28,7 @@ ignored = [
 ]
 
 apps = ["firefox", "google-chrome", "obs-studio", "telegram-desktop"]
-fonts = ["ttf-jetbrains-mono-nerd", "noto-fonts-cjk", "noto-fonts-extra"]
+fonts = ["noto-fonts", "noto-fonts-cjk", "noto-fonts-emoji", "ttf-jetbrains-mono-nerd"]
 nvidia = ["nvidia", "nvidia-utils"]
 
 terminal = [
