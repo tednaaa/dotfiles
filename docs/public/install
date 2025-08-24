@@ -16,7 +16,6 @@ if not command -s rustup
 end
 if not command -s mise
 	curl https://mise.run | sh
-	mise use node@22
 end
 if not command -s paru
 	sudo pacman -S --noconfirm --needed base-devel git
@@ -37,7 +36,7 @@ symm link
 set packages
 
 set cli_tools \
-	alacritty wezterm neovim starship \
+	alacritty zellij neovim starship \
 	btop ripgrep zoxide eza fd bat yazi fzf \
 	jq git-delta resvg lazygit tabiew \
 	openbsd-netcat openssh rsync bind cmake
