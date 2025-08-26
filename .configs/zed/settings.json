@@ -46,9 +46,7 @@
     "Python": {
       "hard_tabs": false,
       "tab_size": 4,
-      "formatter": {
-        "external": { "command": "black", "arguments": ["-"] }
-      }
+      "formatter": { "external": { "command": "black", "arguments": ["-"] } }
     }
   },
 
@@ -74,6 +72,9 @@
         }
       }
     }
+  },
+  "file_types": {
+    "CSS": ["tailwindcss"]
   },
 
   "git": { "inline_blame": { "enabled": false } },
