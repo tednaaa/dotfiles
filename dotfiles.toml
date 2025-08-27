@@ -33,11 +33,13 @@ nvidia = ["nvidia", "nvidia-utils"]
 
 apps = ["firefox", "google-chrome", "obs-studio", "telegram-desktop"]
 
+playwright_workaround = ["enchant"]
+
 terminal = [
   "alacritty", "zellij", "neovim", "fish", "starship",
 	"tabiew", "btop",
 	"yazi", "ueberzugpp", "resvg",
-  "fzf", "jq", "ripgrep", "zoxide", "eza", "fd", "bat",
+  "fzf", "jq", "ripgrep", "zoxide", "eza", "fd", "bat", "unzip",
   "git", "git-delta", "lazygit",
   "openbsd-netcat", "openssh", "rsync", "bind", "cmake", "postgresql",
 	"docker", "docker-buildx", "docker-compose", "lazydocker",
