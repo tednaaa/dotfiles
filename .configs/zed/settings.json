@@ -5,7 +5,7 @@
   "vertical_scroll_margin": 10,
 
   "icon_theme": "Catppuccin Mocha",
-  "theme": "Ayu Dark",
+  "theme": "Gruvbox Dark Soft",
 
   "buffer_font_family": "JetBrainsMonoNL Nerd Font Propo",
   "buffer_font_weight": 500,
@@ -46,7 +46,12 @@
     "Python": {
       "hard_tabs": false,
       "tab_size": 4,
-      "formatter": { "external": { "command": "black", "arguments": ["-"] } }
+      "formatter": {
+        "external": {
+          "command": ".venv/bin/black",
+          "arguments": ["--stdin-filename", "{buffer_path}", "-"]
+        }
+      }
     }
   },
 
@@ -72,9 +77,6 @@
         }
       }
     }
-  },
-  "file_types": {
-    "CSS": ["tailwindcss"]
   },
 
   "git": { "inline_blame": { "enabled": false } },
