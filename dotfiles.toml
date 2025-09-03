@@ -29,12 +29,14 @@ ignored = [
 	"steam", "dbeaver",
 ]
 
+playwright_workaround = ["enchant"]
+lsp = ["gitlab-ci-ls"]
+
+
 fonts = ["noto-fonts", "noto-fonts-cjk", "noto-fonts-emoji", "ttf-jetbrains-mono-nerd"]
 nvidia = ["nvidia", "nvidia-utils"]
 
 apps = ["firefox", "google-chrome", "obs-studio", "telegram-desktop"]
-
-playwright_workaround = ["enchant"]
 
 terminal = [
   "alacritty", "zellij", "neovim", "fish", "starship", "fastfetch",
@@ -44,8 +46,7 @@ terminal = [
   "git", "git-delta", "lazygit",
   "openbsd-netcat", "openssh", "rsync", "bind", "cmake", "postgresql",
 	"docker", "docker-buildx", "docker-compose", "lazydocker",
-	"kubectl", "helm", "k9s",
-	"doctl", "glab", "ansible", "opentofu"
+	"kubectl", "helm", "k9s", "doctl", "glab", "ansible", "opentofu", "fluxcd"
 ]
 
 desktop_hyprland = [
@@ -53,5 +54,5 @@ desktop_hyprland = [
 	"xdg-desktop-portal-hyprland", "xdg-desktop-portal-gtk",
 	"brightnessctl", "waybar", "swaync", "rofi", "nwg-look", "power-profiles-daemon",
 	"dolphin", "pavucontrol", "7zip", "mpv", "clipse", "bluetui",
-	"papirus-icon-theme",
+	"papirus-icon-theme", "apple_cursor"
 ]
