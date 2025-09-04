@@ -1,7 +1,7 @@
 function screenshot
 	set dir (_ensure_screenshot_dir)
 	set filename (date '+%Y%m%d-%H:%M:%S').png
-	grim -g "$(slurp -o -r -c '##ff0000ff')" -t ppm - | satty --filename - --fullscreen --output-filename "$dir/$filename"
+	grim -g "$(slurp -o -r -c '##ff0000ff')" -t ppm - | satty --filename - --output-filename "$dir/$filename"
 end
 
 function _ensure_screenshot_dir

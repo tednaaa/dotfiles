@@ -3,6 +3,7 @@
 "waybar" = ".config/waybar"
 "rofi" = ".config/rofi"
 "yazi" = ".config/yazi"
+"satty" = ".config/satty"
 
 "alacritty" = ".config/alacritty"
 "zellij" = ".config/zellij"
