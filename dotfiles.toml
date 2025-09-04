@@ -15,6 +15,8 @@
 "mise" = ".config/mise"
 
 "fish/config.fish" = ".config/fish/config.fish"
+"fish/functions" = ".config/fish/functions"
+
 "git/.gitconfig" = ".gitconfig"
 "npm/.npmrc" = ".npmrc"
 
@@ -50,9 +52,9 @@ terminal = [
 ]
 
 desktop_hyprland = [
-	"uwsm", "hyprland", "hyprpaper", "hyprlock", "hyprshot",
+	"uwsm", "hyprland", "hyprpaper", "hyprlock",
 	"xdg-desktop-portal-hyprland", "xdg-desktop-portal-gtk",
 	"brightnessctl", "waybar", "swaync", "rofi", "nwg-look", "power-profiles-daemon",
-	"dolphin", "pavucontrol", "7zip", "mpv", "clipse", "bluetui",
+	"dolphin", "pavucontrol", "7zip", "mpv", "clipse", "bluetui", "satty",
 	"papirus-icon-theme", "apple_cursor"
 ]
