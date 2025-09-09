@@ -56,6 +56,6 @@ desktop_hyprland = [
 	"uwsm", "hyprland", "hyprpaper", "hyprlock",
 	"xdg-desktop-portal-hyprland", "xdg-desktop-portal-gtk",
 	"brightnessctl", "waybar", "swaync", "rofi", "nwg-look", "power-profiles-daemon",
-	"dolphin", "pavucontrol", "7zip", "mpv", "clipse", "bluetui", "satty",
+	"dolphin", "pavucontrol", "7zip", "mpv", "clipse", "bluetui", "satty", "grim", "slurp",
 	"papirus-icon-theme", "apple_cursor"
 ]
