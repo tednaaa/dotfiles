@@ -1,0 +1,8 @@
+[Icons]
+Theme=Papirus-Dark
+
+[General]
+ColorScheme=BreezeDark
+
+[KDE]
+LookAndFeelPackage=org.kde.breezedark.desktop
