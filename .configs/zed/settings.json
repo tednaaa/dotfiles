@@ -5,7 +5,7 @@
   "vertical_scroll_margin": 10,
 
   "icon_theme": "Catppuccin Mocha",
-  "theme": "VSCode Dark Modern",
+  "theme": "Gruvbox Dark Hard",
 
   "buffer_font_family": "JetBrainsMonoNL Nerd Font Propo",
   "buffer_font_weight": 500,
@@ -89,7 +89,7 @@
       "provider": "zed.dev",
       "model": "claude-sonnet-4"
     },
-    "default_profile": "ask"
+    "default_profile": "write"
   },
 
   "auto_install_extensions": {
