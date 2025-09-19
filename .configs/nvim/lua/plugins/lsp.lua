@@ -6,6 +6,7 @@ return {
       servers = {
         ---@type lspconfig.options
         gitlab_ci_ls = {},
+        nginx_language_server = {},
 
         ruff = { mason = false, enabled = false },
         basedpyright = { settings = { basedpyright = { analysis = { typeCheckingMode = "basic" } } } },
