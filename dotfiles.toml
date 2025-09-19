@@ -48,7 +48,7 @@ nvidia = ["nvidia", "nvidia-utils"]
 apps = ["firefox", "google-chrome", "obs-studio", "telegram-desktop"]
 
 terminal = [
-  "alacritty", "zellij", "neovim", "fish", "starship", "fastfetch",
+  "alacritty", "zellij", "neovim", "fish", "starship", "fastfetch", "man-db",
 	"tabiew", "btop",
 	"yazi", "ueberzugpp", "resvg",
   "fzf", "jq", "ripgrep", "zoxide", "eza", "fd", "bat", "unzip",
