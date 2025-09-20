@@ -5,7 +5,7 @@
   "vertical_scroll_margin": 10,
 
   "icon_theme": "Catppuccin Mocha",
-  "theme": "Gruvbox Dark Hard",
+  "theme": "Tokyo Night",
 
   "buffer_font_family": "JetBrainsMonoNL Nerd Font Propo",
   "buffer_font_weight": 500,
@@ -60,10 +60,9 @@
       "initialization_options": { "check": { "command": "clippy" } },
       "binary": { "ignore_system_version": true }
     },
-    "pyright": {
+    "basedpyright": {
       "settings": {
-        "python.analysis": {
-          "diagnosticMode": "workspace",
+        "basedpyright": {
           "typeCheckingMode": "off"
         }
       }
