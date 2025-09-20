@@ -70,9 +70,9 @@
     "yaml-language-server": {
       "settings": {
         "yaml": {
-          "schemaStore": { "enable": true },
           "completion": true,
-          "schemas": { "kubernetes": ["~/projects/k8s/**/*.yaml"] }
+          "schemaStore": { "enable": true },
+          "schemas": { "kubernetes": "**/k8s/*.yml" }
         }
       }
     }
