@@ -34,6 +34,8 @@ symm link
 symm packages install --noconfirm
 
 
+systemctl enable gdm.service
+
 systemctl enable docker.socket
 sudo usermod -aG docker $USER
 
