@@ -39,9 +39,7 @@ export default defineConfig({
 				text: "Arch",
 				items: [
 					{ text: "Minimal setup", link: "/arch/minimal-setup" },
-					{ text: "Post setup", link: "/arch/post-setup" },
 					{ text: "KDE", link: "/arch/kde" },
-					{ text: "Hyprland", link: "/arch/hyprland" },
 				],
 			},
 			{
