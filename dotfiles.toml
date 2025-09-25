@@ -63,6 +63,7 @@ desktop_hyprland = [
 	"ly", "hyprland", "hyprpaper", "hyprlock",
 	"xdg-desktop-portal-hyprland", "xdg-desktop-portal-gtk",
 	"brightnessctl", "waybar", "swaync", "rofi", "power-profiles-daemon",
-	"dolphin", "pavucontrol", "7zip", "mpv", "clipse", "wl-clipboard", "bluetui", "satty", "grim", "slurp",
+	"dolphin", "pavucontrol", "7zip", "mpv", "bluetui", "satty", "grim", "slurp",
+	"clipse", "wl-clipboard", "wl-clip-persist",
 	"orchis-theme", "papirus-icon-theme", "apple_cursor"
 ]
