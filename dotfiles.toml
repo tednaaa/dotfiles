@@ -60,7 +60,7 @@ terminal = [
 ]
 
 desktop_hyprland = [
-	"uwsm", "hyprland", "hyprpaper", "hyprlock",
+	"ly", "hyprland", "hyprpaper", "hyprlock",
 	"xdg-desktop-portal-hyprland", "xdg-desktop-portal-gtk",
 	"brightnessctl", "waybar", "swaync", "rofi", "power-profiles-daemon",
 	"dolphin", "pavucontrol", "7zip", "mpv", "clipse", "wl-clipboard", "bluetui", "satty", "grim", "slurp",
