@@ -72,7 +72,7 @@
         "yaml": {
           "completion": true,
           "schemaStore": { "enable": true },
-          "schemas": { "kubernetes": "**/k8s/*.yml" }
+          "schemas": { "kubernetes": "**/clusters/*.yml" }
         }
       }
     }
@@ -102,7 +102,6 @@
 
     "basher": true,
     "cargo-tom": true,
-    "docker-compose": true,
     "dockerfile": true,
     "emmet": true,
     "env": true,
@@ -111,7 +110,6 @@
     "html": true,
     "make": true,
     "nginx": true,
-    "scss": true,
     "snippets": true,
     "sql": true,
     "toml": true,
