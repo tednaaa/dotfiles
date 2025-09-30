@@ -3,6 +3,7 @@ if status is-interactive
 end
 
 alias ls="eza --all --icons -l --no-user -o"
+alias k="kubectl"
 
 set -gx EDITOR "zed --wait"
 
