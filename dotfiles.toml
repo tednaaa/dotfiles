@@ -35,9 +35,9 @@ ignored = [
 	"btrfs-progs", "snapper", "grub", "grub-btrfs", "zram-generator",
 	"bluez", "bluez-utils", "networkmanager", "libpulse", "sof-firmware",
 	"pipewire", "pipewire-alsa", "pipewire-jack", "pipewire-pulse", "gst-plugin-pipewire", "wireplumber",
-	"paru", "paru-debug", "symm", "downgrade",
+	"paru", "paru-debug", "paru-bin", "yay-bin", "symm", "downgrade",
 	"qemu-desktop", "virt-manager", "dnsmasq",
-	"steam", "dbeaver",
+	"steam", "elyprismlauncher", "dbeaver", "spotify-launcher"
 ]
 
 playwright_workaround = ["enchant"]
@@ -57,7 +57,7 @@ terminal = [
   "git", "git-delta", "lazygit",
   "openbsd-netcat", "openssh", "rsync", "bind", "cmake", "postgresql",
 	"docker", "docker-buildx", "docker-compose", "lazydocker",
-	"kubectl", "helm", "k9s", "doctl", "glab", "ansible", "opentofu", "fluxcd"
+	"kubectl", "kustomize", "helm", "k9s", "doctl", "glab", "ansible", "opentofu", "fluxcd"
 ]
 
 desktop_hyprland = [
