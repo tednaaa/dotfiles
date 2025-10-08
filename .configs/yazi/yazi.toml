@@ -10,6 +10,7 @@ tabiew = [
 prepend_rules = [
 	{ name = "*.csv", use = "tabiew" },
 	{ name = "*.xlsx", use = "tabiew" },
+	{ name = "*.xls", use = "tabiew" },
 	{ mime = "text/csv", use = "tabiew" },
 	{ mime = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", use = "tabiew" },
 ]
