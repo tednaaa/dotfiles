@@ -15,6 +15,11 @@
     "hide": "on_success"
   },
   {
+    "label": "k9s",
+    "command": "k9s",
+    "hide": "on_success"
+  },
+  {
     "label": "fzf search",
     "command": "~/.config/zed/scripts/fzf-search.fish",
     "hide": "on_success"

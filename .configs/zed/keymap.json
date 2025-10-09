@@ -24,6 +24,10 @@
         "task::Spawn",
         { "task_name": "lazydocker", "reveal_target": "center" }
       ],
+      "space g k": [
+        "task::Spawn",
+        { "task_name": "k9s", "reveal_target": "center" }
+      ],
 
       "space g /": [
         "task::Spawn",
