@@ -6,6 +6,8 @@ import {
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+	srcDir: "src",
+
 	title: "dotfiles",
 	description: "dotfiles",
 	base: "/dotfiles/",
@@ -29,27 +31,24 @@ export default defineConfig({
 
 		sidebar: [
 			{
-				text: "Dotfiles",
+				text: "How to manage?",
+				link: "/manage",
 				items: [
-					{ text: "How to manage?", link: "/dotfiles/manage" },
-					{ text: "Setup script", link: "/dotfiles/setup-script" },
+					{ text: "symlinks", link: "/manage/symlinks" },
+					{ text: "packages", link: "/manage/packages" },
 				],
 			},
 			{
 				text: "Arch",
 				items: [
 					{ text: "Minimal setup", link: "/arch/minimal-setup" },
+					{ text: "Hyprland", link: "/arch/hyprland" },
 					{ text: "KDE", link: "/arch/kde" },
 				],
 			},
 			{
 				text: "Firefox",
-				items: [
-					{
-						text: "Bookmarks loading?",
-						link: "/firefox/bookmarks",
-					},
-				],
+				items: [{ text: "Bookmarks loading?", link: "/firefox/bookmarks" }],
 			},
 			{
 				text: "Zed",
@@ -58,14 +57,6 @@ export default defineConfig({
 			{
 				text: "Neovim",
 				items: [{ text: "Cheat sheet", link: "/neovim/cheat-sheet" }],
-			},
-			{
-				text: "K8S",
-				items: [
-					{ text: "Self managed with kubeadm", link: "/k8s/basic-setup" },
-					{ text: "Digital Ocean", link: "/k8s/digital-ocean" },
-					{ text: "Canary releases", link: "/k8s/canary-releases" },
-				],
 			},
 		],
 	},

@@ -1,17 +1,3 @@
----
-outline: deep
----
-
-#### How to manage dotfiles?
-
-```fish
-cargo install symm
-# or
-yay -S symm
-# or
-paru -S symm
-```
-
 #### There are 2 commands
 
 ```fish

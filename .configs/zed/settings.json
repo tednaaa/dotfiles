@@ -5,7 +5,7 @@
   "vertical_scroll_margin": 10,
 
   "icon_theme": "Catppuccin Mocha",
-  "theme": "Tokyo Night",
+  "theme": "Catppuccin Mocha - No Italics",
 
   "buffer_font_family": "JetBrainsMonoNL Nerd Font Propo",
   "buffer_font_weight": 500,
@@ -84,6 +84,7 @@
   "show_edit_predictions": true,
 
   "agent": {
+    "single_file_review": false,
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4"

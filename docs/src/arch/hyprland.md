@@ -1,3 +1,6 @@
+> [!WARNING] Required
+> be sure you have already installed [minimal archlinux](minimal-setup)
+
 ## Setup script (Hyprland)
 
 ### Install fish shell
