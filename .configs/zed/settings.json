@@ -35,13 +35,13 @@
   "format_on_save": "on",
   "languages": {
     "TypeScript": {
-      "code_actions_on_format": { "source.fixAll.eslint": true }
+      "formatter": [{ "code_action": "source.fixAll.eslint" }]
     },
     "TSX": {
-      "code_actions_on_format": { "source.fixAll.eslint": true }
+      "formatter": [{ "code_action": "source.fixAll.eslint" }]
     },
     "Vue.js": {
-      "code_actions_on_format": { "source.fixAll.eslint": true }
+      "formatter": [{ "code_action": "source.fixAll.eslint" }]
     },
     "Python": {
       "hard_tabs": false,
