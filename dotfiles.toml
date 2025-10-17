@@ -20,6 +20,7 @@
 "nvim" = ".config/nvim"
 
 "lazygit" = ".config/lazygit"
+"lazydocker" = ".config/lazydocker"
 "mise" = ".config/mise"
 
 "fish/config.fish" = ".config/fish/config.fish"
