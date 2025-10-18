@@ -25,7 +25,6 @@
 
 "fish/config.fish" = ".config/fish/config.fish"
 "fish/functions" = ".config/fish/functions"
-"fish/conf.d" = ".config/fish/conf.d"
 
 "git/.gitconfig" = ".gitconfig"
 "npm/.npmrc" = ".npmrc"
