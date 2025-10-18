@@ -5,11 +5,11 @@
 "yazi" = ".config/yazi"
 "satty" = ".config/satty"
 
-"theme/gtk-3.0/settings.ini" = ".config/gtk-3.0/settings.ini"
-"theme/gtk-4.0/settings.ini" = ".config/gtk-4.0/settings.ini"
-"theme/qt/kdeglobals" = ".config/kdeglobals"
-"theme/qt/qt5ct.conf" = ".config/qt5ct/qt5ct.conf"
-"theme/qt/qt6ct.conf" = ".config/qt6ct/qt6ct.conf"
+# "theme/gtk-3.0/settings.ini" = ".config/gtk-3.0/settings.ini"
+# "theme/gtk-4.0/settings.ini" = ".config/gtk-4.0/settings.ini"
+# "theme/qt/kdeglobals" = ".config/kdeglobals"
+# "theme/qt/qt5ct.conf" = ".config/qt5ct/qt5ct.conf"
+# "theme/qt/qt6ct.conf" = ".config/qt6ct/qt6ct.conf"
 
 "alacritty" = ".config/alacritty"
 "zellij" = ".config/zellij"
