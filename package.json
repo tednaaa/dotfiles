@@ -1,5 +1,5 @@
 {
-  "packageManager": "pnpm",
+  "packageManager": "pnpm@10.18.3",
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
