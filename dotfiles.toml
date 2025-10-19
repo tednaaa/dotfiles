@@ -57,7 +57,7 @@ terminal = [
   "git", "git-delta", "lazygit",
   "openbsd-netcat", "openssh", "rsync", "bind", "cmake", "postgresql",
 	"docker", "docker-buildx", "docker-compose", "lazydocker",
-	"kubectl", "kustomize", "helm", "k9s", "doctl", "glab", "ansible", "opentofu", "fluxcd"
+	"kubectl", "kustomize", "helm", "k9s", "talosctl", "doctl", "glab", "ansible", "opentofu", "fluxcd"
 ]
 
 desktop_hyprland = [
