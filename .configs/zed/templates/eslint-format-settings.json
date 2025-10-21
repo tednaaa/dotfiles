@@ -1,9 +1,5 @@
 {
-  "format_on_save": "on",
-  "languages": {
-    "Vue.js": { "prettier": { "allowed": false } },
-    "TypeScript": { "prettier": { "allowed": false } }
-  },
+  "prettier": { "allowed": false },
 
   "lsp": {
     "eslint": {
@@ -21,8 +17,7 @@
           { "rule": "*quotes", "severity": "off", "fixable": true },
           { "rule": "*semi", "severity": "off", "fixable": true }
         ]
-      },
-      "validate": ["vue", "html", "markdown", "json", "jsonc", "css"]
+      }
     }
   }
 }

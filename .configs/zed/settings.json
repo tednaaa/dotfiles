@@ -35,10 +35,17 @@
   "format_on_save": "on",
   "languages": {
     "TypeScript": {
-      "code_actions_on_format": { "source.fixAll.eslint": true }
+      "code_actions_on_format": { "source.fixAll.eslint": true },
+      "formatter": "prettier"
     },
-    "TSX": { "code_actions_on_format": { "source.fixAll.eslint": true } },
-    "Vue.js": { "code_actions_on_format": { "source.fixAll.eslint": true } },
+    "TSX": {
+      "code_actions_on_format": { "source.fixAll.eslint": true },
+      "formatter": "prettier"
+    },
+    "Vue.js": {
+      "code_actions_on_format": { "source.fixAll.eslint": true },
+      "formatter": "prettier"
+    },
     "Python": {
       "hard_tabs": false,
       "tab_size": 4,
@@ -80,12 +87,8 @@
   "show_edit_predictions": true,
 
   "agent": {
-    "single_file_review": false,
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-5"
-    },
-    "default_profile": "ask"
+    "default_profile": "write",
+    "model_parameters": []
   },
 
   "auto_install_extensions": {
