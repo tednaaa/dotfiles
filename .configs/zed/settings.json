@@ -35,14 +35,10 @@
   "format_on_save": "on",
   "languages": {
     "TypeScript": {
-      "formatter": [{ "code_action": "source.fixAll.eslint" }]
+      "code_actions_on_format": { "source.fixAll.eslint": true }
     },
-    "TSX": {
-      "formatter": [{ "code_action": "source.fixAll.eslint" }]
-    },
-    "Vue.js": {
-      "formatter": [{ "code_action": "source.fixAll.eslint" }]
-    },
+    "TSX": { "code_actions_on_format": { "source.fixAll.eslint": true } },
+    "Vue.js": { "code_actions_on_format": { "source.fixAll.eslint": true } },
     "Python": {
       "hard_tabs": false,
       "tab_size": 4,
@@ -89,7 +85,7 @@
       "provider": "zed.dev",
       "model": "claude-sonnet-4-5"
     },
-    "default_profile": "write"
+    "default_profile": "ask"
   },
 
   "auto_install_extensions": {
