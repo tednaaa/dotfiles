@@ -1,13 +1,13 @@
-## Setup script (Hyprland)
+# Setup script (Hyprland)
 
-### Install fish shell
+## Install fish shell
 
 ```fish
 sudo pacman -S fish
 chsh -s $(which fish)
 ```
 
-### Run setup script
+## Run setup script
 
 ```fish
 curl -fsSL tednaaa.github.io/dotfiles/install | fish
