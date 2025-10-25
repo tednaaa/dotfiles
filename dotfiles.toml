@@ -1,5 +1,7 @@
 [symlinks]
+"niri" = ".config/niri"
 "hypr" = ".config/hypr"
+
 "waybar" = ".config/waybar"
 "rofi" = ".config/rofi"
 "yazi" = ".config/yazi"
