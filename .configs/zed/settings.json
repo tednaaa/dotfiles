@@ -87,6 +87,10 @@
   "show_edit_predictions": true,
 
   "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-5"
+    },
     "default_profile": "write",
     "model_parameters": []
   },
