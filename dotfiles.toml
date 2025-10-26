@@ -34,7 +34,7 @@
 [packages]
 ignored = [
 	"base", "base-devel", "linux", "linux-firmware", "efibootmgr", "intel-ucode",
-	"btrfs-progs", "snapper", "grub", "grub-btrfs", "zram-generator",
+	"btrfs-progs", "snapper", "grub", "grub-btrfs", "zram-generator", "limine",
 	"bluez", "bluez-utils", "networkmanager", "libpulse", "sof-firmware",
 	"pipewire", "pipewire-alsa", "pipewire-jack", "pipewire-pulse", "gst-plugin-pipewire", "wireplumber",
 	"paru", "paru-debug", "paru-bin", "yay-bin", "symm", "downgrade",
@@ -62,11 +62,19 @@ terminal = [
 	"kubectl", "kustomize", "helm", "k9s", "talosctl", "doctl", "glab", "ansible", "opentofu", "fluxcd"
 ]
 
-desktop_hyprland = [
-	"ly", "hyprland", "hyprpaper", "hyprlock",
-	"xdg-desktop-portal-hyprland", "xdg-desktop-portal-gtk",
+desktop = [
+	"ly",
 	"brightnessctl", "waybar", "swaync", "rofi", "power-profiles-daemon",
-	"dolphin", "pavucontrol", "7zip", "mpv", "bluetui", "satty", "grim", "slurp",
+	"dolphin", "ark", "pavucontrol", "7zip", "mpv", "bluetui", "satty", "grim", "slurp", "gnome-keyring",
 	"clipse", "wl-clipboard", "wl-clip-persist",
 	"orchis-theme", "papirus-icon-theme", "apple_cursor"
+]
+
+desktop_niri = [
+	"niri", "swaylock"
+]
+
+desktop_hyprland = [
+	"hyprland", "hyprpaper", "hyprlock",
+	"xdg-desktop-portal-hyprland", "xdg-desktop-portal-gtk",
 ]
