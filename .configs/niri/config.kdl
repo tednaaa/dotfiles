@@ -118,19 +118,13 @@ window-rule {
 }
 
 window-rule {
-	match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+	match app-id="firefox" title="^Picture-in-Picture$"
 	open-floating true
 }
 
-// Block out apps from screen capture.
 window-rule {
-	match app-id=r#"telegram$"#
-	// match app-id=r#"telegram$"#
-
+	match app-id="org.telegram.desktop"
 	block-out-from "screen-capture"
-
-	// Use this instead if you want them visible on third-party screenshot tools.
-	// block-out-from "screencast"
 }
 
 
