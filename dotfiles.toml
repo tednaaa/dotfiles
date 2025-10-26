@@ -72,11 +72,13 @@ desktop = [
 ]
 
 desktop_niri = [
-	"niri", "swaylock", "swaybg", "xdg-desktop-portal-gnome",
+	"niri",
+	"swaylock", "swaybg",
+	"xdg-desktop-portal-gnome", "xdg-desktop-portal-gtk",
 	"xwayland-satellite"
 ]
 
-desktop_hyprland = [
-	"hyprland", "hyprpaper", "hyprlock",
-	"xdg-desktop-portal-hyprland", "xdg-desktop-portal-gtk",
-]
+# desktop_hyprland = [
+# 	"hyprland", "hyprpaper", "hyprlock",
+# 	"xdg-desktop-portal-hyprland", "xdg-desktop-portal-gtk",
+# ]
