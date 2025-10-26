@@ -35,10 +35,10 @@
 [packages]
 ignored = [
 	"base", "base-devel", "linux", "linux-firmware", "efibootmgr", "intel-ucode",
-	"btrfs-progs", "snapper", "grub", "grub-btrfs", "zram-generator", "limine",
+	"btrfs-progs", "snapper", "zram-generator", "limine",
 	"bluez", "bluez-utils", "networkmanager", "libpulse", "sof-firmware",
 	"pipewire", "pipewire-alsa", "pipewire-jack", "pipewire-pulse", "gst-plugin-pipewire", "wireplumber",
-	"paru", "paru-debug", "paru-bin", "yay-bin", "symm", "downgrade",
+	"paru", "paru-debug", "symm", "downgrade",
 	"qemu-desktop", "virt-manager", "dnsmasq",
 	"steam", "elyprismlauncher", "dbeaver", "spotify-launcher"
 ]
@@ -72,7 +72,7 @@ desktop = [
 ]
 
 desktop_niri = [
-	"niri", "swaylock", "xdg-desktop-portal-gnome"
+	"niri", "swaylock", "swaybg", "xdg-desktop-portal-gnome"
 ]
 
 desktop_hyprland = [
