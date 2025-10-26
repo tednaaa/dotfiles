@@ -66,14 +66,7 @@ hotkey-overlay { skip-at-startup; }
 
 prefer-no-csd
 
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
-// You can also set this to null to disable saving screenshots to disk.
-// screenshot-path null
-
-animations {
-	// Uncomment to turn off all animations.
-	// off
-}
+screenshot-path null
 
 // `niri msg pick-window` to get app-id
 window-rule {
@@ -123,7 +116,7 @@ binds {
 	Mod+Return hotkey-overlay-title="Open terminal" { spawn "alacritty"; }
 	Mod+Space hotkey-overlay-title="Open rofi" { spawn-sh "rofi -show drun"; }
 	Super+Alt+L hotkey-overlay-title="Lock the Screen" { spawn "swaylock"; }
-	Print hotkey-overlay-title="Screenshot" { spawn-sh "screenshot"; }
+	Print hotkey-overlay-title="Screenshot" { spawn "fish" "-c" "screenshot"; }
 
 	Mod+D hotkey-overlay-title="Open clipboard history" { spawn-sh "alacritty --class clipse -e clipse"; }
 	Mod+Y hotkey-overlay-title="Open yazi" { spawn-sh "alacritty --class yazi -e yazi"; }
