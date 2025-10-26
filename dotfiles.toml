@@ -7,6 +7,7 @@
 "yazi" = ".config/yazi"
 "satty" = ".config/satty"
 
+"wallpapers" = ".config/wallpapers"
 # "theme/gtk-3.0/settings.ini" = ".config/gtk-3.0/settings.ini"
 # "theme/gtk-4.0/settings.ini" = ".config/gtk-4.0/settings.ini"
 # "theme/qt/kdeglobals" = ".config/kdeglobals"
@@ -71,7 +72,7 @@ desktop = [
 ]
 
 desktop_niri = [
-	"niri", "swaylock"
+	"niri", "swaylock", "xdg-desktop-portal-gnome"
 ]
 
 desktop_hyprland = [
