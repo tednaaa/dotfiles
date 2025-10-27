@@ -66,7 +66,7 @@ terminal = [
 desktop = [
 	"ly",
 	"brightnessctl", "waybar", "swaync", "rofi", "power-profiles-daemon",
-	"dolphin", "ark", "pavucontrol", "7zip", "mpv", "bluetui", "satty", "grim", "slurp", "gnome-keyring",
+	"nautilus", "pavucontrol", "7zip", "mpv", "bluetui", "satty", "grim", "slurp", "gnome-keyring",
 	"clipse", "wl-clipboard", "wl-clip-persist",
 	"orchis-theme", "papirus-icon-theme", "apple_cursor"
 ]
