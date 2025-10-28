@@ -11,10 +11,10 @@
 		"battery",
 		"network",
 		"power-profiles-daemon",
-		"hyprland/language",
+		"niri/language",
 		"tray",
 	],
-	"modules-center": ["hyprland/workspaces"],
+	// "modules-center": ["hyprland/workspaces"],
 	"modules-right": [
 		"pulseaudio",
 		"pulseaudio#microphone",
