@@ -16,5 +16,23 @@ services:
     ports:
       - 6379:6379
 
+  clickhouse:
+    container_name: dev-clickhouse
+    image: clickhouse/clickhouse-server:latest
+    ports:
+      - 8123:8123 # HTTP interface
+      - 9000:9000 # Native client interface
+    environment:
+      CLICKHOUSE_DB: default
+      CLICKHOUSE_USER: default
+      CLICKHOUSE_PASSWORD: clickhouse
+    volumes:
+      - dev-clickhouse:/var/lib/clickhouse/
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+
 volumes:
   dev-postgres:
+  dev-clickhouse:
