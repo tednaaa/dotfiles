@@ -113,6 +113,7 @@ window-rule {
 window-rule {
 	match app-id="yazi"
 	match app-id="org.gnome.Nautilus"
+	match app-id="org.kde.dolphin"
 	open-floating true
 	default-column-width { proportion 0.8; }
   default-window-height { proportion 0.8; }
@@ -139,7 +140,7 @@ binds {
 
 	Mod+D hotkey-overlay-title="Open clipboard history" { spawn-sh "alacritty --class clipse -e clipse"; }
 	Mod+M hotkey-overlay-title="Open yazi" { spawn-sh "alacritty --class yazi -e yazi"; }
-	Mod+N hotkey-overlay-title="Open nautilus" { spawn "nautilus"; }
+	Mod+N hotkey-overlay-title="Open file manager" { spawn "nautilus"; }
 
 	XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
 	XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
