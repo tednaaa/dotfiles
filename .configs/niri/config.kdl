@@ -126,7 +126,8 @@ window-rule {
 
 window-rule {
 	match app-id="org.telegram.desktop"
-	block-out-from "screen-capture"
+	// block-out-from "screen-capture"
+	block-out-from "screencast"
 }
 
 
