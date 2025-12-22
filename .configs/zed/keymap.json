@@ -28,6 +28,10 @@
         "task::Spawn",
         { "task_name": "k9s", "reveal_target": "center" }
       ],
+      "space g a": [
+        "task::Spawn",
+        { "task_name": "cursor-agent", "reveal_target": "center" }
+      ],
 
       "space g /": [
         "task::Spawn",
