@@ -34,6 +34,9 @@
 
   "format_on_save": "on",
   "languages": {
+    "Rust": {
+      "formatter": { "external": { "command": "cargo clippy --fix" } }
+    },
     "TypeScript": {
       "code_actions_on_format": { "source.fixAll.eslint": true },
       "formatter": "prettier"
@@ -87,9 +90,10 @@
   "show_edit_predictions": true,
 
   "agent": {
+    "default_profile": "write",
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-5"
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-5-latest"
     },
     "model_parameters": []
   },
