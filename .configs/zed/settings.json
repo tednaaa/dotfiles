@@ -5,7 +5,7 @@
   "vertical_scroll_margin": 10,
 
   "icon_theme": "Catppuccin Mocha",
-  "theme": "Catppuccin Mocha - No Italics",
+  "theme": "VSCode Dark Modern",
 
   "buffer_font_family": "JetBrainsMonoNL Nerd Font Propo",
   "buffer_font_weight": 500,
@@ -19,7 +19,7 @@
 
   "terminal": {
     "toolbar": { "breadcrumbs": false },
-    "line_height": { "custom": 1.5 }
+    "line_height": { "custom": 1.5 },
   },
 
   "cursor_blink": false,
@@ -35,19 +35,16 @@
   "format_on_save": "on",
   "languages": {
     "Rust": {
-      "formatter": { "external": { "command": "cargo clippy --fix" } }
+      "formatter": { "external": { "command": "cargo clippy --fix" } },
     },
     "TypeScript": {
       "code_actions_on_format": { "source.fixAll.eslint": true },
-      "formatter": "prettier"
     },
     "TSX": {
       "code_actions_on_format": { "source.fixAll.eslint": true },
-      "formatter": "prettier"
     },
     "Vue.js": {
       "code_actions_on_format": { "source.fixAll.eslint": true },
-      "formatter": "prettier"
     },
     "Python": {
       "hard_tabs": false,
@@ -55,33 +52,33 @@
       "formatter": {
         "external": {
           "command": ".venv/bin/black",
-          "arguments": ["--stdin-filename", "{buffer_path}", "-"]
-        }
-      }
-    }
+          "arguments": ["--stdin-filename", "{buffer_path}", "-"],
+        },
+      },
+    },
   },
 
   "lsp": {
     "rust-analyzer": {
       "initialization_options": { "check": { "command": "clippy" } },
-      "binary": { "ignore_system_version": true }
+      "binary": { "ignore_system_version": true },
     },
     "basedpyright": {
       "settings": {
         "basedpyright": {
-          "typeCheckingMode": "off"
-        }
-      }
+          "typeCheckingMode": "off",
+        },
+      },
     },
     "yaml-language-server": {
       "settings": {
         "yaml": {
           "completion": true,
           "schemaStore": { "enable": true },
-          "schemas": { "kubernetes": "**/clusters/*.yml" }
-        }
-      }
-    }
+          "schemas": { "kubernetes": "**/clusters/*.yml" },
+        },
+      },
+    },
   },
 
   "git": { "inline_blame": { "enabled": false } },
@@ -93,9 +90,9 @@
     "default_profile": "write",
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4-5-latest"
+      "model": "claude-sonnet-4-5-latest",
     },
-    "model_parameters": []
+    "model_parameters": [],
   },
 
   "auto_install_extensions": {
@@ -121,6 +118,6 @@
     "sql": true,
     "toml": true,
     "vue": true,
-    "wakatime": true
-  }
+    "wakatime": true,
+  },
 }
