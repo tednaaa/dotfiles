@@ -66,12 +66,11 @@ spawn-at-startup "fish" "-c" "swaybg_wallpaper"
 spawn-sh-at-startup "clipse -listen"
 spawn-sh-at-startup "wl-clip-persist --reconnect-tries 0 --clipboard regular"
 
-// not needed in NixOS
-// spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "color-scheme" "prefer-dark"
-// spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "gtk-theme" "Orchis-Dark-Compact"
-// spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "icon-theme" "Papirus-Dark"
-// spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "text-scaling-factor" "1"
-// spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "cursor-size" "24"
+spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "color-scheme" "prefer-dark"
+spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "gtk-theme" "Orchis-Dark-Compact"
+spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "icon-theme" "Papirus-Dark"
+spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "text-scaling-factor" "1"
+spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "cursor-size" "24"
 
 
 hotkey-overlay { skip-at-startup; }
