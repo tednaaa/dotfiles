@@ -38,13 +38,25 @@
       "formatter": { "external": { "command": "cargo clippy --fix" } },
     },
     "TypeScript": {
-      "code_actions_on_format": { "source.fixAll.eslint": true },
+      "code_actions_on_format": {
+        "source.organizeImports": false,
+        "source.fixAll.eslint": true,
+      },
+      "formatter": [],
     },
     "TSX": {
-      "code_actions_on_format": { "source.fixAll.eslint": true },
+      "code_actions_on_format": {
+        "source.organizeImports": false,
+        "source.fixAll.eslint": true,
+      },
+      "formatter": [],
     },
     "Vue.js": {
-      "code_actions_on_format": { "source.fixAll.eslint": true },
+      "code_actions_on_format": {
+        "source.organizeImports": false,
+        "source.fixAll.eslint": true,
+      },
+      "formatter": [],
     },
     "Python": {
       "hard_tabs": false,
