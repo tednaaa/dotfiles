@@ -4,8 +4,8 @@
   "relative_line_numbers": "enabled",
   "vertical_scroll_margin": 10,
 
-  "icon_theme": "Catppuccin Mocha",
-  "theme": "VSCode Dark Modern",
+  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "theme": "New Darcula Darker",
 
   "buffer_font_family": "JetBrainsMonoNL Nerd Font Propo",
   "buffer_font_weight": 500,
