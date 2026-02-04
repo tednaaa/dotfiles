@@ -4,8 +4,8 @@
   "relative_line_numbers": "enabled",
   "vertical_scroll_margin": 10,
 
-  "icon_theme": "JetBrains New UI Icons (Dark)",
-  "theme": "Catppuccin Espresso (Blur) [Heavy]",
+  "icon_theme": "Material Icon Theme",
+  "theme": "Tokyo Night",
 
   "buffer_font_family": "JetBrainsMonoNL Nerd Font Propo",
   "buffer_font_weight": 500,
@@ -65,6 +65,10 @@
         },
       },
     },
+  },
+
+  "file_types": {
+    "Nginx": ["**/nginx/*.conf"],
   },
 
   "lsp": {
