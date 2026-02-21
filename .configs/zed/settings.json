@@ -95,8 +95,7 @@
   },
 
   "git": { "inline_blame": { "enabled": false } },
-
-  "features": { "edit_prediction_provider": "zed" },
+  "edit_predictions": { "provider": "zed" },
   "show_edit_predictions": true,
 
   "agent": {
