@@ -34,6 +34,9 @@
 
   "format_on_save": "on",
   "languages": {
+    "Nix": {
+      "language_servers": ["nixd", "!nil"],
+    },
     "TypeScript": {
       "code_actions_on_format": {
         "source.organizeImports": false,
