@@ -16,6 +16,7 @@
       allowedTCPPorts = [
         55555 # for minecraft
         53317 # for localsend
+        6006 # for storybook
       ];
       allowedUDPPorts = [ ];
     };
