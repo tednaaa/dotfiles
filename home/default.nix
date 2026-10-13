@@ -21,8 +21,8 @@ let
     "clipse/config.json" = ".config/clipse/config.json";
 
     "zed" = ".config/zed";
-    "helix" = ".config/helix";
-    "nvim" = ".config/nvim";
+    # "nvim" = ".config/nvim";
+    # "helix" = ".config/helix";
 
     "lazygit" = ".config/lazygit";
     "lazydocker" = ".config/lazydocker";
