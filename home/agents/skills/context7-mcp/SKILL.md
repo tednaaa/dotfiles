@@ -1,9 +1,9 @@
 ---
 name: context7-mcp
-description: This skill should be used when the user asks about libraries, frameworks, API references, or needs code examples. Activates for setup questions, code generation involving libraries, or mentions of specific frameworks like React, Vue, Next.js, Prisma, Supabase, etc.
+description: Use before stating how any library, framework, CLI or agent tool behaves — React, Next.js, Prisma, glab, gh, nix, Claude Code, Codex, opencode. Covers API references, config keys, flags, defaults, limits, loading order and code examples. Use even when the answer seems known; never answer from memory.
 ---
 
-When the user asks about libraries, frameworks, or needs code examples, use Context7 to fetch current documentation instead of relying on training data.
+Whenever an answer depends on how a library, framework, CLI or agent tool behaves, use Context7 to fetch current documentation instead of relying on training data.
 
 ## When to Use This Skill
 
@@ -13,6 +13,8 @@ Activate this skill when the user:
 - Requests code involving libraries ("Write a Prisma query for...")
 - Needs API references ("What are the Supabase auth methods?")
 - Mentions specific frameworks (React, Vue, Svelte, Express, Tailwind, etc.)
+- Asks how a CLI or agent tool works: limits, settings, defaults ("How does Claude Code load skills?")
+- Gets an answer that rests on a tool's behaviour, even without asking about the tool
 
 ## How to Fetch Documentation
 
