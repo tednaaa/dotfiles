@@ -72,9 +72,9 @@ let
 in
 {
   imports = [
-    ./theme.nix
-    ./foot.nix
-    ./btop.nix
+    ./theme
+    ./foot
+    ./btop
   ];
 
   home.username = username;
