@@ -1,0 +1,7 @@
+keys:
+  - &laptop age190gyfe76rnlefz4ceh2uwss2jwa86qtamq9kmd34q6hv5pqerp7qfc786m
+creation_rules:
+  - path_regex: home/sops/secrets/
+    key_groups:
+      - age:
+          - *laptop
